@@ -1,0 +1,110 @@
+model MicroHydro;
+
+[dump sync]
+Variable Cell [1] Real AdiabaticCst;
+
+Struct BoundaryCondition
+{
+	[1..1] BoundaryConditionType type;
+	[1..1] FaceGroup surface;
+	[1..1] Real value;
+}
+
+Enumeration BoundaryConditionType
+{
+	Vx = "";
+	Vy = "";
+	Vz = "";
+}
+
+[sync]
+Variable Cell [1] Real CaracteristicLength;
+
+"Ceci est la documentation du Cqs." 
+[dump sync]
+Variable Cell [*] Real3 CellCqs;
+
+[dump sync]
+Variable Cell [1] Real CellMass;
+
+[sync]
+Variable Cell [1] Real CellVolume;
+
+Service DefaultLoopDelegation implements LoopDelegation
+{
+	override LoopDelegation.computeNodeImpulsion use (in NodeMass, in Force, inout Velocity);
+	override LoopDelegation.applyBoundaryCondition use (inout Velocity);
+	override LoopDelegation.moveNodes use (in Velocity, out NodeCoord);
+	override LoopDelegation.computeGeometricValues use (in NodeCoord, inout OldCellVolume, inout CellVolume, out CaracteristicLength, inout CellCqs);
+	override LoopDelegation.updateDensity use (in CellMass, in CellVolume, out Density);
+	override LoopDelegation.computeInternalEnergy use (in CellVolume, in OldCellVolume, in AdiabaticCst, out InternalEnergy);
+	override LoopDelegation.computePressureForce use (in Pressure, in CellCqs, out Force);
+}
+
+[dump sync]
+Variable Cell [1] Real Density;
+
+Variable Node [1] Real3 Force;
+
+[dump sync]
+Variable Cell [1] Real InternalEnergy;
+
+Interface LoopDelegation
+{
+	void computeNodeImpulsion () on Node;
+	void applyBoundaryCondition (in Real boundary_condition_value, in BoundaryConditionType boundary_condition_type) on Face;
+	void moveNodes () on Node;
+	void computeGeometricValues () on Cell;
+	void updateDensity () on Cell;
+	void computeInternalEnergy () on Cell;
+	void computePressureForce () on Cell sequentially;
+}
+
+Module MicroHydro
+{
+	[1..1] Real deltat_min;
+	[1..1] Real deltat_max;
+	[1..1] Real deltat_init;
+	[namefr = "temps_final"]
+	[1..1] Real final_time;
+	"Définition de la CFL." [1..1] Real cfl = "0.3";
+	[1..*] BoundaryCondition boundary_condition;
+	[1..1] MicroHydro.Eos.EquationOfState eos_model;
+	[1..1] LoopDelegation loop_delegation = "MicroHydro.DefaultLoopDelegation";
+	@ StartInit hydroStartInit use (in Density, inout CellCqs, out CellMass, out NodeMass, out OldCellVolume, out CaracteristicLength, out CellVolume, out NodeCoord) call (MicroHydro.Eos.EquationOfState.initEOS);
+	@ ContinueInit hydroContinueInit use (in NodeCoord, in CellCqs, out CellVolume);
+	[NoAutoLoad]
+	@ ComputeLoop computePressureForce use (out Force) call (LoopDelegation.computePressureForce);
+	[NoAutoLoad]
+	@ ComputeLoop computeVelocity use (out Velocity) call (LoopDelegation.computeNodeImpulsion);
+	[NoAutoLoad]
+	@ ComputeLoop applyBoundaryCondition call (LoopDelegation.applyBoundaryCondition);
+	[NoAutoLoad]
+	@ ComputeLoop moveNodes call (LoopDelegation.moveNodes);
+	[NoAutoLoad]
+	@ ComputeLoop computeGeometricValues use (in CellVolume, out OldCellVolume) call (LoopDelegation.computeGeometricValues);
+	[NoAutoLoad]
+	@ ComputeLoop updateDensity use (out Density) call (LoopDelegation.updateDensity);
+	[NoAutoLoad]
+	@ ComputeLoop applyEquationOfState use (in CellVolume, in OldCellVolume, in AdiabaticCst, out InternalEnergy) call (MicroHydro.Eos.EquationOfState.applyEOS);
+	[NoAutoLoad]
+	@ ComputeLoop computeDeltaT use (in CaracteristicLength, in SoundSpeed);
+}
+
+[dump sync]
+Variable Node [1] Real3 NodeCoord;
+
+[dump sync]
+Variable Node [1] Real NodeMass;
+
+[dump sync]
+Variable Cell [1] Real OldCellVolume;
+
+[dump sync]
+Variable Cell [1] Real Pressure;
+
+[dump sync]
+Variable Cell [1] Real SoundSpeed;
+
+[dump execdep]
+Variable Node [1] Real3 Velocity;

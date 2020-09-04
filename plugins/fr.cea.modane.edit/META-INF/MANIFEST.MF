@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: fr.cea.modane.edit
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.cea.modane.edit
+Bundle-SymbolicName: fr.cea.modane.edit;singleton:=true
+Bundle-Version: 1.4.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: fr.cea.modane.modane.provider.ModaneEditPlugin$Implementation
+Bundle-Vendor: CEA
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: fr.cea.modane.modane.provider
+Require-Bundle: fr.cea.modane;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Import-Package: fr.cea.modane.modane

@@ -1,0 +1,21 @@
+all : ${MODULE_NAME}.exe
+
+${MODULE_NAME}.exe: main.o ${EXAMPLE_ADDITIONAL_TARGETS} ${MODULE_NAME}Module.o
+	$(CXX) $< ${MODULE_NAME}Module.o -o $@ ${EXAMPLE_ADDITIONAL_LIBS} -Wl,-rpath,. ${SERVICE_LIBS} $(LIBS)
+
+main.o: main.cc
+	echo LIBS=${ARCANE_LIBS}
+	echo FLAGS=${ARCANE_CFLAGS}
+	$(CXX) -c ${CFLAGS} $< -o $@
+
+lib${MODULE_NAME}.so: ${MODULE_NAME}Module.o 
+	$(CXX) -shared -o $@ $^
+
+${MODULE_NAME}Module.o: ${MODULE_NAME}Module.cc ${MODULE_NAME}Module.h ${MODULE_NAME}_axl.h
+	$(CXX) -c ${CFLAGS} $< -o $@
+
+${MODULE_NAME}_axl.h : ${MODULE_NAME}.axl
+	$(AXL_EXE) -l c++ $<
+
+clean::
+	\rm -rf *.o lib*.so *.exe *_axl.h fatal_4 logs output

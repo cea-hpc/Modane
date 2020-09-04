@@ -1,0 +1,3 @@
+Voir si on peut se passer du formatage des commentaires (ValueConverter).
+Régler le problème de nommage des ModaneElement depuis qu'on a mis le packageName.
+Passer la génération sur le ModaneProject

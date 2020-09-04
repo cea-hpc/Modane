@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><service name="MyInterfDefault" version="1.0" namespace-name="PtyOnInterface" type="caseoption">
+  <description>Service par défaut pour l'interface MyInterf</description>
+  <interface name="::PtyOnInterface::IMyInterf"/>
+  <variables/>
+  <options>
+    <simple name="r" type="real"/>
+    <complex name="s" interface="::PtyOnInterface::IMyStruct" type="MyStruct">
+      <simple name="r" type="real"/>
+      <simple name="opt-i" type="integer" optional="true"/>
+    </complex>
+  </options>
+</service>

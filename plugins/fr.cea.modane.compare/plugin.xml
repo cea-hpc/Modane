@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+    Copyright (c) 2020 CEA
+    This program and the accompanying materials are made available under the 
+    terms of the Eclipse Public License 2.0 which is available at
+    http://www.eclipse.org/legal/epl-2.0.
+   
+    SPDX-License-Identifier: EPL-2.0
+    Contributors: see AUTHORS file
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.emf.compare.ide.ui.modelDependencyProvider">
+      <dependency
+            class="fr.cea.modane.compare.ModaneDependencyProvider">
+      </dependency>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.weightProvider">
+      <provider
+            class="fr.cea.modane.compare.ModaneWeightProvider"
+            description="Provides weight for the modane features"
+            id="fr.cea.modane.compare.weight.provider"
+            label="Modane weigth provider"
+            nsURI="http://www.cea.fr/modane/Modane"
+            ranking="1">
+      </provider>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.ide.resourceSetHook">
+      <resourceSetHook
+            class="fr.cea.modane.compare.ResolveAllResourceSetHook">
+      </resourceSetHook>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.equalityHelperExtensionProvider">
+      <provider
+            class="fr.cea.modane.compare.ModaneEqualityHelperExtensionProvider"
+            description="Provides equality helper extension for the modane features"
+            id="fr.cea.modane.compare.equalityHelperExtension.provider"
+            label="Modane equality helper extension provider"
+            nsURI="http://www.cea.fr/modane/Modane"
+            ranking="1">
+      </provider>
+   </extension>
+
+</plugin>

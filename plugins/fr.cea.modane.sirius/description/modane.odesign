@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="modane" version="12.0.0.2017041100">
+  <ownedViewpoints name="ModaneViewpoint" modelFileExtension="modaneprj" icon="/fr.cea.modane.ui/icons/modane.gif">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="VariablesTable" titleExpression="aql:self.name + ' Variables Table'" domainClass="modane.ModaneModel" initialHeaderColumnWidth="-1">
+      <metamodel href="http://www.cea.fr/modane/Modane#/"/>
+      <ownedLineMappings name="VT.VariableLine" domainClass="modane.Variable" semanticCandidatesExpression="aql:self.elements" headerLabelExpression="aql:self.name">
+        <defaultForeground labelSize="11">
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <delete name="VT.DeleteVariable" label="Delete Variable">
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:element">
+            <subModelOperations xsi:type="tool:If" conditionExpression="service:element.showConfirmationDeletionDialogForTable()">
+              <subModelOperations xsi:type="tool:For" expression="service:element.getAllElementsToDelete()">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:element.changeFunctionTypeToVoid()"/>
+                <subModelOperations xsi:type="tool:RemoveElement"/>
+              </subModelOperations>
+            </subModelOperations>
+          </firstModelOperation>
+        </delete>
+      </ownedLineMappings>
+      <ownedCreateLine name="VT.CreateVariable" label="new Variable" mapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='VariablesTable']/@ownedLineMappings[name='VT.VariableLine']">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:CreateInstance" typeName="modane.Variable" referenceName="elements">
+          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'New' + instance.eClass().name"/>
+        </firstModelOperation>
+      </ownedCreateLine>
+      <ownedColumnMappings name="VT.Name" headerLabelExpression="Name" featureName="name">
+        <foregroundConditionalStyle predicateExpression="aql:not self.checkName() or not self.checkUniqueName()">
+          <style labelSize="11">
+            <labelFormat>bold</labelFormat>
+            <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </foregroundConditionalStyle>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="VT.Support" headerLabelExpression="Support" canEdit="true" featureName="support">
+        <foregroundConditionalStyle predicateExpression="aql: not self.checkSupport()">
+          <style labelSize="11">
+            <labelFormat>bold</labelFormat>
+            <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </foregroundConditionalStyle>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="VT.Multiplicity" headerLabelExpression="Multiplicity" canEdit="true" featureName="multiplicity"/>
+      <ownedColumnMappings name="VT.Type" headerLabelExpression="Type" canEdit="true" featureName="type">
+        <foregroundConditionalStyle predicateExpression="aql: not self.checkType()">
+          <style labelSize="11">
+            <labelFormat>bold</labelFormat>
+            <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </foregroundConditionalStyle>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="VT.Dump" headerLabelExpression="Dump" canEdit="true" featureName="dump"/>
+      <ownedColumnMappings name="VT.Restore" headerLabelExpression="Restore" canEdit="true" featureName="restore"/>
+      <ownedColumnMappings name="VT.ExecDepend" headerLabelExpression="Exec Depend" canEdit="true" featureName="executionDepend"/>
+      <ownedColumnMappings name="VT.NeedSync" headerLabelExpression="Need Sync" canEdit="true" featureName="needSync"/>
+      <ownedColumnMappings name="VT.Family" headerLabelExpression="Family" featureName="family" labelExpression="aql:self.getFamilyDisplayExpression()">
+        <foregroundConditionalStyle predicateExpression="aql:not self.checkParticleVariableMustHaveFamily() or not self.checkDoFVariableMustHaveFamily() or not self.checkSameSupportOnVariableAndFamily()">
+          <style labelSize="11">
+            <labelFormat>bold</labelFormat>
+            <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </foregroundConditionalStyle>
+      </ownedColumnMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="ItemFamilyTable" titleExpression="aql:self.name + ' Item Families Table'" domainClass="modane.ModaneModel">
+      <ownedLineMappings name="IFT.ItemFamilyLine" domainClass="modane.ItemFamily" semanticCandidatesExpression="aql:self.elements" headerLabelExpression="aql:self.name">
+        <defaultForeground labelSize="11">
+          <foreGroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </defaultForeground>
+        <delete name="IFT.DeleteItemfamily" label="Delete ItemFamily">
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="root" documentation="The semantic root element of the table."/>
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:element">
+            <subModelOperations xsi:type="tool:If" conditionExpression="service:element.showConfirmationDeletionDialogForTable()">
+              <subModelOperations xsi:type="tool:For" expression="service:element.getAllElementsToDelete()">
+                <subModelOperations xsi:type="tool:RemoveElement"/>
+              </subModelOperations>
+            </subModelOperations>
+          </firstModelOperation>
+        </delete>
+      </ownedLineMappings>
+      <ownedCreateLine name="IFT.CreateItemFamily" label="new ItemFamily" mapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='ItemFamilyTable']/@ownedLineMappings[name='IFT.ItemFamilyLine']">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:CreateInstance" typeName="modane.ItemFamily" referenceName="elements">
+          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'New' + instance.eClass().name"/>
+        </firstModelOperation>
+      </ownedCreateLine>
+      <ownedColumnMappings name="IFT.Support" headerLabelExpression="Support" canEdit="true" featureName="support"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="VariablesUsageTable" preconditionExpression="false" domainClass="modane.ModaneModel">
+      <metamodel href="http://www.cea.fr/modane/Modane#/"/>
+      <ownedLineMappings name="VUT.ModuleLines" domainClass="modane.Module" semanticCandidatesExpression="aql:self.elements->filter(modane::Module)">
+        <ownedSubLines name="VUT.ML.EntryPointLines" domainClass="modane.EntryPoint" semanticCandidatesExpression="aql:self.oclAsType(modane::Module).entryPoints"/>
+      </ownedLineMappings>
+      <ownedColumnMappings name="VUT.VariableColumn" domainClass="modane.Variable" semanticCandidatesExpression="aql:self.elements->filter(modane::Variable)"/>
+      <intersection name="VUT.ModuleVariable" lineMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='VariablesUsageTable']/@ownedLineMappings[name='VUT.ModuleLines']/@ownedSubLines[name='VUT.ML.EntryPointLines']" columnMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='VariablesUsageTable']/@ownedColumnMappings.0" labelExpression="aql:self.vars->select(v|v.variable = columnSemantic)->first().direction" columnFinderExpression="aql:self.vars.variable"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DropExternModaneElement']" name="DesignDiagram" titleExpression="aql:self.name + ' Design Diagram'" domainClass="modane.ModaneModel" enablePopupBars="true">
+      <metamodel href="http://www.cea.fr/modane/Modane#/"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="DD.PtyEdge" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeletePtyEdge']" semanticElements="aql:Sequence{self, self.type}" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" targetMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" targetFinderExpression="aql:self.type->filter(modane::Reference).target" sourceFinderExpression="aql:self.eContainer()" domainClass="modane.Pty" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="9" showIcon="false" labelExpression="aql:self.multiplicity + ' ' + self.name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DD.Generalization" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteGeneralizationEdge']" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" targetMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" targetFinderExpression="aql:self.getParents()">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="9">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DD.Implementation" preconditionExpression="aql:self.oclIsKindOf(modane::ServiceOrModule)" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteImplementationAndKnowledgeEdge']" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" targetMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" targetFinderExpression="aql:self.oclAsType(modane::ServiceOrModule).interfaces">
+          <style lineStyle="dash" targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="9">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="DD.ModaneElement" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteNode']" semanticCandidatesExpression="aql:self.elements->select(e | e.isDesignDiagramDisplayable())" synchronizationLock="true" domainClass="modane.ModaneElement" childrenPresentation="VerticalStack">
+          <subContainerMappings name="DD.ME.Name" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DisableDelete']" labelDirectEdit="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD_EditLabel']" semanticCandidatesExpression="aql:self" domainClass="modane.ModaneElement">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="10" labelExpression="aql:self.name" tooltipExpression="aql:self.renderTooltip()" backgroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']" foregroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementForegroundColor']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="DD.ME.Info" preconditionExpression="aql:self.hasInfo()" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DisableDelete']" semanticCandidatesExpression="aql:self" domainClass="modane.ModaneElement">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="9" showIcon="false" labelExpression="aql:self.getInfo()" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" backgroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']" foregroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementForegroundColor']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="DD.ME.Properties" preconditionExpression="aql:self.isPropertiesContainer() and containerView.oclAsType(diagram::DNodeContainer).isPropertiesCompartmentShown()" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DisableDelete']" semanticCandidatesExpression="aql:self" synchronizationLock="true" domainClass="modane.ModaneElement" childrenPresentation="List">
+            <subNodeMappings name="DD.ME.P.Property" preconditionExpression="aql:self.shouldBeDisplayed(diagram)" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteNode']" labelDirectEdit="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD_EditLabel']" semanticCandidatesExpression="aql:self.getProperties()" synchronizationLock="true" domainClass="modane.Pty">
+              <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="9" showIcon="false" labelExpression="aql:self.multiplicity + ' ' + self.name + ' : ' + self.type.getName()" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="9" labelExpression="aql:self.name + ' properties'" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" hideLabelByDefault="true" backgroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']" foregroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementForegroundColor']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="DD.ME.Operations" preconditionExpression="aql:self.isOperationsContainer() and containerView.oclAsType(diagram::DNodeContainer).isOperationsCompartmentShown()" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DisableDelete']" semanticCandidatesExpression="aql:self" synchronizationLock="true" domainClass="modane.ModaneElement" childrenPresentation="List">
+            <subNodeMappings name="DD.ME.O.EntryPoint" preconditionExpression="aql:container.oclIsKindOf(modane::Module)" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteNode']" labelDirectEdit="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD_EditLabel']" semanticCandidatesExpression="aql:self->filter(modane::Module).entryPoints" synchronizationLock="true" domainClass="modane.EntryPoint">
+              <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="9" showIcon="false" labelExpression="aql:self.name + ' @ ' + self.location" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="DD.ME.O.UnitTestFunctions" preconditionExpression="aql:container.oclIsKindOf(modane::Service)" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteNode']" labelDirectEdit="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD_EditLabel']" semanticCandidatesExpression="aql:self->filter(modane::Service).unitTestFunctions" synchronizationLock="true" domainClass="modane.UnitTestFunction">
+              <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'test ' + self.name" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="DD.ME.O.Function" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteNode']" labelDirectEdit="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD_EditLabel']" semanticCandidatesExpression="aql:self.getFunctions()" synchronizationLock="true" domainClass="modane.Function">
+              <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:self.name + ' : ' + self.getReturnTypeName()" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="DD.ME.O.OverrideFunction" preconditionExpression="aql:container.oclIsKindOf(modane::ServiceOrModule)" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteNode']" semanticCandidatesExpression="aql:self->filter(modane::ServiceOrModule).overrideFuncs" synchronizationLock="true" domainClass="modane.OverrideFunction">
+              <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql:'override ' + self.func.name" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="9" labelExpression="aql:self.name + ' operations'" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" hideLabelByDefault="true" backgroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']" foregroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementForegroundColor']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="DD.ME.Literals" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DisableDelete']" semanticCandidatesExpression="aql:self" synchronizationLock="true" domainClass="modane.Enumeration" childrenPresentation="List">
+            <subNodeMappings name="DD.ME.L.Literal" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteNode']" labelDirectEdit="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD_EditLabel']" semanticCandidatesExpression="feature:literals" synchronizationLock="true" domainClass="modane.EnumerationLiteral">
+              <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="9" showIcon="false" labelExpression="aql:self.name" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:self.name + ' literals'" labelAlignment="LEFT" tooltipExpression="aql:self.renderTooltip()" hideLabelByDefault="true" backgroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementBackgroundColor']" foregroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='ModaneElementForegroundColor']">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="9" showIcon="false" labelExpression="aql:self.eContainer().oclAsType(modane::ModaneModel).name" tooltipExpression="aql:self.renderTooltip()" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='PackageColor']" foregroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='PackageColor']">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="DD.ExternModaneElement" deletionDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DisableDelete']" createElements="false" doubleClickDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.OpenDesignDiagram']" domainClass="modane.ModaneElement" reusedContainerMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Info'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']" childrenPresentation="VerticalStack">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.eContainer().oclAsType(modane::ModaneModel).name" tooltipExpression="aql:self.renderTooltip()" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='PackageColor']" foregroundColor="//@userColorsPalettes[name='ModanePalette']/@entries[name='PackageColor']">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="DD.CreateElementSection" label="Element Creation">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="DD.CreateNewLegacy" label="new Legacy" containerMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']" iconPath="/fr.cea.modane.sirius/icons/Legacy.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.Legacy" referenceName="elements">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'New' + instance.eClass().name"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="originFile" valueExpression="aql:container.oclAsType(modane::ModaneModel).name.replaceAll('\\.','/') + '/NewLegacy.h'"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="DD.CreateInterface" label="new Interface" containerMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']" iconPath="/fr.cea.modane.sirius/icons/Interface.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.Interface" referenceName="elements">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'New' + instance.eClass().name"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="DD.CreateModule" label="new Module" containerMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']" iconPath="/fr.cea.modane.sirius/icons/Module.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.Module" referenceName="elements">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'New' + instance.eClass().name"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="DD.CreateService" label="new Service" precondition="aql:(self.oclIsKindOf(modane::Interface) and containerView.getMapping().name='DD.ModaneElement' ) or self.oclIsKindOf(modane::ModaneModel) " iconPath="/fr.cea.modane.sirius/icons/Service.gif" windowTitle="Interfaces Selection" message="Select interfaces that the service has to implement" candidatesExpression="aql:self.getAllResourceSetModaneElements()->filter(modane::Interface)" preSelectedCandidatesExpression="aql:self.oclAsType(modane::Interface)">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.eContainerOrSelf(modane::ModaneModel)">
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:not element->isEmpty()">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="modane.Service" referenceName="elements">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'New' + instance.eClass().name"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="interfaces" valueExpression="aql:element"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="DD.CreateEnumeration" label="new Enumeration" containerMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']" iconPath="/fr.cea.modane.sirius/icons/Enumeration.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.Enumeration" referenceName="elements">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'New' + instance.eClass().name"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="DD.CreateStruct" label="new Struct" containerMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']" iconPath="/fr.cea.modane.sirius/icons/Struct.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.Struct" referenceName="elements">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'New' + instance.eClass().name"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="DD.CreatePropertySection" label="Property Creation">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="DD.CreateLiteral" label="new Enumeration Literal" precondition="aql:(containerView.getMapping().name='DD.ME.Literals' and containerView.eContainer().getMapping().name='DD.ModaneElement' ) " nodeMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.EnumerationLiteral" referenceName="literals" variableName="literal">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="NewLiteral"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="DD.CreateProperty" label="new Property" precondition="aql:(containerView.getMapping().name='DD.ME.Properties' and containerView.eContainer().getMapping().name='DD.ModaneElement' ) " forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']" iconPath="/fr.cea.modane.sirius/icons/Pty.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.Pty" referenceName="properties" variableName="pty">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="new_property"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="multiplicity" valueExpression="aql:modane::PtyMultiplicity::OneOne"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:self.createRealType()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="DD.CreateOperationSection" label="Operation Creation">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="DD.CreateEntryPoint" label="new EntryPoint" precondition="aql:(containerView.getMapping().name='DD.ME.Operations' and containerView.eContainer().getMapping().name='DD.ModaneElement' and container.oclIsKindOf(modane::Module)) " nodeMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.EntryPoint" referenceName="entryPoints" variableName="entryPoint">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="newEntryPoint"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="location" valueExpression="aql:modane::EntryPointLocation::ComputeLoop"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="DD.CreateFunction" label="new Function" precondition="aql:(containerView.getMapping().name='DD.ME.Operations' and containerView.eContainer().getMapping().name='DD.ModaneElement' ) " nodeMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.Function" referenceName="functions" variableName="">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="newFunction"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="DD.CreateOverrideFunction" label="new OverrideFunction" precondition="aql:(containerView.getMapping().name='DD.ME.Operations' and containerView.eContainer().getMapping().name='DD.ModaneElement' and container.oclIsKindOf(modane::ServiceOrModule)) " candidatesExpression="aql:container.getAllFunctions()" message="Select function to override" iconPath="/fr.cea.modane.sirius/icons/OverrideFunction.gif" windowTitle="Function Selection">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.oclAsKind(modane::ServiceOrModel)">
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:not element->isEmpty()">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="modane.OverrideFunction" referenceName="overrideFuncs">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="func" valueExpression="aql:element"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="DD.CreateUnitTestFunction" label="new UnitTestFunction" precondition="aql:(containerView.getMapping().name='DD.ME.Operations' and containerView.eContainer().getMapping().name='DD.ModaneElement' and container.oclIsKindOf(modane::Service)) " nodeMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.UnitTestFunctions']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.UnitTestFunction" referenceName="unitTestFunctions" variableName="unitTestFunction">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="newUnitTestFunction"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="label" valueExpression="New Unit Test Function"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="DD.CreateRelationSection" label="Relation Creation">
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="DD.CreateImplementation" label="implements" precondition="aql:preTarget.oclIsKindOf(modane::Interface)" edgeMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Implementation']" iconPath="/fr.cea.modane.sirius/icons/Implementation.gif" connectionStartPrecondition="aql:preSource.oclIsKindOf(modane::ServiceOrModule)">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:source">
+                <subModelOperations xsi:type="tool:SetValue" featureName="interfaces" valueExpression="aql:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="DD.CreateGeneralization" label="extends" precondition="aql:preTarget.oclIsTypeOf(preSource.eClass()) and preTarget &lt;> preSource" edgeMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Generalization']" iconPath="/fr.cea.modane.sirius/icons/Implementation.gif" connectionStartPrecondition="aql:preSource.oclIsKindOf(modane::Struct) or preSource.oclIsKindOf(modane::Interface) ">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:source">
+                <subModelOperations xsi:type="tool:SetValue" featureName="parents" valueExpression="aql:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DD.DeleteNode" precondition="aql:(view.eContainerOrSelf(diagram::DNodeContainer).getMapping().name='DD.ModaneElement' ) ">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="service:element.getAllElementsToDelete()">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:element.changeFunctionTypeToVoid()"/>
+                <subModelOperations xsi:type="tool:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+            <hook id="fr.cea.modane.sirius.deleteHook"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DD.DeletePtyEdge" precondition="aql:view.oclAsType(diagram::DEdge).sourceNode.oclAsType(diagram::DNodeContainer).getMapping().name='DD.ModaneElement' ">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:RemoveElement">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:containerView.oclAsType(diagram::DSemanticDiagram).refresh()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DD.DeleteImplementationAndKnowledgeEdge" precondition="aql:view.oclAsType(diagram::DEdge).sourceNode.oclAsType(diagram::DNodeContainer).getMapping().name='DD.ModaneElement' ">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element">
+                <subModelOperations xsi:type="tool:Unset" featureName="interfaces" elementExpression="aql:elementView.oclAsType(diagram::DEdge).targetNode.oclAsType(diagram::DNodeContainer).target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DD.DeleteGeneralizationEdge" precondition="aql:view.oclAsType(diagram::DEdge).sourceNode.oclAsType(diagram::DNodeContainer).getMapping().name='DD.ModaneElement' ">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element">
+                <subModelOperations xsi:type="tool:Unset" featureName="parents" elementExpression="aql:elementView.oclAsType(diagram::DEdge).targetNode.oclAsType(diagram::DNodeContainer).target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DD.DisableDelete" precondition="false">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DD.RemoveExternElement" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:elementView">
+                <subModelOperations xsi:type="tool:DeleteView"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerDropDescription" name="DD.DropExternModaneElement" precondition="aql:element.isDesignDiagramDisplayable() and not newViewContainer.oclAsType(diagram::DSemanticDiagram).getDisplayedModaneElements()->includes(self)" forceRefresh="true" mappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" dragSource="PROJECT_EXPLORER">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:newContainerView.eContainerOrSelf(diagram::DSemanticDiagram).refresh()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DoubleClickDescription" name="DD.OpenDesignDiagram" mappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:element.eContainer().oclAsType(modane::ModaneModel)">
+                <subModelOperations xsi:type="tool_1:Navigation" diagramDescription="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="DD.ShowPopupMenu" label="Show">
+            <menuItemDescription xsi:type="tool:OperationAction" name="DD.ShowOperationsCompartment" label="Operations" precondition="aql:views->enableShowOperations()" elementsToSelect="aql:views" icon="/fr.cea.modane.sirius/icons/Function.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
+                  <subModelOperations xsi:type="tool:For" expression="aql:views->getShowOperationsCandidateNodes()" iteratorName="node">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:node.oclAsType(diagram::DNodeContainer).setOperationsCompartmentShown(true)"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="MVED.ShowPropertiesCompartment" label="Properties" precondition="aql:views->enableShowProperties()" elementsToSelect="aql:views" icon="/fr.cea.modane.sirius/icons/Pty.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
+                  <subModelOperations xsi:type="tool:For" expression="aql:views->getShowPropertiesCandidateNodes()" iteratorName="node">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:node.oclAsType(diagram::DNodeContainer).setPropertiesCompartmentShown(true)"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="DD.HidePopupMenu" label="Hide">
+            <menuItemDescription xsi:type="tool:OperationAction" name="DD.HideOperationsCompartment" label="Operations" precondition="aql:views->enableHideOperations()" elementsToSelect="aql:views" icon="/fr.cea.modane.sirius/icons/Function.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
+                  <subModelOperations xsi:type="tool:For" expression="aql:views->getHideOperationsCandidateNodes()" iteratorName="node">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:node.oclAsType(diagram::DNodeContainer).setOperationsCompartmentShown(false)"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="MVED.HidePropertiesCompartment" label="Properties" precondition="aql:views->enableHideProperties()" elementsToSelect="aql:views" icon="/fr.cea.modane.sirius/icons/Pty.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
+                  <subModelOperations xsi:type="tool:For" expression="aql:views->getHidePropertiesCandidateNodes()" iteratorName="node">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:node.oclAsType(diagram::DNodeContainer).setPropertiesCompartmentShown(false)"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="DD.DisplayPopupMenu" label="Display">
+            <menuItemDescription xsi:type="tool:OperationAction" name="DD.DisplayRelatedElements" label="Related Elements" precondition="aql:views->enableDisplayRelatedElements()" icon="/fr.cea.modane.sirius/icons/modane.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
+                  <subModelOperations xsi:type="tool:For" expression="aql:views->getDisplayRelatedElementsCandidateNodes()" iteratorName="node">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:node.oclAsType(diagram::DNodeContainer).target">
+                      <subModelOperations xsi:type="tool:For" expression="aql:self.oclAsType(modane::ModaneElement).getRelatedElements()" iteratorName="elt">
+                        <subModelOperations xsi:type="tool:If" conditionExpression="aql:not diagram.getDisplayedModaneElements()->includes(elt)">
+                          <subModelOperations xsi:type="tool_1:CreateView" mapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" containerViewExpression="aql:diagram" variableName="myCreatedView"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:diagram.refresh()"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool:OperationAction" name="DD.DisplayChildren" label="Children" precondition="aql:views->enableDisplayChildren()" icon="/fr.cea.modane.sirius/icons/modane.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:For" expression="aql:views->getDisplayChildrenCandidateNodes()" iteratorName="node">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:node.oclAsType(diagram::DNodeContainer).target">
+                    <subModelOperations xsi:type="tool:For" expression="aql:self.oclAsType(modane::ModaneElement).eInverse(modane::ModaneElement)->select(e : modane::ModaneElement | e.getAllParents()->includes(self))" iteratorName="elt">
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:not diagram.getDisplayedModaneElements()->includes(elt)">
+                        <subModelOperations xsi:type="tool_1:CreateView" mapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']" containerViewExpression="aql:diagram" variableName="myCreatedView"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:diagram.refresh()"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PopupMenu" name="DD.Open" label="Open">
+            <menuItemDescription xsi:type="tool:OperationAction" name="DD.OpenTextualEditor" label="Textual Editor" precondition="aql:views->enableOpenTextualEditor()" icon="/fr.cea.modane.sirius/icons/modane.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self">
+                  <subModelOperations xsi:type="tool:For" expression="aql:views->getOpenTextualEditorCandidateEObjects()" iteratorName="o">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:o.openXtextEditor()"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DirectEditLabel" name="DD_EditLabel" precondition="aql:containerView.eContainer(diagram::DNodeContainer).getMapping().name='DD.ModaneElement' " forceRefresh="true" inputLabelExpression="aql:self.name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:arg0"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:self.hasError()">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style" referenceName="borderColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </featureCustomizations>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style" attributeName="borderSizeComputationExpression" value="2"/>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.UnitTestFunctions']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style" referenceName="labelColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </featureCustomizations>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.UnitTestFunctions']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style" attributeName="labelFormat" value="bold"/>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style" referenceName="strokeColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </featureCustomizations>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style/@centerLabelStyleDescription" referenceName="labelColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </featureCustomizations>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style/@centerLabelStyleDescription" attributeName="labelFormat" value="aql:viewpoint::FontFormat::bold"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:self.hasWarning()">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style" referenceName="borderColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </featureCustomizations>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style" attributeName="borderSizeComputationExpression" value="2"/>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.UnitTestFunctions']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style" referenceName="labelColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </featureCustomizations>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.UnitTestFunctions']/@style //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style" attributeName="labelFormat" value="bold"/>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style" referenceName="strokeColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </featureCustomizations>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style/@centerLabelStyleDescription" referenceName="labelColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            </featureCustomizations>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style/@centerLabelStyleDescription" attributeName="labelFormat" value="aql:viewpoint::FontFormat::bold"/>
+          </vsmElementCustomizations>
+        </customization>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DropExternModaneElement']" name="PresentationDiagram" titleExpression="aql:self.name + ' Presentation Diagram'" domainClass="modane.ModaneModel" enablePopupBars="true">
+      <metamodel href="platform:/plugin/fr.cea.modane/model/generated/Modane.ecore#/"/>
+      <defaultLayer name="Default" reusedMappings="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Generalization'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Implementation'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Info'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']">
+        <toolSections name="PD.ToolSection" reusedTools="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DropExternModaneElement'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DeleteNode'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DisableDelete'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.DisplayPopupMenu'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.HidePopupMenu'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.OpenDesignDiagram'] //@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@toolSections.4/@ownedTools[name='DD.ShowPopupMenu']"/>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="DependencyDiagram" domainClass="modaneproject.ModaneProject" enablePopupBars="true">
+      <metamodel href="http://www.cea.fr/modane/ModaneProject#/"/>
+      <metamodel href="http://www.cea.fr/modane/Modane#/"/>
+      <metamodel href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+      <layout xsi:type="description_2:CompositeLayout"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="DD.ModaneModel" semanticCandidatesExpression="aql:self.getAllModaneModels()" synchronizationLock="true" domainClass="modane.ModaneModel">
+          <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="DD.ModelReference" sourceMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DependencyDiagram']/@defaultLayer/@nodeMappings[name='DD.ModaneModel']" targetMapping="//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DependencyDiagram']/@defaultLayer/@nodeMappings[name='DD.ModaneModel']" targetFinderExpression="aql:self.getReferencedModaneModels()">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.ModaneElementExtensions"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.ModaneStringExtensions"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.ChangeTypeUtils"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.DAnnotationUtils"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.ModaneElementExtensions"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.ModaneModelExtensions"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.ModaneStringExtensions"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.PopupMenuUtils"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.PtyOrArgTypeExtensions"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.SemanticDiagramExtensions"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.Utils"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.project.PackagesContainerExtensions"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.ui.dialogs.ConfirmDeletionServices"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.ui.ModaneUiUtils"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.DiagramValidationUtils"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.validation.ModaneValidator"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.validation.UniqueNameValidator"/>
+    <ownedJavaExtensions qualifiedClassName="fr.cea.modane.sirius.services.PropertiesValidationUtils"/>
+  </ownedViewpoints>
+  <userColorsPalettes name="ModanePalette">
+    <entries xsi:type="description:ComputedColor" name="PackageColor" red="aql:self.oclAsType(modane::ModaneElement).getRedPackageColor()" green="aql:self.oclAsType(modane::ModaneElement).getGreenPackageColor()" blue="aql:self.oclAsType(modane::ModaneElement).getBluePackageColor()"/>
+    <entries xsi:type="description:UserFixedColor" red="255" green="255" blue="255" name="ModaneElementBackgroundColor"/>
+    <entries xsi:type="description:UserFixedColor" red="255" green="255" blue="255" name="ModaneElementForegroundColor"/>
+  </userColorsPalettes>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
+    <metamodels href="../../fr.cea.modane/model/generated/Modane.ecore#/"/>
+    <categories name="Default">
+      <pages name="Default Page" labelExpression="aql:input.emfEditServices(self).getTabName()" semanticCandidateExpression="aql:input.getAllSemanticElements()" groups="//@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.4 //@extensions.0/@categories.0/@groups.5 //@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.20 //@extensions.0/@categories.0/@groups.21 //@extensions.0/@categories.0/@groups.24 //@extensions.0/@categories.0/@groups.25 //@extensions.0/@categories.0/@groups.26 //@extensions.0/@categories.0/@groups.27 //@extensions.0/@categories.0/@groups.7 //@extensions.0/@categories.0/@groups.8 //@extensions.0/@categories.0/@groups.10 //@extensions.0/@categories.0/@groups.9 //@extensions.0/@categories.0/@groups.11 //@extensions.0/@categories.0/@groups.12 //@extensions.0/@categories.0/@groups.13 //@extensions.0/@categories.0/@groups.14 //@extensions.0/@categories.0/@groups.15 //@extensions.0/@categories.0/@groups.16 //@extensions.0/@categories.0/@groups.17 //@extensions.0/@categories.0/@groups.18 //@extensions.0/@categories.0/@groups.19 //@extensions.0/@categories.0/@groups.22 //@extensions.0/@categories.0/@groups.23">
+        <validationSet>
+          <semanticValidationRules name="HasNoError" level="ERROR" message="aql:self.getErrorMsg()" targetClass="modane.NamedElement">
+            <audits auditExpression="aql:not self.hasError()"/>
+          </semanticValidationRules>
+          <semanticValidationRules name="HasNoWarning" level="WARNING" message="aql:self.getErrorMsg()" targetClass="modane.NamedElement">
+            <audits auditExpression="aql:not self.hasWarning()"/>
+          </semanticValidationRules>
+        </validationSet>
+      </pages>
+      <groups name="Default Group" labelExpression="General" semanticCandidateExpression="var:self" preconditionExpression="aql:not self.oclIsKindOf(modane::NamedElement) and not self.oclIsKindOf(modane::OverrideFunction)">
+        <controls xsi:type="properties:DynamicMappingForDescription" iterator="eStructuralFeature" iterableExpression="aql:input.emfEditServices(self).getEStructuralFeatures()">
+          <ifs predicateExpression="aql:input.emfEditServices(self).needsTextWidget(eStructuralFeature) and not input.emfEditServices(self).isMultiline(eStructuralFeature)">
+            <widget xsi:type="properties:TextDescription" name="sirius_default_rules_mono_string" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs predicateExpression="aql:input.emfEditServices(self).needsTextWidget(eStructuralFeature) and input.emfEditServices(self).isMultiline(eStructuralFeature)">
+            <widget xsi:type="properties:TextAreaDescription" name="sirius_default_rules_multi_string" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs predicateExpression="aql:input.emfEditServices(self).needsCheckboxWidget(eStructuralFeature)">
+            <widget xsi:type="properties:CheckboxDescription" name="sirius_default_rules_mono_boolean" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs predicateExpression="aql:eStructuralFeature.eType.oclIsKindOf(ecore::EEnum) and not(eStructuralFeature.many)">
+            <widget xsi:type="properties:RadioDescription" name="sirius_default_rules_enum" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:eStructuralFeature.eType.getEEnumLiteralByLiteral(self.eGet(eStructuralFeature.name).toString())" candidatesExpression="aql:eStructuralFeature.eType.eLiterals" candidateDisplayExpression="aql:candidate.literal" numberOfColumns="5">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue.instance)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs predicateExpression="aql:eStructuralFeature.oclIsKindOf(ecore::EAttribute) and eStructuralFeature.many">
+            <widget xsi:type="properties:ListDescription" name="sirius_default_rules_eattribute_many" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)" displayExpression="var:value"/>
+          </ifs>
+          <ifs predicateExpression="aql:eStructuralFeature.oclIsKindOf(ecore::EReference)">
+            <widget xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="sirius_default_rules_ereference" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" referenceNameExpression="aql:eStructuralFeature.name"/>
+          </ifs>
+        </controls>
+        <controls xsi:type="properties:DynamicMappingForDescription" iterator="pty" iterableExpression="aql:self">
+          <ifs predicateExpression="aql:input.getSemanticElement().oclIsKindOf(modane::Pty)">
+            <widget xsi:type="properties:LabelDescription" labelExpression="Type:" valueExpression="aql:self.getTypeName()">
+              <actions labelExpression="Modify">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:self.getTypeFromSelection(self.type)"/>
+                </initialOperation>
+              </actions>
+            </widget>
+          </ifs>
+        </controls>
+        <controls xsi:type="properties:DynamicMappingForDescription" iterator="function" iterableExpression="aql:self">
+          <ifs predicateExpression="aql:input.getSemanticElement().oclIsKindOf(modane::Function)">
+            <widget xsi:type="properties:LabelDescription" labelExpression="Type:" valueExpression="aql:self.getTypeName()">
+              <actions labelExpression="Remove">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:null"/>
+                </initialOperation>
+              </actions>
+              <actions labelExpression="Modify">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:self.getTypeFromSelection(self.type)"/>
+                </initialOperation>
+              </actions>
+            </widget>
+          </ifs>
+        </controls>
+      </groups>
+      <groups name="NamedElement General Group" labelExpression="General" domainClass="modane.NamedElement" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="modane::NamedElement name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:self.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:not self.checkName() or not self.checkUniqueName()">
+            <style>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="modane::NamedElement description" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('description')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('description'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('description').changeable" valueExpression="aql:self.description">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="ServiceOrModule General Group" labelExpression="General" domainClass="modane.Module" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="modane::ServiceOrModule interfaces" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('interfaces')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('interfaces'))" referenceNameExpression="aql:'interfaces'"/>
+      </groups>
+      <groups name="ServiceOrModule Advanced Group" labelExpression="Advanced" domainClass="modane.Module" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="modane::ServiceOrModule namefr" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('namefr')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('namefr'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('namefr').changeable" valueExpression="aql:self.namefr">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="namefr" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql: not self.checkUniqueNameFr()">
+            <style>
+              <labelBackgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="modane::ServiceOrModule categories" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('categories')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('categories'))" referenceNameExpression="aql:'categories'">
+          <conditionalStyles preconditionExpression="aql:not self.checkConsistentPtyAndEnumCategory()">
+            <style>
+              <labelForegroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionalStyles>
+        </controls>
+      </groups>
+      <groups name="Service General Group" labelExpression="General" domainClass="modane.Service" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.2"/>
+      <groups name="Service Advanced Group" labelExpression="Advanced" domainClass="modane.Service" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.3">
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:SelectDescription" name="modane::Service type" isEnabledExpression="aql:self.eClass().getEStructuralFeature('type').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('type').eType.getEEnumLiteralByLiteral(self.type.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('type').eType.eLiterals" candidateDisplayExpression="aql:candidate.name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:newValue.instance"/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Service singleton" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('singleton'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('singleton'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('singleton').changeable" valueExpression="aql:self.singleton">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="singleton" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="2"/>
+        </controls>
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Service classSetUp" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('classSetUp'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('classSetUp'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('classSetUp').changeable" valueExpression="aql:self.classSetUp">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="classSetUp" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Service testSetUp" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('testSetUp'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('testSetUp'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('testSetUp').changeable" valueExpression="aql:self.testSetUp">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="testSetUp" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Service classTearDown" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('classTearDown'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('classTearDown'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('classTearDown').changeable" valueExpression="aql:self.classTearDown">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="classTearDown" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Service testTearDown" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('testTearDown'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('testTearDown'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('testTearDown').changeable" valueExpression="aql:self.testTearDown">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="testTearDown" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="4"/>
+        </controls>
+      </groups>
+      <groups name="Interface General Group" labelExpression="General" domainClass="modane.Interface" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="modane::Interface parents" referenceNameExpression="aql:'parents'"/>
+      </groups>
+      <groups name="Pty General Group" labelExpression="General" domainClass="modane.Pty" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties:ContainerDescription" name="modane::Pty typeContainer">
+          <controls xsi:type="properties:SelectDescription" name="modane::Pty multiplicity" isEnabledExpression="aql:self.eClass().getEStructuralFeature('multiplicity').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('multiplicity').eType.getEEnumLiteralByLiteral(self.multiplicity.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('multiplicity').eType.eLiterals" candidateDisplayExpression="aql:candidate.literal">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="multiplicity" valueExpression="aql:newValue.instance"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="modane::Pty type" valueExpression="aql:self.type.getTypeOfType()" candidatesExpression="aql:self.getAllAvailableTypes()" candidateDisplayExpression="aql:candidate.getDisplayName()">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:self.type.getType(newValue) "/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:TextDescription" name="modane::Pty defaultValue" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('defaultValue')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('defaultValue'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('defaultValue').changeable" valueExpression="aql:self.defaultValue">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="defaultValue" valueExpression="aql: if  (newValue.toString().size() > 0) newValue else null">
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:newValue.toString().size() > 0">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="defaultValue" valueExpression="var:newValue"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <conditionalStyles preconditionExpression="aql: not self.checkCorrectPtyDefaultValue()">
+              <style>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              </style>
+            </conditionalStyles>
+          </controls>
+          <layout xsi:type="properties:FillLayoutDescription" orientation="HORIZONTAL"/>
+        </controls>
+      </groups>
+      <groups name="Pty Advanced Group" labelExpression="Advanced" domainClass="modane.Pty" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.3"/>
+      <groups name="EntryPoint Support Group" labelExpression="Support" domainClass="modane.EntryPoint" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ContainerDescription" name="Support container">
+          <controls xsi:type="properties:SelectDescription" name="modane::EntryPoint support" isEnabledExpression="aql:self.eClass().getEStructuralFeature('support').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('support').eType.getEEnumLiteralByLiteral(self.support.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('support').eType.eLiterals" candidateDisplayExpression="aql:candidate.name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="support" valueExpression="aql:newValue.instance"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="modane::EntryPoint sequential" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('sequential'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('sequential'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('sequential').changeable" valueExpression="aql:self.sequential">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="sequential" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:FillLayoutDescription" orientation="HORIZONTAL"/>
+        </controls>
+      </groups>
+      <groups name="EntryPoint General Group" labelExpression="General" domainClass="modane.EntryPoint" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties:ContainerDescription" name="modane::EntryPoint container">
+          <controls xsi:type="properties:SelectDescription" name="modane::EntryPoint location" isEnabledExpression="aql:self.eClass().getEStructuralFeature('location').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('location').eType.getEEnumLiteralByLiteral(self.location.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('location').eType.eLiterals" candidateDisplayExpression="aql:candidate.name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="location" valueExpression="aql:newValue.instance"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="modane::EntryPoint autoload" isEnabledExpression="aql:self.eClass().getEStructuralFeature('autoLoad').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('autoLoad').eType.getEEnumLiteralByLiteral(self.autoLoad.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('autoLoad').eType.eLiterals" candidateDisplayExpression="aql:candidate.name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="autoload" valueExpression="aql:newValue.instance"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:FillLayoutDescription" orientation="HORIZONTAL"/>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="modane::EntryPoint calls" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('calls'))" referenceNameExpression="aql:'calls'"/>
+      </groups>
+      <groups name="EntryPoint Variables Group" labelExpression="Used Variables" domainClass="modane.EntryPoint" semanticCandidateExpression="aql:self">
+        <controls xsi:type="properties:ContainerDescription" name="modane::EntryPoint variablesContainer">
+          <controls xsi:type="properties:DynamicMappingForDescription" iterator="varRef" iterableExpression="aql:self.vars" forceRefresh="true">
+            <ifs name="direction select" predicateExpression="aql:true">
+              <widget xsi:type="properties:SelectDescription" valueExpression="aql:modane::Direction.getEEnumLiteralByLiteral(varRef.direction.toString())" candidatesExpression="aql:modane::Direction.eLiterals" candidateDisplayExpression="aql:candidate.name">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:varRef">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="direction" valueExpression="aql:newValue.instance"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="variable select" predicateExpression="aql:true">
+              <widget xsi:type="properties:SelectDescription" valueExpression="aql:varRef.variable" candidatesExpression="aql:self.getAllResourceSetModaneElements()->filter(modane::Variable)" candidateDisplayExpression="aql:candidate.name">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:varRef">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="variable" valueExpression="aql:newValue"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="up Button" predicateExpression="aql:true">
+              <widget xsi:type="properties:ButtonDescription" imageExpression="fr.cea.modane.sirius/icons/ArrowUp.gif">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:SetValue" featureName="vars" valueExpression="aql:varRef.shiftItemInList(self.vars, -1)"/>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="down Button" predicateExpression="aql:true">
+              <widget xsi:type="properties:ButtonDescription" imageExpression="fr.cea.modane.sirius/icons/ArrowDown.gif">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:SetValue" featureName="vars" valueExpression="aql:varRef.shiftItemInList(self.vars, 1)"/>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="remove Button" predicateExpression="aql:true">
+              <widget xsi:type="properties:ButtonDescription" imageExpression="fr.cea.modane.sirius/icons/Delete.gif">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:varRef">
+                    <subModelOperations xsi:type="tool:RemoveElement"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="5"/>
+        </controls>
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Used Variable" imageExpression="fr.cea.modane.sirius/icons/Add.gif">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.VarReference" referenceName="vars" variableName="var"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription"/>
+        </controls>
+      </groups>
+      <groups name="Function General Group" labelExpression="General" domainClass="modane.Function" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties:CheckboxDescription" name="modane::Function const" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('const'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('const'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('const').changeable" valueExpression="aql:self.const">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="const" valueExpression="var:newValue"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="modane::Function calls" referenceNameExpression="aql:'calls'"/>
+      </groups>
+      <groups name="Function Return Group" labelExpression="Return " domainClass="modane.Function" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:CheckboxDescription" name="modane::Function void" labelExpression="void" helpExpression="No return type" valueExpression="aql:(self.type = null)">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:Switch">
+              <cases conditionExpression="aql:newValue = false">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="modane.Simple" referenceName="type"/>
+              </cases>
+              <default>
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:null"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="multiplicity" valueExpression="aql:modane::ArgMultiplicity::Scalar"/>
+              </default>
+            </firstModelOperations>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:not self.checkSupportFunctionReturnVoid()">
+            <style>
+              <labelBackgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <labelForegroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:ContainerDescription" name="modane::Function typeContainer">
+          <controls xsi:type="properties:SelectDescription" name="modane::Function type" isEnabledExpression="aql:self.type != null" valueExpression="aql:self.type.getTypeOfType()" candidatesExpression="aql:self.getAllAvailableTypes()" candidateDisplayExpression="aql:candidate.getDisplayName()">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:self.type.getType(newValue) "/>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="modane::Function multiplicity" isEnabledExpression="aql:self.type != null" valueExpression="aql:self.eClass().getEStructuralFeature('multiplicity').eType.getEEnumLiteralByLiteral(self.multiplicity.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('multiplicity').eType.eLiterals" candidateDisplayExpression="aql:candidate.literal">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="multiplicity" valueExpression="aql:newValue.instance"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="2"/>
+        </controls>
+      </groups>
+      <groups name="Function Args Group" labelExpression="Arguments" domainClass="modane.Function" semanticCandidateExpression="aql:self">
+        <controls xsi:type="properties:ContainerDescription" name="modane::Function argsContainer">
+          <controls xsi:type="properties:DynamicMappingForDescription" iterator="arg" iterableExpression="aql:self.args" forceRefresh="true">
+            <ifs name="direction select" predicateExpression="aql:true">
+              <widget xsi:type="properties:SelectDescription" valueExpression="aql:modane::Direction.getEEnumLiteralByLiteral(arg.direction.toString())" candidatesExpression="aql:modane::Direction.eLiterals" candidateDisplayExpression="aql:candidate.name">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="direction" valueExpression="aql:newValue.instance"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="argMultiplicity select" predicateExpression="aql:arg.oclIsKindOf(modane::ArgDefinition)">
+              <widget xsi:type="properties:SelectDescription" name="modane::ArgDefinition multiplicity" valueExpression="aql:arg.eClass().getEStructuralFeature('multiplicity').eType.getEEnumLiteralByLiteral(arg.multiplicity.toString())" candidatesExpression="aql:arg.eClass().getEStructuralFeature('multiplicity').eType.eLiterals" candidateDisplayExpression="aql:candidate.literal">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="multiplicity" valueExpression="aql:newValue.instance"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="argType select" predicateExpression="aql:arg.oclIsKindOf(modane::ArgDefinition)">
+              <widget xsi:type="properties:SelectDescription" name="modane::ArgDefinition type" valueExpression="aql:arg.type.getTypeOfType()" candidatesExpression="aql:arg.getAllAvailableTypes()" candidateDisplayExpression="aql:candidate.getDisplayName()">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:self.type.getType(newValue) "/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="varMultiplicity select" predicateExpression="aql:arg.oclIsKindOf(modane::VarDefinition)">
+              <widget xsi:type="properties:SelectDescription" name="modane::VarDefinition multiplicity" valueExpression="aql:arg.eClass().getEStructuralFeature('multiplicity').eType.getEEnumLiteralByLiteral(arg.multiplicity.toString())" candidatesExpression="aql:arg.eClass().getEStructuralFeature('multiplicity').eType.eLiterals" candidateDisplayExpression="aql:candidate.literal">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="multiplicity" valueExpression="aql:newValue.instance"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="varType select" predicateExpression="aql:arg.oclIsKindOf(modane::VarDefinition)">
+              <widget xsi:type="properties:SelectDescription" name="modane::VarDefinition type" valueExpression="aql:arg.eClass().getEStructuralFeature('type').eType.getEEnumLiteralByLiteral(arg.type.toString())" candidatesExpression="aql:arg.eClass().getEStructuralFeature('type').eType.eLiterals" candidateDisplayExpression="aql:candidate.literal">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:newValue.instance"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="name textBox" predicateExpression="aql:true">
+              <widget xsi:type="properties:TextDescription" name="modane::Arg name" labelExpression="aql:input.emfEditServices(arg).getText(arg.eClass().getEStructuralFeature('name')) + ':'" isEnabledExpression="aql:arg.eClass().getEStructuralFeature('name').changeable" valueExpression="aql:arg.name">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:newValue"/>
+                  </firstModelOperations>
+                </initialOperation>
+                <conditionalStyles preconditionExpression="aql:not arg.checkName() or not arg.checkVarsReservedName()">
+                  <style>
+                    <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                  </style>
+                </conditionalStyles>
+              </widget>
+            </ifs>
+            <ifs name="argDefaultValue textBox" predicateExpression="aql:arg.oclIsKindOf(modane::ArgDefinition)">
+              <widget xsi:type="properties:TextDescription" name="modane::ArgDefinition defaultValue" labelExpression="aql:input.emfEditServices(arg).getText(arg.eClass().getEStructuralFeature('defaultValue')) + ':'" isEnabledExpression="aql:arg.eClass().getEStructuralFeature('defaultValue').changeable" valueExpression="aql:arg.defaultValue">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="defaultValue" valueExpression="var:newValue"/>
+                  </firstModelOperations>
+                </initialOperation>
+                <conditionalStyles preconditionExpression="aql:not arg.checkOnlyInArgHasDefaultValue()">
+                  <style>
+                    <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                  </style>
+                </conditionalStyles>
+              </widget>
+            </ifs>
+            <ifs name="varSupport select" predicateExpression="aql:arg.oclIsKindOf(modane::VarDefinition)">
+              <widget xsi:type="properties:SelectDescription" name="modane::VarDefinition support" isEnabledExpression="aql:arg.eClass().getEStructuralFeature('support').changeable" valueExpression="aql:arg.eClass().getEStructuralFeature('support').eType.getEEnumLiteralByLiteral(arg.support.toString())" candidatesExpression="aql:arg.eClass().getEStructuralFeature('support').eType.eLiterals" candidateDisplayExpression="aql:candidate.name">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="support" valueExpression="aql:newValue.instance"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="up Button" predicateExpression="aql:true">
+              <widget xsi:type="properties:ButtonDescription" imageExpression="fr.cea.modane.sirius/icons/ArrowUp.gif">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:SetValue" featureName="args" valueExpression="aql:arg.shiftItemInList(self.args, -1)"/>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="down Button" predicateExpression="aql:true">
+              <widget xsi:type="properties:ButtonDescription" imageExpression="fr.cea.modane.sirius/icons/ArrowDown.gif">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:SetValue" featureName="args" valueExpression="aql:arg.shiftItemInList(self.args, 1)"/>
+                </initialOperation>
+              </widget>
+            </ifs>
+            <ifs name="remove Button" predicateExpression="aql:true">
+              <widget xsi:type="properties:ButtonDescription" imageExpression="fr.cea.modane.sirius/icons/Delete.gif">
+                <initialOperation>
+                  <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:arg">
+                    <subModelOperations xsi:type="tool:RemoveElement"/>
+                  </firstModelOperations>
+                </initialOperation>
+              </widget>
+            </ifs>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="8"/>
+        </controls>
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Simple Argument" imageExpression="fr.cea.modane.sirius/icons/Add.gif">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.ArgDefinition" referenceName="args" variableName=""/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:ButtonDescription" buttonLabelExpression="Add Variable Argument" imageExpression="fr.cea.modane.sirius/icons/Add.gif">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="modane.VarDefinition" referenceName="args" variableName=""/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="2"/>
+        </controls>
+      </groups>
+      <groups name="Function Support Group" labelExpression="Support" domainClass="modane.Function" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.9"/>
+      <groups name="Function Variables Group" labelExpression="Used Variables" domainClass="modane.Function" semanticCandidateExpression="aql:self" preconditionExpression="aql:not self.eContainer().oclIsKindOf(modane::Interface)" extends="//@extensions.0/@categories.0/@groups.11"/>
+      <groups name="OverrideFunction General Group" labelExpression="General" domainClass="modane.OverrideFunction" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="modane::OverrideFunction func" referenceNameExpression="aql:'func'"/>
+        <controls xsi:type="properties:TextDescription" name="modane::Function description" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('description')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('description'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('description').changeable" valueExpression="aql:self.description">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="description" valueExpression="var:newValue"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="modane::Function calls" referenceNameExpression="aql:'calls'"/>
+      </groups>
+      <groups name="OverrideFunction Variables Group" labelExpression="Used Variables" domainClass="modane.OverrideFunction" semanticCandidateExpression="aql:self" extends="//@extensions.0/@categories.0/@groups.11"/>
+      <groups name="Unit Test Function General Group" labelExpression="General" domainClass="modane.UnitTestFunction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties:TextDescription" name="modane::UnitTestFunction label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('label')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('label'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('label').changeable" valueExpression="aql:self.label">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="label" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:not self.checkLabelNotEmpty()">
+            <style>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionalStyles>
+        </controls>
+      </groups>
+      <groups name="Struct General Group" labelExpression="General" domainClass="modane.Struct" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="modane::Struct parents" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('parents')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('parents'))" referenceNameExpression="aql:'parents'"/>
+      </groups>
+      <groups name="Enumeration General Group" labelExpression="General" domainClass="modane.Enumeration" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1"/>
+      <groups name="EnumerationLiteral General Group" labelExpression="General" domainClass="modane.EnumerationLiteral" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties:TextDescription" name="modane::EnumerationLiteral value" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('value')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('value'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('value').changeable" valueExpression="aql:self.value">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="value" valueExpression="var:newValue"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="EnumerationLiteral Advanced Group" labelExpression="Advanced" domainClass="modane.EnumerationLiteral" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.3"/>
+      <groups name="Legacy General Group" labelExpression="General" domainClass="modane.Legacy" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties:TextDescription" name="modane::Legacy originFile" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('originFile')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('originFile'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('originFile').changeable" valueExpression="aql:self.originFile">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="originFile" valueExpression="var:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:not self.checkOriginFileNotEmpty()">
+            <style>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="modane::Legacy originNamespace" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('originNamespace')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('originNamespace'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('originNamespace').changeable" valueExpression="aql:self.originNamespace">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="originNamespace" valueExpression="var:newValue"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="Variable General Group" labelExpression="General" domainClass="modane.Variable" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties:ContainerDescription" name="Variable type container">
+          <controls xsi:type="properties:SelectDescription" name="modane::Variable support" isEnabledExpression="aql:self.eClass().getEStructuralFeature('support').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('support').eType.getEEnumLiteralByLiteral(self.support.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('support').eType.eLiterals" candidateDisplayExpression="aql:candidate.name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="support" valueExpression="aql:newValue.instance">
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.support != modane::ItemType::Particle and self.support != modane::ItemType::DoF">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="family" valueExpression="aql:null"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="modane::Variable type" valueExpression="aql:self.eClass().getEStructuralFeature('type').eType.getEEnumLiteralByLiteral(self.type.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('type').eType.eLiterals" candidateDisplayExpression="aql:candidate.name">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:newValue.instance"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:SelectDescription" name="modane::Function multiplicity" valueExpression="aql:self.eClass().getEStructuralFeature('multiplicity').eType.getEEnumLiteralByLiteral(self.multiplicity.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('multiplicity').eType.eLiterals" candidateDisplayExpression="aql:candidate.literal">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="multiplicity" valueExpression="aql:newValue.instance"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="3"/>
+        </controls>
+        <controls xsi:type="properties:SelectDescription" name="modane::Variable family" labelExpression="Family:" isEnabledExpression="aql:self.support == modane::ItemType::Particle or self.support == modane::ItemType::DoF" valueExpression="aql:self.family" candidatesExpression="aql:self.getAllResourceSetModaneElements()->filter(modane::ItemFamily)->select(f | f.support == self.support)" candidateDisplayExpression="aql:candidate.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="family" valueExpression="aql:newValue"/>
+          </initialOperation>
+          <conditionalStyles preconditionExpression="aql:not self.checkParticleVariableMustHaveFamily() or not self.checkDoFVariableMustHaveFamily() or not self.checkSameSupportOnVariableAndFamily()">
+            <style>
+              <labelBackgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelForegroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <labelFontFormat>bold</labelFontFormat>
+            </style>
+          </conditionalStyles>
+        </controls>
+        <controls xsi:type="properties:ContainerDescription">
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Variable dump" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('dump'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('dump'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('dump').changeable" valueExpression="aql:self.dump">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="dump" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Variable restore" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('restore'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('restore'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('restore').changeable" valueExpression="aql:self.restore">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="restore" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Variable executionDepend" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('executionDepend'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('executionDepend'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('executionDepend').changeable" valueExpression="aql:self.executionDepend">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="executionDepend" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="modane::Variable needSync" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('needSync'))" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('needSync'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('needSync').changeable" valueExpression="aql:self.needSync">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="needSync" valueExpression="var:newValue"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="4"/>
+        </controls>
+      </groups>
+      <groups name="ItemFamily General Group" labelExpression="General" domainClass="modane.ItemFamily" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1">
+        <controls xsi:type="properties:SelectDescription" name="modane::ItemFamily support" labelExpression="Support:" isEnabledExpression="aql:self.eClass().getEStructuralFeature('support').changeable" valueExpression="aql:self.eClass().getEStructuralFeature('support').eType.getEEnumLiteralByLiteral(self.support.toString())" candidatesExpression="aql:self.eClass().getEStructuralFeature('support').eType.eLiterals" candidateDisplayExpression="aql:candidate.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="support" valueExpression="aql:newValue.instance">
+              <subModelOperations xsi:type="tool:If" conditionExpression="aql:self.support != modane::ItemType::Particle and self.support != modane::ItemType::DoF">
+                <subModelOperations xsi:type="tool:SetValue" featureName="family" valueExpression="aql:null"/>
+              </subModelOperations>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="UserCategory General Group" labelExpression="General" domainClass="modane.UserCategory" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.1"/>
+    </categories>
+  </extensions>
+</description:Group>

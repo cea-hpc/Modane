@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modane" nsURI="http://www.cea.fr/modane/Modane" nsPrefix="modane">
+  <eClassifiers xsi:type="ecore:EClass" name="ModaneModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//ModaneElement" containment="true" eKeys="#//NamedElement/name"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Referenceable" eSuperTypes="#//ModaneElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModaneElement" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//ModaneElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dump" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="restore" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="executionDepend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="needSync" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="support" eType="#//ItemType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="#//VariableMultiplicity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="family" eType="#//ItemFamily"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Enumeration" eSuperTypes="#//Referenceable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="literals" upperBound="-1"
+        eType="#//EnumerationLiteral" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationLiteral" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="namefr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="categories" unique="false"
+        upperBound="-1" eType="#//UserCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Legacy" eSuperTypes="#//Referenceable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originFile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Struct" eSuperTypes="#//Referenceable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parents" unique="false"
+        upperBound="-1" eType="#//Struct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Pty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pty" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="namefr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="categories" unique="false"
+        upperBound="-1" eType="#//UserCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="#//PtyMultiplicity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//PtyOrArgType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PtyOrArgType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//Referenceable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parents" unique="false"
+        upperBound="-1" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Pty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
+        eType="#//Function" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="const" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="#//ArgMultiplicity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//PtyOrArgType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Arg"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="support" eType="#//FunctionItemType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sequential" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vars" upperBound="-1" eType="#//VarReference"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calls" unique="false" upperBound="-1"
+        eType="#//Function"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arg" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Direction"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArgDefinition" eSuperTypes="#//Arg">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="#//ArgMultiplicity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//PtyOrArgType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarDefinition" eSuperTypes="#//Arg">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="support" eType="#//ItemType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="#//VariableMultiplicity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SimpleType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarReference">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Direction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//Variable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ItemFamily" eSuperTypes="#//ModaneElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="support" eType="#//ItemType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceOrModule" eSuperTypes="#//ModaneElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="namefr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="categories" unique="false"
+        upperBound="-1" eType="#//UserCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" unique="false"
+        upperBound="-1" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Pty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="overrideFuncs" upperBound="-1"
+        eType="#//OverrideFunction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
+        eType="#//Function" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="#//ServiceOrModule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ServiceType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="singleton" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="classSetUp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="testSetUp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="classTearDown" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="testTearDown" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unitTestFunctions" upperBound="-1"
+        eType="#//UnitTestFunction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OverrideFunction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="func" eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vars" upperBound="-1" eType="#//VarReference"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calls" unique="false" upperBound="-1"
+        eType="#//Function"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnitTestFunction" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ServiceType">
+    <eLiterals name="caseoption" literal="caseoption"/>
+    <eLiterals name="application" value="1" literal="application"/>
+    <eLiterals name="session" value="2" literal="session"/>
+    <eLiterals name="subdomain" value="3" literal="subdomain"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//ServiceOrModule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entryPoints" upperBound="-1"
+        eType="#//EntryPoint" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryPoint" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoLoad" eType="#//EntryPointAutoLoad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="#//EntryPointLocation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="support" eType="#//FunctionItemType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sequential" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vars" upperBound="-1" eType="#//VarReference"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calls" unique="false" upperBound="-1"
+        eType="#//Function"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EntryPointLocation">
+    <eLiterals name="ComputeLoop" literal="ComputeLoop"/>
+    <eLiterals name="OnMeshChanged" value="1" literal="OnMeshChanged"/>
+    <eLiterals name="OnMeshRefinement" value="2" literal="OnMeshRefinement"/>
+    <eLiterals name="Init" value="3" literal="Init"/>
+    <eLiterals name="ContinueInit" value="4" literal="ContinueInit"/>
+    <eLiterals name="StartInit" value="5" literal="StartInit"/>
+    <eLiterals name="Restore" value="6" literal="Restore"/>
+    <eLiterals name="Build" value="7" literal="Build"/>
+    <eLiterals name="Exit" value="8" literal="Exit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EntryPointAutoLoad">
+    <eLiterals name="NoAutoLoad" literal="NoAutoLoad"/>
+    <eLiterals name="AutoLoadBegin" value="1" literal="AutoLoadBegin"/>
+    <eLiterals name="AutoLoadEnd" value="2" literal="AutoLoadEnd"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserCategory" eSuperTypes="#//ModaneElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Simple" eSuperTypes="#//PtyOrArgType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//SimpleType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="#//PtyOrArgType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ItemType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ItemGroup" eSuperTypes="#//PtyOrArgType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ItemGroupType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//PtyOrArgType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Referenceable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ItemType">
+    <eLiterals name="NoItem" literal="NoItem"/>
+    <eLiterals name="Item" value="1" literal="Item"/>
+    <eLiterals name="Cell" value="2" literal="Cell"/>
+    <eLiterals name="Node" value="3" literal="Node"/>
+    <eLiterals name="Face" value="4" literal="Face"/>
+    <eLiterals name="Particle" value="5" literal="Particle"/>
+    <eLiterals name="MatCell" value="6" literal="MatCell"/>
+    <eLiterals name="EnvCell" value="7" literal="EnvCell"/>
+    <eLiterals name="ComponentCell" value="8" literal="ComponentCell"/>
+    <eLiterals name="AllEnvCell" value="9" literal="AllEnvCell"/>
+    <eLiterals name="DoF" value="10" literal="DoF"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FunctionItemType">
+    <eLiterals name="NoItem" literal="NoItem"/>
+    <eLiterals name="Item" value="1" literal="Item"/>
+    <eLiterals name="Cell" value="2" literal="Cell"/>
+    <eLiterals name="Node" value="3" literal="Node"/>
+    <eLiterals name="Face" value="4" literal="Face"/>
+    <eLiterals name="Particle" value="5" literal="Particle"/>
+    <eLiterals name="MatCell" value="6" literal="MatCell"/>
+    <eLiterals name="EnvCell" value="7" literal="EnvCell"/>
+    <eLiterals name="ComponentCell" value="8" literal="ComponentCell"/>
+    <eLiterals name="AllEnvCell" value="9" literal="AllEnvCell"/>
+    <eLiterals name="DoF" value="10" literal="DoF"/>
+    <eLiterals name="ItemTypeSpecialized" value="11" literal="ItemTypeSpecialized"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ItemGroupType">
+    <eLiterals name="NoItemGroup" literal="NoItemGroup"/>
+    <eLiterals name="ItemGroup" value="1" literal="ItemGroup"/>
+    <eLiterals name="CellGroup" value="2" literal="CellGroup"/>
+    <eLiterals name="NodeGroup" value="3" literal="NodeGroup"/>
+    <eLiterals name="FaceGroup" value="4" literal="FaceGroup"/>
+    <eLiterals name="ParticleGroup" value="5" literal="ParticleGroup"/>
+    <eLiterals name="MatCellGroup" value="6" literal="MatCellGroup"/>
+    <eLiterals name="EnvCellGroup" value="7" literal="EnvCellGroup"/>
+    <eLiterals name="ComponentCellGroup" value="8" literal="ComponentCellGroup"/>
+    <eLiterals name="AllEnvCellGroup" value="9" literal="AllEnvCellGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SimpleType">
+    <eLiterals name="bool" literal="bool"/>
+    <eLiterals name="String" value="1" literal="String"/>
+    <eLiterals name="Integer" value="2" literal="Integer"/>
+    <eLiterals name="Int32" value="3" literal="Int32"/>
+    <eLiterals name="Int64" value="4" literal="Int64"/>
+    <eLiterals name="Real" value="5" literal="Real"/>
+    <eLiterals name="Real2" value="6" literal="Real2"/>
+    <eLiterals name="Real3" value="7" literal="Real3"/>
+    <eLiterals name="Real2x2" value="8" literal="Real2x2"/>
+    <eLiterals name="Real3x3" value="9" literal="Real3x3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Direction">
+    <eLiterals name="in" literal="in"/>
+    <eLiterals name="out" value="1" literal="out"/>
+    <eLiterals name="inout" value="2" literal="inout"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PtyMultiplicity">
+    <eLiterals name="ZeroOne" literal="[0..1]"/>
+    <eLiterals name="OneOne" value="1" literal="[1..1]"/>
+    <eLiterals name="ZeroStar" value="2" literal="[0..*]"/>
+    <eLiterals name="OneStar" value="3" literal="[1..*]"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VariableMultiplicity">
+    <eLiterals name="Scalar" literal="[1]"/>
+    <eLiterals name="Array" value="1" literal="[*]"/>
+    <eLiterals name="Array2" value="2" literal="[*,*]"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ArgMultiplicity">
+    <eLiterals name="Scalar" literal="[1]"/>
+    <eLiterals name="Array" value="1" literal="[*]"/>
+  </eClassifiers>
+</ecore:EPackage>

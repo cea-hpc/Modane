@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.0.4.2 (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Benoit (601463)">
+	<META NAME="CHANGED" CONTENT="20151124;16202800">
+	<META NAME="CHANGEDBY" CONTENT="Benoit (601463)">
+</HEAD>
+<BODY LANG="fr-FR" DIR="LTR">
+<H1><FONT SIZE=5 STYLE="font-size: 20pt">G&eacute;n&eacute;ration
+depuis un mod&egrave;le UML</FONT></H1>
+<P ALIGN=LEFT STYLE="margin-left: 2.05cm; background: transparent"><IMG SRC="GenerationFromUml.png" NAME="graphics1" ALIGN=MIDDLE BORDER=0>
+</P>
+<P STYLE="background: transparent"><FONT SIZE=2 STYLE="font-size: 11pt">Depuis
+Magicdraw, le mod&egrave;le doit &ecirc;tre export&eacute; au format
+'Eclipse UML2 (V3.x)' depuis le menu 'File &gt; Export'. Il faut
+choisir un r&eacute;pertoire d'export appartenant &agrave; un de vos
+projets Eclipse. <BR>Ensuite, dans Eclipse, il faut s&eacute;lectionner
+le fichier de mod&egrave;le, avec l'extension '.uml', faire un clic
+droit et s&eacute;lectionner l'item 'G&eacute;n&eacute;rer le code
+C++ pour Arcane'. <BR>La fen&ecirc;tre de dialogue ci-dessus apparait
+alors. Les options sont :</FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm; background: transparent"><FONT SIZE=2 STYLE="font-size: 11pt">Package
+	&agrave; g&eacute;n&eacute;rer : le package du mod&egrave;le pour
+	lequel vous voulez g&eacute;n&eacute;rer les sources. </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm; background: transparent"><FONT SIZE=2 STYLE="font-size: 11pt">Pr&eacute;fixe
+	de package : parfois le package g&eacute;n&eacute;r&eacute; est un
+	sous-ensemble (module Magicdraw) d'un mod&egrave;le global et il
+	doit s'int&eacute;grer dans une arborescence lors de la g&eacute;n&eacute;ration.
+	Par exemple, le package 'matrix', doit &ecirc;tre g&eacute;n&eacute;r&eacute;
+	dans le package 'algebra/matrix'. Dans ce cas, le pr&eacute;fixe de
+	package est 'algebra'. </FONT>
+	</P>
+	<LI><P STYLE="background: transparent"><FONT SIZE=2 STYLE="font-size: 11pt">R&eacute;pertoire
+	de sortie : c'est la racine du r&eacute;pertoire de g&eacute;n&eacute;ration.
+	C'est souvent le r&eacute;pertoire 'src' du projet. </FONT>
+	</P>
+	<LI><P STYLE="background: transparent"><FONT SIZE=2 STYLE="font-size: 11pt">Ecriture
+	des fichiers '.modane'&nbsp;: cette option permet de g&eacute;n&eacute;rer
+	les fichiers contenant le mod&egrave;le au format texte, dans la
+	syntaxe Modane.</FONT></P>
+</UL>
+<P STYLE="background: transparent"><FONT SIZE=2 STYLE="font-size: 11pt">Pour
+m&eacute;moriser les options que vous avez s&eacute;lectionn&eacute;es,
+un fichier de m&ecirc;me nom que le mod&egrave;le avec l'extension
+'.properties' est cr&eacute;&eacute;. Par exemple, si votre mod&egrave;le
+est dans le fichier 'Mydir/Mymodel.uml', un fichier
+'Mydir/Mymodel.properties' est cr&eacute;&eacute;. Ce fichier est
+&eacute;ditable et ses options peuvent &ecirc;tre modifi&eacute;es
+manuellement. </FONT>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.cea.arcane.model/src" modelPluginID="fr.cea.arcane.model"
+    modelName="Arcane" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" publicConstructors="true">
+  <foreignModel>Arcane.ecore</foreignModel>
+  <genPackages prefix="Arcane" disposableProviderFactory="true" ecorePackage="Arcane.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Arcane.ecore#//ServiceTypeList">
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//ServiceTypeList/Application"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//ServiceTypeList/Session"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//ServiceTypeList/SubDomain"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//ServiceTypeList/CaseOption"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Arcane.ecore#//EntryPointLocation">
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/ComputeLoop"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/OnMeshChanged"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/OnMeshRefinement"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/Init"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/ContinueInit"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/StartInit"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/Restore"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/Build"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointLocation/Exit"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Arcane.ecore#//EntryPointProperty">
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointProperty/None"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointProperty/AutoLoadBegin"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//EntryPointProperty/AutoLoadEnd"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Arcane.ecore#//VariableMultiplicity">
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//VariableMultiplicity/Scalar"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//VariableMultiplicity/Array"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//VariableMultiplicity/Array2"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Arcane.ecore#//ArgDirection">
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//ArgDirection/IN"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//ArgDirection/OUT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Arcane.ecore#//AnnotationLevels">
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//AnnotationLevels/Error"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//AnnotationLevels/Warning"/>
+      <genEnumLiterals ecoreEnumLiteral="Arcane.ecore#//AnnotationLevels/Filtered"/>
+    </genEnums>
+    <genClasses ecoreClass="Arcane.ecore#//Func">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//Func/support"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Func/parallel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arcane.ecore#//Func/args"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Arcane.ecore#//Func/container"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Func/itemTypeSpecialized"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arcane.ecore#//Func/returnArgument"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Arcane.ecore#//PropertyOrArgument">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//PropertyOrArgument/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//PropertyOrArgument/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//PropertyOrArgument/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//PropertyOrArgument/upperBound"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Arcane.ecore#//PropertyOrArgumentType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//PropertyOrArgumentType/usedBy"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Arcane.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//NamedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//NamedElement/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//NamedElement/userEnabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//NamedElement/nameFr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//NamedElement/annotations"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Module">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arcane.ecore#//Module/entryPoints"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Service">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Service/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//Service/interface"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Arcane.ecore#//ServiceOrModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//ServiceOrModule/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//ServiceOrModule/axlFilePath"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//EntryPoint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//EntryPoint/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//EntryPoint/property"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Arcane.ecore#//EntryPoint/containingModule"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Package">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arcane.ecore#//Package/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Struct">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//Struct/parents"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Enumeration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference Arcane.ecore#//Enumeration/literals"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Arcane.ecore#//FuncOrEntryPoint">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//FuncOrEntryPoint/inVariables"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//FuncOrEntryPoint/outVariables"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//FuncOrEntryPoint/calledFuncs"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Interface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//Interface/parents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//Interface/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//Interface/realisations"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Variable/multiplicity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//Variable/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Arcane.ecore#//Variable/support"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Variable/dump"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Variable/restore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Variable/executionDepend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Variable/needSync"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Variable/abstract"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//PackagedElement">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Arcane.ecore#//PackagedElement/containingPackage"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Argument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Argument/direction"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Legacy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Legacy/originNamespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Legacy/provider"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Legacy/file"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//EnumerationLiteral">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Arcane.ecore#//EnumerationLiteral/containingEnumeration"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Arcane.ecore#//FuncContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arcane.ecore#//FuncContainer/funcs"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Property">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Arcane.ecore#//Property/containingContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="Arcane.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Annotation/msg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Annotation/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Annotation/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arcane.ecore#//Annotation/xpathExpr"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Arcane.ecore#//PropertyContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arcane.ecore#//PropertyContainer/properties"/>
+    </genClasses>
+    <nestedGenPackages prefix="Arcanetypes" basePackage="arcane" disposableProviderFactory="true"
+        ecorePackage="Arcane.ecore#//arcanetypes">
+      <genClasses ecoreClass="Arcane.ecore#//arcanetypes/ArcaneTypes">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arcane.ecore#//arcanetypes/ArcaneTypes/meshTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arcane.ecore#//arcanetypes/ArcaneTypes/simpleTypes"/>
+      </genClasses>
+      <genClasses ecoreClass="Arcane.ecore#//arcanetypes/ItemType"/>
+      <genClasses ecoreClass="Arcane.ecore#//arcanetypes/SimpleType"/>
+      <genClasses ecoreClass="Arcane.ecore#//arcanetypes/MeshType"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

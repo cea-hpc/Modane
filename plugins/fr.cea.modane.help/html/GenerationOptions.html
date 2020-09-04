@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.0.4.2 (Linux)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Benoit (601463)">
+	<META NAME="CHANGED" CONTENT="20151123;16531500">
+</HEAD>
+<BODY LANG="fr-FR" DIR="LTR">
+<H1><FONT SIZE=5 STYLE="font-size: 20pt">Options de g&eacute;n&eacute;ration</FONT></H1>
+<P><FONT SIZE=2 STYLE="font-size: 11pt">Il existe des options li&eacute;es
+&agrave; la g&eacute;n&eacute;ration de code. Ces options sont
+positionn&eacute;es dans un fichier nomm&eacute; <B>'modane.properties'</B>.
+Elles sont : </FONT>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 11pt"><B>parallelLoops
+	= true/false</B> : g&eacute;n&egrave;re des boucles multi-thread
+	pour toutes les fonctions du mod&egrave;le qui ont un support et
+	dont l'option 'parallel' vaut 'true'. Par d&eacute;faut, cette
+	option est &agrave; vrai et elle peut-&ecirc;tre d&eacute;sactiv&eacute;e,
+	par exemple, pour des besoins de d&eacute;bogage. </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 11pt"><B>alwaysMaterialMng
+	= true/false</B> : g&eacute;n&egrave;re des classes avec un acc&egrave;s
+	au gestionnaire de mat&eacute;riaux de Arcane, m&ecirc;me si
+	l'entit&eacute; correspondante dans le mod&egrave;le (module,
+	service...) ne comporte ni variable, ni support de type mat&eacute;riau.
+	Par d&eacute;faut cette option est activ&eacute;e. </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 11pt"><B>variableAsArgs
+	= true/false</B> : pour chaque fonction du mod&egrave;le, g&eacute;n&egrave;re
+	une classe contenant toutes les variables de cette fonction et passe
+	un argument du type de cette classe &agrave; la fonction. Par d&eacute;faut
+	cette option est activ&eacute;e. </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 11pt"><B>defaultService
+	= true/false</B> : g&eacute;n&egrave;re un service/une classe par
+	d&eacute;faut pour une interface n'ayant aucune impl&eacute;mentation.
+	Par d&eacute;faut cette option est activ&eacute;e. </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 11pt"><B>traceMsg
+	= true/false</B> : g&eacute;n&egrave;re des messages de trace dans
+	les m&eacute;thodes des classes de base. Par d&eacute;faut cette
+	option n'est pas active et elle peut-&ecirc;tre activ&eacute;e, par
+	exemple, pour des besoins de d&eacute;bogage. </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><FONT SIZE=2 STYLE="font-size: 11pt"><B>generateXsd
+	= true/false</B> : g&eacute;n&egrave;re un XML sch&eacute;ma pour
+	chaque &eacute;l&eacute;ment Modane (Module, Service, Struct...) et
+	un sch&eacute;ma global.xsd repr&eacute;sentant l'ensemble du
+	mod&egrave;le. Par d&eacute;faut cette option n'est pas active. </FONT>
+	</P>
+	<LI><P><FONT SIZE=2 STYLE="font-size: 11pt"><B>langFr = true/false</B>
+	: cette option n'est utile que pour la g&eacute;n&eacute;ration des
+	sch&eacute;mas. Si elle vaut vrai, les sch&eacute;mas seront cr&eacute;&eacute;s
+	avec les noms fran&ccedil;ais des propri&eacute;t&eacute;s sinon
+	avec les noms anglais. La valeur par d&eacute;faut est 'false'. </FONT>
+	</P>
+</UL>
+<P><FONT SIZE=2 STYLE="font-size: 11pt">Les fichiers
+'modane.properties' doivent se trouver sur l'arborescence de
+g&eacute;n&eacute;ration. Quand un package est g&eacute;n&eacute;r&eacute;,
+les fichiers de configuration se trouvant dans son arborescence sont
+lus dans leur ordre d'apparition depuis la racine. </FONT>
+</P>
+<P><FONT SIZE=2 STYLE="font-size: 11pt">Par exemple, supposons qu'un
+package a.b.c soit g&eacute;n&eacute;r&eacute; dans src, et que les
+r&eacute;pertoires 'src' et 'src/a/b' contiennent un fichier
+'modane.properties'. Dans ce cas, les options sont positionn&eacute;es
+avec le fichier se trouvant dans 'src' et sont ensuite
+&eacute;cras&eacute;es/compl&eacute;t&eacute;es avec le fichier se
+trouvant dans 'src/a/b'. </FONT>
+</P>
+<P><FONT SIZE=2 STYLE="font-size: 11pt">Ainsi, il est possible de
+fournir des options pour le projet et de surcharger certaines d'entre
+elles pour certains packages du mod&egrave;le. </FONT>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><module name="Hydro" version="1.0" namespace-name="ParameterDefaultValue" autoload="false">
+  <variables/>
+  <entry-points>
+    <entry-point method-name="compute" name="Compute" where="compute-loop" property="none"/>
+  </entry-points>
+  <options>
+    <service-instance name="var-as-args" type="::ParameterDefaultValueVarAsArgs::IUpdater" default="UpdaterImpl">
+      <userclass>User</userclass>
+    </service-instance>
+    <service-instance name="no-var-as-args" type="::ParameterDefaultValueNoVarAsArgs::IUpdaterNoVars" default="UpdaterNoVarsImpl"/>
+  </options>
+</module>

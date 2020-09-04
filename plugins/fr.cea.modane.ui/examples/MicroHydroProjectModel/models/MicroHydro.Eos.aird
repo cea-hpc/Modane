@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:modane="http://www.cea.fr/modane/Modane" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_X-6p8B5ZEem6HezlZ2NNww" selectedViews="_X-7RAB5ZEem6HezlZ2NNww" version="14.3.0.201909031200">
+    <semanticResources>MicroHydro.Eos.modane</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_X-7RAB5ZEem6HezlZ2NNww">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9-hMQB7eEemEKZsY_lIr2Q" name="MicroHydro.Eos Design Diagram" repPath="#_9-glMB7eEemEKZsY_lIr2Q">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']"/>
+        <target xmi:type="modane:ModaneModel" href="MicroHydro.Eos.modane#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_9-glMB7eEemEKZsY_lIr2Q">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9-glMR7eEemEKZsY_lIr2Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_9-glMh7eEemEKZsY_lIr2Q"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9-hzUB7eEemEKZsY_lIr2Q" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_9-hzUR7eEemEKZsY_lIr2Q" type="Sirius" element="_9-glMB7eEemEKZsY_lIr2Q" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_9-jBdB7eEemEKZsY_lIr2Q" type="2002" element="_9-glQh7eEemEKZsY_lIr2Q">
+          <children xmi:type="notation:Node" xmi:id="_9-jogB7eEemEKZsY_lIr2Q" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_9-jogR7eEemEKZsY_lIr2Q" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_9-mEwx7eEemEKZsY_lIr2Q" type="3008" element="_9-glRB7eEemEKZsY_lIr2Q">
+              <children xmi:type="notation:Node" xmi:id="_9-mExh7eEemEKZsY_lIr2Q" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_9-mExx7eEemEKZsY_lIr2Q" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_9-mEyB7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_9-mEyR7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_9-mr0B7eEemEKZsY_lIr2Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9-mExB7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="10" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-mExR7eEemEKZsY_lIr2Q"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9-mr0R7eEemEKZsY_lIr2Q" type="3009" element="_9-glRh7eEemEKZsY_lIr2Q">
+              <children xmi:type="notation:Node" xmi:id="_9-mr1B7eEemEKZsY_lIr2Q" visible="false" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_9-pIEB7eEemEKZsY_lIr2Q" type="7003">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_9-pIER7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_9-pIEh7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_9-pIEx7eEemEKZsY_lIr2Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9-mr0h7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-mr0x7eEemEKZsY_lIr2Q" y="40"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9-pIFB7eEemEKZsY_lIr2Q" type="3009" element="_9-glSR7eEemEKZsY_lIr2Q">
+              <children xmi:type="notation:Node" xmi:id="_9-pvIB7eEemEKZsY_lIr2Q" visible="false" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_9-pvIR7eEemEKZsY_lIr2Q" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_9-pvJR7eEemEKZsY_lIr2Q" type="3010" element="_9-glTB7eEemEKZsY_lIr2Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_9-pvJh7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_9-pvJx7eEemEKZsY_lIr2Q"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_9-qWMB7eEemEKZsY_lIr2Q" type="3010" element="_9-glTh7eEemEKZsY_lIr2Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_9-qWMR7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_9-qWMh7eEemEKZsY_lIr2Q"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_9-pvIh7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_9-pvIx7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_9-pvJB7eEemEKZsY_lIr2Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9-pIFR7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-pIFh7eEemEKZsY_lIr2Q" y="80"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_9-jogh7eEemEKZsY_lIr2Q"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_9-jogx7eEemEKZsY_lIr2Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9-jBdR7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-jBdh7eEemEKZsY_lIr2Q" x="254" y="239"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9-johB7eEemEKZsY_lIr2Q" type="2002" element="_9-glUB7eEemEKZsY_lIr2Q">
+          <children xmi:type="notation:Node" xmi:id="_9-johx7eEemEKZsY_lIr2Q" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_9-joiB7eEemEKZsY_lIr2Q" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_9-qWMx7eEemEKZsY_lIr2Q" type="3008" element="_9-glUh7eEemEKZsY_lIr2Q">
+              <children xmi:type="notation:Node" xmi:id="_9-qWNh7eEemEKZsY_lIr2Q" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_9-qWNx7eEemEKZsY_lIr2Q" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_9-qWOB7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_9-qWOR7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_9-q9QB7eEemEKZsY_lIr2Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9-qWNB7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="10" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-qWNR7eEemEKZsY_lIr2Q"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9-q9QR7eEemEKZsY_lIr2Q" type="3009" element="_9-glVB7eEemEKZsY_lIr2Q">
+              <children xmi:type="notation:Node" xmi:id="_9-q9RB7eEemEKZsY_lIr2Q" visible="false" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_9-q9RR7eEemEKZsY_lIr2Q" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_9-rkWB7eEemEKZsY_lIr2Q" type="3010" element="_9-glVx7eEemEKZsY_lIr2Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_9-rkWR7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_9-rkWh7eEemEKZsY_lIr2Q"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_9-q9Rh7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_9-q9Rx7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_9-q9SB7eEemEKZsY_lIr2Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9-q9Qh7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-q9Qx7eEemEKZsY_lIr2Q" y="40"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9-rkUB7eEemEKZsY_lIr2Q" type="3009" element="_9-glWR7eEemEKZsY_lIr2Q">
+              <children xmi:type="notation:Node" xmi:id="_9-rkUx7eEemEKZsY_lIr2Q" visible="false" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_9-rkVB7eEemEKZsY_lIr2Q" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_9-sLYB7eEemEKZsY_lIr2Q" type="3010" element="_9-glXB7eEemEKZsY_lIr2Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_9-sLYR7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_9-sLYh7eEemEKZsY_lIr2Q"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_9-sLYx7eEemEKZsY_lIr2Q" type="3010" element="_9-glXh7eEemEKZsY_lIr2Q">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_9-sLZB7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_9-sLZR7eEemEKZsY_lIr2Q"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_9-rkVR7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_9-rkVh7eEemEKZsY_lIr2Q"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_9-rkVx7eEemEKZsY_lIr2Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_9-rkUR7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-rkUh7eEemEKZsY_lIr2Q" y="80"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_9-kPkB7eEemEKZsY_lIr2Q"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_9-kPkR7eEemEKZsY_lIr2Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9-johR7eEemEKZsY_lIr2Q" fontName="Sans Serif" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9-johh7eEemEKZsY_lIr2Q" x="39" y="253"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_oYaK0IBXEem3dc59wdQeEw" type="2002" element="_oXYQEIBXEem3dc59wdQeEw">
+          <children xmi:type="notation:Node" xmi:id="_oYitsIBXEem3dc59wdQeEw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_oYjUwIBXEem3dc59wdQeEw" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_oYqCcIBXEem3dc59wdQeEw" type="3008" element="_oXdvoIBXEem3dc59wdQeEw">
+              <children xmi:type="notation:Node" xmi:id="_oYqpgIBXEem3dc59wdQeEw" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_oYrQkIBXEem3dc59wdQeEw" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_oYrQkYBXEem3dc59wdQeEw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_oYrQkoBXEem3dc59wdQeEw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_oYr3oIBXEem3dc59wdQeEw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_oYqCcYBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="10" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oYqCcoBXEem3dc59wdQeEw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_oYsesIBXEem3dc59wdQeEw" type="3009" element="_oXfk0IBXEem3dc59wdQeEw">
+              <children xmi:type="notation:Node" xmi:id="_oYu68IBXEem3dc59wdQeEw" visible="false" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_oYu68YBXEem3dc59wdQeEw" type="7003">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_oYu68oBXEem3dc59wdQeEw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_oYu684BXEem3dc59wdQeEw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_oYviAIBXEem3dc59wdQeEw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_oYsesYBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oYsesoBXEem3dc59wdQeEw" y="40"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_oYviAYBXEem3dc59wdQeEw" type="3009" element="_oXioIIBXEem3dc59wdQeEw">
+              <children xmi:type="notation:Node" xmi:id="_oYwJEIBXEem3dc59wdQeEw" visible="false" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_oYwwIIBXEem3dc59wdQeEw" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_oYxXMIBXEem3dc59wdQeEw" type="3010" element="_oXlEYIBXEem3dc59wdQeEw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_oYxXMYBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_oYxXMoBXEem3dc59wdQeEw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_oYylUIBXEem3dc59wdQeEw" type="3010" element="_oXm5kIBXEem3dc59wdQeEw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_oYylUYBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_oYylUoBXEem3dc59wdQeEw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_oYwwIYBXEem3dc59wdQeEw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_oYwwIoBXEem3dc59wdQeEw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_oYwwI4BXEem3dc59wdQeEw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_oYviAoBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oYviA4BXEem3dc59wdQeEw" y="80"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_oYjUwYBXEem3dc59wdQeEw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_oYjUwoBXEem3dc59wdQeEw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_oYaK0YBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="8" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oYaK0oBXEem3dc59wdQeEw" x="156" y="48"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_9-hzUh7eEemEKZsY_lIr2Q"/>
+        <edges xmi:type="notation:Edge" xmi:id="_oZDEAIBXEem3dc59wdQeEw" type="4001" element="_oYCXYIBXEem3dc59wdQeEw" source="_9-jBdB7eEemEKZsY_lIr2Q" target="_oYaK0IBXEem3dc59wdQeEw">
+          <children xmi:type="notation:Node" xmi:id="_oZESIIBXEem3dc59wdQeEw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZESIYBXEem3dc59wdQeEw" x="1" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_oZFgQIBXEem3dc59wdQeEw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZFgQYBXEem3dc59wdQeEw" x="1" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_oZGHUIBXEem3dc59wdQeEw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZGHUYBXEem3dc59wdQeEw" x="2" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_oZDEAYBXEem3dc59wdQeEw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_oZDEAoBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oZDEA4BXEem3dc59wdQeEw" points="[0, 0, 88, 46]$[-88, -46, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oZUw0IBXEem3dc59wdQeEw" id="(0.509090909090909,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oZUw0YBXEem3dc59wdQeEw" id="(0.5076923076923077,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_oZUw0oBXEem3dc59wdQeEw" type="4001" element="_oYDlgIBXEem3dc59wdQeEw" source="_9-johB7eEemEKZsY_lIr2Q" target="_oYaK0IBXEem3dc59wdQeEw">
+          <children xmi:type="notation:Node" xmi:id="_oZVX44BXEem3dc59wdQeEw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZVX5IBXEem3dc59wdQeEw" x="-11" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_oZVX5YBXEem3dc59wdQeEw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZVX5oBXEem3dc59wdQeEw" x="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_oZV-8IBXEem3dc59wdQeEw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oZV-8YBXEem3dc59wdQeEw" x="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_oZVX4IBXEem3dc59wdQeEw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_oZVX4YBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oZVX4oBXEem3dc59wdQeEw" points="[0, 0, -110, 60]$[110, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oZWmAIBXEem3dc59wdQeEw" id="(0.5069444444444444,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oZWmAYBXEem3dc59wdQeEw" id="(0.5076923076923077,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_9-glQh7eEemEKZsY_lIr2Q" name="MicroHydro.Eos" tooltipText=" " outgoingEdges="_oYCXYIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
+      <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+      <semanticElements xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9-glQx7eEemEKZsY_lIr2Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="45,128,243" foregroundColor="45,128,243">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_9-glRB7eEemEKZsY_lIr2Q" name="PerfectGas">
+        <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+        <semanticElements xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9-glRR7eEemEKZsY_lIr2Q" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9-glRh7eEemEKZsY_lIr2Q" name="PerfectGas properties">
+        <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+        <semanticElements xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_9-glRx7eEemEKZsY_lIr2Q"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9-glSB7eEemEKZsY_lIr2Q" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9-glSR7eEemEKZsY_lIr2Q" name="PerfectGas operations">
+        <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+        <semanticElements xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_9-glSh7eEemEKZsY_lIr2Q"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9-glSx7eEemEKZsY_lIr2Q" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_9-glTB7eEemEKZsY_lIr2Q" name="override initEOS">
+          <target xmi:type="modane:OverrideFunction" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']/@overrideFuncs.0"/>
+          <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']/@overrideFuncs.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_9-glTR7eEemEKZsY_lIr2Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_9-glTh7eEemEKZsY_lIr2Q" name="override applyEOS">
+          <target xmi:type="modane:OverrideFunction" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']/@overrideFuncs.1"/>
+          <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']/@overrideFuncs.1"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_9-glTx7eEemEKZsY_lIr2Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_9-glUB7eEemEKZsY_lIr2Q" name="MicroHydro.Eos" tooltipText=" " outgoingEdges="_oYDlgIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
+      <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+      <semanticElements xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9-glUR7eEemEKZsY_lIr2Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="45,128,243" foregroundColor="45,128,243">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_9-glUh7eEemEKZsY_lIr2Q" name="StiffenedGas">
+        <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+        <semanticElements xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9-glUx7eEemEKZsY_lIr2Q" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9-glVB7eEemEKZsY_lIr2Q" name="StiffenedGas properties">
+        <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+        <semanticElements xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_9-glVR7eEemEKZsY_lIr2Q"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9-glVh7eEemEKZsY_lIr2Q" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_9-glVx7eEemEKZsY_lIr2Q" name="[1..1] limit_tension : Real">
+          <target xmi:type="modane:Pty" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']/@properties.0"/>
+          <semanticElements xmi:type="modane:Pty" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']/@properties.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_9-glWB7eEemEKZsY_lIr2Q" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9-glWR7eEemEKZsY_lIr2Q" name="StiffenedGas operations">
+        <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+        <semanticElements xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_9-glWh7eEemEKZsY_lIr2Q"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9-glWx7eEemEKZsY_lIr2Q" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_9-glXB7eEemEKZsY_lIr2Q" name="override initEOS">
+          <target xmi:type="modane:OverrideFunction" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']/@overrideFuncs.0"/>
+          <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']/@overrideFuncs.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_9-glXR7eEemEKZsY_lIr2Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_9-glXh7eEemEKZsY_lIr2Q" name="override applyEOS">
+          <target xmi:type="modane:OverrideFunction" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']/@overrideFuncs.1"/>
+          <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']/@overrideFuncs.1"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_9-glXx7eEemEKZsY_lIr2Q" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_oXYQEIBXEem3dc59wdQeEw" name="MicroHydro.Eos" tooltipText=" " incomingEdges="_oYCXYIBXEem3dc59wdQeEw _oYDlgIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
+      <target xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
+      <semanticElements xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_oXasUIBXEem3dc59wdQeEw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="45,128,243" foregroundColor="45,128,243">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_oXdvoIBXEem3dc59wdQeEw" name="EquationOfState">
+        <target xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
+        <semanticElements xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_oXeWsIBXEem3dc59wdQeEw" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_oXfk0IBXEem3dc59wdQeEw" name="EquationOfState properties">
+        <target xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
+        <semanticElements xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_oXiBEIBXEem3dc59wdQeEw"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_oXgy8IBXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_oXioIIBXEem3dc59wdQeEw" name="EquationOfState operations">
+        <target xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
+        <semanticElements xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_oXkdUIBXEem3dc59wdQeEw"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_oXjPMIBXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_oXlEYIBXEem3dc59wdQeEw" name="initEOS : void">
+          <target xmi:type="modane:Function" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']/@functions.0"/>
+          <semanticElements xmi:type="modane:Function" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']/@functions.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_oXmSgIBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_oXm5kIBXEem3dc59wdQeEw" name="applyEOS : void">
+          <target xmi:type="modane:Function" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']/@functions.1"/>
+          <semanticElements xmi:type="modane:Function" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']/@functions.1"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_oXm5kYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_oYCXYIBXEem3dc59wdQeEw" sourceNode="_9-glQh7eEemEKZsY_lIr2Q" targetNode="_oXYQEIBXEem3dc59wdQeEw">
+      <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='PerfectGas']"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_oYC-cIBXEem3dc59wdQeEw" lineStyle="dash" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Implementation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_oYC-cYBXEem3dc59wdQeEw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Implementation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_oYDlgIBXEem3dc59wdQeEw" sourceNode="_9-glUB7eEemEKZsY_lIr2Q" targetNode="_oXYQEIBXEem3dc59wdQeEw">
+      <target xmi:type="modane:Service" href="MicroHydro.Eos.modane#//@elements[name='StiffenedGas']"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_oYDlgYBXEem3dc59wdQeEw" lineStyle="dash" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Implementation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_oYDlgoBXEem3dc59wdQeEw"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Implementation']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_9-glZh7eEemEKZsY_lIr2Q"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer"/>
+    <target xmi:type="modane:ModaneModel" href="MicroHydro.Eos.modane#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

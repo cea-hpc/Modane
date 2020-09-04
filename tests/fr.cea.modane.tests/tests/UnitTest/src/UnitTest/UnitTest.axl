@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><service name="UnitTest" version="1.0" namespace-name="UnitTest" type="caseoption">
+  <interface name="::UnitTest::IInterf"/>
+  <tests class-set-up="setUpForClass" test-set-up="setUp" class-tear-down="tearDownForClass" test-tear-down="tearDown">
+    <test name="Mon test unitaire pour la fonction Add" method-name="testAdd"/>
+  </tests>
+  <variables/>
+  <options/>
+</service>

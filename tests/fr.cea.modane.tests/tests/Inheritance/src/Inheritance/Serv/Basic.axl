@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><service name="Basic" version="1.0" namespace-name="InheritanceServ" type="caseoption">
+  <interface name="::InheritanceServ::IMyChildInterf"/>
+  <interface name="::InheritanceServ::IMyParentInterf" inherited="false"/>
+  <variables/>
+  <options/>
+</service>

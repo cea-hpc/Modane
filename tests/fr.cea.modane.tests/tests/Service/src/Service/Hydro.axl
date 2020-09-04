@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><module name="Hydro" version="1.0" namespace-name="Service" autoload="false">
+  <description>Mon module Hydro</description>
+  <userclass>User</userclass>
+  <name lang="fr">hydrodynamique</name>
+  <interface name="::Service::ITrackingable"/>
+  <variables/>
+  <entry-points>
+    <entry-point method-name="compute" name="Compute" where="compute-loop" property="none"/>
+    <entry-point method-name="autoLoadCompute" name="AutoLoadCompute" where="compute-loop" property="auto-load-begin"/>
+  </entry-points>
+  <options>
+    <service-instance name="deura" type="::Service::IDeura" default="Compri"/>
+    <service-instance name="duboi" type="::onf::OnfUtils::Duboi" default="joli"/>
+    <service-instance name="danlacol" type="Danlacol"/>
+    <complex name="bid" interface="::Service::IBidon" type="Bidon">
+      <service-instance name="duboi" type="::onf::OnfUtils::Duboi" default="joli"/>
+      <service-instance name="danlacol" type="Danlacol"/>
+      <service-instance name="deura" type="::Service::IDeura" default="Compri"/>
+      <service-instance name="ovipare" type="::Service::IOvipare" default="Ornythorinque"/>
+    </complex>
+    <service-instance name="a-concrete-face" type="::Service::IAnotherConcreteFace" default="AnotherConcreteFaceDefault"/>
+    <service-instance name="my-tracking" type="::Service::ITracking" default="TrackingDefault"/>
+  </options>
+</module>

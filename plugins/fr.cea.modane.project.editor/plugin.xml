@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+    Copyright (c) 2020 CEA
+    This program and the accompanying materials are made available under the 
+    terms of the Eclipse Public License 2.0 which is available at
+    http://www.eclipse.org/legal/epl-2.0.
+   
+    SPDX-License-Identifier: EPL-2.0
+    Contributors: see AUTHORS file
+-->
+
+<plugin>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ModaneProject -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.cea.modane.modaneproject.presentation.ModaneprojectModelWizardID"
+            name="%_UI_ModaneprojectModelWizard_label"
+            class="fr.cea.modane.modaneproject.presentation.ModaneprojectModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ModaneprojectModelFile.gif">
+         <description>%_UI_ModaneprojectModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ModaneProject -->
+      <editor
+            id="fr.cea.modane.modaneproject.presentation.ModaneprojectEditorID"
+            name="%_UI_ModaneprojectEditor_label"
+            icon="icons/full/obj16/ModaneprojectModelFile.gif"
+            extensions="modaneprj"
+            class="fr.cea.modane.modaneproject.presentation.ModaneprojectEditor"
+            contributorClass="fr.cea.modane.modaneproject.presentation.ModaneprojectActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

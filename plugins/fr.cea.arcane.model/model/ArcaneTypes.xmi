@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<arcanetypes:ArcaneTypes xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arcanetypes="http://arcane.cea.fr/arcanetypes" xsi:schemaLocation="http://arcane.cea.fr/arcanetypes http://arcane.cea.fr#//arcanetypes">
+  <meshTypes xsi:type="arcanetypes:ItemType" name="Item"/>
+  <meshTypes xsi:type="arcanetypes:ItemType" name="Cell"/>
+  <meshTypes xsi:type="arcanetypes:ItemType" name="Node"/>
+  <meshTypes xsi:type="arcanetypes:ItemType" name="Face"/>
+  <meshTypes xsi:type="arcanetypes:ItemType" name="Particle" userEnabled="true"/>
+  <meshTypes xsi:type="arcanetypes:ItemType" name="MatCell"/>
+  <meshTypes xsi:type="arcanetypes:ItemType" name="EnvCell"/>
+  <meshTypes name="CellGroup"/>
+  <meshTypes name="FaceGroup"/>
+  <meshTypes name="NodeGroup"/>
+  <meshTypes name="ItemGroup"/>
+  <meshTypes name="ParticleGroup" userEnabled="true"/>
+  <simpleTypes name="Boolean"/>
+  <simpleTypes name="String"/>
+  <simpleTypes name="Integer"/>
+  <simpleTypes name="Real"/>
+  <simpleTypes name="Real2"/>
+  <simpleTypes name="Real3"/>
+  <simpleTypes name="Real2x2"/>
+  <simpleTypes name="Real3x3"/>
+  <simpleTypes name="Real[]"/>
+  <simpleTypes name="Real2[]"/>
+</arcanetypes:ArcaneTypes>

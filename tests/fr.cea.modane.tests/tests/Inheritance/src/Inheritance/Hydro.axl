@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><module name="Hydro" version="1.0" namespace-name="Inheritance" autoload="false">
+  <description>Mon module Hydro</description>
+  <userclass>User</userclass>
+  <name lang="fr">hydrodynamique</name>
+  <variables/>
+  <entry-points>
+    <entry-point method-name="compute" name="Compute" where="compute-loop" property="none"/>
+  </entry-points>
+  <options>
+    <complex name="child" interface="::Inheritance::IMyChildStruct" type="MyChildStruct">
+      <simple name="a" type="real"/>
+      <simple name="b" type="integer"/>
+    </complex>
+    <service-instance name="serv" type="::InheritanceServ::IMyChildInterf" default="Basic"/>
+  </options>
+</module>

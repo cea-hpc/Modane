@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><service name="TrackingDefault" version="1.0" namespace-name="Service" type="caseoption">
+  <description>Service par défaut pour l'interface Tracking</description>
+  <interface name="::Service::ITracking"/>
+  <variables/>
+  <options>
+    <simple name="cfl" type="real"/>
+  </options>
+</service>

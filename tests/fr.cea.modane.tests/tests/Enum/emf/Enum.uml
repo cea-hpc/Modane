@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ArcaneProfile="http:///schemas/ArcaneProfile/_oPPagHWpEeqggsLuGblBOg/0" xmlns:MagicDrawProfile="http:///schemas/MagicDrawProfile/_oPpDIHWpEeqggsLuGblBOg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/ArcaneProfile/_oPPagHWpEeqggsLuGblBOg/0 ArcaneProfile.profile.uml#_oQAPgnWpEeqggsLuGblBOg http:///schemas/MagicDrawProfile/_oPpDIHWpEeqggsLuGblBOg/0 UML_Standard_Profile.MagicDraw_Profile.profile.uml#_oQCssnWpEeqggsLuGblBOg">
+  <uml:Model xmi:id="eee_1045467100313_135436_1" name="Data" viewpoint="">
+    <ownedComment xmi:id="_16_6_1_eb6034a_1324286468129_808728_343" body="Author:oudot.&#xA;Created:4/26/12 10:25 AM.&#xA;Title:.&#xA;Comment:.&#xA;" annotatedElement="eee_1045467100313_135436_1"/>
+    <packageImport xmi:id="_0primitiveTypesData">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_0javaPrimitiveTypesData">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_16_6_1_682022c_1335428758483_252125_1822" name="Enum">
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_16_6_1_682022c_1335428777588_979088_1847" name="CQsComputingMethod">
+        <ownedComment xmi:id="_16_6_1_682022c_1336037374372_935767_1882" body=" Méthode de calcul des résultantes aux sommets des mailles." annotatedElement="_16_6_1_682022c_1335428777588_979088_1847"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335428868031_676143_1865" name="Iso" classifier="_16_6_1_682022c_1335428777588_979088_1847"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335428984029_147675_1870" name="T4" classifier="_16_6_1_682022c_1335428777588_979088_1847"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335429002356_905839_1872" name="Pracht" classifier="_16_6_1_682022c_1335428777588_979088_1847"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335429009036_811286_1874" name="PrachtPmt" classifier="_16_6_1_682022c_1335428777588_979088_1847"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335429025797_845369_1878" name="PrachtCompatible" classifier="_16_6_1_682022c_1335428777588_979088_1847"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335429018484_970783_1876" name="Symetrie" classifier="_16_6_1_682022c_1335428777588_979088_1847"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1336748639257_33303_1927" name="Enum2Computing" classifier="_16_6_1_682022c_1335428777588_979088_1847"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1336749355493_386146_1932" name="Toto2T2" classifier="_16_6_1_682022c_1335428777588_979088_1847"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_16_6_1_682022c_1335429114688_838811_1884" name="PseudoViscosityLimiter">
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335429126524_224845_1904" name="None" classifier="_16_6_1_682022c_1335429114688_838811_1884"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335429154860_104394_1906" name="Christensen" classifier="_16_6_1_682022c_1335429114688_838811_1884"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335429157846_932603_1908" name="ChakravartyOsher" classifier="_16_6_1_682022c_1335429114688_838811_1884"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335430301136_152861_1910" name="Superbee" classifier="_16_6_1_682022c_1335429114688_838811_1884"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335430306568_752073_1912" name="Minmod" classifier="_16_6_1_682022c_1335429114688_838811_1884"/>
+        <ownedLiteral xmi:id="_16_6_1_682022c_1335430320632_910015_1914" name="Vanleer" classifier="_16_6_1_682022c_1335429114688_838811_1884">
+          <ownedComment xmi:id="_16_6_1_682022c_1335431695571_821021_1997" body="Limiteur de VanLeer" annotatedElement="_16_6_1_682022c_1335430320632_910015_1914"/>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_16_6_1_682022c_1335431083987_495945_1960" name="Hydro">
+        <ownedComment xmi:id="_16_6_1_682022c_1336144551568_130161_1945" body="Mon module Hydro" annotatedElement="_16_6_1_682022c_1335431083987_495945_1960"/>
+        <ownedAttribute xmi:id="_16_6_1_682022c_1335431092828_118321_1979" name="CQsComputingMethod" visibility="private" type="_16_6_1_682022c_1335428777588_979088_1847" association="_16_6_1_ea7033b_1338283728205_736417_2623">
+          <ownedComment xmi:id="_16_6_1_682022c_1335431537889_775589_1995" body="Méthode de calcul des résultantes aux sommets des mailles." annotatedElement="_16_6_1_682022c_1335431092828_118321_1979"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_16_6_1_682022c_1335431388057_633561_1994" name="" instance="_16_6_1_682022c_1335428984029_147675_1870"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_16_6_1_682022c_1335431183506_492420_1989" name="FineNodeMassComputing" visibility="private">
+          <ownedComment xmi:id="_16_6_1_682022c_1335431314546_971700_1993" body="Calcule les masses nodales en utilisant les sous volumes de contrôle. Dans le cas où cette option est désactivée, les masses aux noeuds sont&#x9;évaluées par 1/8ème de la masse des mailles qui entourent chaque noeud pour les mailles hexaédriques, et de façon similaire pour les autres types de mailles." annotatedElement="_16_6_1_682022c_1335431183506_492420_1989"/>
+          <type xmi:type="uml:PrimitiveType" href="ArcaneProfile.profile.uml#_15_0_1_2610136_1322584524115_857827_1101"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_16_6_1_682022c_1335431266611_509662_1992" name="" value="true"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_16_6_1_682022c_1335432208430_684049_2057" name="PseudoViscosity" visibility="private" type="_16_6_1_682022c_1335432091240_617426_2034" association="_16_6_1_ea7033b_1338283698046_417126_2587"/>
+        <ownedOperation xmi:id="_16_6_1_682022c_1335965425383_236615_1916" name="compute" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_16_6_1_682022c_1335432091240_617426_2034" name="PseudoViscosity">
+        <ownedComment xmi:id="_16_6_1_682022c_1336037385363_212353_1883" body="Pseudo Viscosité" annotatedElement="_16_6_1_682022c_1335432091240_617426_2034"/>
+        <ownedAttribute xmi:id="_16_6_1_682022c_1335432118054_422313_2053" name="Type" visibility="private" type="_16_6_1_682022c_1335431975008_476545_2002" association="_16_6_1_ea7033b_1338283707581_615944_2599">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_16_6_1_682022c_1335432133262_209285_2056" name="" instance="_16_6_1_682022c_1335432005603_896093_2020"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_16_6_1_682022c_1335431106018_237045_1982" name="LimiterTvd" visibility="private" type="_16_6_1_682022c_1335429114688_838811_1884" association="_16_6_1_ea7033b_1338283710413_139255_2611">
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_16_6_1_682022c_1335431598888_519062_1996" name="" instance="_16_6_1_682022c_1335429154860_104394_1906"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_16_6_1_682022c_1335965390471_94241_1879" name="OldCellVolume">
+        <ownedComment xmi:id="_16_6_1_682022c_1335965630973_163402_1924" body="Vieux volume" annotatedElement="_16_6_1_682022c_1335965390471_94241_1879"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_16_6_1_ea7033b_1338283698046_417126_2587" name="" memberEnd="_16_6_1_ea7033b_1338283698046_441416_2588 _16_6_1_682022c_1335432208430_684049_2057">
+        <ownedEnd xmi:id="_16_6_1_ea7033b_1338283698046_441416_2588" name="" visibility="private" type="_16_6_1_682022c_1335431083987_495945_1960" association="_16_6_1_ea7033b_1338283698046_417126_2587"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_16_6_1_ea7033b_1338283707581_615944_2599" name="" memberEnd="_16_6_1_ea7033b_1338283707582_80972_2600 _16_6_1_682022c_1335432118054_422313_2053">
+        <ownedEnd xmi:id="_16_6_1_ea7033b_1338283707582_80972_2600" name="" visibility="private" type="_16_6_1_682022c_1335432091240_617426_2034" association="_16_6_1_ea7033b_1338283707581_615944_2599"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_16_6_1_ea7033b_1338283710413_139255_2611" name="" memberEnd="_16_6_1_ea7033b_1338283710413_289614_2612 _16_6_1_682022c_1335431106018_237045_1982">
+        <ownedEnd xmi:id="_16_6_1_ea7033b_1338283710413_289614_2612" name="" visibility="private" type="_16_6_1_682022c_1335432091240_617426_2034" association="_16_6_1_ea7033b_1338283710413_139255_2611"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_16_6_1_ea7033b_1338283728205_736417_2623" name="" memberEnd="_16_6_1_ea7033b_1338283728205_745334_2624 _16_6_1_682022c_1335431092828_118321_1979">
+        <ownedEnd xmi:id="_16_6_1_ea7033b_1338283728205_745334_2624" name="" visibility="private" type="_16_6_1_682022c_1335431083987_495945_1960" association="_16_6_1_ea7033b_1338283728205_736417_2623"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_17_0_1_682022c_1360143078975_630099_2722" name="SubEnum">
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_16_6_1_682022c_1335431975008_476545_2002" name="PseudoViscosityType">
+          <ownedLiteral xmi:id="_16_6_1_682022c_1335432005603_896093_2020" name="None" classifier="_16_6_1_682022c_1335431975008_476545_2002"/>
+          <ownedLiteral xmi:id="_16_6_1_682022c_1335432019827_465811_2022" name="ScalarCellDiv" classifier="_16_6_1_682022c_1335431975008_476545_2002"/>
+          <ownedLiteral xmi:id="_16_6_1_682022c_1335432031707_948507_2024" name="ScalarCellWilkins" classifier="_16_6_1_682022c_1335431975008_476545_2002"/>
+          <ownedLiteral xmi:id="_16_6_1_682022c_1335432044284_215733_2026" name="TensorEdge" classifier="_16_6_1_682022c_1335431975008_476545_2002"/>
+          <ownedLiteral xmi:id="_16_6_1_682022c_1335432055939_514685_2028" name="TensorTvdEdge" classifier="_16_6_1_682022c_1335431975008_476545_2002"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_17_0_1_682022c_1360144876552_337713_2861" name="Eos">
+        <ownedOperation xmi:id="_17_0_1_682022c_1360144885461_510097_2880" name="f" visibility="public">
+          <ownedParameter xmi:id="_17_0_1_682022c_1360144893750_977898_2888" name="PseudoType" visibility="public" type="_16_6_1_682022c_1335431975008_476545_2002"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="magicdraw_uml_standard_profile_v_0001" name="UML Standard Profile">
+      <ownedComment xmi:id="_be00301_1078843546940_242228_131" body="UML Standard Profile contains a UML metamodel (metaclasses without properties and associations), Standard UML stereotypes defined in the annex C of UML specification, validation suites for UML model correctness and completeness checking, and stereotypes used by MagicDraw internally." annotatedElement="magicdraw_uml_standard_profile_v_0001"/>
+    </packagedElement>
+    <profileApplication xmi:id="_15_0_1_2610136_1322228985601_419069_457profileApplicationData">
+      <eAnnotations xmi:id="_oQIyYXWpEeqggsLuGblBOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="ArcaneProfile.profile.uml#_oQAPgnWpEeqggsLuGblBOg"/>
+      </eAnnotations>
+      <appliedProfile href="ArcaneProfile.profile.uml#_15_0_1_2610136_1322228985601_419069_457"/>
+    </profileApplication>
+    <profileApplication xmi:id="_17_0_4beta_8ca0285_1361349406965_180847_3086profileApplicationData">
+      <eAnnotations xmi:id="_oQIyYHWpEeqggsLuGblBOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.Dependency_Matrix_Profile.profile.uml#_oQEiIXWpEeqggsLuGblBOg"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.Dependency_Matrix_Profile.profile.uml#_17_0_4beta_8ca0285_1361349406965_180847_3086"/>
+    </profileApplication>
+    <profileApplication xmi:id="_11_5_be00301_1153310565718_226811_161profileApplicationData">
+      <eAnnotations xmi:id="_oQJZcXWpEeqggsLuGblBOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_oQCEsnWpEeqggsLuGblBOg"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_11_5_be00301_1153310565718_226811_161"/>
+    </profileApplication>
+    <profileApplication xmi:id="_be00301_1073394351331_445580_2profileApplicationData">
+      <eAnnotations xmi:id="_oQKAgXWpEeqggsLuGblBOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_oQCssnWpEeqggsLuGblBOg"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_be00301_1073394351331_445580_2"/>
+    </profileApplication>
+    <profileApplication xmi:id="_9_0_be00301_1108050582343_527400_10847profileApplicationData">
+      <eAnnotations xmi:id="_oQKnkHWpEeqggsLuGblBOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.StandardProfile.profile.uml#_oQFJM3WpEeqggsLuGblBOg"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.StandardProfile.profile.uml#_9_0_be00301_1108050582343_527400_10847"/>
+    </profileApplication>
+    <profileApplication xmi:id="_16_6_8f90291_1254846042821_86742_517profileApplicationData">
+      <eAnnotations xmi:id="_oQLOoHWpEeqggsLuGblBOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.Traceability_customization.profile.uml#_oQEhLXWpEeqggsLuGblBOg"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.Traceability_customization.profile.uml#_16_6_8f90291_1254846042821_86742_517"/>
+    </profileApplication>
+    <profileApplication xmi:id="_11_5_f720368_1159529670215_231387_1profileApplicationData">
+      <eAnnotations xmi:id="_oQLOonWpEeqggsLuGblBOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.Validation_Profile.profile.uml#_oQFJOXWpEeqggsLuGblBOg"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.Validation_Profile.profile.uml#_11_5_f720368_1159529670215_231387_1"/>
+    </profileApplication>
+  </uml:Model>
+  <ArcaneProfile:Module xmi:id="_oQUYkHWpEeqggsLuGblBOg" nameFr="hydrodynamique" userEnabled="true" base_Element="_16_6_1_682022c_1335431083987_495945_1960" base_Class="_16_6_1_682022c_1335431083987_495945_1960"/>
+  <ArcaneProfile:Struct xmi:id="_oQU_oHWpEeqggsLuGblBOg" base_Class="_16_6_1_682022c_1335432091240_617426_2034"/>
+  <ArcaneProfile:EntryPoint xmi:id="_oQVmsHWpEeqggsLuGblBOg" base_Operation="_16_6_1_682022c_1335965425383_236615_1916" inVariables="_oQVmsXWpEeqggsLuGblBOg"/>
+  <ArcaneProfile:Variable xmi:id="_oQVmsXWpEeqggsLuGblBOg" base_Class="_16_6_1_682022c_1335965390471_94241_1879" restore="false">
+    <type href="ArcaneProfile.profile.uml#_oQdig3WpEeqggsLuGblBOg"/>
+  </ArcaneProfile:Variable>
+  <ArcaneProfile:Enum xmi:id="_oQVmsnWpEeqggsLuGblBOg" base_Enumeration="_16_6_1_682022c_1335431975008_476545_2002"/>
+  <ArcaneProfile:Enum xmi:id="_oQVms3WpEeqggsLuGblBOg" base_Enumeration="_16_6_1_682022c_1335428777588_979088_1847"/>
+  <ArcaneProfile:Enum xmi:id="_oQVmtHWpEeqggsLuGblBOg" base_Enumeration="_16_6_1_682022c_1335429114688_838811_1884"/>
+  <ArcaneProfile:Pty xmi:id="_oQVmtXWpEeqggsLuGblBOg" userEnabled="true" base_Element="_16_6_1_682022c_1335431092828_118321_1979" base_Property="_16_6_1_682022c_1335431092828_118321_1979"/>
+  <ArcaneProfile:Pty xmi:id="_oQWNwHWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335432118054_422313_2053" base_Property="_16_6_1_682022c_1335432118054_422313_2053"/>
+  <ArcaneProfile:Pty xmi:id="_oQWNwXWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335431183506_492420_1989" base_Property="_16_6_1_682022c_1335431183506_492420_1989"/>
+  <ArcaneProfile:Pty xmi:id="_oQWNwnWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335432208430_684049_2057" base_Property="_16_6_1_682022c_1335432208430_684049_2057"/>
+  <ArcaneProfile:Pty xmi:id="_oQW00HWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335431106018_237045_1982" base_Property="_16_6_1_682022c_1335431106018_237045_1982"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQW00XWpEeqggsLuGblBOg" userEnabled="true" base_Element="_16_6_1_682022c_1335429025797_845369_1878" base_EnumerationLiteral="_16_6_1_682022c_1335429025797_845369_1878"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQW00nWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1336749355493_386146_1932" base_EnumerationLiteral="_16_6_1_682022c_1336749355493_386146_1932"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQXb4HWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335429002356_905839_1872" base_EnumerationLiteral="_16_6_1_682022c_1335429002356_905839_1872"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQXb4XWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335430320632_910015_1914" base_EnumerationLiteral="_16_6_1_682022c_1335430320632_910015_1914"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQXb4nWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335429126524_224845_1904" base_EnumerationLiteral="_16_6_1_682022c_1335429126524_224845_1904"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQXb43WpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335429154860_104394_1906" base_EnumerationLiteral="_16_6_1_682022c_1335429154860_104394_1906"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQYC8HWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335432005603_896093_2020" base_EnumerationLiteral="_16_6_1_682022c_1335432005603_896093_2020" value="0"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQYC8XWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335430306568_752073_1912" base_EnumerationLiteral="_16_6_1_682022c_1335430306568_752073_1912"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQYC8nWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335429157846_932603_1908" base_EnumerationLiteral="_16_6_1_682022c_1335429157846_932603_1908"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQYC83WpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335428868031_676143_1865" base_EnumerationLiteral="_16_6_1_682022c_1335428868031_676143_1865"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQYqAHWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335432031707_948507_2024" base_EnumerationLiteral="_16_6_1_682022c_1335432031707_948507_2024" value="2"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQYqAXWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335432019827_465811_2022" base_EnumerationLiteral="_16_6_1_682022c_1335432019827_465811_2022" value="1"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQZREHWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1336748639257_33303_1927" base_EnumerationLiteral="_16_6_1_682022c_1336748639257_33303_1927"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQZREXWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335430301136_152861_1910" base_EnumerationLiteral="_16_6_1_682022c_1335430301136_152861_1910"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQZREnWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335429018484_970783_1876" base_EnumerationLiteral="_16_6_1_682022c_1335429018484_970783_1876"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQZRE3WpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335428984029_147675_1870" base_EnumerationLiteral="_16_6_1_682022c_1335428984029_147675_1870"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQZ4IHWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335429009036_811286_1874" base_EnumerationLiteral="_16_6_1_682022c_1335429009036_811286_1874"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQZ4IXWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335432044284_215733_2026" base_EnumerationLiteral="_16_6_1_682022c_1335432044284_215733_2026" value="3"/>
+  <ArcaneProfile:EnumLiteral xmi:id="_oQZ4InWpEeqggsLuGblBOg" base_Element="_16_6_1_682022c_1335432055939_514685_2028" base_EnumerationLiteral="_16_6_1_682022c_1335432055939_514685_2028" value="4"/>
+  <ArcaneProfile:Func xmi:id="_oQZ4I3WpEeqggsLuGblBOg" base_Operation="_17_0_1_682022c_1360144885461_510097_2880"/>
+  <ArcaneProfile:FuncParam xmi:id="_oQafMHWpEeqggsLuGblBOg" base_Parameter="_17_0_1_682022c_1360144893750_977898_2888"/>
+  <ArcaneProfile:Interf xmi:id="_oQafMXWpEeqggsLuGblBOg" base_Interface="_17_0_1_682022c_1360144876552_337713_2861"/>
+  <MagicDrawProfile:auxiliaryResource xmi:id="_oRigkXWpEeqggsLuGblBOg" base_Element="magicdraw_uml_standard_profile_v_0001" base_Package="magicdraw_uml_standard_profile_v_0001"/>
+</xmi:XMI>

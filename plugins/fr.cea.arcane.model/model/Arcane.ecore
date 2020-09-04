@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="arcane" nsURI="http://arcane.cea.fr" nsPrefix="arcane">
+  <eClassifiers xsi:type="ecore:EClass" name="Func" eSuperTypes="#//FuncOrEntryPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="support" eType="#//arcanetypes/ItemType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parallel" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Argument"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" lowerBound="1"
+        eType="#//FuncContainer" eOpposite="#//FuncContainer/funcs"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemTypeSpecialized" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnArgument" eType="#//Argument"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyOrArgument" abstract="true"
+      eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//PropertyOrArgumentType"
+        eOpposite="#//PropertyOrArgumentType/usedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperBound" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyOrArgumentType" abstract="true"
+      eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedBy" upperBound="-1"
+        eType="#//PropertyOrArgument" eOpposite="#//PropertyOrArgument/type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userEnabled" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameFr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" upperBound="-1"
+        eType="#//Annotation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//ServiceOrModule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entryPoints" upperBound="-1"
+        eType="#//EntryPoint" containment="true" eOpposite="#//EntryPoint/containingModule"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="#//ServiceOrModule #//FuncContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//ServiceTypeList"
+        defaultValueLiteral="CaseOption">
+      <eAnnotations source="Technical"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="#//Interface"
+        eOpposite="#//Interface/realisations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceOrModule" abstract="true" eSuperTypes="#//PropertyContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="1.0">
+      <eAnnotations source="Technical"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="axlFilePath" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ServiceTypeList">
+    <eLiterals name="Application"/>
+    <eLiterals name="Session" value="1"/>
+    <eLiterals name="SubDomain" value="2"/>
+    <eLiterals name="CaseOption" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryPoint" eSuperTypes="#//FuncOrEntryPoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" lowerBound="1"
+        eType="#//EntryPointLocation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="property" lowerBound="1"
+        eType="#//EntryPointProperty" defaultValueLiteral="None">
+      <eAnnotations source="Technical"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containingModule" lowerBound="1"
+        eType="#//Module" eOpposite="#//Module/entryPoints"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EntryPointLocation">
+    <eLiterals name="ComputeLoop"/>
+    <eLiterals name="OnMeshChanged" value="1" literal="OnMeshChanged"/>
+    <eLiterals name="OnMeshRefinement" value="2" literal="OnMeshRefinement"/>
+    <eLiterals name="Init" value="3"/>
+    <eLiterals name="ContinueInit" value="4"/>
+    <eLiterals name="StartInit" value="5"/>
+    <eLiterals name="Restore" value="6"/>
+    <eLiterals name="Build" value="7"/>
+    <eLiterals name="Exit" value="8"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EntryPointProperty">
+    <eLiterals name="None"/>
+    <eLiterals name="AutoLoadBegin" value="1"/>
+    <eLiterals name="AutoLoadEnd" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//PackagedElement" containment="true" eOpposite="#//PackagedElement/containingPackage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Struct" eSuperTypes="#//PropertyOrArgumentType #//PropertyContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parents" upperBound="-1"
+        eType="#//Struct"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Enumeration" eSuperTypes="#//PropertyOrArgumentType #//PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="literals" lowerBound="1"
+        upperBound="-1" eType="#//EnumerationLiteral" containment="true" eOpposite="#//EnumerationLiteral/containingEnumeration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FuncOrEntryPoint" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inVariables" upperBound="-1"
+        eType="#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outVariables" upperBound="-1"
+        eType="#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calledFuncs" upperBound="-1"
+        eType="#//Func"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//PropertyOrArgumentType #//FuncContainer #//PropertyContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parents" upperBound="-1"
+        eType="#//Interface" eOpposite="#//Interface/children"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//Interface" eOpposite="#//Interface/parents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realisations" upperBound="-1"
+        eType="#//Service" eOpposite="#//Service/interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" lowerBound="1"
+        eType="#//VariableMultiplicity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//arcanetypes/SimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="support" eType="#//arcanetypes/ItemType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dump" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true">
+      <eAnnotations source="Technical"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="restore" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true">
+      <eAnnotations source="Technical"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="executionDepend" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false">
+      <eAnnotations source="Technical"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="needSync" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true">
+      <eAnnotations source="Technical"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstract" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VariableMultiplicity">
+    <eLiterals name="Scalar" literal="Scalar"/>
+    <eLiterals name="Array" value="1" literal="Array"/>
+    <eLiterals name="Array2" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PackagedElement" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containingPackage" eType="#//Package"
+        eOpposite="#//Package/elements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ArgDirection">
+    <eLiterals name="IN"/>
+    <eLiterals name="OUT" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Argument" eSuperTypes="#//PropertyOrArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" lowerBound="1"
+        eType="#//ArgDirection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Legacy" eSuperTypes="#//PropertyOrArgumentType #//PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="provider" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationLiteral" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containingEnumeration"
+        lowerBound="1" eType="#//Enumeration" eOpposite="#//Enumeration/literals"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FuncContainer" abstract="true" eSuperTypes="#//PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="funcs" upperBound="-1"
+        eType="#//Func" containment="true" eOpposite="#//Func/container"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="#//PropertyOrArgument">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containingContainer" lowerBound="1"
+        eType="#//PropertyContainer" eOpposite="#//PropertyContainer/properties"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Annotation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="msg" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="#//AnnotationLevels"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="xpathExpr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AnnotationLevels">
+    <eLiterals name="Error"/>
+    <eLiterals name="Warning" value="1"/>
+    <eLiterals name="Filtered" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyContainer" abstract="true" eSuperTypes="#//PackagedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Property" containment="true" eOpposite="#//Property/containingContainer"/>
+  </eClassifiers>
+  <eSubpackages name="arcanetypes" nsURI="http://arcane.cea.fr/arcanetypes" nsPrefix="arcanetypes">
+    <eClassifiers xsi:type="ecore:EClass" name="ArcaneTypes">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="meshTypes" upperBound="-1"
+          eType="#//arcanetypes/MeshType" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="simpleTypes" upperBound="-1"
+          eType="#//arcanetypes/SimpleType" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ItemType" eSuperTypes="#//arcanetypes/MeshType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SimpleType" eSuperTypes="#//PropertyOrArgumentType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MeshType" eSuperTypes="#//PropertyOrArgumentType"/>
+  </eSubpackages>
+</ecore:EPackage>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><module name="Hydro" version="1.0" namespace-name="Support" autoload="false">
+  <variables/>
+  <entry-points>
+    <entry-point method-name="compute" name="Compute" where="compute-loop" property="none"/>
+  </entry-points>
+  <options/>
+</module>

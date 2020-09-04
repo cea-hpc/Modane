@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.0.4.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Benoit (601463)">
+	<META NAME="CREATED" CONTENT="20151123;16534100">
+	<META NAME="CHANGEDBY" CONTENT="Benoit (601463)">
+	<META NAME="CHANGED" CONTENT="20151124;16393000">
+</HEAD>
+<BODY LANG="fr-FR" DIR="LTR">
+<H1><FONT SIZE=5 STYLE="font-size: 20pt">Gestion des fichiers
+'.modane'</FONT></H1>
+<P STYLE="margin-top: 0.42cm; page-break-after: avoid"><A NAME="__DdeLink__3_446729575"></A>
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4>Cr&eacute;ation</FONT></FONT></P>
+<P><FONT SIZE=2 STYLE="font-size: 11pt">Lors de la g&eacute;n&eacute;ration
+de code depuis les fichiers '.uml' provenant de Magicdraw, il est
+possible de g&eacute;n&eacute;rer les fichiers '.modane' en
+s&eacute;lectionnant l'option dans la boite de dialogue. Le
+g&eacute;n&eacute;rateur cr&eacute;e un fichier par package du
+mod&egrave;le. Les fichiers sont nomm&eacute;s
+'__&lt;nom_de_package&gt;.modane'. Ils sont &eacute;cras&eacute;s &agrave;
+chaque g&eacute;n&eacute;ration. Si vous souhaitez effectuer des
+modifications/&eacute;volutions sur un de ces fichiers, il est
+conseill&eacute; de le renommer sans le pr&eacute;fixe '__' afin
+d'&eacute;viter qu'il soit &eacute;cras&eacute;.</FONT></P>
+<P><FONT SIZE=2 STYLE="font-size: 11pt">Il est &eacute;galement
+possible de cr&eacute;er des fichiers avec l'extension '.modane' ne
+provenant pas de la g&eacute;n&eacute;ration via le menu
+File&gt;New&gt;File. Les fichiers sont imm&eacute;diatement pris en
+charge par Modane pour l'&eacute;dition, la compilation et la
+g&eacute;n&eacute;ration de code.</FONT></P>
+<P ALIGN=LEFT><FONT SIZE=2 STYLE="font-size: 11pt">La mise &agrave;
+jour du mod&egrave;le Magicdraw depuis les fichiers '.modane' n'est
+pas possible.</FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.42cm; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=4>Performances</FONT></FONT></P>
+<P ALIGN=LEFT><FONT SIZE=2 STYLE="font-size: 11pt">Si votre projet C++
+est configur&eacute; pour compiler automatiquement dans Eclipse, il
+est possible que vous rencontriez des probl&egrave;mes de
+performances lors de l'&eacute;dition d'un fichier Modane. En
+effet, &agrave; chaque sauvegarde de votre fichier, Modane va g&eacute;n&eacute;rer
+le code C++ correspondant, ce qui va entrainer la compilation C++.
+Pour &eacute;viter cela, vous devez d&eacute;sactiver
+temporairement le compilateur Modane, ce qui stoppera la g&eacute;n&eacute;ration de code C++. Pour ce faire, allez dans
+le menu Project&gt;Properties, dans l'onglet Modane&gt;Compiler et
+d&eacute;sactivez l'option 'Compiler is activated' (si n&eacute;cessaire
+activez 'Enable project specific settings').</FONT></P>
+<P ALIGN=LEFT STYLE="margin-left: 2.05cm; background: transparent"><IMG SRC="ProjectProperties.png" NAME="graphics1" ALIGN=MIDDLE BORDER=0>
+</P>
+</BODY>
+</HTML>

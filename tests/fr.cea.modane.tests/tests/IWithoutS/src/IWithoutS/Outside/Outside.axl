@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><service name="Outside" version="1.0" namespace-name="IWithoutSOutside" type="caseoption">
+  <interface name="::IWithoutSInterfaces::IOutsideServiceInterf"/>
+  <variables/>
+  <options>
+    <simple name="real-option" type="real" optional="true"/>
+  </options>
+</service>

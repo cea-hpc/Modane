@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><module name="Hydro" version="1.0" namespace-name="Var" autoload="false">
+  <variables>
+    <variable field-name="pressure" name="Pressure" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="boolean_var" name="BooleanVar" data-type="bool" item-kind="cell" dim="0" dump="true" need-sync="true" restore="true" execution-depend="true"/>
+    <variable field-name="particle_energy" name="ParticleEnergy" data-type="real" item-kind="particle" family-name="Photons" dim="0" dump="true" need-sync="true" restore="true" execution-depend="false"/>
+    <variable field-name="mat_array_var" name="MatArrayVar" data-type="bool" item-kind="cell" dim="1" dump="true" need-sync="true" restore="true" execution-depend="false" material="true"/>
+    <variable field-name="dof_energy" name="DofEnergy" data-type="real" item-kind="dof" family-name="DofFamily" dim="0" dump="true" need-sync="true" restore="true" execution-depend="false"/>
+    <variable field-name="temperature" name="Temperature" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="env_elasticity" name="EnvElasticity" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="true" execution-depend="false" environment="true"/>
+    <variable field-name="particle_density" name="ParticleDensity" data-type="real" item-kind="particle" family-name="Neutrons" dim="0" dump="true" need-sync="true" restore="true" execution-depend="false"/>
+  </variables>
+  <entry-points>
+    <entry-point method-name="compute" name="Compute" where="compute-loop" property="none"/>
+  </entry-points>
+  <options>
+    <service-instance name="eos" type="::Var::IEos"/>
+    <simple name="div-u-strategy" type="string"/>
+  </options>
+</module>

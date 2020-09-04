@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><service name="PerfectGas" version="1.0" namespace-name="Var" type="caseoption">
+  <interface name="::Var::IEos"/>
+  <variables>
+    <variable field-name="pressure" name="Pressure" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="plasticity" name="Plasticity" data-type="string" item-kind="none" dim="1" dump="true" need-sync="true" restore="true" execution-depend="false"/>
+    <variable field-name="temperature" name="Temperature" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="mat_density" name="MatDensity" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false" material="true"/>
+    <variable field-name="boolean_var" name="BooleanVar" data-type="bool" item-kind="cell" dim="0" dump="true" need-sync="true" restore="true" execution-depend="true"/>
+  </variables>
+  <options>
+    <service-instance name="delegation" type="::VarNoVarAsArgs::IEosDelegation" default="MyEosDelegation"/>
+  </options>
+</service>

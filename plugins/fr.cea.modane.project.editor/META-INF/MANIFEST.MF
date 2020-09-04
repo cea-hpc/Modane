@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: fr.cea.modane.project.editor
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.cea.modane.project.editor;singleton:=true
+Bundle-Version: 1.4.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: fr.cea.modane.modaneproject.presentation.ModaneProjectEditorPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: fr.cea.modane.modaneproject.presentation
+Require-Bundle: fr.cea.modane.project.edit;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources;visibility:=reexport,
+ org.eclipse.emf.edit.ui;visibility:=reexport,
+ org.eclipse.ui.ide;visibility:=reexport,
+ fr.cea.modane.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy
+

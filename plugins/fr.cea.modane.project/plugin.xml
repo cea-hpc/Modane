@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+    Copyright (c) 2020 CEA
+    This program and the accompanying materials are made available under the 
+    terms of the Eclipse Public License 2.0 which is available at
+    http://www.eclipse.org/legal/epl-2.0.
+   
+    SPDX-License-Identifier: EPL-2.0
+    Contributors: see AUTHORS file
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="fr.cea.modane.project.ModaneProjectPerspective"
+            icon="icons/ModaneProject.gif"
+            id="fr.cea.modane.project.ModaneProjectPerspective"
+            name="Modane Project Perspective">
+      </perspective>
+   </extension>
+   <extension
+        point="org.eclipse.ui.perspectiveExtensions">
+        <perspectiveExtension
+            targetID="fr.cea.modane.project.ModaneProjectPerspective">
+            <view
+                id="org.eclipse.ui.views.ContentOutline"
+                minimized="false"
+                ratio="0.6"
+                relationship="bottom"
+                relative="org.eclipse.sirius.ui.tools.views.model.explorer">
+            </view>
+            <hiddenToolBarItem
+                id="org.eclipse.jdt.ui.navigate.open.type">
+            </hiddenToolBarItem>
+            <hiddenToolBarItem
+                id="org.eclipse.sirius.editor.reloadVSMCommand">
+            </hiddenToolBarItem>
+            <hiddenToolBarItem
+                id="org.eclipse.ui.externaltools.ExternalToolsSet">
+            </hiddenToolBarItem>
+            <hiddenToolBarItem
+                id="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar">
+            </hiddenToolBarItem>
+        </perspectiveExtension>
+</extension>
+
+   <!-- Add Modane wizard shortcuts into Model Explorer View (only when Modane perspective is active) -->
+   <extension
+       point="org.eclipse.ui.navigator.navigatorContent">
+    <commonWizard
+          type="new"
+          wizardId="fr.cea.modane.ui.examples.project.wizard">
+       <enablement>
+          <with
+                variable="activeWorkbenchWindow.activePerspective">
+             <equals
+                   value="fr.cea.modane.project.ModaneProjectPerspective">
+             </equals>
+          </with>
+       </enablement>
+    </commonWizard>
+    <commonWizard
+          type="new"
+          wizardId="fr.cea.modane.sirius.wizardID">
+       <enablement>
+          <with
+                variable="activeWorkbenchWindow.activePerspective">
+             <equals
+                   value="fr.cea.modane.project.ModaneProjectPerspective">
+             </equals>
+          </with>
+       </enablement>
+    </commonWizard>
+   </extension>
+
+   <!-- Hide Xtend and Sirius wizard shortcuts from Model Explorer View (only when Modane perspective is active) -->
+   <extension
+       point="org.eclipse.ui.activities">
+    <activity
+          id="fr.cea.modane.project.activity"
+          name="ModaneActivity">
+       <enabledWhen>
+          <with
+                variable="activeWorkbenchWindow.activePerspective">
+                <not>
+                   <equals
+                      value="fr.cea.modane.project.ModaneProjectPerspective">
+                   </equals>
+                </not>
+          </with>
+       </enabledWhen>
+    </activity>
+    <activityPatternBinding
+          activityId="fr.cea.modane.project.activity"
+          pattern="org\.eclipse\.xtend.*">
+    </activityPatternBinding>
+    <activityPatternBinding
+          activityId="fr.cea.modane.project.activity"
+          pattern="org.eclipse.sirius.ui.ext/org.eclipse.sirius.ui.modelingproject.wizard">
+    </activityPatternBinding>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ModaneProject -->
+      <package
+            uri="http://www.cea.fr/modane/ModaneProject"
+            class="fr.cea.modane.modaneproject.ModaneprojectPackage"
+            genModel="model/ModaneProject.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ModaneProject -->
+      <parser
+            type="modaneprj"
+            class="fr.cea.modane.modaneproject.util.ModaneprojectResourceFactoryImpl"/>
+   </extension>
+</plugin>

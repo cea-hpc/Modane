@@ -1,0 +1,65 @@
+/*******************************************************************************
+ * Copyright (c) 2020 CEA
+ * This program and the accompanying materials are made available under the 
+ * terms of the Eclipse Public License 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ * Contributors: see AUTHORS file
+ *******************************************************************************/
+target "Modane Target platform"
+
+with requirements
+environment JavaSE-11
+
+location eclipse "https://download.eclipse.org/releases/2019-12" {
+	org.eclipse.sdk.feature.group
+	org.eclipse.rcp.feature.group
+	org.eclipse.equinox.p2.sdk.feature.group
+	org.eclipse.equinox.executable.feature.group
+	org.eclipse.emf.feature.group
+	org.eclipse.emf.mwe2.runtime.sdk.feature.group
+	org.eclipse.emf.mwe2.launcher.feature.group
+	org.eclipse.emf.mwe2.language.sdk.feature.group
+	org.eclipse.gmf.feature.group
+	org.eclipse.xtext.runtime.feature.group
+	org.eclipse.xtext.ui.feature.group
+	org.eclipse.xtext.redist.feature.group
+	org.eclipse.xtext.xbase.feature.group
+	org.eclipse.xtext.xbase.junit
+	org.eclipse.xtext.xbase.testing
+	org.eclipse.xtext.junit4
+	org.eclipse.cdt.feature.group
+	org.eclipse.wst.xml_core.feature.feature.group
+	org.eclipse.wst.xml_ui.feature.feature.group
+	org.eclipse.egit.feature.group
+	org.eclipse.emf.compare.ide.ui.feature.group
+	org.eclipse.emf.compare.egit.feature.group
+	org.eclipse.uml2.sdk.feature.group
+}
+
+location sirius "https://download.eclipse.org/sirius/updates/releases/6.3.0/2019-06" {
+	org.eclipse.sirius.aql.feature.group
+	org.eclipse.sirius.runtime.feature.group
+	org.eclipse.sirius.runtime.aql.feature.group
+	org.eclipse.sirius.runtime.ocl.feature.group
+	org.eclipse.sirius.runtime.ide.ui.feature.group
+	org.eclipse.sirius.runtime.ide.eef.feature.group
+	org.eclipse.sirius.runtime.ide.xtext.feature.group
+	org.eclipse.sirius.properties.feature.feature.group
+	org.eclipse.eef.sdk.feature.feature.group
+	org.eclipse.eef.ext.widgets.reference.feature.feature.group
+}
+
+location contextual-explorer "https://download.eclipse.org/modeling/amalgam/updates/stable/1.11.0-S20191007/capella/" {
+	org.eclipse.amalgam.explorer.contextual.core.feature.group
+	org.eclipse.amalgam.explorer.contextual.sirius.feature.group
+}
+
+location orbit "https://download.eclipse.org/tools/orbit/downloads/drops/R20200224183213/repository/" {
+	org.hamcrest.core
+	org.apache.commons.lang3
+	com.google.guava
+	org.antlr.runtime [3.2.0,3.2.1)
+	org.junit [4.13.0,5.0.0)
+}

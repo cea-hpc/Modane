@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: fr.cea.modane.rcp;singleton:=true
+Bundle-Version: 1.4.0.qualifier
+Bundle-Vendor: CEA
+Automatic-Module-Name: fr.cea.modane.product
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-Name: fr.cea.modane.rcp
+Require-Bundle: org.eclipse.equinox.app,
+ fr.cea.modane.ui,
+ fr.cea.modane.project

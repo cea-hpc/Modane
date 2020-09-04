@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: fr.cea.modane.help
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.cea.modane.help
+Bundle-SymbolicName: fr.cea.modane.help;singleton:=true
+Bundle-Version: 1.4.0.qualifier
+Bundle-Activator: fr.cea.modane.help.Activator
+Bundle-Vendor: CEA
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-ActivationPolicy: lazy

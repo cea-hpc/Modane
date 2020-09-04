@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><service name="Add" version="1.0" namespace-name="StructOperation" type="caseoption">
+  <interface name="::StructOperation::IOperation"/>
+  <variables/>
+  <options>
+    <complex name="op-bidon" interface="::StructOperation::IOperand" type="Operand" optional="true">
+      <simple name="y" type="integer"/>
+      <simple name="x" type="integer"/>
+      <simple name="b" type="bool" optional="true"/>
+      <extended name="c-g" type="CellGroup" optional="true"/>
+      <simple name="r" type="real" optional="true">
+        <userclass>User</userclass>
+      </simple>
+      <simple name="r2" type="real2" optional="true"/>
+      <simple name="r22" type="real2x2" optional="true"/>
+      <simple name="s" type="string" optional="true"/>
+      <complex name="t" interface="::Struct::ITest" type="Test" optional="true">
+        <simple name="a" type="string"/>
+      </complex>
+      <simple name="ss" type="string" minOccurs="0" maxOccurs="unbounded"/>
+      <complex name="ts" interface="::Struct::ITest" type="Test2" minOccurs="0" maxOccurs="unbounded">
+        <simple name="a" type="string"/>
+      </complex>
+    </complex>
+    <complex name="op-ref" interface="::StructOperation::IOperand" type="Operand2" optional="true">
+      <simple name="y" type="integer"/>
+      <simple name="x" type="integer"/>
+      <simple name="b" type="bool" optional="true"/>
+      <extended name="c-g" type="CellGroup" optional="true"/>
+      <simple name="r" type="real" optional="true">
+        <userclass>User</userclass>
+      </simple>
+      <simple name="r2" type="real2" optional="true"/>
+      <simple name="r22" type="real2x2" optional="true"/>
+      <simple name="s" type="string" optional="true"/>
+      <complex name="t" interface="::Struct::ITest" type="Test3" optional="true">
+        <simple name="a" type="string"/>
+      </complex>
+      <simple name="ss" type="string" minOccurs="0" maxOccurs="unbounded"/>
+      <complex name="ts" interface="::Struct::ITest" type="Test4" minOccurs="0" maxOccurs="unbounded">
+        <simple name="a" type="string"/>
+      </complex>
+    </complex>
+  </options>
+</service>

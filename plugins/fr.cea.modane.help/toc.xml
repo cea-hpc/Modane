@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Modane Documentation">
+    <topic href="html/GenerationFromUml.html" label="Génération depuis un modèle UML">
+    </topic>
+    <topic href="html/GenerationOptions.html" label="Options de génération">
+    </topic>
+    <topic href="html/ModaneFiles.html" label="Utilisation des fichiers &apos;.modane&apos;">
+    </topic>
+</toc>

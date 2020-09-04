@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+    Copyright (c) 2020 CEA
+    This program and the accompanying materials are made available under the 
+    terms of the Eclipse Public License 2.0 which is available at
+    http://www.eclipse.org/legal/epl-2.0.
+   
+    SPDX-License-Identifier: EPL-2.0
+    Contributors: see AUTHORS file
+-->
+
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="fr.cea.modane.sirius.Activator"
+               id="fr.cea.modane.sirius"
+	       name="modane">
+    </component>
+  </extension>
+
+ 	<!-- La contribution pour le contextual explorer -->
+   <extension point="org.eclipse.sirius.analysisSelectorProvider">
+      <provider
+            id="fr.cea.modane.sirius.analysisselectorprovider"
+            providerClass="fr.cea.modane.sirius.ModaneAnalysisSelectorProvider">
+      </provider>
+   </extension>
+
+    <extension point="org.eclipse.ui.navigator.navigatorContent">
+      <commonFilter
+            activeByDefault="true"
+            class="fr.cea.modane.sirius.ui.ModaneViewerFilter"
+            description="Filtre les éléments techniques dans les vues Project Explorer et Model Explorer"
+            id="fr.cea.modane.sirius.ui.filter.ModaneViewerFilter"
+            name="Modane Filter">
+      </commonFilter>
+   </extension>
+   
+   <extension point="org.eclipse.ui.navigator.viewer">
+      <viewerContentBinding
+            viewerId="org.eclipse.sirius.ui.tools.views.model.explorer">
+         <includes>
+            <contentExtension
+                  pattern="fr.cea.modane.sirius.ui.filter.*">
+            </contentExtension></includes>
+      </viewerContentBinding>
+      <viewerContentBinding
+            viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension
+                  pattern="fr.cea.modane.sirius.ui.filter.*">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+   </extension>
+   
+   <extension point="org.eclipse.amalgam.explorer.contextual.core.contentProviderCategory">
+      <category
+            id="fr.cea.modane.sirius.contextual.referencingelements"
+            isTopLevel="true"
+            name="Referencing Elements">
+         <targetExplorerId
+               id="ReferencingElementExplorer">
+         </targetExplorerId>
+         <availableForType
+               class="org.eclipse.emf.ecore.EObject">
+         </availableForType>
+         <categoryQuery>
+            <basicQuery
+                  class="fr.cea.modane.sirius.contextual.queries.ReferencingElementsQuery"></basicQuery></categoryQuery>
+      </category>
+      <category
+            id="fr.cea.modane.sirius.contextual.referencedelements"
+            isTopLevel="true"
+            name="Referenced Elements">
+         <targetExplorerId
+               id="ReferencedElementExplorer">
+         </targetExplorerId>
+         <availableForType
+               class="org.eclipse.emf.ecore.EObject">
+         </availableForType>
+         <categoryQuery>
+            <basicQuery
+                  class="fr.cea.modane.sirius.contextual.queries.ReferencedElementsQuery">
+            </basicQuery>
+         </categoryQuery>
+      </category>
+   </extension>
+   
+   <extension point="org.eclipse.amalgam.explorer.contextual.core.ui.selectionHelper">
+      <helper
+            class="fr.cea.modane.sirius.contextual.ModaneSelectionHelper"
+            id="fr.cea.modane.sirius.contextual.selectionhelper">
+      </helper>
+   </extension>
+   
+   <extension point="org.eclipse.amalgam.explorer.contextual.core.candidateElementFilter">
+      <filter
+            class="fr.cea.modane.sirius.contextual.ModaneCandidateElementFilter"
+            id="fr.cea.modane.sirius.contextual.candidateelementfilter">
+      </filter>
+   </extension>
+   
+   <!-- L'assistant de creation du projet -->
+   <extension point="org.eclipse.ui.newWizards">
+      <wizard
+            category="fr.cea.modane.ui.category"
+            class="fr.cea.modane.sirius.ui.wizard.NewProjectWizard"
+            finalPerspective="org.eclipse.sirius.ui.tools.perspective.modeling"
+            icon="icons/ModaneProject.gif"
+            id="fr.cea.modane.sirius.wizardID"
+            name="%ModaneProjectWizardName"
+            preferredPerspectives="org.eclipse.sirius.ui.tools.perspective.design"
+            project="true">
+         <description>%ModaneProjectWizardDescription</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+      <category
+            id="fr.cea.modane.ui.category"
+            name="%ModaneCategory">
+      </category>
+   </extension>
+   
+   <extension point="org.eclipse.sirius.externalJavaAction">
+      <javaActions
+            actionClass="fr.cea.modane.sirius.actions.ExternalOpenXtextEditor"
+            id="fr.cea.modane.sirius.actions.ExternalOpenXtextEditor">
+      </javaActions>
+   </extension>
+   
+   <extension
+         id="fr.cea.modane.sirius.ui.menus"
+         name="fr.cea.modane.sirius.ui.menus"
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?endof=additions">
+         <separator
+               name="fr.cea.modane.sirius.startseparator"
+               visible="true">
+         </separator>
+         <command
+               commandId="fr.cea.modane.sirius.ImportUmlModelCommand"
+               icon="icons/ImportUmlModel.gif"
+               label="Import Uml Model"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="fr.cea.modane.modaneproject.ModaneProject">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="fr.cea.modane.sirius.FindCrossReferencesCommand"
+               icon="icons/FindCrossReferences.gif"
+               label="Find Cross References"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="fr.cea.modane.modaneproject.ModaneProject">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="fr.cea.modane.sirius.CreatePackageCommand"
+               icon="icons/CreatePackage.gif"
+               label="Create Package"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="fr.cea.modane.modaneproject.PackagesContainer">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="fr.cea.modane.sirius.CreateModelCommand"
+               icon="icons/modane.gif"
+               label="Create Model"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="fr.cea.modane.modaneproject.Package">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="fr.cea.modane.sirius.RenamePackageCommand"
+               icon="icons/RenamePackage.gif"
+               label="Rename Package"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="fr.cea.modane.modaneproject.Package">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="fr.cea.modane.sirius.DeletePackageCommand"
+               icon="icons/Delete.gif"
+               label="Delete Package"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="fr.cea.modane.modaneproject.Package">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="fr.cea.modane.sirius.DeleteModaneElementCommand"
+               icon="icons/Delete.gif"
+               label="Delete Modane Element"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="org.eclipse.emf.ecore.EObject">
+                     </instanceof>
+                     <test
+                           property="fr.cea.modane.ePackageName"
+                           value="modane">
+                     </test>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="fr.cea.modane.sirius.OpenTextualEditor"
+               icon="icons/OpenTextualEditor.gif"
+               label="Open Textual Editor"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="fr.cea.modane.modane.ModaneModel">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="fr.cea.modane.sirius.GenerateCodeCommand"
+               icon="icons/GenerateCode.gif"
+               label="Generate Code"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate>
+                     <instanceof
+                           value="fr.cea.modane.modaneproject.PackagesContainer">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <separator
+               name="fr.cea.modane.sirius.endseparator"
+               visible="true">
+         </separator>
+      </menuContribution>
+   </extension>
+   
+   <extension
+         id="fr.cea.modane.sirius.ui.commands"
+         name="fr.cea.modane.sirius.ui.commands"
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="fr.cea.modane.sirius.handlers.EmfDeleteHandler"
+            id="fr.cea.modane.sirius.DeleteModaneElementCommand"
+            name="Delete Modane Element">
+      </command>
+      <command
+            defaultHandler="fr.cea.modane.sirius.handlers.RenamePackageHandler"
+            id="fr.cea.modane.sirius.RenamePackageCommand"
+            name="Rename Package">
+      </command>
+      <command
+            defaultHandler="fr.cea.modane.sirius.handlers.CreatePackageHandler"
+            id="fr.cea.modane.sirius.CreatePackageCommand"
+            name="Create Package">
+      </command>
+      <command
+            id="fr.cea.modane.sirius.CreateModelCommand"
+            name="Create Model">
+      </command>
+      <command
+            defaultHandler="fr.cea.modane.sirius.handlers.DeletePackageHandler"
+            id="fr.cea.modane.sirius.DeletePackageCommand"
+            name="Delete Package">
+      </command>
+      <command
+            defaultHandler="fr.cea.modane.sirius.handlers.ImportUmlModelHandler"
+            id="fr.cea.modane.sirius.ImportUmlModelCommand"
+            name="Import Uml Model">
+      </command>
+      <command
+            defaultHandler="fr.cea.modane.sirius.handlers.OpenTextualEditorHandler"
+            id="fr.cea.modane.sirius.OpenTextualEditor"
+            name="Open Textual Editor">
+      </command>
+      <command
+            defaultHandler="fr.cea.modane.sirius.handlers.FindCrossReferencesHandler"
+            id="fr.cea.modane.sirius.FindCrossReferencesCommand"
+            name="Find Cross References">
+      </command>
+      <command 
+    		defaultHandler="fr.cea.modane.sirius.handlers.GenerateCodeHandler"
+            id="fr.cea.modane.sirius.GenerateCodeCommand"
+            name="Generate Code">
+      </command>
+
+   </extension>
+   
+   <extension point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="fr.cea.modane.sirius.ui.EPackageNamePropertyTester"
+            id="fr.cea.modane.sirius.ui.EPackageNamePropertyTester"
+            namespace="fr.cea.modane"
+            properties="ePackageName"
+            type="org.eclipse.emf.ecore.EObject">
+      </propertyTester>
+      <propertyTester
+            class="fr.cea.modane.sirius.ui.PackageModelExistenceTester"
+            id="fr.cea.modane.sirius.ui.PackageModelExistenceTester"
+            namespace="fr.cea.modane.modaneproject"
+            properties="model"
+            type="fr.cea.modane.modaneproject.Package">
+      </propertyTester>
+   </extension>
+   
+ 
+   <extension point="org.eclipse.ui.handlers">
+      <handler
+            class="fr.cea.modane.sirius.handlers.CreateModelHandler"
+            commandId="fr.cea.modane.sirius.CreateModelCommand">
+         <enabledWhen>
+            <with
+                  variable="selection">
+               <iterate>
+                  <instanceof
+                        value="fr.cea.modane.modaneproject.Package">
+                  </instanceof>
+                   <and></and>
+                  <test
+                        property="fr.cea.modane.modaneproject.model"
+                        value="false">
+                  </test>
+               </iterate>
+            </with>
+         </enabledWhen>
+      </handler>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            adaptable="true"
+            class="fr.cea.modane.sirius.ui.ErrorDecorator"
+            id="fr.cea.modane.sirius.ui.ErrorDecorator"
+            label="EObject Error Decorator"
+            lightweight="true"
+            location="BOTTOM_LEFT"
+            state="true">
+      </decorator>
+   </extension>
+    
+	<!-- La contribution a la fenetre de recherche  -->
+   <extension
+         point="org.eclipse.search.searchResultViewPages">
+      <viewPage
+            class="fr.cea.modane.sirius.ui.search.CyclesSearchResultPage"
+            icon="icons/modane.gif"
+            id="fr.cea.modane.sirius.ui.search.CyclesSearchResultPage"
+            searchResultClass="fr.cea.modane.sirius.ui.search.CyclesSearchResult">
+      </viewPage>
+   </extension>
+   <extension
+         point="org.eclipse.sirius.deleteHook">
+      <deleteHook
+            class="fr.cea.modane.sirius.ui.dialogs.ModaneDeleteHook"
+            id="fr.cea.modane.sirius.deleteHook">
+      </deleteHook>
+   </extension>
+   <extension
+         point="org.eclipse.sirius.resourceStrategy">
+      <resourceStrategy
+            class="fr.cea.modane.sirius.ModaneResourceStrategy">
+      </resourceStrategy>
+   </extension>
+
+<!-- Ce point d'extension permet de filter le Semantic Tab des Properties Views -->
+  <extension
+        point="org.eclipse.eef.properties.ui.eefTabDescriptorFilter">
+     <descriptor
+           class="fr.cea.modane.sirius.ui.LegacyTabFilter"
+           description="Filters out Sirius' legacy tabs from the properties view when editing custom models with a Sirius based diagram editor."
+           id="legacy.sirius.tab.filter"
+           label="Filter Legacy Sirius Tabs">
+     </descriptor>
+  </extension>
+  <extension
+        point="org.eclipse.sirius.sessionManagerListener">
+     <listener
+           class="fr.cea.modane.sirius.internal.ModaneSessionListener">
+     </listener>
+  </extension>
+
+   <!-- Hide Sirius Menu Validate Diagram -->
+   <extension
+        point="org.eclipse.ui.activities">
+    <activity
+           id="fr.cea.modane.sirius.activity"
+           name="ModaneActivity">
+        <enabledWhen>
+          <with
+                variable="activeWorkbenchWindow.activePerspective">
+                <not>
+                   <equals
+                      value="fr.cea.modane.project.ModaneProjectPerspective">
+                   </equals>
+                </not>
+          </with>
+       </enabledWhen>
+     </activity>
+     <activityPatternBinding
+        activityId="fr.cea.modane.sirius.activity"
+        pattern="org.eclipse.sirius.diagram.ui/org.eclipse.sirius.diagram.ui.command.validateDiagram">
+	</activityPatternBinding>
+
+ </extension>
+
+
+
+   <!-- Les lignes suivantes ne fonctionnent pas avec la sequence DEL. Conflit ?
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="fr.cea.modane.sirius.ui.DeleteEObjectCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="DEL">
+      </key>
+   </extension>
+   --> 
+ </plugin>

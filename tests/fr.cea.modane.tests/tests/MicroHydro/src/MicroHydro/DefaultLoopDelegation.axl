@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><service name="DefaultLoopDelegation" version="1.0" namespace-name="MicroHydro" type="caseoption">
+  <interface name="::MicroHydro::ILoopDelegation"/>
+  <variables>
+    <variable field-name="node_mass" name="NodeMass" data-type="real" item-kind="node" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="force" name="Force" data-type="real3" item-kind="node" dim="0" dump="false" need-sync="false" restore="false" execution-depend="false"/>
+    <variable field-name="velocity" name="Velocity" data-type="real3" item-kind="node" dim="0" dump="true" need-sync="false" restore="false" execution-depend="true"/>
+    <variable field-name="node_coord" name="NodeCoord" data-type="real3" item-kind="node" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="old_cell_volume" name="OldCellVolume" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="cell_volume" name="CellVolume" data-type="real" item-kind="cell" dim="0" dump="false" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="caracteristic_length" name="CaracteristicLength" data-type="real" item-kind="cell" dim="0" dump="false" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="cell_cqs" name="CellCqs" data-type="real3" item-kind="cell" dim="1" dump="true" need-sync="true" restore="false" execution-depend="false">
+      <description>Ceci est la documentation du Cqs.</description>
+    </variable>
+    <variable field-name="cell_mass" name="CellMass" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="density" name="Density" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false">
+      <description>Ceci est la documentation de la densité.
+  	</description>
+    </variable>
+    <variable field-name="adiabatic_cst" name="AdiabaticCst" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="internal_energy" name="InternalEnergy" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+    <variable field-name="pressure" name="Pressure" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="false" execution-depend="false"/>
+  </variables>
+  <options/>
+</service>

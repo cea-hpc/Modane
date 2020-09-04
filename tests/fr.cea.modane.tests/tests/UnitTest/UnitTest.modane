@@ -1,0 +1,13 @@
+model UnitTest;
+
+Interface Interf
+{
+	Integer add(in Integer a, in Integer b);
+}
+
+[class-set-up test-set-up class-tear-down test-tear-down]
+Service UnitTest implements Interf
+{
+	override Interf.add;
+	test testAdd label 'Mon test unitaire pour la fonction Add';
+}

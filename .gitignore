@@ -1,0 +1,24 @@
+
+# DO NOT IGNORE src-gen DIRECTORIES FOR ALL PROJECTS
+# Java
+.class
+bin/
+# Eclipse
+.metadata
+.settings/
+.recommenders/
+# Xtext
+xtend-gen/
+# C++
+.o
+.a
+# Nabla
+.nablair
+org.antlr.runtime
+org.apache.batik.util.gui
+RemoteSystemsTempFiles
+output
+# Maven
+target/
+# macOS
+.DS_Store

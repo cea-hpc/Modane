@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><module name="Calculator" version="1.0" namespace-name="Struct" autoload="false">
+  <variables/>
+  <entry-points>
+    <entry-point method-name="compute" name="Compute" where="compute-loop" property="none"/>
+  </entry-points>
+  <options>
+    <service-instance name="operation" type="::StructOperation::IOperation"/>
+    <complex name="method" interface="::Struct::IMethod" type="Method">
+      <simple name="name" type="string"/>
+      <complex name="params" interface="::Struct::IParam" type="Param" minOccurs="1" maxOccurs="unbounded">
+        <simple name="name" type="string"/>
+        <simple name="value" type="real">
+          <name lang="fr">valeur</name>
+        </simple>
+      </complex>
+      <complex name="another-param" interface="::Struct::IParam" type="Param2">
+        <simple name="name" type="string"/>
+        <simple name="value" type="real">
+          <name lang="fr">valeur</name>
+        </simple>
+      </complex>
+    </complex>
+    <complex name="operands" interface="::StructOperation::IOperand" type="Operand" minOccurs="1" maxOccurs="unbounded">
+      <userclass>User</userclass>
+      <simple name="y" type="integer"/>
+      <simple name="x" type="integer"/>
+      <simple name="b" type="bool" optional="true"/>
+      <extended name="c-g" type="CellGroup" optional="true"/>
+      <simple name="r" type="real" optional="true">
+        <userclass>User</userclass>
+      </simple>
+      <simple name="r2" type="real2" optional="true"/>
+      <simple name="r22" type="real2x2" optional="true"/>
+      <simple name="s" type="string" optional="true"/>
+      <complex name="t" interface="::Struct::ITest" type="Test" optional="true">
+        <simple name="a" type="string"/>
+      </complex>
+      <simple name="ss" type="string" minOccurs="0" maxOccurs="unbounded"/>
+      <complex name="ts" interface="::Struct::ITest" type="Test2" minOccurs="0" maxOccurs="unbounded">
+        <simple name="a" type="string"/>
+      </complex>
+    </complex>
+  </options>
+</module>

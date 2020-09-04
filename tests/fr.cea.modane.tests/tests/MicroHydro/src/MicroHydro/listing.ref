@@ -1,0 +1,1957 @@
+*I-Internal   ** -- ** -- ** -- ** -- ** -- ** -- ** -- ** -- ** -- **
+*I-Internal   ** -- ** -- ** -- ** -- ** -- ** -- ** -- ** -- ** -- **
+*I-Internal    
+*I-Internal                  MicroHydro
+*I-Internal    
+*I-Internal                  Version 1.0.0
+*I-Internal    
+*I-Internal   ** -- ** -- ** -- ** -- ** -- ** -- ** -- ** -- ** -- **
+*I-Internal   ** -- ** -- ** -- ** -- ** -- ** -- ** -- ** -- ** -- **
+*I-Internal   Date: 2012-03-30T09:34:09
+*I-Internal   Current process pid=22751 machine=modane
+*I-Internal   Service de stack trace présent
+*I-Internal   Getting hardware architecture.
+*I-Internal   Machine#0(3951MB)
+*I-Internal     Socket#0 + L2(4096KB)
+*I-Internal       L1(32KB) + Core#0 + PU#0
+*I-Internal       L1(32KB) + Core#1 + PU#2
+*I-Internal     Socket#3 + L2(4096KB)
+*I-Internal       L1(32KB) + Core#0 + PU#1
+*I-Internal       L1(32KB) + Core#1 + PU#3
+*I-Internal   Cpuset: 0x0000000f
+*I-Internal   Unknown Hyoda service
+*I-Internal   Using configuration file in current directory.
+*I-Internal   Using configuration file: 'MicroHydro.config'
+*I-Internal   Service used for thread management : 'TBBThreadImplementationService'
+*I-Internal   No task management active
+*I-Internal   UnitSystem service found name=Udunits
+*I-Internal   NB_LOCAL_RANK=1
+*I-Internal   Lecture des données 'MicroHydro.arc'
+*I-Internal   Add mesh name=Mesh0 count=0
+*I-Internal   Le répertoire de sortie est </tmp/oudot/samples/microhydro/output>
+*I-Internal   Sortie des erreurs dans '/tmp/oudot/samples/microhydro/output/listing/errors.0'
+*I-Init       Lecture du cas `MicroHydro.arc'
+*I-Internal    CpuSet=0x0000000f
+*I-Internal   Utilisation de la boucle en temps <MicroHydroLoop>
+*I-TimeLoopMng Chargement module Master (Version 1.1.0) (autoload)
+*I-TimeLoopMng Chargement module ArcaneCheckpoint (Version 0.9.1)
+*I-TimeLoopMng Chargement module ArcanePostProcessing (Version 0.1.2)
+*I-TimeLoopMng Chargement module MicroHydro (Version 1.0.0)
+*I-CaseMng    Lecture du jeu de données (phase1): langage 'en', 6 jeu d'options.
+*I-CaseMng    NB_CASE_FUNCTION_PROVIDER_FACTORY = 0
+*I-Init       -- Exécution des points d'entrée de construction
+*I-Init        MF=sod.vtk
+*I-Init        Infos: 3636
+*I-Init       Mesh name=Mesh0 set dimension = 3
+*I-Mesh       Estimation du nombre d'entités: Node=3000 Edge=17000 Face=8500 Cell=2500
+*I-Mesh       Nodefamily: reserve=66022
+*I-Mesh       Cellfamily: reserve=40016
+*I-Mesh       Temps de construction des structures de maillage (méthode indirecte) (unité: seconde): 0.0163018703460693
+*I-Mesh       Begin compute face unique ids
+*I-Mesh       Date: 2012-03-30T09:34:09 MEM=46 MAX_MEM=46 MIN_MEM=46 AVG_MEM=46 MIN_RANK=0 MAX_RANK=0
+*I-Mesh       Max uid=2499
+*I-Mesh       TIME to compute face unique ids=0.00096893310546875
+*I-Mesh       Begin compute ghost layer
+*I-Mesh       Date: 2012-03-30T09:34:09 MEM=46 MAX_MEM=46 MIN_MEM=46 AVG_MEM=46 MIN_RANK=0 MAX_RANK=0
+*I-Mesh       Use new mesh init in GhostLayerBuilder
+*I-Mesh       ** NEW GHOST LAYER BUILDER V2
+*I-Mesh        RANK=0 size=1
+*I-Mesh       NOT PARALLEL
+*I-Mesh       TIME to compute ghost layer=2.19345092773438e-05
+*I-Mesh       Begin compact items
+*I-Mesh       Date: 2012-03-30T09:34:09 MEM=46 MAX_MEM=46 MIN_MEM=46 AVG_MEM=46 MIN_RANK=0 MAX_RANK=0
+*I-Mesh       -- Informations sur le maillage (Arcane2):
+*I-Mesh       Nombre de noeuds  3636
+*I-Mesh       Nombre d'arêtes   0
+*I-Mesh       Nombre de faces   8525
+*I-Mesh       Nombre de mailles 2500
+*I-Mesh       Date: 2012-03-30T09:34:09 MEM=46 MAX_MEM=46 MIN_MEM=46 AVG_MEM=46 MIN_RANK=0 MAX_RANK=0
+*I-Mesh       Calcul des informations de synchronisation de familles pour Mesh0
+*I-Mesh       Calcul des informations de synchronisation de groupes pour Mesh0
+*I-Mesh       ItemSharedInfoList: write: Node count=21 changed=1
+*I-Mesh       ItemSharedInfoList: write: Face count=3 changed=1
+*I-Mesh       ItemSharedInfoList: write: Cell count=1 changed=1
+*I-Mesh       ITEMS_INFO_INDEX=0 N=0
+*I-Mesh       NODES_ISO_INDEX=0 N=0
+*I-Init       Read line
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_ZG type=int
+*I-Init       ** ** ** GROUP ! name=ZG
+*I-Init       Lecture infos groupes pour le groupe: ZG
+*I-Init       Création groupe: ZG nb_element=1250
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_ZD type=int
+*I-Init       ** ** ** GROUP ! name=ZD
+*I-Init       Lecture infos groupes pour le groupe: ZD
+*I-Init       Création groupe: ZD nb_element=1250
+*I-Init        Infos: 3636
+*I-Init       Read line
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_ZMAX type=int
+*I-Init       ** ** ** GROUP ! name=ZMAX
+*I-Init       Lecture infos groupes pour le groupe: ZMAX
+*I-Init       Création groupe: ZMAX nb_element=500
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_ZMIN type=int
+*I-Init       ** ** ** GROUP ! name=ZMIN
+*I-Init       Lecture infos groupes pour le groupe: ZMIN
+*I-Init       Création groupe: ZMIN nb_element=500
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_YMIN type=int
+*I-Init       ** ** ** GROUP ! name=YMIN
+*I-Init       Lecture infos groupes pour le groupe: YMIN
+*I-Init       Création groupe: YMIN nb_element=500
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_YMAX type=int
+*I-Init       ** ** ** GROUP ! name=YMAX
+*I-Init       Lecture infos groupes pour le groupe: YMAX
+*I-Init       Création groupe: YMAX nb_element=500
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_XMIN type=int
+*I-Init       ** ** ** GROUP ! name=XMIN
+*I-Init       Lecture infos groupes pour le groupe: XMIN
+*I-Init       Création groupe: XMIN nb_element=25
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_INTERFACE1 type=int
+*I-Init       ** ** ** GROUP ! name=INTERFACE1
+*I-Init       Lecture infos groupes pour le groupe: INTERFACE1
+*I-Init       Création groupe: INTERFACE1 nb_element=25
+*I-Init       Read line
+*I-Init       ** ** ** READNAME: name=GROUP_XMAX type=int
+*I-Init       ** ** ** GROUP ! name=XMAX
+*I-Init       Lecture infos groupes pour le groupe: XMAX
+*I-Init       Création groupe: XMAX nb_element=25
+*I-Init       ITEMS_INFO_INDEX=0 N=0
+*I-Init       NODES_ISO_INDEX=0 N=0
+*I-Init       ItemSharedInfoList: check valid family=Node count=21 list=21 free=0 changed=0
+*I-Init       ItemSharedInfoList: check valid family=Edge count=0 list=0 free=0 changed=0
+*I-Init       ItemSharedInfoList: check valid family=Face count=3 list=3 free=0 changed=0
+*I-Init       ItemSharedInfoList: check valid family=Cell count=1 list=1 free=0 changed=0
+*I-Init       DynamicMesh::checkValidMeshFull check
+*I-Init        VAR_FACE GROUP=0x109b2f10 NAME=AllFaces FAMILY_NAME=Face GROUP_NAME=AllFaces
+*I-Init       Initialisation des variables
+*I-CaseMng    Lecture du jeu de données (phase2)
+*I-Init       -----------------------------------------------------
+*I-Init       Valeurs du jeu de données:
+*I-Init        <arcane-direct-execution>
+*I-Init         write-mesh                              0
+*I-Init         tool                                    
+*I-Init        </arcane-direct-execution>
+*I-Init        <main>
+*I-Init         do-time-history                         1
+*I-Init         write-history-period                    0
+*I-Init        </main>
+*I-Init        <master-module>
+*I-Init         global-service                          
+*I-Init        </master-module>
+*I-Init        <arcane-checkpoint>
+*I-Init         frequency                               0
+*I-Init         period                                  0
+*I-Init         frequency-cpu                           0
+*I-Init         do-dump-at-end                          1
+*I-Init         <checkpoint-service name="ArcaneHdf5MultiCheckpoint">
+*I-Init         </checkpoint-service>
+*I-Init        </arcane-checkpoint>
+*I-Init        <arcane-post-processing>
+*I-Init         output-frequency                        0
+*I-Init         output-period                           10
+*I-Init         output-history-period                   1
+*I-Init         save-init                               0
+*I-Init         end-execution-output                    0
+*I-Init         <format name="Ensight7PostProcessor">
+*I-Init          fileset-size                           0
+*I-Init          use-degenerated-hexa                   1
+*I-Init          binary-file                            0
+*I-Init          force-first-geometry                   0
+*I-Init          save-uids                              0
+*I-Init         </format>
+*I-Init         <output>
+*I-Init          variable                               CellMass Pressure Density Velocity NodeMass InternalEnergy 
+*I-Init          group                                  
+*I-Init         </output>
+*I-Init        </arcane-post-processing>
+*I-Init        <micro-hydro>
+*I-Init         deltat-min                              1e-05
+*I-Init         deltat-max                              0.0001
+*I-Init         deltat-init                             0.001
+*I-Init         final-time                              0.05
+*I-Init         cfl                                     0.3
+*I-Init         <boundary-condition>
+*I-Init          type                                   'Vx' (0)
+*I-Init          surface                                XMIN
+*I-Init          value                                  0
+*I-Init         </boundary-condition>
+*I-Init         <boundary-condition>
+*I-Init          type                                   'Vx' (0)
+*I-Init          surface                                XMAX
+*I-Init          value                                  0
+*I-Init         </boundary-condition>
+*I-Init         <boundary-condition>
+*I-Init          type                                   'Vy' (1)
+*I-Init          surface                                YMIN
+*I-Init          value                                  0
+*I-Init         </boundary-condition>
+*I-Init         <boundary-condition>
+*I-Init          type                                   'Vy' (1)
+*I-Init          surface                                YMAX
+*I-Init          value                                  0
+*I-Init         </boundary-condition>
+*I-Init         <boundary-condition>
+*I-Init          type                                   'Vz' (2)
+*I-Init          surface                                ZMIN
+*I-Init          value                                  0
+*I-Init         </boundary-condition>
+*I-Init         <boundary-condition>
+*I-Init          type                                   'Vz' (2)
+*I-Init          surface                                ZMAX
+*I-Init          value                                  0
+*I-Init         </boundary-condition>
+*I-Init         <eos-model name="PerfectGas">
+*I-Init         </eos-model>
+*I-Init        </micro-hydro>
+*I-Init       -----------------------------------------------------
+*I-Mesh        -------------------------------------------
+*I-Mesh        -- MESH STATISTICS    (All)    FOR Mesh0
+*I-Mesh                     Item    Myself       Min    Rank       Max    Rank   Average       Bal       Total
+*I-Mesh        
+*I-Mesh                    Noeud      3636      3636       0      3636       0      3636         0        3636
+*I-Mesh                     Face      8525      8525       0      8525       0      8525         0        8525
+*I-Mesh                   Maille      2500      2500       0      2500       0      2500         0        2500
+*I-Mesh        
+*I-Mesh                   Vertex      3636      3636       0      3636       0      3636         0        3636
+*I-Mesh              Quadrangle4      8525      8525       0      8525       0      8525         0        8525
+*I-Mesh               Hexaedron8      2500      2500       0      2500       0      2500         0        2500
+*I-Mesh        
+*I-Mesh        -------------------------------------------
+*I-Mesh        -------------------------------------------
+*I-Mesh        -- MESH STATISTICS    (Own)    FOR Mesh0
+*I-Mesh                     Item    Myself       Min    Rank       Max    Rank   Average       Bal       Total
+*I-Mesh        
+*I-Mesh                    Noeud      3636      3636       0      3636       0      3636         0        3636
+*I-Mesh                     Face      8525      8525       0      8525       0      8525         0        8525
+*I-Mesh                   Maille      2500      2500       0      2500       0      2500         0        2500
+*I-Mesh        
+*I-Mesh                   Vertex      3636      3636       0      3636       0      3636         0        3636
+*I-Mesh              Quadrangle4      8525      8525       0      8525       0      8525         0        8525
+*I-Mesh               Hexaedron8      2500      2500       0      2500       0      2500         0        2500
+*I-Mesh        
+*I-Mesh        -------------------------------------------
+*I-Mesh        -------------------------------------------
+*I-Mesh        -- MESH STATISTICS  (Ghost)    FOR Mesh0
+*I-Mesh                     Item    Myself       Min    Rank       Max    Rank   Average       Bal       Total
+*I-Mesh        
+*I-Mesh        
+*I-Mesh        
+*I-Mesh        -------------------------------------------
+*I-TimeHistoryMng Using TimeHistoryMngV2
+*I-TimeHistoryMng Ajoute CurveWriter name=gnuplot
+*I-TimeHistoryMng NB_FACTORY = 0
+*I-TimeHistoryMng NB_FACTORY = 1
+*I-TimeHistoryMng FOUND CURVE SERVICE (V2)!
+*I-TimeHistoryMng Ajoute CurveWriter2 name=ArcaneCurveWriter
+*I-ArcanePostProcessing  -------------------------------------------
+*I-ArcanePostProcessing |            POST TRAITEMENT                |
+*I-ArcanePostProcessing  -------------------------------------------
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing Sorties pour les variables:
+*I-ArcanePostProcessing Sorties toutes les 10 itérations.
+*I-ArcanePostProcessing Sorties pour les historiques:
+*I-ArcanePostProcessing Sorties toutes les 1 itérations.
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing -- Liste des variables à sortir (6 variables):
+*I-ArcanePostProcessing Variable <CellMass>
+*I-ArcanePostProcessing Variable <Pressure>
+*I-ArcanePostProcessing Variable <Density>
+*I-ArcanePostProcessing Variable <Velocity>
+*I-ArcanePostProcessing Variable <NodeMass>
+*I-ArcanePostProcessing Variable <InternalEnergy>
+*I-ArcaneCheckpoint  -------------------------------------------
+*I-ArcaneCheckpoint |            PROTECTION-REPRISE             |
+*I-ArcaneCheckpoint  -------------------------------------------
+*I-ArcaneCheckpoint  
+*I-ArcaneCheckpoint  
+*I-ArcaneCheckpoint Aucune sortie demandée.
+*I-ArcaneCheckpoint  
+*I-ArcaneCheckpoint Protection demandée en fin de calcul
+*I-Internal   ** NB_TOOL2=0
+*I-Master      
+*I-Master     *** ITERATION        1  TEMPS 1.000000000000000e-03  BOUCLE        1  DELTAT 1.000000000000000e-03 ***
+*I-Master     Date: 2012-03-30T09:34:09 CPU=0.02 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION        2  TEMPS 1.100000000000000e-03  BOUCLE        2  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.05 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION        3  TEMPS 1.200000000000000e-03  BOUCLE        3  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.07 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION        4  TEMPS 1.300000000000000e-03  BOUCLE        4  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.09 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION        5  TEMPS 1.400000000000000e-03  BOUCLE        5  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.11 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION        6  TEMPS 1.500000000000000e-03  BOUCLE        6  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.14 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION        7  TEMPS 1.600000000000000e-03  BOUCLE        7  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.16 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION        8  TEMPS 1.700000000000000e-03  BOUCLE        8  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.18 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION        9  TEMPS 1.800000000000000e-03  BOUCLE        9  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.21 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       10  TEMPS 1.900000000000000e-03  BOUCLE       10  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.23 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0019  ******
+*I-Master      
+*I-Master     *** ITERATION       11  TEMPS 2.000000000000000e-03  BOUCLE       11  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.29 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       12  TEMPS 2.100000000000000e-03  BOUCLE       12  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.31 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       13  TEMPS 2.200000000000000e-03  BOUCLE       13  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.33 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       14  TEMPS 2.300000000000000e-03  BOUCLE       14  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.36 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       15  TEMPS 2.400000000000000e-03  BOUCLE       15  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.38 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       16  TEMPS 2.500000000000000e-03  BOUCLE       16  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.4 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       17  TEMPS 2.599999999999999e-03  BOUCLE       17  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.43 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       18  TEMPS 2.699999999999999e-03  BOUCLE       18  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.45 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       19  TEMPS 2.799999999999999e-03  BOUCLE       19  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.47 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       20  TEMPS 2.899999999999999e-03  BOUCLE       20  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.49 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0029  ******
+*I-Master      
+*I-Master     *** ITERATION       21  TEMPS 2.999999999999999e-03  BOUCLE       21  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.54 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       22  TEMPS 3.099999999999999e-03  BOUCLE       22  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.57 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       23  TEMPS 3.199999999999998e-03  BOUCLE       23  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.59 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       24  TEMPS 3.299999999999998e-03  BOUCLE       24  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.61 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       25  TEMPS 3.399999999999998e-03  BOUCLE       25  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.64 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       26  TEMPS 3.499999999999998e-03  BOUCLE       26  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.66 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       27  TEMPS 3.599999999999998e-03  BOUCLE       27  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.68 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       28  TEMPS 3.699999999999998e-03  BOUCLE       28  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.7 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       29  TEMPS 3.799999999999997e-03  BOUCLE       29  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.73 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       30  TEMPS 3.899999999999997e-03  BOUCLE       30  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.75 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0039  ******
+*I-Master      
+*I-Master     *** ITERATION       31  TEMPS 3.999999999999997e-03  BOUCLE       31  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.8 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       32  TEMPS 4.099999999999998e-03  BOUCLE       32  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.82 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       33  TEMPS 4.199999999999998e-03  BOUCLE       33  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.84 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       34  TEMPS 4.299999999999998e-03  BOUCLE       34  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.87 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       35  TEMPS 4.399999999999999e-03  BOUCLE       35  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.89 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       36  TEMPS 4.499999999999999e-03  BOUCLE       36  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.91 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       37  TEMPS 4.599999999999999e-03  BOUCLE       37  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.940000000000001 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       38  TEMPS 4.699999999999999e-03  BOUCLE       38  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.960000000000001 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       39  TEMPS 4.800000000000000e-03  BOUCLE       39  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=0.980000000000001 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       40  TEMPS 4.900000000000000e-03  BOUCLE       40  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:10 CPU=1.01 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0049  ******
+*I-Master      
+*I-Master     *** ITERATION       41  TEMPS 5.000000000000000e-03  BOUCLE       41  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.05 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       42  TEMPS 5.100000000000000e-03  BOUCLE       42  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.08 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       43  TEMPS 5.200000000000001e-03  BOUCLE       43  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.1 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       44  TEMPS 5.300000000000001e-03  BOUCLE       44  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.12 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       45  TEMPS 5.400000000000001e-03  BOUCLE       45  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.15 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       46  TEMPS 5.500000000000001e-03  BOUCLE       46  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.17 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       47  TEMPS 5.600000000000002e-03  BOUCLE       47  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.19 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       48  TEMPS 5.700000000000002e-03  BOUCLE       48  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.22 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       49  TEMPS 5.800000000000002e-03  BOUCLE       49  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.24 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       50  TEMPS 5.900000000000002e-03  BOUCLE       50  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.26 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0059  ******
+*I-Master      
+*I-Master     *** ITERATION       51  TEMPS 6.000000000000003e-03  BOUCLE       51  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.32 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       52  TEMPS 6.100000000000003e-03  BOUCLE       52  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.34 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       53  TEMPS 6.200000000000003e-03  BOUCLE       53  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.37 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       54  TEMPS 6.300000000000004e-03  BOUCLE       54  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.39 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       55  TEMPS 6.400000000000004e-03  BOUCLE       55  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.41 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       56  TEMPS 6.500000000000004e-03  BOUCLE       56  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.44 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       57  TEMPS 6.600000000000004e-03  BOUCLE       57  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.46 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       58  TEMPS 6.700000000000005e-03  BOUCLE       58  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.48 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       59  TEMPS 6.800000000000005e-03  BOUCLE       59  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.5 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       60  TEMPS 6.900000000000005e-03  BOUCLE       60  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.53 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.00690000000000001  ******
+*I-Master      
+*I-Master     *** ITERATION       61  TEMPS 7.000000000000005e-03  BOUCLE       61  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.58 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       62  TEMPS 7.100000000000006e-03  BOUCLE       62  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.6 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       63  TEMPS 7.200000000000006e-03  BOUCLE       63  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.62 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       64  TEMPS 7.300000000000006e-03  BOUCLE       64  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.65 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       65  TEMPS 7.400000000000006e-03  BOUCLE       65  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.67 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       66  TEMPS 7.500000000000007e-03  BOUCLE       66  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.69 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       67  TEMPS 7.600000000000007e-03  BOUCLE       67  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.72 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       68  TEMPS 7.700000000000007e-03  BOUCLE       68  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.74 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       69  TEMPS 7.800000000000007e-03  BOUCLE       69  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.76 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       70  TEMPS 7.900000000000008e-03  BOUCLE       70  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.79 MEM=47 MAX_MEM=47 MIN_MEM=47 AVG_MEM=47 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.00790000000000001  ******
+*I-Master      
+*I-Master     *** ITERATION       71  TEMPS 8.000000000000007e-03  BOUCLE       71  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.83 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       72  TEMPS 8.100000000000007e-03  BOUCLE       72  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.86 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       73  TEMPS 8.200000000000006e-03  BOUCLE       73  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.88 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       74  TEMPS 8.300000000000005e-03  BOUCLE       74  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.9 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       75  TEMPS 8.400000000000005e-03  BOUCLE       75  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.93 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       76  TEMPS 8.500000000000004e-03  BOUCLE       76  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.95 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       77  TEMPS 8.600000000000003e-03  BOUCLE       77  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.97 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       78  TEMPS 8.700000000000003e-03  BOUCLE       78  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=1.99 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       79  TEMPS 8.800000000000002e-03  BOUCLE       79  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=2.02 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       80  TEMPS 8.900000000000002e-03  BOUCLE       80  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:11 CPU=2.04 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0089  ******
+*I-Master      
+*I-Master     *** ITERATION       81  TEMPS 9.000000000000001e-03  BOUCLE       81  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.1 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       82  TEMPS 9.100000000000000e-03  BOUCLE       82  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.12 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       83  TEMPS 9.200000000000000e-03  BOUCLE       83  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.15 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       84  TEMPS 9.299999999999999e-03  BOUCLE       84  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.17 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       85  TEMPS 9.399999999999999e-03  BOUCLE       85  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.19 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       86  TEMPS 9.499999999999998e-03  BOUCLE       86  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.21 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       87  TEMPS 9.599999999999997e-03  BOUCLE       87  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.24 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       88  TEMPS 9.699999999999997e-03  BOUCLE       88  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.26 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       89  TEMPS 9.799999999999996e-03  BOUCLE       89  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.28 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       90  TEMPS 9.899999999999996e-03  BOUCLE       90  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.31 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0099  ******
+*I-Master      
+*I-Master     *** ITERATION       91  TEMPS 9.999999999999995e-03  BOUCLE       91  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.35 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       92  TEMPS 1.009999999999999e-02  BOUCLE       92  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.38 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       93  TEMPS 1.019999999999999e-02  BOUCLE       93  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.4 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       94  TEMPS 1.029999999999999e-02  BOUCLE       94  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.42 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       95  TEMPS 1.039999999999999e-02  BOUCLE       95  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.45 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       96  TEMPS 1.049999999999999e-02  BOUCLE       96  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.47 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       97  TEMPS 1.059999999999999e-02  BOUCLE       97  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.49 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       98  TEMPS 1.069999999999999e-02  BOUCLE       98  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.51 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION       99  TEMPS 1.079999999999999e-02  BOUCLE       99  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.54 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      100  TEMPS 1.089999999999999e-02  BOUCLE      100  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.56 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0109  ******
+*I-Master      
+*I-Master     *** ITERATION      101  TEMPS 1.099999999999999e-02  BOUCLE      101  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.61 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      102  TEMPS 1.109999999999999e-02  BOUCLE      102  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.63 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      103  TEMPS 1.119999999999999e-02  BOUCLE      103  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.65 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      104  TEMPS 1.129999999999999e-02  BOUCLE      104  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.68 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      105  TEMPS 1.139999999999999e-02  BOUCLE      105  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.7 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      106  TEMPS 1.149999999999999e-02  BOUCLE      106  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.72 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      107  TEMPS 1.159999999999999e-02  BOUCLE      107  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.75 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      108  TEMPS 1.169999999999998e-02  BOUCLE      108  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.77 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      109  TEMPS 1.179999999999998e-02  BOUCLE      109  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.79 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      110  TEMPS 1.189999999999998e-02  BOUCLE      110  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.81 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0119  ******
+*I-Master      
+*I-Master     *** ITERATION      111  TEMPS 1.199999999999998e-02  BOUCLE      111  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.87 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      112  TEMPS 1.209999999999998e-02  BOUCLE      112  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.9 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      113  TEMPS 1.219999999999998e-02  BOUCLE      113  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.92 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      114  TEMPS 1.229999999999998e-02  BOUCLE      114  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.94 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      115  TEMPS 1.239999999999998e-02  BOUCLE      115  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.96 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      116  TEMPS 1.249999999999998e-02  BOUCLE      116  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=2.99 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      117  TEMPS 1.259999999999998e-02  BOUCLE      117  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=3.01 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      118  TEMPS 1.269999999999998e-02  BOUCLE      118  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:12 CPU=3.03 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      119  TEMPS 1.279999999999998e-02  BOUCLE      119  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.06 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      120  TEMPS 1.289999999999998e-02  BOUCLE      120  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.08 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0129  ******
+*I-Master      
+*I-Master     *** ITERATION      121  TEMPS 1.299999999999998e-02  BOUCLE      121  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.13 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      122  TEMPS 1.309999999999998e-02  BOUCLE      122  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.15 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      123  TEMPS 1.319999999999998e-02  BOUCLE      123  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.17 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      124  TEMPS 1.329999999999998e-02  BOUCLE      124  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.2 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      125  TEMPS 1.339999999999997e-02  BOUCLE      125  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.22 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      126  TEMPS 1.349999999999997e-02  BOUCLE      126  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.24 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      127  TEMPS 1.359999999999997e-02  BOUCLE      127  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.26 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      128  TEMPS 1.369999999999997e-02  BOUCLE      128  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.29 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      129  TEMPS 1.379999999999997e-02  BOUCLE      129  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.31 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      130  TEMPS 1.389999999999997e-02  BOUCLE      130  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.33 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0139  ******
+*I-Master      
+*I-Master     *** ITERATION      131  TEMPS 1.399999999999997e-02  BOUCLE      131  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.39 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      132  TEMPS 1.409999999999997e-02  BOUCLE      132  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.41 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      133  TEMPS 1.419999999999997e-02  BOUCLE      133  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.44 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      134  TEMPS 1.429999999999997e-02  BOUCLE      134  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.46 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      135  TEMPS 1.439999999999997e-02  BOUCLE      135  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.48 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      136  TEMPS 1.449999999999997e-02  BOUCLE      136  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.51 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      137  TEMPS 1.459999999999997e-02  BOUCLE      137  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.53 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      138  TEMPS 1.469999999999997e-02  BOUCLE      138  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.55 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      139  TEMPS 1.479999999999997e-02  BOUCLE      139  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.57 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      140  TEMPS 1.489999999999997e-02  BOUCLE      140  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.6 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0149  ******
+*I-Master      
+*I-Master     *** ITERATION      141  TEMPS 1.499999999999996e-02  BOUCLE      141  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.65 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      142  TEMPS 1.509999999999996e-02  BOUCLE      142  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.67 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      143  TEMPS 1.519999999999996e-02  BOUCLE      143  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.69 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      144  TEMPS 1.529999999999996e-02  BOUCLE      144  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.71 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      145  TEMPS 1.539999999999996e-02  BOUCLE      145  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.74 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      146  TEMPS 1.549999999999996e-02  BOUCLE      146  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.76 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      147  TEMPS 1.559999999999996e-02  BOUCLE      147  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.78 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      148  TEMPS 1.569999999999996e-02  BOUCLE      148  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.81 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      149  TEMPS 1.579999999999996e-02  BOUCLE      149  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.83 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      150  TEMPS 1.589999999999996e-02  BOUCLE      150  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.85 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0159  ******
+*I-Master      
+*I-Master     *** ITERATION      151  TEMPS 1.599999999999996e-02  BOUCLE      151  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.9 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      152  TEMPS 1.609999999999996e-02  BOUCLE      152  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.92 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      153  TEMPS 1.619999999999996e-02  BOUCLE      153  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.95 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      154  TEMPS 1.629999999999996e-02  BOUCLE      154  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.97 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      155  TEMPS 1.639999999999996e-02  BOUCLE      155  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=3.99 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      156  TEMPS 1.649999999999996e-02  BOUCLE      156  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=4.01 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      157  TEMPS 1.659999999999996e-02  BOUCLE      157  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:13 CPU=4.04 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      158  TEMPS 1.669999999999995e-02  BOUCLE      158  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.06 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      159  TEMPS 1.679999999999995e-02  BOUCLE      159  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.08 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      160  TEMPS 1.689999999999995e-02  BOUCLE      160  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.11 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0169  ******
+*I-Master      
+*I-Master     *** ITERATION      161  TEMPS 1.699999999999995e-02  BOUCLE      161  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.16 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      162  TEMPS 1.709999999999995e-02  BOUCLE      162  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.18 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      163  TEMPS 1.719999999999995e-02  BOUCLE      163  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.2 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      164  TEMPS 1.729999999999995e-02  BOUCLE      164  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.22 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      165  TEMPS 1.739999999999995e-02  BOUCLE      165  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.25 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      166  TEMPS 1.749999999999995e-02  BOUCLE      166  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.27 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      167  TEMPS 1.759999999999995e-02  BOUCLE      167  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.29 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      168  TEMPS 1.769999999999995e-02  BOUCLE      168  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.32 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      169  TEMPS 1.779999999999995e-02  BOUCLE      169  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.34 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      170  TEMPS 1.789999999999995e-02  BOUCLE      170  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.35999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0178999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      171  TEMPS 1.799999999999995e-02  BOUCLE      171  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.40999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      172  TEMPS 1.809999999999995e-02  BOUCLE      172  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.42999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      173  TEMPS 1.819999999999995e-02  BOUCLE      173  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.46999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      174  TEMPS 1.829999999999994e-02  BOUCLE      174  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.48999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      175  TEMPS 1.839999999999994e-02  BOUCLE      175  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.50999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      176  TEMPS 1.849999999999994e-02  BOUCLE      176  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.52999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      177  TEMPS 1.859999999999994e-02  BOUCLE      177  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.55999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      178  TEMPS 1.869999999999994e-02  BOUCLE      178  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.57999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      179  TEMPS 1.879999999999994e-02  BOUCLE      179  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.59999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      180  TEMPS 1.889999999999994e-02  BOUCLE      180  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.61999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0188999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      181  TEMPS 1.899999999999994e-02  BOUCLE      181  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.66999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      182  TEMPS 1.909999999999994e-02  BOUCLE      182  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.69999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      183  TEMPS 1.919999999999994e-02  BOUCLE      183  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.71999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      184  TEMPS 1.929999999999994e-02  BOUCLE      184  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.73999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      185  TEMPS 1.939999999999994e-02  BOUCLE      185  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.76999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      186  TEMPS 1.949999999999994e-02  BOUCLE      186  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.78999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      187  TEMPS 1.959999999999994e-02  BOUCLE      187  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.80999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      188  TEMPS 1.969999999999994e-02  BOUCLE      188  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.82999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      189  TEMPS 1.979999999999994e-02  BOUCLE      189  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.85999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      190  TEMPS 1.989999999999994e-02  BOUCLE      190  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.87999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0198999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      191  TEMPS 1.999999999999993e-02  BOUCLE      191  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.92999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      192  TEMPS 2.009999999999993e-02  BOUCLE      192  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.94999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      193  TEMPS 2.019999999999993e-02  BOUCLE      193  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.97999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      194  TEMPS 2.029999999999993e-02  BOUCLE      194  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=4.99999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      195  TEMPS 2.039999999999993e-02  BOUCLE      195  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:14 CPU=5.01999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      196  TEMPS 2.049999999999993e-02  BOUCLE      196  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.03999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      197  TEMPS 2.059999999999993e-02  BOUCLE      197  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.06999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      198  TEMPS 2.069999999999993e-02  BOUCLE      198  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.08999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      199  TEMPS 2.079999999999993e-02  BOUCLE      199  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.10999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      200  TEMPS 2.089999999999993e-02  BOUCLE      200  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.13999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0208999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      201  TEMPS 2.099999999999993e-02  BOUCLE      201  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.18999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      202  TEMPS 2.109999999999993e-02  BOUCLE      202  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.20999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      203  TEMPS 2.119999999999993e-02  BOUCLE      203  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.22999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      204  TEMPS 2.129999999999993e-02  BOUCLE      204  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.24999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      205  TEMPS 2.139999999999993e-02  BOUCLE      205  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.27999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      206  TEMPS 2.149999999999993e-02  BOUCLE      206  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.29999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      207  TEMPS 2.159999999999992e-02  BOUCLE      207  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.31999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      208  TEMPS 2.169999999999992e-02  BOUCLE      208  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.34999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      209  TEMPS 2.179999999999992e-02  BOUCLE      209  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.36999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      210  TEMPS 2.189999999999992e-02  BOUCLE      210  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.38999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0218999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      211  TEMPS 2.199999999999992e-02  BOUCLE      211  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.44999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      212  TEMPS 2.209999999999992e-02  BOUCLE      212  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.47999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      213  TEMPS 2.219999999999992e-02  BOUCLE      213  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.49999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      214  TEMPS 2.229999999999992e-02  BOUCLE      214  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.51999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      215  TEMPS 2.239999999999992e-02  BOUCLE      215  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.53999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      216  TEMPS 2.249999999999992e-02  BOUCLE      216  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.56999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      217  TEMPS 2.259999999999992e-02  BOUCLE      217  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.58999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      218  TEMPS 2.269999999999992e-02  BOUCLE      218  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.60999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      219  TEMPS 2.279999999999992e-02  BOUCLE      219  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.63999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      220  TEMPS 2.289999999999992e-02  BOUCLE      220  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.65999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0228999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      221  TEMPS 2.299999999999992e-02  BOUCLE      221  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.70999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      222  TEMPS 2.309999999999992e-02  BOUCLE      222  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.72999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      223  TEMPS 2.319999999999992e-02  BOUCLE      223  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.74999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      224  TEMPS 2.329999999999991e-02  BOUCLE      224  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.77999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      225  TEMPS 2.339999999999991e-02  BOUCLE      225  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.79999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      226  TEMPS 2.349999999999991e-02  BOUCLE      226  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.81999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      227  TEMPS 2.359999999999991e-02  BOUCLE      227  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.84999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      228  TEMPS 2.369999999999991e-02  BOUCLE      228  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.86999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      229  TEMPS 2.379999999999991e-02  BOUCLE      229  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.88999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      230  TEMPS 2.389999999999991e-02  BOUCLE      230  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.90999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0238999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      231  TEMPS 2.399999999999991e-02  BOUCLE      231  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.95999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      232  TEMPS 2.409999999999991e-02  BOUCLE      232  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=5.98999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      233  TEMPS 2.419999999999991e-02  BOUCLE      233  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=6.00999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      234  TEMPS 2.429999999999991e-02  BOUCLE      234  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:15 CPU=6.02999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      235  TEMPS 2.439999999999991e-02  BOUCLE      235  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.05999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      236  TEMPS 2.449999999999991e-02  BOUCLE      236  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.07999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      237  TEMPS 2.459999999999991e-02  BOUCLE      237  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.09999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      238  TEMPS 2.469999999999991e-02  BOUCLE      238  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.11999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      239  TEMPS 2.479999999999991e-02  BOUCLE      239  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.14999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      240  TEMPS 2.489999999999990e-02  BOUCLE      240  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.16999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0248999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      241  TEMPS 2.499999999999990e-02  BOUCLE      241  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.22999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      242  TEMPS 2.509999999999990e-02  BOUCLE      242  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.24999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      243  TEMPS 2.519999999999990e-02  BOUCLE      243  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.26999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      244  TEMPS 2.529999999999990e-02  BOUCLE      244  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.29999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      245  TEMPS 2.539999999999990e-02  BOUCLE      245  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.31999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      246  TEMPS 2.549999999999990e-02  BOUCLE      246  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.33999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      247  TEMPS 2.559999999999990e-02  BOUCLE      247  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.36999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      248  TEMPS 2.569999999999990e-02  BOUCLE      248  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.38999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      249  TEMPS 2.579999999999990e-02  BOUCLE      249  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.40999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      250  TEMPS 2.589999999999990e-02  BOUCLE      250  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.43999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0258999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      251  TEMPS 2.599999999999990e-02  BOUCLE      251  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.48999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      252  TEMPS 2.609999999999990e-02  BOUCLE      252  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.50999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      253  TEMPS 2.619999999999990e-02  BOUCLE      253  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.52999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      254  TEMPS 2.629999999999990e-02  BOUCLE      254  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.54999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      255  TEMPS 2.639999999999990e-02  BOUCLE      255  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.57999999999998 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      256  TEMPS 2.649999999999990e-02  BOUCLE      256  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.59999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      257  TEMPS 2.659999999999989e-02  BOUCLE      257  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.61999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      258  TEMPS 2.669999999999989e-02  BOUCLE      258  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.64999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      259  TEMPS 2.679999999999989e-02  BOUCLE      259  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.66999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      260  TEMPS 2.689999999999989e-02  BOUCLE      260  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.68999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0268999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      261  TEMPS 2.699999999999989e-02  BOUCLE      261  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.73999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      262  TEMPS 2.709999999999989e-02  BOUCLE      262  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.75999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      263  TEMPS 2.719999999999989e-02  BOUCLE      263  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.78999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      264  TEMPS 2.729999999999989e-02  BOUCLE      264  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.80999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      265  TEMPS 2.739999999999989e-02  BOUCLE      265  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.82999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      266  TEMPS 2.749999999999989e-02  BOUCLE      266  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.84999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      267  TEMPS 2.759999999999989e-02  BOUCLE      267  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.87999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      268  TEMPS 2.769999999999989e-02  BOUCLE      268  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.89999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      269  TEMPS 2.779999999999989e-02  BOUCLE      269  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.91999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      270  TEMPS 2.789999999999989e-02  BOUCLE      270  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.94999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0278999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      271  TEMPS 2.799999999999989e-02  BOUCLE      271  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=6.99999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      272  TEMPS 2.809999999999989e-02  BOUCLE      272  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:16 CPU=7.02999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      273  TEMPS 2.819999999999988e-02  BOUCLE      273  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.04999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      274  TEMPS 2.829999999999988e-02  BOUCLE      274  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.06999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      275  TEMPS 2.839999999999988e-02  BOUCLE      275  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.09999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      276  TEMPS 2.849999999999988e-02  BOUCLE      276  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.11999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      277  TEMPS 2.859999999999988e-02  BOUCLE      277  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.13999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      278  TEMPS 2.869999999999988e-02  BOUCLE      278  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.15999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      279  TEMPS 2.879999999999988e-02  BOUCLE      279  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.18999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      280  TEMPS 2.889999999999988e-02  BOUCLE      280  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.20999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0288999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      281  TEMPS 2.899999999999988e-02  BOUCLE      281  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.25999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      282  TEMPS 2.909999999999988e-02  BOUCLE      282  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.27999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      283  TEMPS 2.919999999999988e-02  BOUCLE      283  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.29999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      284  TEMPS 2.929999999999988e-02  BOUCLE      284  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.32999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      285  TEMPS 2.939999999999988e-02  BOUCLE      285  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.34999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      286  TEMPS 2.949999999999988e-02  BOUCLE      286  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.36999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      287  TEMPS 2.959999999999988e-02  BOUCLE      287  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.38999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      288  TEMPS 2.969999999999988e-02  BOUCLE      288  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.41999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      289  TEMPS 2.979999999999988e-02  BOUCLE      289  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.43999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      290  TEMPS 2.989999999999987e-02  BOUCLE      290  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.45999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0298999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      291  TEMPS 2.999999999999987e-02  BOUCLE      291  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.50999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      292  TEMPS 3.009999999999987e-02  BOUCLE      292  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.52999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      293  TEMPS 3.019999999999987e-02  BOUCLE      293  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.55999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      294  TEMPS 3.029999999999987e-02  BOUCLE      294  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.58999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      295  TEMPS 3.039999999999987e-02  BOUCLE      295  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.60999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      296  TEMPS 3.049999999999987e-02  BOUCLE      296  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.62999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      297  TEMPS 3.059999999999987e-02  BOUCLE      297  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.65999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      298  TEMPS 3.069999999999987e-02  BOUCLE      298  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.67999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      299  TEMPS 3.079999999999987e-02  BOUCLE      299  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.69999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      300  TEMPS 3.089999999999987e-02  BOUCLE      300  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.72999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0308999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      301  TEMPS 3.099999999999987e-02  BOUCLE      301  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.76999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      302  TEMPS 3.109999999999987e-02  BOUCLE      302  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.79999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      303  TEMPS 3.119999999999987e-02  BOUCLE      303  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.81999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      304  TEMPS 3.129999999999987e-02  BOUCLE      304  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.83999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      305  TEMPS 3.139999999999987e-02  BOUCLE      305  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.86999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      306  TEMPS 3.149999999999988e-02  BOUCLE      306  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.88999999999997 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      307  TEMPS 3.159999999999988e-02  BOUCLE      307  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.90999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      308  TEMPS 3.169999999999988e-02  BOUCLE      308  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.92999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      309  TEMPS 3.179999999999988e-02  BOUCLE      309  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.95999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      310  TEMPS 3.189999999999989e-02  BOUCLE      310  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=7.97999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0318999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      311  TEMPS 3.199999999999989e-02  BOUCLE      311  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:17 CPU=8.02999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      312  TEMPS 3.209999999999989e-02  BOUCLE      312  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.04999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      313  TEMPS 3.219999999999990e-02  BOUCLE      313  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.06999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      314  TEMPS 3.229999999999990e-02  BOUCLE      314  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.09999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      315  TEMPS 3.239999999999990e-02  BOUCLE      315  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.11999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      316  TEMPS 3.249999999999990e-02  BOUCLE      316  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.13999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      317  TEMPS 3.259999999999991e-02  BOUCLE      317  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.16999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      318  TEMPS 3.269999999999991e-02  BOUCLE      318  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.18999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      319  TEMPS 3.279999999999991e-02  BOUCLE      319  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.20999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      320  TEMPS 3.289999999999992e-02  BOUCLE      320  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.22999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0328999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      321  TEMPS 3.299999999999992e-02  BOUCLE      321  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.28999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      322  TEMPS 3.309999999999992e-02  BOUCLE      322  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.30999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      323  TEMPS 3.319999999999992e-02  BOUCLE      323  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.33999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      324  TEMPS 3.329999999999993e-02  BOUCLE      324  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.35999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      325  TEMPS 3.339999999999993e-02  BOUCLE      325  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.37999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      326  TEMPS 3.349999999999993e-02  BOUCLE      326  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.40999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      327  TEMPS 3.359999999999994e-02  BOUCLE      327  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.42999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      328  TEMPS 3.369999999999994e-02  BOUCLE      328  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.44999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      329  TEMPS 3.379999999999994e-02  BOUCLE      329  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.46999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      330  TEMPS 3.389999999999994e-02  BOUCLE      330  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.49999999999996 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0338999999999999  ******
+*I-Master      
+*I-Master     *** ITERATION      331  TEMPS 3.399999999999995e-02  BOUCLE      331  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.53999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      332  TEMPS 3.409999999999995e-02  BOUCLE      332  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.56999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      333  TEMPS 3.419999999999995e-02  BOUCLE      333  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.58999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      334  TEMPS 3.429999999999996e-02  BOUCLE      334  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.60999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      335  TEMPS 3.439999999999996e-02  BOUCLE      335  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.63999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      336  TEMPS 3.449999999999996e-02  BOUCLE      336  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.65999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      337  TEMPS 3.459999999999996e-02  BOUCLE      337  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.67999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      338  TEMPS 3.469999999999997e-02  BOUCLE      338  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.69999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      339  TEMPS 3.479999999999997e-02  BOUCLE      339  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.72999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      340  TEMPS 3.489999999999997e-02  BOUCLE      340  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.75999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0349  ******
+*I-Master      
+*I-Master     *** ITERATION      341  TEMPS 3.499999999999998e-02  BOUCLE      341  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.80999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      342  TEMPS 3.509999999999998e-02  BOUCLE      342  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.82999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      343  TEMPS 3.519999999999998e-02  BOUCLE      343  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.84999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      344  TEMPS 3.529999999999998e-02  BOUCLE      344  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.87999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      345  TEMPS 3.539999999999999e-02  BOUCLE      345  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.89999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      346  TEMPS 3.549999999999999e-02  BOUCLE      346  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.91999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      347  TEMPS 3.559999999999999e-02  BOUCLE      347  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.93999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      348  TEMPS 3.570000000000000e-02  BOUCLE      348  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.96999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      349  TEMPS 3.580000000000000e-02  BOUCLE      349  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=8.98999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      350  TEMPS 3.590000000000000e-02  BOUCLE      350  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:18 CPU=9.00999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0359  ******
+*I-Master      
+*I-Master     *** ITERATION      351  TEMPS 3.600000000000000e-02  BOUCLE      351  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.05999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      352  TEMPS 3.610000000000001e-02  BOUCLE      352  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.08999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      353  TEMPS 3.620000000000001e-02  BOUCLE      353  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.10999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      354  TEMPS 3.630000000000001e-02  BOUCLE      354  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.12999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      355  TEMPS 3.640000000000002e-02  BOUCLE      355  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.14999999999995 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      356  TEMPS 3.650000000000002e-02  BOUCLE      356  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.17999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      357  TEMPS 3.660000000000002e-02  BOUCLE      357  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.19999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      358  TEMPS 3.670000000000002e-02  BOUCLE      358  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.21999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      359  TEMPS 3.680000000000003e-02  BOUCLE      359  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.24999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      360  TEMPS 3.690000000000003e-02  BOUCLE      360  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.26999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0369  ******
+*I-Master      
+*I-Master     *** ITERATION      361  TEMPS 3.700000000000003e-02  BOUCLE      361  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.31999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      362  TEMPS 3.710000000000004e-02  BOUCLE      362  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.33999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      363  TEMPS 3.720000000000004e-02  BOUCLE      363  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.35999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      364  TEMPS 3.730000000000004e-02  BOUCLE      364  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.38999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      365  TEMPS 3.740000000000004e-02  BOUCLE      365  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.40999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      366  TEMPS 3.750000000000005e-02  BOUCLE      366  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.42999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      367  TEMPS 3.760000000000005e-02  BOUCLE      367  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.45999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      368  TEMPS 3.770000000000005e-02  BOUCLE      368  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.47999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      369  TEMPS 3.780000000000006e-02  BOUCLE      369  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.49999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      370  TEMPS 3.790000000000006e-02  BOUCLE      370  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.51999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0379000000000001  ******
+*I-Master      
+*I-Master     *** ITERATION      371  TEMPS 3.800000000000006e-02  BOUCLE      371  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.56999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      372  TEMPS 3.810000000000006e-02  BOUCLE      372  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.59999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      373  TEMPS 3.820000000000007e-02  BOUCLE      373  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.61999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      374  TEMPS 3.830000000000007e-02  BOUCLE      374  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.63999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      375  TEMPS 3.840000000000007e-02  BOUCLE      375  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.66999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      376  TEMPS 3.850000000000008e-02  BOUCLE      376  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.68999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      377  TEMPS 3.860000000000008e-02  BOUCLE      377  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.70999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      378  TEMPS 3.870000000000008e-02  BOUCLE      378  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.72999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      379  TEMPS 3.880000000000008e-02  BOUCLE      379  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.75999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      380  TEMPS 3.890000000000009e-02  BOUCLE      380  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.77999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0389000000000001  ******
+*I-Master      
+*I-Master     *** ITERATION      381  TEMPS 3.900000000000009e-02  BOUCLE      381  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.83999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      382  TEMPS 3.910000000000009e-02  BOUCLE      382  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.85999999999994 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      383  TEMPS 3.920000000000010e-02  BOUCLE      383  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.88999999999993 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      384  TEMPS 3.930000000000010e-02  BOUCLE      384  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.90999999999993 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      385  TEMPS 3.940000000000010e-02  BOUCLE      385  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.92999999999993 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      386  TEMPS 3.950000000000010e-02  BOUCLE      386  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.95999999999993 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      387  TEMPS 3.960000000000011e-02  BOUCLE      387  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.97999999999993 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      388  TEMPS 3.970000000000011e-02  BOUCLE      388  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=9.99999999999993 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      389  TEMPS 3.980000000000011e-02  BOUCLE      389  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:19 CPU=10.0199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      390  TEMPS 3.990000000000012e-02  BOUCLE      390  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.0499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0399000000000001  ******
+*I-Master      
+*I-Master     *** ITERATION      391  TEMPS 4.000000000000012e-02  BOUCLE      391  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.0999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      392  TEMPS 4.010000000000012e-02  BOUCLE      392  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.1199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      393  TEMPS 4.020000000000012e-02  BOUCLE      393  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.1399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      394  TEMPS 4.030000000000013e-02  BOUCLE      394  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.1699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      395  TEMPS 4.040000000000013e-02  BOUCLE      395  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.1899999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      396  TEMPS 4.050000000000013e-02  BOUCLE      396  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.2099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      397  TEMPS 4.060000000000014e-02  BOUCLE      397  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.2399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      398  TEMPS 4.070000000000014e-02  BOUCLE      398  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.2599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      399  TEMPS 4.080000000000014e-02  BOUCLE      399  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.2799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      400  TEMPS 4.090000000000014e-02  BOUCLE      400  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.2999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0409000000000001  ******
+*I-Master      
+*I-Master     *** ITERATION      401  TEMPS 4.100000000000015e-02  BOUCLE      401  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.3599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      402  TEMPS 4.110000000000015e-02  BOUCLE      402  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.3799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      403  TEMPS 4.120000000000015e-02  BOUCLE      403  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.3999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      404  TEMPS 4.130000000000016e-02  BOUCLE      404  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.4199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      405  TEMPS 4.140000000000016e-02  BOUCLE      405  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.4499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      406  TEMPS 4.150000000000016e-02  BOUCLE      406  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.4699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      407  TEMPS 4.160000000000016e-02  BOUCLE      407  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.4899999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      408  TEMPS 4.170000000000017e-02  BOUCLE      408  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.5099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      409  TEMPS 4.180000000000017e-02  BOUCLE      409  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.5399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      410  TEMPS 4.190000000000017e-02  BOUCLE      410  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.5599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0419000000000002  ******
+*I-Master      
+*I-Master     *** ITERATION      411  TEMPS 4.200000000000018e-02  BOUCLE      411  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.6099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      412  TEMPS 4.210000000000018e-02  BOUCLE      412  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.6299999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      413  TEMPS 4.220000000000018e-02  BOUCLE      413  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.6499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      414  TEMPS 4.230000000000018e-02  BOUCLE      414  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.6799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      415  TEMPS 4.240000000000019e-02  BOUCLE      415  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.6999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      416  TEMPS 4.250000000000019e-02  BOUCLE      416  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.7199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      417  TEMPS 4.260000000000019e-02  BOUCLE      417  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.7499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      418  TEMPS 4.270000000000020e-02  BOUCLE      418  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.7699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      419  TEMPS 4.280000000000020e-02  BOUCLE      419  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.7899999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      420  TEMPS 4.290000000000020e-02  BOUCLE      420  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.8099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0429000000000002  ******
+*I-Master      
+*I-Master     *** ITERATION      421  TEMPS 4.300000000000020e-02  BOUCLE      421  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.8699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      422  TEMPS 4.310000000000021e-02  BOUCLE      422  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.8999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      423  TEMPS 4.320000000000021e-02  BOUCLE      423  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.9199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      424  TEMPS 4.330000000000021e-02  BOUCLE      424  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.9399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      425  TEMPS 4.340000000000022e-02  BOUCLE      425  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.9599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      426  TEMPS 4.350000000000022e-02  BOUCLE      426  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=10.9899999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      427  TEMPS 4.360000000000022e-02  BOUCLE      427  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=11.0099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      428  TEMPS 4.370000000000022e-02  BOUCLE      428  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:20 CPU=11.0299999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      429  TEMPS 4.380000000000023e-02  BOUCLE      429  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.0599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      430  TEMPS 4.390000000000023e-02  BOUCLE      430  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.0799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0439000000000002  ******
+*I-Master      
+*I-Master     *** ITERATION      431  TEMPS 4.400000000000023e-02  BOUCLE      431  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.1299999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      432  TEMPS 4.410000000000024e-02  BOUCLE      432  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.1499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      433  TEMPS 4.420000000000024e-02  BOUCLE      433  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.1699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      434  TEMPS 4.430000000000024e-02  BOUCLE      434  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.1999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      435  TEMPS 4.440000000000024e-02  BOUCLE      435  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.2199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      436  TEMPS 4.450000000000025e-02  BOUCLE      436  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.2399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      437  TEMPS 4.460000000000025e-02  BOUCLE      437  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.2599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      438  TEMPS 4.470000000000025e-02  BOUCLE      438  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.2899999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      439  TEMPS 4.480000000000026e-02  BOUCLE      439  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.3099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      440  TEMPS 4.490000000000026e-02  BOUCLE      440  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.3299999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0449000000000003  ******
+*I-Master      
+*I-Master     *** ITERATION      441  TEMPS 4.500000000000026e-02  BOUCLE      441  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.3799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      442  TEMPS 4.510000000000026e-02  BOUCLE      442  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.3999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      443  TEMPS 4.520000000000027e-02  BOUCLE      443  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.4299999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      444  TEMPS 4.530000000000027e-02  BOUCLE      444  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.4499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      445  TEMPS 4.540000000000027e-02  BOUCLE      445  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.4699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      446  TEMPS 4.550000000000028e-02  BOUCLE      446  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.4999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      447  TEMPS 4.560000000000028e-02  BOUCLE      447  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.5199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      448  TEMPS 4.570000000000028e-02  BOUCLE      448  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.5399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      449  TEMPS 4.580000000000028e-02  BOUCLE      449  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.5599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      450  TEMPS 4.590000000000029e-02  BOUCLE      450  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.5899999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0459000000000003  ******
+*I-Master      
+*I-Master     *** ITERATION      451  TEMPS 4.600000000000029e-02  BOUCLE      451  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.6399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      452  TEMPS 4.610000000000029e-02  BOUCLE      452  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.6599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      453  TEMPS 4.620000000000030e-02  BOUCLE      453  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.6799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      454  TEMPS 4.630000000000030e-02  BOUCLE      454  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.7199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      455  TEMPS 4.640000000000030e-02  BOUCLE      455  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.7399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      456  TEMPS 4.650000000000030e-02  BOUCLE      456  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.7599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      457  TEMPS 4.660000000000031e-02  BOUCLE      457  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.7799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      458  TEMPS 4.670000000000031e-02  BOUCLE      458  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.8099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      459  TEMPS 4.680000000000031e-02  BOUCLE      459  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.8299999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      460  TEMPS 4.690000000000032e-02  BOUCLE      460  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.8499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0469000000000003  ******
+*I-Master      
+*I-Master     *** ITERATION      461  TEMPS 4.700000000000032e-02  BOUCLE      461  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.8999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      462  TEMPS 4.710000000000032e-02  BOUCLE      462  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.9199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      463  TEMPS 4.720000000000033e-02  BOUCLE      463  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.9499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      464  TEMPS 4.730000000000033e-02  BOUCLE      464  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.9699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      465  TEMPS 4.740000000000033e-02  BOUCLE      465  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=11.9899999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      466  TEMPS 4.750000000000033e-02  BOUCLE      466  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:21 CPU=12.0099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      467  TEMPS 4.760000000000034e-02  BOUCLE      467  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.0399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      468  TEMPS 4.770000000000034e-02  BOUCLE      468  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.0599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      469  TEMPS 4.780000000000034e-02  BOUCLE      469  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.0799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      470  TEMPS 4.790000000000035e-02  BOUCLE      470  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.1099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0479000000000003  ******
+*I-Master      
+*I-Master     *** ITERATION      471  TEMPS 4.800000000000035e-02  BOUCLE      471  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.1499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      472  TEMPS 4.810000000000035e-02  BOUCLE      472  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.1799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      473  TEMPS 4.820000000000035e-02  BOUCLE      473  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.1999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      474  TEMPS 4.830000000000036e-02  BOUCLE      474  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.2199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      475  TEMPS 4.840000000000036e-02  BOUCLE      475  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.2499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      476  TEMPS 4.850000000000036e-02  BOUCLE      476  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.2699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      477  TEMPS 4.860000000000037e-02  BOUCLE      477  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.2899999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      478  TEMPS 4.870000000000037e-02  BOUCLE      478  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.3199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      479  TEMPS 4.880000000000037e-02  BOUCLE      479  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.3399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      480  TEMPS 4.890000000000037e-02  BOUCLE      480  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.3599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0489000000000004  ******
+*I-Master      
+*I-Master     *** ITERATION      481  TEMPS 4.900000000000038e-02  BOUCLE      481  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.4099999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      482  TEMPS 4.910000000000038e-02  BOUCLE      482  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.4399999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      483  TEMPS 4.920000000000038e-02  BOUCLE      483  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.4599999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      484  TEMPS 4.930000000000039e-02  BOUCLE      484  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.4799999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      485  TEMPS 4.940000000000039e-02  BOUCLE      485  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.4999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      486  TEMPS 4.950000000000039e-02  BOUCLE      486  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.5299999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      487  TEMPS 4.960000000000039e-02  BOUCLE      487  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.5499999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      488  TEMPS 4.970000000000040e-02  BOUCLE      488  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.5699999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      489  TEMPS 4.980000000000040e-02  BOUCLE      489  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.5999999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-Master      
+*I-Master     *** ITERATION      490  TEMPS 4.990000000000040e-02  BOUCLE      490  DELTAT 1.000000000000000e-04 ***
+*I-Master     Date: 2012-03-30T09:34:22 CPU=12.6199999999999 MEM=48 MAX_MEM=48 MIN_MEM=48 AVG_MEM=48 MIN_RANK=0 MAX_RANK=0
+*I-ArcanePostProcessing  
+*I-ArcanePostProcessing ****  Sortie en cours au temps 0.0499000000000004  ******
+*I-Master     ===============================================================
+*I-Master     ======   FIN DU CALCUL ATTEINTE...  ===========================
+*I-Master     ===============================================================
+*I-Internal   TotalReel = 12.7555630207062 secondes (init: 0.0943069458007812  loop: 12.6612560749054 )
+*I-Internal   Ecriture de l'historique des valeurs
+*I-Internal   Début sortie historique: 2012-03-30T09:34:22
+*I-Internal   Ecriture des courbes avec l'écrivain 'gnuplot'
+*I-Internal   Ecriture des courbes avec l'écrivain 'ArcaneCurveWriter'
+*I-Internal   ArcaneCurveWriter::beginWrite()Begin write curves
+*I-Internal   Begin write curves path=/tmp/oudot/samples/microhydro/output/courbes
+*I-Internal   End writing curves
+*I-Internal   Fin sortie historique: 2012-03-30T09:34:22
+*I-Internal   -- Exécution des points d'entrée de terminaison
+*I-ArcanePostProcessing Temps total pour les sorties de dépouillement (seconde): 1.40972828865051
+*I-ArcanePostProcessing Temps moyen par sortie (seconde): 0.0287699650745003 (pour 49 sorties
+*I-ArcaneCheckpoint ****  Protection en cours au temps 0.0499000000000004 directory=/tmp/oudot/samples/microhydro/output/protection numéro 0 ******
+*I-Variable   CLOSE WRITE FILE name=/tmp/oudot/samples/microhydro/output/protection/arcanedump.0.h5
+*I-Variable   CLOSE WRITE FILE name=/tmp/oudot/samples/microhydro/output/protection/arcanedump.0.h5
+*I-ArcaneCheckpoint Temps d'écriture de la protection (unité: seconde): 0.0229148864746094
+*I-ArcaneCheckpoint Temps total pour les sorties de protections (seconde): 0.0229148864746094
+*I-ArcaneCheckpoint Temps moyen par sortie (seconde): 0.0229148864746094 (pour 1 sorties
+*I-Internal   Informations sur les temps d'exécutions
+*I-Internal    TotalCPU  = 12.5210959995165 secondes
+*I-Internal    CumulativeCPU  = 12.6199999999999 secondes
+*I-Internal    T   = Temps total passé dans la fonction ou le module (en s)
+*I-Internal    TC  = Temps total par appel (en ms)
+*I-Internal    TCC = Temps total par appel et par maille (en ns)
+*I-Internal    N   = Nombre de fois où la fonction a été appelée
+*I-Internal   
+              Nom                             T        TC       TCC    %         N
+                  ArcaneTimeLoopBegin         0         0        15    0       490
+                    ArcaneTimeLoopEnd         0         0         0    0       490
+                ArcaneMasterStartInit         0         0         0    0         1
+                     ArcaneMasterInit         0         0         0    0         1
+                 ArcaneMasterLoopExit         0         0         0    0         1
+--                           Master--         0         0        16
+                          MasterBuild         0         0         0    0         1
+--                           Master--         0         0         0
+    ArcaneCheckpointCheckAndWriteData         0         0         0    0       490
+            ArcaneCheckpointStartInit         0         0         0    0         1
+                 ArcaneCheckpointInit         0         0         0    0         1
+                 ArcaneCheckpointExit         0        14      5999    0         1
+--                 ArcaneCheckpoint--         0         0         0
+             PostProcessingExportData         1         2      1047   10       490
+        PostProcessingExportDataStart         0         0         1    0       490
+              PostProcessingStartInit         0         0         0    0         1
+                   PostProcessingInit         0         0         0    0         1
+                   PostProcessingExit         0         0         0    0         1
+--             ArcanePostProcessing--         0         2      1048
+                       HydroStartInit         0        18      7598    0         1
+                 ComputePressureForce         1         2      1066   10       490
+                      ComputeVelocity         0         0       195    1       490
+               ApplyBoundaryCondition         0         0       224    2       490
+                            MoveNodes         0         0       108    1       490
+               ComputeGeometricValues         8        18      7216   70       490
+                        UpdateDensity         0         0        59    0       490
+                 ApplyEquationOfState         0         0       197    1       490
+                        ComputeDeltaT         0         0        54    0       490
+--                       MicroHydro--         0        22      9122
+
+*I-Internal   Utilisation Mémoire (Mo): 51.175424
+*I-Internal   
+Memory statistics for variables:
+ Number of created variables:              116
+ Number of created variables reference:    229
+ Number of currently allocated variables:  115
+ Number of currently reference:            0
+Memory repartition by module:
+                                                    Memory (Mo)                   Memory (Ko)
+                        Module   Nvar     Private      Shared       Total      %     per cell
+
+                          None     53       1.075       0.000       1.075   52.3%        0.43
+                TimeHistoryMng      9       0.027       0.000       0.027    1.3%        0.01
+              ArcaneCheckpoint      1       0.000       0.000       0.000    0.0%        0.00
+          ArcanePostProcessing      1       0.000       0.000       0.000    0.0%        0.00
+                    MicroHydro     14       0.674       0.276       0.950   46.2%        0.38
+
+                         TOTAL     78                               2.054                0.82
+
+Biggest variables (D=Dump, E=Exchange R=Restore):
+                                     Variable      Kind     Memory (Ko)  per cell (o)  D E R
+
+                                      CellCQS      Cell       480.000       192.0      X X X 
+                          NodeFamilyItemsData      None       319.968       127.9      X   X 
+                          FaceFamilyItemsData      None       272.800       109.1      X   X 
+                          CellFamilyItemsData      None       160.000        64.0      X   X 
+                                        Force      Node        87.264        34.9        X X 
+                                     Velocity      Node        87.264        34.9      X X X 
+                                    NodeCoord      Node        87.264        34.9      X X X 
+                          FaceFamilyUniqueIds      None        68.200        27.2      X   X 
+                       FaceFamilyNewOwnerName      Face        34.100        13.6      X X X 
+                           GROUP_FaceAllFaces      None        34.100        13.6      X   X 
+                        FaceFamilyItemsShared      None        34.100        13.6      X   X 
+                                     NodeMass      Node        29.088        11.6      X X X 
+                          NodeFamilyUniqueIds      None        29.088        11.6      X   X 
+                                     Pressure      Cell        20.000         8.0      X X X 
+                                   SoundSpeed      Cell        20.000         8.0      X X X 
+
+*I-Internal   MemoryInfos: 0
+Total size=0
+*I-Internal   NB_CELL=2500 nb_loop=490
+*I-Internal   -- Statistiques d'exécution (divide=1.225e+06):
+                                     Action            Time       Time  
+                                                     Total(s)  /cell(us)
+
+ Loop                                                 12.493     10.198     1  99.0  99.0 [ 89.7   0.0  10.2]
+  LoopEntryPoints                                     12.492     10.197   490  99.0  99.9 [ 89.7   0.0  10.2]
+   Master                                              0.019      0.016   980   0.1   0.1 [100.0   0.0   0.0]
+   TimeHistoryMng                                      0.004      0.004   980   0.0   0.0 [100.0   0.0   0.0]
+   ArcanePostProcessing                                1.284      1.048   980  10.1  10.2 [  0.3   0.0  99.6]
+   MicroHydro                                         11.174      9.121  3920  88.6  89.4 [100.0   0.0   0.0]
+   ArcaneCheckpoint                                    0.000      0.000   490   0.0   0.0 [100.0   0.0   0.0]
+

@@ -1,0 +1,21 @@
+model MicroHydro.Eos;
+
+Interface EquationOfState
+{
+	void initEOS () on Cell;
+	void applyEOS () on Cell;
+}
+
+[namefr = "gaz_parfait"]
+Service PerfectGas implements EquationOfState
+{
+	override EquationOfState.initEOS use (in MicroHydro.AdiabaticCst, in MicroHydro.Density, in MicroHydro.Pressure, out MicroHydro.InternalEnergy, out MicroHydro.SoundSpeed);
+	override EquationOfState.applyEOS use (in MicroHydro.InternalEnergy, in MicroHydro.Density, in MicroHydro.AdiabaticCst, out MicroHydro.Pressure, out MicroHydro.SoundSpeed);
+}
+
+Service StiffenedGas implements EquationOfState
+{
+	[1..1] Real limit_tension = "0.01";
+	override EquationOfState.initEOS use (in MicroHydro.AdiabaticCst, in MicroHydro.Density, in MicroHydro.Pressure, out MicroHydro.InternalEnergy, out MicroHydro.SoundSpeed);
+	override EquationOfState.applyEOS use (in MicroHydro.InternalEnergy, in MicroHydro.Density, in MicroHydro.AdiabaticCst, out MicroHydro.Pressure, out MicroHydro.SoundSpeed);
+}
