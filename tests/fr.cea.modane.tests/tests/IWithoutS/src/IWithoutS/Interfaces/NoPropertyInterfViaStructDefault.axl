@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><service name="NoPropertyInterfViaStructDefault" version="1.0" namespace-name="IWithoutSInterfaces" type="caseoption">
-  <description>Service par défaut pour l'interface NoPropertyInterfViaStruct</description>
-  <interface name="::IWithoutSInterfaces::INoPropertyInterfViaStruct"/>
-  <variables/>
-  <options/>
-</service>

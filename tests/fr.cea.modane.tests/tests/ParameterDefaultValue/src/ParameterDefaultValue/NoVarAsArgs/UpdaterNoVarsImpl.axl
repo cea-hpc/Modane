@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><service name="UpdaterNoVarsImpl" version="1.0" namespace-name="ParameterDefaultValueNoVarAsArgs" type="caseoption">
-  <interface name="::ParameterDefaultValueNoVarAsArgs::IUpdaterNoVars"/>
-  <variables/>
-  <options/>
-</service>

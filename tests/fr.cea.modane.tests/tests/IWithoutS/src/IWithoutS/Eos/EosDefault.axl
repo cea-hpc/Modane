@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><service name="EosDefault" version="1.0" namespace-name="IWithoutSEos" type="caseoption">
-  <description>Service par défaut pour l'interface Eos</description>
-  <interface name="::IWithoutSEos::IEos"/>
-  <variables/>
-  <options>
-    <simple name="my-bidon-option" type="real" optional="true"/>
-  </options>
-</service>

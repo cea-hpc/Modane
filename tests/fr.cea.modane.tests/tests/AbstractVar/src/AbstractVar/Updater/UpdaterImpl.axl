@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><service name="UpdaterImpl" version="1.0" namespace-name="AbstractVarUpdater" type="caseoption">
-  <interface name="::AbstractVarUpdater::IUpdater"/>
-  <variables>
-    <variable field-name="temperature" name="Temperature" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="true" execution-depend="false"/>
-    <variable field-name="old_pressure" name="OldPressure" data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true" restore="true" execution-depend="false"/>
-  </variables>
-  <options/>
-</service>

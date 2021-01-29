@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><service name="Compri2" version="1.0" namespace-name="Service" type="caseoption">
-  <interface name="::Service::IDeura"/>
-  <variables/>
-  <options/>
-</service>

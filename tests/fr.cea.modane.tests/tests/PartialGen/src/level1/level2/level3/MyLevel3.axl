@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><service name="MyLevel3" version="1.0" namespace-name="Level1Level2Level3" type="caseoption">
-  <interface name="::Level1Level2Level3::IMyLevel3Interface"/>
-  <variables/>
-  <options/>
-</service>

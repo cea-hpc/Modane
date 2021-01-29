@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><service name="PerfectGas" version="1.0" namespace-name="SupportEos" type="caseoption" singleton="true">
-  <interface name="::SupportEos::IEos"/>
-  <variables/>
-  <options/>
-</service>
