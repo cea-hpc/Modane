@@ -3,10 +3,10 @@ Automatic-Module-Name: fr.cea.modane.project.editor
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: fr.cea.modane.project.editor;singleton:=true
-Bundle-Version: 1.4.0.qualifier
+Bundle-Version: 1.4.1.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: fr.cea.modane.modaneproject.presentation.ModaneProjectEditorPlugin$Implementation
-Bundle-Vendor: %providerName
+Bundle-Vendor: CEA
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: fr.cea.modane.modaneproject.presentation
