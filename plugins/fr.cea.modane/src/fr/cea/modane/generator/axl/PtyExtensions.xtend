@@ -38,6 +38,18 @@ class PtyExtensions
 		getContent(type, encounteredStructs)
 	}
 
+	def dispatch getReferencedName(Struct it) { 'I' + name }
+	def dispatch getReferencedName(Interface it) { 'I' + name }
+	def dispatch getReferencedName(Referenceable it) { name }
+
+	def getReferencedNameWithNs(Referenceable it)
+	{
+		if (nsName !== null && nsName != '')
+			'::' + nsName + '::' + referencedName
+		else
+			referencedName
+	}
+
 	private def dispatch getContent(Pty it, Simple t, HashMap<Struct, Integer> encounteredStructs)
 	'''
 		<simple 
@@ -168,18 +180,5 @@ class PtyExtensions
 		if (!description.nullOrEmpty)
 			result += description.formatDescription
 		return result;
-	}
-
-	def dispatch getReferencedName(Struct it) { 'I'.concat(name) }
-	def dispatch getReferencedName(Interface it) { 'I'.concat(name) }
-	def dispatch getReferencedName(Enumeration it) { name }
-	def dispatch getReferencedName(Legacy it) { name }
-
-	def getReferencedNameWithNs(Referenceable it)
-	{
-		if (nsName !== null && nsName != '')
-			'::' + nsName + '::' + referencedName
-		else
-			referencedName
 	}
 }

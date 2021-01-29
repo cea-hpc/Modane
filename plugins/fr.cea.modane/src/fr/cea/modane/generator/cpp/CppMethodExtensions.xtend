@@ -13,8 +13,10 @@ import fr.cea.modane.modane.Arg
 import fr.cea.modane.modane.ArgDefinition
 import fr.cea.modane.modane.ArgMultiplicity
 import fr.cea.modane.modane.Direction
+import fr.cea.modane.modane.Enumeration
 import fr.cea.modane.modane.FunctionItemType
 import fr.cea.modane.modane.Item
+import fr.cea.modane.modane.Reference
 import fr.cea.modane.modane.Simple
 import fr.cea.modane.modane.SimpleType
 import fr.cea.modane.modane.VarDefinition
@@ -22,6 +24,7 @@ import java.util.ArrayList
 
 import static extension fr.cea.modane.generator.cpp.ArgDefinitionExtensions.*
 import static extension fr.cea.modane.generator.cpp.PtyOrArgTypeExtensions.*
+import static extension fr.cea.modane.generator.cpp.ReferenceableExtensions.*
 
 class CppMethodExtensions
 {
@@ -234,28 +237,35 @@ class CppMethodExtensions
 				val a = args.get(i-1)
 				switch a 
 				{
-					ArgDefinition : 
+					ArgDefinition :
 					{
 						var s = a.typeName + ' ' + a.name
 						if (a.multiplicity == ArgMultiplicity::SCALAR && a.direction == Direction::IN && lastDefaultVal && !a.defaultValue.nullOrEmpty) s += '=' + a.formatDefaultValue
 						else lastDefaultVal = false
 						argStrings.add(0, s)
 					}
-					
+
 					VarDefinition :
 					{
 						val cppVariable = new CppVarDefinition(a)
 						argStrings.add(0, cppVariable.argTypeName + ' ' + cppVariable.name)
-					}		
+					}
 				}
 			}
 		}
-		return argStrings	
+		return argStrings
 	}
 
 	private static def formatDefaultValue(ArgDefinition a)
 	{
-		if ( a.type instanceof Simple && ((a.type as Simple).type == SimpleType::STRING) ) '"' + a.defaultValue + '"'
-		else a.defaultValue
+		if ( a.type instanceof Simple && ((a.type as Simple).type == SimpleType::STRING) )
+			return '"' + a.defaultValue + '"'
+		else if (a.type instanceof Reference && (a.type as Reference).target instanceof Enumeration)
+		{
+			val enum = (a.type as Reference).target as Enumeration
+			return enum.referencedNameWithNs + "::" + a.defaultValue
+		}
+		else
+			return a.defaultValue
 	}
 }

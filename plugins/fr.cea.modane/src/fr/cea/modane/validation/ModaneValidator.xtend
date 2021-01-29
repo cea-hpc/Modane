@@ -59,7 +59,6 @@ class ModaneValidator extends UniqueNameValidator
 
 	@Inject
 	IScopeProvider scopeProvider
-
 	/* ----- REGLES DE NOMMAGE ----- */
 
 	public static val INVALID_NAME = 'InvalidName'
@@ -199,6 +198,7 @@ class ModaneValidator extends UniqueNameValidator
 	public static val NO_VAR_ON_INTERFACE_FUNCTION = "Une fonction d'une interface ne peut pas référencer de variable"
 	public static val FUNCTION_REALLY_OVERRIDE = "Fonction n'appartenant à aucune des interfaces"
 	public static val ONLY_IN_ARG_HAS_DEFAULT_VALUE = "Seul un argument IN peut avoir une valeur par défaut"
+	public static val ENUMERATION_ARG_DEFAULT_VALUE = "Valeur par défaut incorrecte"
 
 	@Check
 	def checkSupportFunctionReturnVoid(Function it)
@@ -239,6 +239,19 @@ class ModaneValidator extends UniqueNameValidator
 		if (!defaultValue.nullOrEmpty && direction != Direction::IN)
 		{
 			error(ONLY_IN_ARG_HAS_DEFAULT_VALUE, ModanePackage.Literals::ARG_DEFINITION__DEFAULT_VALUE, INCORRECT_DEFAULT_VALUE)
+			return false
+		}
+		return true
+	}
+
+	@Check
+	def checkEnumerationArgDefaultValue(ArgDefinition it)
+	{
+		if (!defaultValue.nullOrEmpty && type instanceof Reference && (type as Reference).target instanceof Enumeration)
+		{
+			val enum = (type as Reference).target as Enumeration
+			if (!enum.literals.exists[x | x.name == defaultValue])
+				error(ENUMERATION_ARG_DEFAULT_VALUE, ModanePackage.Literals::ARG_DEFINITION__DEFAULT_VALUE, INCORRECT_DEFAULT_VALUE)
 			return false
 		}
 		return true
