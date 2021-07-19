@@ -28,4 +28,9 @@ public class ModaneAnalysisSelectorProvider
 		return new ModaneAnalysisSelector();
 	}
 
+	@Override
+	public int getPriority() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
