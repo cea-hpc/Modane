@@ -12,7 +12,7 @@ target "Modane Target platform"
 with requirements
 environment JavaSE-11
 
-location eclipse "https://download.eclipse.org/releases/2019-12" {
+location eclipse "https://download.eclipse.org/releases/2020-09" {
 	org.eclipse.sdk.feature.group
 	org.eclipse.rcp.feature.group
 	org.eclipse.equinox.p2.sdk.feature.group
@@ -38,7 +38,7 @@ location eclipse "https://download.eclipse.org/releases/2019-12" {
 	org.eclipse.uml2.sdk.feature.group
 }
 
-location sirius "https://download.eclipse.org/sirius/updates/releases/6.3.0/2019-06" {
+location sirius "https://download.eclipse.org/sirius/updates/releases/6.4.0/2020-09" {
 	org.eclipse.sirius.aql.feature.group
 	org.eclipse.sirius.runtime.feature.group
 	org.eclipse.sirius.runtime.aql.feature.group
@@ -51,12 +51,12 @@ location sirius "https://download.eclipse.org/sirius/updates/releases/6.3.0/2019
 	org.eclipse.eef.ext.widgets.reference.feature.feature.group
 }
 
-location contextual-explorer "https://download.eclipse.org/modeling/amalgam/updates/stable/1.11.0-S20191007/capella/" {
+location contextual-explorer "https://download.eclipse.org/modeling/amalgam/updates/stable/1.12.0-S20201020/capella/" {
 	org.eclipse.amalgam.explorer.contextual.core.feature.group
 	org.eclipse.amalgam.explorer.contextual.sirius.feature.group
 }
 
-location orbit "https://download.eclipse.org/tools/orbit/downloads/drops/R20200224183213/repository/" {
+location orbit "https://download.eclipse.org/tools/orbit/downloads/drops/R20200831200620/repository/" {
 	org.hamcrest.core
 	org.apache.commons.lang3
 	com.google.guava
