@@ -1,0 +1,6 @@
+CMakeCache.txt
+CMakeFiles/
+*_axl.h
+__*.h
+cmake_install.cmake
+*~
