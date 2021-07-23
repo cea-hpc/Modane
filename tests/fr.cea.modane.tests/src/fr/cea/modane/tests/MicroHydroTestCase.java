@@ -28,7 +28,7 @@ public class MicroHydroTestCase extends TestCaseBase
 	public void testCompilation()
 	{
 		testGenerationAndCompilationFromUmlModel(Dir);
-		assertEquals(0, launchCommand("./MicroHydro.exe ./MicroHydro.arc", Dir, Dir));
+		assertEquals(0, launchCommand("./MicroHydro ./MicroHydro.arc", Dir, Dir));
 	}
 
 	@Override

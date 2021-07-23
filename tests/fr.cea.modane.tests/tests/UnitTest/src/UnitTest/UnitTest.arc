@@ -12,7 +12,6 @@
 	<module-main></module-main>
 	
 	<module-test-unitaire>
-	  ...
 	  <xml-test name="UnitTest">
 	     <!-- ici les données de mon service de test (si bien sur il en a !)... -->
 	  </xml-test>

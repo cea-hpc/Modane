@@ -33,7 +33,8 @@ public class UnpackagedTestCase extends TestCaseBase
 	@Override
 	public void testCompilation()
 	{
-		assertEquals(0, launchCommand("make fullclean", Dir, null));
+		assertEquals(0, launchCommand("cmake .", Dir, null));
+		assertEquals(2, launchCommand("make fullclean", Dir, null));
 		UmlToCpp umlToCpp = UmlToCpp.createInstance();
 		Model model = umlToCpp.readModel(getUmlModelFileURI(Dir));
 		umlToCpp.generate(model, getAbsoluteSrcDir(Dir), null, null, false, false);

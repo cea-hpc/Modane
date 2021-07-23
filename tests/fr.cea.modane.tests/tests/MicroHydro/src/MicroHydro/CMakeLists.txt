@@ -16,6 +16,7 @@ add_executable(MicroHydro
 arcane_add_arcane_libraries_to_target(MicroHydro)
 target_include_directories(MicroHydro PUBLIC .. ${CMAKE_CURRENT_BINARY_DIR})
 
+arcane_target_add_axl(MicroHydro MicroHydro)
 arcane_target_add_axl(MicroHydro Eos/PerfectGas)
 arcane_target_add_axl(MicroHydro Eos/StiffenedGas)
 arcane_target_add_axl(MicroHydro DefaultLoopDelegation)
