@@ -36,7 +36,7 @@
       <name lang="fr">temps-final</name>
     </simple>
     <simple name="cfl" type="real" default="0.3">
-      <description>D??finition de la CFL.</description>
+      <description>Définition de la CFL.</description>
     </simple>
     <complex name="boundary-condition" interface="::MicroHydro::IBoundaryCondition" type="BoundaryCondition" minOccurs="1" maxOccurs="unbounded">
       <enumeration name="type" type="::MicroHydro::BoundaryConditionType">

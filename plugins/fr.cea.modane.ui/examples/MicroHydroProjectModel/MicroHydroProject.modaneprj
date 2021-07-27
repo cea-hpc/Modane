@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<modaneproject:ModaneProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:modaneproject="http://www.cea.fr/modane/ModaneProject" name="MicroHydroProject" description="Projet d'exemple" srcDir="MicroHydroProject/src" arcaneHome="/home/arcaneuser/arcaneuser/products/rhel7/arcane/dev5_debug">
+<modaneproject:ModaneProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:modaneproject="http://www.cea.fr/modane/ModaneProject" name="MicroHydroProject" description="Projet d'exemple" srcDir="MicroHydroProject/src" arcaneHome="/home/lelandaisb/arcane/install">
   <subPackages name="MicroHydro">
     <subPackages name="Eos">
       <model href="models/MicroHydro.Eos.modane#/"/>

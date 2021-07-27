@@ -124,7 +124,7 @@ class GenerateCodeHandler extends AbstractHandler
 				cmakeSubPackages += subP.name
 
 		// on génère le fichier root même si pas de sous-packages
-		if (generateCMakeLists) 
+		if (generateCMakeLists)
 			cMakeGenerator.generateRoot(codeGenerator.fsa, p.name, p.arcaneHome, cmakeSubPackages)
 
 		return generateCMakeLists
