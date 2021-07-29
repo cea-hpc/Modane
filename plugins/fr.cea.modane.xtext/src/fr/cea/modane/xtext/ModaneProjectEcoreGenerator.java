@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2020 CEA
+ * Copyright (c) 2021 CEA
  * This program and the accompanying materials are made available under the 
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0.
@@ -121,7 +121,7 @@ public class ModaneProjectEcoreGenerator extends EcoreGenerator {
 	@Override
 	protected String copyright() {
 		return 	"/*******************************************************************************\n"+
-				 " * Copyright (c) 2020 CEA\n"+
+				 " * Copyright (c) 2021 CEA\n"+
 				 " * This program and the accompanying materials are made available under the\n"+
 				 " * terms of the Eclipse Public License 2.0 which is available at\n"+
 				 " * http://www.eclipse.org/legal/epl-2.0.\n"+
