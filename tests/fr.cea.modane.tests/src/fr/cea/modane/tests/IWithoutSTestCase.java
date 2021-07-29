@@ -28,7 +28,7 @@ public class IWithoutSTestCase extends TestCaseBase
 	public void testCompilation()
 	{
 		testGenerationAndCompilationFromUmlModel(Dir);
-		assertEquals(0, launchCommand("./Hydro.exe -arcane_opt max_iteration 1 ./IWithoutS.arc", Dir, Dir));
+		assertEquals(0, launchCommand("./Hydro -arcane_opt max_iteration 1 ./IWithoutS.arc", Dir, Dir));
 	}
 
 	@Override

@@ -1,3 +1,3 @@
-add_executable(MicroHydroProject main)
-target_link_libraries(MicroHydroProject PUBLIC MicroHydro Eos arcane_full)
-configure_file(MicroHydroProject.config ${CMAKE_BINARY_DIR})
+add_executable(MicroHydroProject main.cc)
+arcane_add_arcane_libraries_to_target(MicroHydroProject)
+target_link_libraries(MicroHydroProject PUBLIC MicroHydro Eos)

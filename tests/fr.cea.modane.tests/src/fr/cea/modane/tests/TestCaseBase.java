@@ -98,14 +98,16 @@ public abstract class TestCaseBase
 
 	protected void testGenerationAndCompilationFromUmlModel(String testName)
 	{
-		assertEquals(0, launchCommand("make fullclean", testName, testName));
+		assertEquals(0, launchCommand("cmake .", testName, testName));
+		assertEquals(2, launchCommand("make fullclean", testName, testName));
 		generateFromUmlModel(testName);
 		assertEquals(0, launchCommand("make", testName, testName));
 	}
 
 	protected void testGenerationAndCompilationFromModaneModel(String testName, String[] modaneFileNames)
 	{
-		assertEquals(0, launchCommand("make fullclean", testName, testName));
+		assertEquals(0, launchCommand("cmake .", testName, testName));
+		assertEquals(2, launchCommand("make fullclean", testName, testName));
 		generateFromModaneModel(testName, modaneFileNames);
 		assertEquals(0, launchCommand("make", testName, testName));
 	}

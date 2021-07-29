@@ -13,11 +13,11 @@ import java.util.LinkedHashSet
 import org.eclipse.xtend.lib.annotations.Data
 
 @Data
-class CMakeFiles 
+class CMakeFiles
 {
 	val cppFilesForCMake = new LinkedHashSet<String>
 	val axlFilesForCMake = new LinkedHashSet<String>
-	
+
 	def isEmpty()
 	{
 		cppFilesForCMake.empty && axlFilesForCMake.empty

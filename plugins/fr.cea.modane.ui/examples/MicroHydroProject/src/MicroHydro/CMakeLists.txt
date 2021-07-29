@@ -1,12 +1,19 @@
 #
 # Generated file - Do not overwrite
 #
-add_library(MicroHydro __IBoundaryCondition.h __BoundaryConditionType.h __DefaultLoopDelegationServiceVars.h __DefaultLoopDelegationServiceBase.h DefaultLoopDelegation_axl.h DefaultLoopDelegationService.h DefaultLoopDelegationService.cc __ILoopDelegation.h __MicroHydroModuleVars.h __MicroHydroModuleBase.h MicroHydro_axl.h MicroHydroModule.h MicroHydroModule.cc)
-target_include_directories(MicroHydro PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
-target_link_libraries(MicroHydro PUBLIC arcane_core)
-arcane_generate_axl(DefaultLoopDelegation)
-arcane_generate_axl(MicroHydro)
+add_library(MicroHydro
+  DefaultLoopDelegationService.cc
+  MicroHydroModule.cc
+)
+
+target_include_directories(MicroHydro PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+arcane_add_arcane_libraries_to_target(MicroHydro)
+
+arcane_target_add_axl(MicroHydro DefaultLoopDelegation)
+arcane_target_add_axl(MicroHydro MicroHydro)
+
 add_subdirectory(Eos)
+
 if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Project.cmake)
 include(Project.cmake)
 endif()

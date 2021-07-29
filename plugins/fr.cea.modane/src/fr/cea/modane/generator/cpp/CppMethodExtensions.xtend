@@ -138,7 +138,7 @@ class CppMethodExtensions
 		  items.applyOperation(&fclass);
 		  «ELSEIF hasParallelLoops»
 		  T* t = static_cast<T*>(this);
-		  Parallel::Foreach(items, [&](«support.literal»VectorView sub_items)
+		  arcaneParallelForeach(items, [&](«support.literal»VectorView sub_items)
 		  {
 		    ENUMERATE_«support.literal.toUpperCase» (iitem, sub_items) {
 		      const «support.literal» item = *iitem;

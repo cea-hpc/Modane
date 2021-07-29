@@ -28,7 +28,7 @@ public class UnitTestTestCase extends TestCaseBase
 	public void testCompilation()
 	{
 		testGenerationAndCompilationFromModaneModel(Dir, new String[] {"UnitTest"});
-		assertEquals(0, launchCommand("./UnitTest.exe ./UnitTest.arc", Dir, Dir));
+		assertEquals(0, launchCommand("./UnitTest ./UnitTest.arc", Dir, Dir));
 	}
 
 	@Override

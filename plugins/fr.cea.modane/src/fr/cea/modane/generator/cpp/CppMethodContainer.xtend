@@ -26,7 +26,7 @@ import static extension fr.cea.modane.ServiceExtensions.*
  */
 interface CppMethodContainer
 {
-	def String getShortName() 
+	def String getShortName()
 	def boolean hasAxl()
 	def String getClassNameSuffix()
 	def ModaneElement getModaneElement()
@@ -39,18 +39,18 @@ interface CppMethodContainer
 class ServiceCppMethodContainer implements CppMethodContainer
 {
 	Service s
-		
+
 	new(Service s) { this.s = s }
-	
+
 	override getShortName() { s.name }
 	override hasAxl() { true }
 	override getClassNameSuffix() { 'Service' }
 	override getModaneElement() { s }
 	override getAllProperties() { s.allProperties }
 	override getInterfaces() { s.interfaces }
-	
-	override getAllMethods() 
-	{ 
+
+	override getAllMethods()
+	{
 		s.functions.map[f | new FunctionCppMethod(f, shortName)] +
 		s.overrideFuncs.map[f | new OverrideFunctionCppMethod(f, shortName)]
 	}
@@ -62,7 +62,7 @@ class ServiceCppMethodContainer implements CppMethodContainer
 		if (s.classSetUp) names += 'setUpForClass'
 		if (s.testSetUp) names += 'setUp'
 		if (s.classTearDown) names += 'tearDownForClass'
-		if (s.testTearDown) names += 'tearDown'		 
+		if (s.testTearDown) names += 'tearDown'
 		return names
 	}
 }
@@ -70,7 +70,7 @@ class ServiceCppMethodContainer implements CppMethodContainer
 class ModuleCppMethodContainer implements CppMethodContainer
 {
 	Module m
-		
+
 	new(Module m) { this.m = m } 
 
 	override getShortName() { m.name }
@@ -80,9 +80,9 @@ class ModuleCppMethodContainer implements CppMethodContainer
 	override getAllProperties() { m.allProperties }
 	override getInterfaces() { m.interfaces }
 	override getUnitTestMethodNames() { newArrayList }
-	
-	override getAllMethods() 
-	{ 
+
+	override getAllMethods()
+	{
 		m.entryPoints.map[f | new EntryPointCppMethod(f, shortName)] +
 		m.functions.map[f | new FunctionCppMethod(f, shortName)] +
 		m.overrideFuncs.map[f | new OverrideFunctionCppMethod(f, shortName)]
@@ -99,16 +99,16 @@ class InterfaceCppMethodContainer implements CppMethodContainer
 	{
 		i.defaultImplementationName
 	}
-	
+
 	override hasAxl() { false }
 	override getClassNameSuffix() { '' }
 	override getModaneElement() { i }
-	override getAllProperties() { i.allProperties  }
+	override getAllProperties() { i.allProperties }
 	override getInterfaces() { newArrayList(i) }
 	override getUnitTestMethodNames() { newArrayList }
-	
+
 	override getAllMethods() 
-	{ 
+	{
 		i.allFunctions.map[f | new FunctionCppMethod(f, shortName)]
 	}
 }

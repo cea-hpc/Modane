@@ -74,7 +74,7 @@ class DefaultLoopDelegationServiceBase
         , m_force
         , m_velocity);
     T* t = static_cast<T*>(this);
-    Parallel::Foreach(items, [&](NodeVectorView sub_items)
+    arcaneParallelForeach(items, [&](NodeVectorView sub_items)
     {
       ENUMERATE_NODE (iitem, sub_items) {
         const Node item = *iitem;
@@ -107,7 +107,7 @@ class DefaultLoopDelegationServiceBase
   {
     DefaultLoopDelegationApplyBoundaryConditionVars vars(m_velocity);
     T* t = static_cast<T*>(this);
-    Parallel::Foreach(items, [&](FaceVectorView sub_items)
+    arcaneParallelForeach(items, [&](FaceVectorView sub_items)
     {
       ENUMERATE_FACE (iitem, sub_items) {
         const Face item = *iitem;
@@ -141,7 +141,7 @@ class DefaultLoopDelegationServiceBase
     DefaultLoopDelegationMoveNodesVars vars(m_velocity
         , m_node_coord);
     T* t = static_cast<T*>(this);
-    Parallel::Foreach(items, [&](NodeVectorView sub_items)
+    arcaneParallelForeach(items, [&](NodeVectorView sub_items)
     {
       ENUMERATE_NODE (iitem, sub_items) {
         const Node item = *iitem;
@@ -178,7 +178,7 @@ class DefaultLoopDelegationServiceBase
         , m_caracteristic_length
         , m_cell_cqs);
     T* t = static_cast<T*>(this);
-    Parallel::Foreach(items, [&](CellVectorView sub_items)
+    arcaneParallelForeach(items, [&](CellVectorView sub_items)
     {
       ENUMERATE_CELL (iitem, sub_items) {
         const Cell item = *iitem;
@@ -213,7 +213,7 @@ class DefaultLoopDelegationServiceBase
         , m_cell_volume
         , m_density);
     T* t = static_cast<T*>(this);
-    Parallel::Foreach(items, [&](CellVectorView sub_items)
+    arcaneParallelForeach(items, [&](CellVectorView sub_items)
     {
       ENUMERATE_CELL (iitem, sub_items) {
         const Cell item = *iitem;
@@ -249,7 +249,7 @@ class DefaultLoopDelegationServiceBase
         , m_adiabatic_cst
         , m_internal_energy);
     T* t = static_cast<T*>(this);
-    Parallel::Foreach(items, [&](CellVectorView sub_items)
+    arcaneParallelForeach(items, [&](CellVectorView sub_items)
     {
       ENUMERATE_CELL (iitem, sub_items) {
         const Cell item = *iitem;

@@ -76,7 +76,7 @@ class StiffenedGasServiceBase
         , m_internal_energy
         , m_sound_speed);
     T* t = static_cast<T*>(this);
-    Parallel::Foreach(items, [&](CellVectorView sub_items)
+    arcaneParallelForeach(items, [&](CellVectorView sub_items)
     {
       ENUMERATE_CELL (iitem, sub_items) {
         const Cell item = *iitem;
@@ -113,7 +113,7 @@ class StiffenedGasServiceBase
         , m_pressure
         , m_sound_speed);
     T* t = static_cast<T*>(this);
-    Parallel::Foreach(items, [&](CellVectorView sub_items)
+    arcaneParallelForeach(items, [&](CellVectorView sub_items)
     {
       ENUMERATE_CELL (iitem, sub_items) {
         const Cell item = *iitem;

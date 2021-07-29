@@ -12,7 +12,7 @@ package fr.cea.modane.generator.cmake
 import java.util.Collection
 import org.eclipse.xtext.generator.IFileSystemAccess
 
-class CMakeListsGenerator 
+class CMakeListsGenerator
 {
 	static val FileName = 'CMakeLists.txt'
 
@@ -20,28 +20,34 @@ class CMakeListsGenerator
 	{
 		fsa.generateFile(packageFullyQualifiedName.path + '/' + FileName, getContent(packageFullyQualifiedName, subPackageShortNames, cMakeFiles))
 	}
-	
+
 	private def getContent(String packageFullyQualifiedName, Collection<String> subPackageShortNames, CMakeFiles cMakeFiles)
 	'''
 		#
 		# Generated file - Do not overwrite
 		#
-		«IF cMakeFiles.cppFilesForCMake.exists[x | x.endsWith(".cc")]»
-		add_library(«packageFullyQualifiedName.shortName» «FOR f : cMakeFiles.cppFilesForCMake SEPARATOR ' '»«f»«ENDFOR»)
-		target_include_directories(«packageFullyQualifiedName.shortName» PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
-		target_link_libraries(«packageFullyQualifiedName.shortName» PUBLIC arcane_core)
+		««« On ne garde que les fichiers cc (pas les h)
+		«val sources = cMakeFiles.cppFilesForCMake.filter[x | x.endsWith(".cc")]»
+		«IF !sources.empty»
+		add_library(«packageFullyQualifiedName.shortName»«FOR f : sources»«'\n'»  «f»«ENDFOR»«'\n'»)
+
+		target_include_directories(«packageFullyQualifiedName.shortName» PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+		arcane_add_arcane_libraries_to_target(«packageFullyQualifiedName.shortName»)
+
 		«FOR axlFile : cMakeFiles.axlFilesForCMake»
-		arcane_generate_axl(«axlFile»)
+		arcane_target_add_axl(«packageFullyQualifiedName.shortName» «axlFile»)
 		«ENDFOR»
 		«ENDIF»
+
 		«FOR subPackageShortName : subPackageShortNames»
 		add_subdirectory(«subPackageShortName»)
 		«ENDFOR»
+
 		if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Project.cmake)
 		include(Project.cmake)
 		endif()
 	'''
-	
+
 	def generateRoot(IFileSystemAccess fsa, String projectName, String arcaneHome, Collection<String> subPackageShortNames)
 	{
 		fsa.generateFile(FileName, getContent(projectName, arcaneHome, subPackageShortNames))
@@ -52,23 +58,27 @@ class CMakeListsGenerator
 		#
 		# Generated file - Do not overwrite
 		#
-		cmake_minimum_required(VERSION 3.10)
-		include(«arcaneHome»/samples/ArcaneCompilerConfig.cmake)
+		cmake_minimum_required(VERSION 3.13)
 		project(«projectName» LANGUAGES C CXX)
-		find_package(Arcane)
+
+		set(Arcane_ROOT «arcaneHome»)
+		include(«arcaneHome»/samples/ArcaneCompilerConfig.cmake)
+		find_package(Arcane REQUIRED)
+
 		«FOR subPackageShortName : subPackageShortNames»
 		add_subdirectory(«subPackageShortName»)
 		«ENDFOR»
+
 		if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Project.cmake)
 		include(Project.cmake)
 		endif()
 	'''
-	
-	private def getShortName(String fullyQualifiedName) 
+
+	private def getShortName(String fullyQualifiedName)
 	{ 
 		if (fullyQualifiedName.contains('.')) fullyQualifiedName.split("\\.").last
 		else fullyQualifiedName
 	}
-	
+
 	private def getPath(String fullyQualifiedName) { fullyQualifiedName.replace('.', '/') }
 }

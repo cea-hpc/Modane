@@ -28,7 +28,7 @@ public class StructTestCase extends TestCaseBase
 	public void testCompilation()
 	{
 		testGenerationAndCompilationFromUmlModel(Dir);
-		assertEquals(0, launchCommand("./Calculator.exe -arcane_opt max_iteration 1 ./Calculator.arc", Dir, Dir));
+		assertEquals(0, launchCommand("./Calculator -arcane_opt max_iteration 1 ./Calculator.arc", Dir, Dir));
 	}
 
 	@Override
