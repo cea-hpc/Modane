@@ -33,8 +33,8 @@ public class Application implements IApplication
 
 	String cppDir = null;
 	String umlDir = null;
-	String mdzipFile = null;
-	String umlFile = null;
+	String[] mdzipFiles = null;
+	String[] umlFiles = null;
 	String pkgToGenerate = null;
 	boolean writeCMakesFiles = false;
 
@@ -50,7 +50,7 @@ public class Application implements IApplication
 		if (parseArgs(appArgs))
 		{
 			// Arguments are checked
-			if (umlDir != null && mdzipFile != null)
+			if (umlDir != null && mdzipFiles != null)
 			{
 				// Step 0: check EMF2XMI_DIR environment variable
 				String emf2xmiDir = System.getenv(EMF2XMI);
@@ -63,42 +63,54 @@ public class Application implements IApplication
 				// Step 1: ".mdzip" file to ".uml" file
 				System.out.println(">>>>> MDZIP --> EMF UML");
 				System.out.println("      emf2xmi dir     : " + emf2xmiDir);
-				System.out.println("      Mdzip file      : " + mdzipFile);
 				System.out.println("      Destination dir : " + umlDir);
-				ProcessBuilder pb = new ProcessBuilder(emf2xmiDir, "project_file=" + mdzipFile, "destination_dir=" + umlDir);
-				pb.redirectOutput(Redirect.INHERIT);
-				pb.redirectError(Redirect.INHERIT);
-				Process p = pb.start();
-				p.waitFor();
-				int exitValue = p.exitValue();
-				System.out.println("        Exit value : " + exitValue);
 
-				if (exitValue != 0)
+				umlFiles = new String[mdzipFiles.length];
+				for (int i=0 ; i<mdzipFiles.length ; ++i)
 				{
-					System.out.println(">>>>> UML generation failed. Exiting...");
-					return Application.EXIT_OK;
+					final String mdzipFile = mdzipFiles[i];
+					System.out.println("      Mdzip file      : " + mdzipFile);
+					final ProcessBuilder pb = new ProcessBuilder(emf2xmiDir, "project_file=" + mdzipFile, "destination_dir=" + umlDir);
+					pb.redirectOutput(Redirect.INHERIT);
+					pb.redirectError(Redirect.INHERIT);
+					final Process p = pb.start();
+					p.waitFor();
+					final int exitValue = p.exitValue();
+					System.out.println("        Exit value : " + exitValue);
+
+					if (exitValue != 0)
+					{
+						System.out.println(">>>>> UML generation failed for " + mdzipFile + ". Exiting...");
+						return Application.EXIT_OK;
+					}
+
+					System.out.println(">>>>> UML generation ok for " + mdzipFile);
+					File f = new File(mdzipFile);
+					umlFiles[i] = umlDir + '/' + f.getName().replace(".mdzip", ".uml");
 				}
-				System.out.println(">>>>> UML generation ok");
-				File f = new File(mdzipFile);
-				umlFile = umlDir + '/' + f.getName().replace(".mdzip", ".uml");
 			}
 
-			if (umlFile != null)
+			if (umlFiles != null)
 			{
 				// Step 2: C++ generation from a ".uml" file
-				System.out.println(">>>>> Loading EMF UML resource: " + umlFile);
-				UmlToCpp umlToCpp = UmlToCpp.createInstance();
-				Procedure2<ModaneGeneratorMessageDispatcher.MessageType, String> printConsole = (ModaneGeneratorMessageDispatcher.MessageType type, String msg) -> { System.out.println(msg); };
-				umlToCpp.getMessageDispatcher().getTraceListeners().add(printConsole);
-				Model model = umlToCpp.readModel(URI.createFileURI(umlFile));
-				System.out.println(">>>>> EMF UML resource loaded: " + umlFile);
+				for (int i=0 ; i<umlFiles.length ; ++i)
+				{
+					final String umlFile = umlFiles[i];
+					System.out.println(">>>>> Loading EMF UML resource: " + umlFile);
+					final UmlToCpp umlToCpp = UmlToCpp.createInstance();
+					final Procedure2<ModaneGeneratorMessageDispatcher.MessageType, String> printConsole = (ModaneGeneratorMessageDispatcher.MessageType type, String msg) -> { System.out.println(msg); };
+					umlToCpp.getMessageDispatcher().getTraceListeners().add(printConsole);
+					final Model model = umlToCpp.readModel(URI.createFileURI(umlFile));
+					System.out.println(">>>>> EMF UML resource loaded: " + umlFile);
 
-				System.out.println(">>>>> Starting generation process for: " + model.getName());
-				if (pkgToGenerate == null)
-					umlToCpp.generate(model, cppDir, "", "", writeCMakesFiles, false);
-				else
-					umlToCpp.generate(model, cppDir, "", pkgToGenerate, writeCMakesFiles, false);
-				System.out.println(">>>>> Generation process ended successfully for: " + model.getName());
+					System.out.println(">>>>> Starting generation process for: " + umlFile);
+					if (pkgToGenerate == null)
+						umlToCpp.generate(model, cppDir, "", "", writeCMakesFiles, false);
+					else
+						umlToCpp.generate(model, cppDir, "", pkgToGenerate, writeCMakesFiles, false);
+
+					System.out.println(">>>>> Generation process ended successfully for: " + umlFile);
+				}
 			}
 		}
 
@@ -116,6 +128,7 @@ public class Application implements IApplication
 		System.out.println("Usage (Directories need absolute pathes and package separator is '.': A, A.B, A.B.C...):");
 		System.out.println("  Generate from a '.mdzip' model: modane --cpp-dir <AXL_AND_CPP_FILES_OUTPUT_DIR> --uml-dir <UML_FILES_OUTPUT_DIR> --mdzip <MDZIP_MODEL_FILE> [--pkg <PACKAGE_NAME_TO_GENERATE>] [--cmakes]");
 		System.out.println("  Generate from a '.uml'   model: modane --cpp-dir <AXL_AND_CPP_FILES_OUTPUT_DIR> --uml <UML_ROOT_MODEL_FILE> [--pkg <PACKAGE_NAME_TO_GENERATE>] [--cmakes]");
+		System.out.println("  Note: --mdzip and --uml options accept a list of comma separated files (no space)");
 	}
 
 	private boolean parseArgs(String[] appArgs)
@@ -128,8 +141,18 @@ public class Application implements IApplication
 			{
 			case "--cpp-dir": cppDir = appArgs[++i]; break;
 			case "--uml-dir": umlDir = appArgs[++i]; break;
-			case "--mdzip": mdzipFile = appArgs[++i]; break;
-			case "--uml": umlFile = appArgs[++i]; break;
+			case "--mdzip":
+			{
+				String arg = appArgs[++i];
+				mdzipFiles = arg.split(",");
+				break;
+			}
+			case "--uml":
+			{
+				String arg = appArgs[++i];
+				umlFiles = arg.split(",");
+				break;
+			}
 			case "--pkg": pkgToGenerate = appArgs[++i]; break;
 			case "--cmakes": writeCMakesFiles = true; break;
 			default:
@@ -140,7 +163,7 @@ public class Application implements IApplication
 			}
 			}
 		}
-		valid = (dirOK(cppDir) && (fileOK(umlFile, "uml") || (fileOK(mdzipFile, "mdzip") && dirOK(umlDir))));
+		valid = (dirOK(cppDir) && (filesOK(umlFiles, "uml") || (filesOK(mdzipFiles, "mdzip") && dirOK(umlDir))));
 
 		if (!valid) printUsage();
 		return valid;
@@ -157,18 +180,24 @@ public class Application implements IApplication
 		return false;
 	}
 
-	private boolean fileOK(String fileName, String expectedExtension)
+	private boolean filesOK(String[] fileNames, String expectedExtension)
 	{
-		if (fileName != null && fileName != "")
+		if (fileNames != null)
 		{
-			if (fileName.endsWith("." + expectedExtension))
+			for (String fileName : fileNames)
 			{
-				File f = new File(fileName);
-				if (f.exists() && f.isFile()) return true;
-				System.out.println("Unknow " + expectedExtension + " file: " + fileName);
+				if (fileName != null && fileName != "")
+				{
+					if (fileName.endsWith("." + expectedExtension))
+					{
+						File f = new File(fileName);
+						if (f.exists() && f.isFile()) return true;
+						System.out.println("Unknow " + expectedExtension + " file: " + fileName);
+					}
+					else 
+						System.out.println("Unknown file type (expected " + expectedExtension + "): " + fileName);
+				}
 			}
-			else 
-				System.out.println("Unknown file type (expected " + expectedExtension + "): " + fileName);
 		}
 		return false;
 	}
