@@ -16,7 +16,6 @@ import fr.cea.modane.modane.Function
 import fr.cea.modane.modane.Interface
 import fr.cea.modane.modane.ItemFamily
 import fr.cea.modane.modane.Legacy
-import fr.cea.modane.modane.ModaneElement
 import fr.cea.modane.modane.ModaneModel
 import fr.cea.modane.modane.ModanePackage
 import fr.cea.modane.modane.Module
@@ -62,7 +61,7 @@ class GraphBuilder
 		// Construction de la liste des packages
 		val packages = new LinkedHashSet<String>
 		for (m : models)
-			for (e : m.elements.filter[x | x instanceof ModaneElement])
+			for (e : m.elements)
 				packages.add(e.model.name)
 
 		// Allocation du graph
@@ -70,7 +69,7 @@ class GraphBuilder
 
 		// Création des arcs avec les informations de dépendance sur le modèle
 		for (m : models)
-			for (e : m.elements.filter[x | x instanceof ModaneElement])
+			for (e : m.elements)
 				e.findArcs
 
 		return graph
@@ -139,8 +138,7 @@ class GraphBuilder
 
 	private def checkDependency(VarReference it)
 	{
-		if (it instanceof VarReference)
-			checkDependency(it, variable, pack.varReference_Variable, -1)
+		checkDependency(it, variable, pack.varReference_Variable, -1)
 	}
 
 	private def checkDependency(Function it)

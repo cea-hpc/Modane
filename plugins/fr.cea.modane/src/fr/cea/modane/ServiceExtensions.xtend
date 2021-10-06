@@ -12,7 +12,6 @@ package fr.cea.modane
 import fr.cea.modane.modane.Interface
 import fr.cea.modane.modane.Pty
 import fr.cea.modane.modane.Service
-import fr.cea.modane.modane.VarReference
 import fr.cea.modane.modane.Variable
 import java.util.LinkedHashSet
 
@@ -50,7 +49,7 @@ class ServiceExtensions
 			for (vref : f.vars)
 				usedVariables.add(vref.variable)
 		for (f : functions)
-			for (vref : f.vars.filter(t | t instanceof VarReference))
+			for (vref : f.vars)
 				usedVariables.add(vref.variable)
 		return usedVariables
 	}
