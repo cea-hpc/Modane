@@ -7,7 +7,7 @@
 
 Written by CEA and Contributors
 
-(C) Copyright 2020, by CEA. All rights reserved.
+(C) Copyright 2021, by CEA. All rights reserved.
 
 All content is the property of the respective authors or their employers.
 For more information regarding authorship of content, please consult the
@@ -120,19 +120,23 @@ Modane requires Java 11.1 or later to build & run.
 
 It as based on:
 
-Eclipse 2019-12
+Eclipse 2021-09
  * License: EPL-2.0
- * Project: https://www.eclipse.org/downloads/packages/release/2019-12/r
+ * Project: https://www.eclipse.org/downloads/packages/release/2021-09/r
 
-Xtext (2.20.0)
+Xtext (2.25.0)
  * License: EPL-2.0
  * Project: http://projects.eclipse.org/projects/modeling.tmf.xtext
  * Source: https://github.com/eclipse/xtext
 
-Sirius (6.3.0)
+Sirius (6.5.1)
  * License: EPL-2.0
  * Project: http://projects.eclipse.org/projects/modeling.sirius
  * Source: https://git.eclipse.org/c/sirius/org.eclipse.sirius.git
+
+Amalgam (1.13.0)
+ * License: EPL-2.0
+ * Update Site: https://download.eclipse.org/modeling/amalgam/updates/stable
 
 JGraphT (1.3.0)
  * License: LGPL-2.1, EPL-2.0
