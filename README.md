@@ -39,7 +39,7 @@ The Modane perspective provides a set of *Views* and wizards shortcuts allowing 
 
 From the *Model Explorer View* in the *Modane* perspective, just right-click and select *New > Modane Project* to create a new project:
 
-<img src="./README_images/Modane_new_menu.png" alt="Modane New Project" title="Modane New Project" width="60%" height="60%" />
+<img src="./README_images/Modane_new_menu.png" alt="Modane New Project" title="Modane New Project" width="40%" height="40%" />
 
 You can also create it from the *File > New > Modane Project* main menu.
 
@@ -103,13 +103,13 @@ To build the Modane products for Windows/Linux/MacOS and the Eclipse update-site
 
 Note the `';'` after `mvn clean`. 
 
-The products resulting from the build will be accessible in */releng/fr.cea.modane.updatesite/target/products/Modane-1.4.0.yyyymmddHHMM-YOUR_PLATFORM.zip*.
+The products resulting from the build will be accessible in */releng/fr.cea.modane.updatesite/target/products/Modane-version.yyyymmddHHMM-YOUR_PLATFORM.zip*.
 
-The headless products resulting from the build will be accessible in */releng/fr.cea.modane.updatesite/target/products/ModaneHeadless-1.4.0.yyyymmddHHMM-YOUR_PLATFORM.zip*.
+The headless products resulting from the build will be accessible in */releng/fr.cea.modane.updatesite/target/products/ModaneHeadless-version.yyyymmddHHMM-YOUR_PLATFORM.zip*.
 
-The Eclipse update-site resulting from the build will be accessible in */releng/fr.cea.modane.updatesite/target/fr.cea.modane.updatesite-1.4.0.yyyymmddHHMM.zip*.
+The Eclipse update-site resulting from the build will be accessible in */releng/fr.cea.modane.updatesite/target/fr.cea.modane.updatesite-version.yyyymmddHHMM.zip*.
 
-Just install this update-site in an Eclipse 2019-12 with Sirius 6.3.0 and Xtext 2.20.0 already installed to use Modane.
+Just install this update-site in an Eclipse with Sirius and Xtext already installed to use Modane. The versions of Eclipse, Sirius and Xtext are listed below.
 
 If you want to skip tests execution, you can run the following command:
 `mvn clean; mvn verify -Dmaven.test.skip=true`
