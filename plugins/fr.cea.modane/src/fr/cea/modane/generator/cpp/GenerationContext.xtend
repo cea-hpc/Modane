@@ -36,8 +36,10 @@ class GenerationContext
 	String path
 	String name
 	String content
-	ArrayList<String> includes
 	ArrayList<String> arcaneIncludes
+	ArrayList<String> includes // includes for .h and .cc
+	ArrayList<String> ccIncludes // includes only for .cc
+	ArrayList<Pair<String, String>> classDeclarations // <namespace, class name> pair of declarations
 	ArrayList<String> usedNs
 
 	new(GenerationOptions options, ModaneGeneratorMessageDispatcher messageDispatcher)
@@ -54,6 +56,8 @@ class GenerationContext
 		this.content = ""
 		this.arcaneIncludes = new ArrayList<String>
 		this.includes = new ArrayList<String>
+		this.ccIncludes = new ArrayList<String>
+		this.classDeclarations = new ArrayList<Pair<String, String>>
 		this.usedNs = new ArrayList<String>
 
 		if (withIncludes)
@@ -107,6 +111,18 @@ class GenerationContext
 		}
 	}
 
+	def addCcInclude(String include)
+	{
+		if (!ccIncludes.contains(include) && include != fullName)
+			ccIncludes += include
+	}
+
+	def addClassDeclaration(String namespace, String className)
+	{
+		if (!classDeclarations.exists[x | x.key == namespace && x.value == className])
+			classDeclarations += new Pair<String, String>(namespace, className)
+	}
+
 	def addUsedNs(String value)
 	{ 
 		if (nsName != value && !usedNs.contains(value))
@@ -141,18 +157,25 @@ class GenerationContext
 		#define «ifndefTag»
 		«Separator»
 		«FOR i : arcaneIncludes + includes»
-		#include "«i»"
+			#include "«i»"
 		«ENDFOR»
 		«Separator»
+		«FOR p : classDeclarations»
+			«IF p.key.nullOrEmpty»
+				class «p.value»;
+			«ELSE»
+				namespace «p.key» { class «p.value»; }
+			«ENDIF»
+		«ENDFOR»
 		«FOR i : usedNs»
-		using namespace «i»;
+			using namespace «i»;
 		«ENDFOR»
 		«IF !path.empty»namespace «nsName» {«ENDIF»
 		«Separator»
 		«content»
 		«IF !path.empty»
-		«Separator»
-		}  // namespace «nsName»
+			«Separator»
+			}  // namespace «nsName»
 		«ENDIF»
 		«Separator»
 		#endif  // «ifndefTag»
@@ -163,7 +186,7 @@ class GenerationContext
 	 */
 	private def dumpCC()
 	'''
-		«FOR i : arcaneIncludes + includes»
+		«FOR i : arcaneIncludes + includes + ccIncludes»
 		#include "«i»"
 		«ENDFOR»
 		«Separator»

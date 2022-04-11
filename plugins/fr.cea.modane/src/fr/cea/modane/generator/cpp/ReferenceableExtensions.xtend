@@ -40,7 +40,12 @@ class ReferenceableExtensions
  	static def dispatch getReferencedNameWithNs(Legacy it)
  	{
 		val context = GenerationContext::Current
-		if (context.name.endsWith(GenerationContext::HeaderExtension) && !originFile.nullOrEmpty) context.addInclude(originFile)
+		if (context.name.endsWith(GenerationContext::HeaderExtension) && !originFile.nullOrEmpty)
+		{
+			context.addCcInclude(originFile)
+			context.addClassDeclaration(originNamespace, referencedName)
+		}
+
 		if (originNamespace.nullOrEmpty) referencedName
 		else '::' + originNamespace + '::' + referencedName
  	}
