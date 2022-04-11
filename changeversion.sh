@@ -62,10 +62,10 @@ do
 done
 
 f=./README.md
-if grep -q "https://github.com/cea-hpc/NabLab/releases/tag/v$OLD_VERSION" $f; then
+if grep -q "https://github.com/cea-hpc/Modane/releases/tag/v$OLD_VERSION" $f; then
    echo "   Changing version of:" $f
    cp $f $f.old
-   sed "s%https://github.com/cea-hpc/NabLab/releases/tag/v$OLD_VERSION%https://github.com/cea-hpc/NabLab/releases/tag/v$NEW_VERSION%g" $f.old > $f
+   sed "s%https://github.com/cea-hpc/Modane/releases/tag/v$OLD_VERSION%https://github.com/cea-hpc/Modane/releases/tag/v$NEW_VERSION%g" $f.old > $f
 fi
 
 echo "DONE. All that remains is to change the SPLASH SCREEN (BMP 459x347)."
