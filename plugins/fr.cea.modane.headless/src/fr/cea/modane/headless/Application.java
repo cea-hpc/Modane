@@ -80,14 +80,15 @@ public class Application implements IApplication
 
 					if (exitValue != 0)
 					{
-						System.out.println(">>>>> UML generation failed for " + mdzipFile + ". Exiting...");
+						System.out.println("**    UML generation failed for " + mdzipFile + ". Exiting...");
 						return Application.EXIT_OK;
 					}
 
-					System.out.println(">>>>> UML generation ok for " + mdzipFile);
+					System.out.println("      UML generation ok for " + mdzipFile);
 					File f = new File(mdzipFile);
 					umlFiles[i] = umlDir + '/' + f.getName().replace(".mdzip", ".uml");
 				}
+				System.out.println(">>>>> MDZIP --> EMF UML finished");
 			}
 
 			if (umlFiles != null)
