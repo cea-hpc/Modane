@@ -82,7 +82,7 @@ public class PartialGenTestCase extends TestCaseBase
 	}
 
 	@Override
-	protected void makeFullClean()
+	public void makeFullClean()
 	{
 		for (File f : FileUtils.listAllFiles(getRelativeSrcDir(ModelName)))
 		{

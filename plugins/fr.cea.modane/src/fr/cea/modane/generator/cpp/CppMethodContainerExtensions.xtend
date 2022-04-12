@@ -89,7 +89,6 @@ class CppMethodContainerExtensions
 		context.newFile(outputPath, developerHeaderFileName, false, component)
 		cmakeFiles += developerHeaderFileName
 		context.addInclude(outputPath, baseClassFileName)
-		context.addProjectInclude
 		context.addContent(developerHeaderContent)
 		context.generateIfNotExist(fsa)	
 

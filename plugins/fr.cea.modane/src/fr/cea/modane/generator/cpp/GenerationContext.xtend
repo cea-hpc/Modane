@@ -86,7 +86,6 @@ class GenerationContext
 
 	def getName() { name }
 	def getFullName() { path + '/' + name }
-	def addProjectInclude() { addInclude("ProjectIncludes.h") }
 	def addContent(CharSequence c) { content = content.concat(c.toString) }
 	def getNsName() { path.split("/").map[s | s.toFirstUpper].join }
 	def isAUsedNs(String ns) { usedNs.contains(ns) }

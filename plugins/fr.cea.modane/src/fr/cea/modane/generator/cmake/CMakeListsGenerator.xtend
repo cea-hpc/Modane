@@ -27,22 +27,20 @@ class CMakeListsGenerator
 		# Generated file - Do not overwrite
 		#
 		««« On ne garde que les fichiers cc (pas les h)
-		«val sources = cMakeFiles.cppFilesForCMake.filter[x | x.endsWith(".cc")]»
+		«val sources = cMakeFiles.cppFilesForCMake.filter[x | x.endsWith(".cc")] + cMakeFiles.axlFilesForCMake.map[x | x + "_axl.h"]»
 		«IF !sources.empty»
-		add_library(«packageFullyQualifiedName.shortName»«FOR f : sources»«'\n'»  «f»«ENDFOR»«'\n'»)
+			add_library(«packageFullyQualifiedName.shortName»«FOR f : sources»«'\n'»  «f»«ENDFOR»«'\n'»)
 
-		target_include_directories(«packageFullyQualifiedName.shortName» PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
-		arcane_add_arcane_libraries_to_target(«packageFullyQualifiedName.shortName»)
-
-		«FOR axlFile : cMakeFiles.axlFilesForCMake»
-		arcane_target_add_axl(«packageFullyQualifiedName.shortName» «axlFile»)
-		«ENDFOR»
+			«FOR axlFile : cMakeFiles.axlFilesForCMake AFTER "\n"»
+				arcane_generate_axl(«axlFile»)
+			«ENDFOR»
+			target_link_libraries(«packageFullyQualifiedName.shortName» PRIVATE arcane_full)
+			target_include_directories(«packageFullyQualifiedName.shortName» PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 		«ENDIF»
 
-		«FOR subPackageShortName : subPackageShortNames»
-		add_subdirectory(«subPackageShortName»)
+		«FOR subPackageShortName : subPackageShortNames AFTER "\n"»
+			add_subdirectory(«subPackageShortName»)
 		«ENDFOR»
-
 		if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Project.cmake)
 		include(Project.cmake)
 		endif()

@@ -28,17 +28,22 @@ public class MicroHydroTestCase extends TestCaseBase
 	public void testCompilation()
 	{
 		testGenerationAndCompilationFromUmlModel(Dir);
-		assertEquals(0, launchCommand("./MicroHydro ./MicroHydro.arc", Dir, Dir));
 	}
 
 	@Override
-	protected void makeFullClean()
+	public void testExecution()
+	{
+		testGenerationAndCompilationFromUmlModel(Dir);
+		assertEquals(0, run("./build/Hydro ./MicroHydro.arc", Dir));
+	}
+
+	@Override
+	public void makeFullClean()
 	{
 		for (File f : getAllFiles(Dir))
 		{
 			if (f.getName().matches("__(.*).h")
 					|| f.getName().matches("(.*).axl")
-					|| f.getName().matches("(.*)_axl.h")
 					|| f.getName().matches("(.*).(.*)nabla")
 					)
 				f.delete();

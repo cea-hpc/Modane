@@ -5,7 +5,6 @@
 /*---------------------------------------------------------------------------*/
 
 #include "Parameter/__ParameterDefaultBase.h"
-#include "ProjectIncludes.h"
 #include "Parameter/__IComplexType.h"
 #include "Parameter/__EnumType.h"
 #include "Parameter/__IInterfaceType.h"

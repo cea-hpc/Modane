@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:modane="http://www.cea.fr/modane/Modane" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_X_TEcB5ZEem6HezlZ2NNww" selectedViews="_X_TEcR5ZEem6HezlZ2NNww" version="14.3.0.201909031200">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:modane="http://www.cea.fr/modane/Modane" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_X_TEcB5ZEem6HezlZ2NNww" selectedViews="_X_TEcR5ZEem6HezlZ2NNww" version="14.5.1.202106111100">
     <semanticResources>MicroHydro.modane</semanticResources>
     <semanticResources>MicroHydro.Eos.modane</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_X_TEcR5ZEem6HezlZ2NNww">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_qoAO4IBXEem3dc59wdQeEw" name="MicroHydro Design Diagram" repPath="#_qn9yoIBXEem3dc59wdQeEw" changeId="dde3753e-7ff0-411d-b80f-f9e83a963340">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_qoAO4IBXEem3dc59wdQeEw" name="MicroHydro Design Diagram" repPath="#_qn9yoIBXEem3dc59wdQeEw" changeId="3af0360d-6f5b-4fc2-8f25-1dbb2b0a9c5d">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']"/>
         <target xmi:type="modane:ModaneModel" href="MicroHydro.modane#/"/>
       </ownedRepresentationDescriptors>
@@ -269,10 +269,6 @@
                   <styles xmi:type="notation:FontStyle" xmi:id="_qoy5FIBXEem3dc59wdQeEw" fontName="Ubuntu" fontHeight="8"/>
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_qoy5FYBXEem3dc59wdQeEw"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_3vvAsGYCEeqlN7icoxRalA" type="3010" element="_3u4FEmYCEeqlN7icoxRalA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_3vvAsWYCEeqlN7icoxRalA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_3vvAsmYCEeqlN7icoxRalA"/>
-                </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_qov1woBXEem3dc59wdQeEw"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_qov1w4BXEem3dc59wdQeEw"/>
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_qov1xIBXEem3dc59wdQeEw"/>
@@ -448,69 +444,85 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qo-fQIBXEem3dc59wdQeEw" id="(0.5028248587570622,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qo-fQYBXEem3dc59wdQeEw" id="(0.5061728395061729,1.0)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_yCisgLr3Eeyk7shkkMgnhQ" type="4001" element="_yCMHMLr3Eeyk7shkkMgnhQ" source="_qoGVhIBXEem3dc59wdQeEw" target="_sQ108IBXEem3dc59wdQeEw">
+          <children xmi:type="notation:Node" xmi:id="_yCm98Lr3Eeyk7shkkMgnhQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yCm98br3Eeyk7shkkMgnhQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yCqBQLr3Eeyk7shkkMgnhQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yCqBQbr3Eeyk7shkkMgnhQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yCqBQrr3Eeyk7shkkMgnhQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yCqBQ7r3Eeyk7shkkMgnhQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_yCisgbr3Eeyk7shkkMgnhQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_yCisgrr3Eeyk7shkkMgnhQ" fontName="Noto Sans"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yCisg7r3Eeyk7shkkMgnhQ" points="[0, 0, -44, -360]$[44, 360, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yC3coLr3Eeyk7shkkMgnhQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yC3cobr3Eeyk7shkkMgnhQ" id="(0.5,0.5)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZsoBXEem3dc59wdQeEw" name="MicroHydro" tooltipText=" " outgoingEdges="_qn-aJIBXEem3dc59wdQeEw" incomingEdges="_qn-aKIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZsoBXEem3dc59wdQeEw" name="MicroHydro" tooltipText="" outgoingEdges="_qn-aJIBXEem3dc59wdQeEw" incomingEdges="_qn-aKIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
       <target xmi:type="modane:Struct" href="MicroHydro.modane#//@elements[name='BoundaryCondition']"/>
       <semanticElements xmi:type="modane:Struct" href="MicroHydro.modane#//@elements[name='BoundaryCondition']"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Zs4BXEem3dc59wdQeEw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="128,243,56" foregroundColor="128,243,56">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Zs4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" backgroundColor="128,243,56" foregroundColor="128,243,56">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZtIBXEem3dc59wdQeEw" name="BoundaryCondition">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZtIBXEem3dc59wdQeEw" name="BoundaryCondition" tooltipText="">
         <target xmi:type="modane:Struct" href="MicroHydro.modane#//@elements[name='BoundaryCondition']"/>
         <semanticElements xmi:type="modane:Struct" href="MicroHydro.modane#//@elements[name='BoundaryCondition']"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZtYBXEem3dc59wdQeEw" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZtYBXEem3dc59wdQeEw" labelSize="10" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" foregroundColor="255,255,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-ZtoBXEem3dc59wdQeEw" name="BoundaryCondition properties">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-ZtoBXEem3dc59wdQeEw" name="BoundaryCondition properties" tooltipText="">
         <target xmi:type="modane:Struct" href="MicroHydro.modane#//@elements[name='BoundaryCondition']"/>
         <semanticElements xmi:type="modane:Struct" href="MicroHydro.modane#//@elements[name='BoundaryCondition']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_qn-Zt4BXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZuIBXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZuIBXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-ZuYBXEem3dc59wdQeEw" name="[1..1] surface : FaceGroup">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-ZuYBXEem3dc59wdQeEw" name="[1..1] surface : FaceGroup" tooltipText="">
           <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='BoundaryCondition']/@properties.1"/>
           <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='BoundaryCondition']/@properties.1"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-ZuoBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-ZuoBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Zu4BXEem3dc59wdQeEw" name="[1..1] value : Real">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Zu4BXEem3dc59wdQeEw" name="[1..1] value : Real" tooltipText="">
           <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='BoundaryCondition']/@properties.2"/>
           <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='BoundaryCondition']/@properties.2"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-ZvIBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-ZvIBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZvYBXEem3dc59wdQeEw" name="MicroHydro" tooltipText=" " incomingEdges="_qn-aJIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZvYBXEem3dc59wdQeEw" name="MicroHydro" tooltipText="" incomingEdges="_qn-aJIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
       <target xmi:type="modane:Enumeration" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']"/>
       <semanticElements xmi:type="modane:Enumeration" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZvoBXEem3dc59wdQeEw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="128,243,56" foregroundColor="128,243,56">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZvoBXEem3dc59wdQeEw" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" backgroundColor="128,243,56" foregroundColor="128,243,56">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Zv4BXEem3dc59wdQeEw" name="BoundaryConditionType">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Zv4BXEem3dc59wdQeEw" name="BoundaryConditionType" tooltipText="">
         <target xmi:type="modane:Enumeration" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']"/>
         <semanticElements xmi:type="modane:Enumeration" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZwIBXEem3dc59wdQeEw" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZwIBXEem3dc59wdQeEw" labelSize="10" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" foregroundColor="255,255,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-ZwYBXEem3dc59wdQeEw" name="BoundaryConditionType literals">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-ZwYBXEem3dc59wdQeEw" name="BoundaryConditionType literals" tooltipText="">
         <target xmi:type="modane:Enumeration" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']"/>
         <semanticElements xmi:type="modane:Enumeration" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_qn-ZwoBXEem3dc59wdQeEw"/>
@@ -518,433 +530,425 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-ZxIBXEem3dc59wdQeEw" name="Vx">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-ZxIBXEem3dc59wdQeEw" name="Vx" tooltipText="">
           <target xmi:type="modane:EnumerationLiteral" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']/@literals.0"/>
           <semanticElements xmi:type="modane:EnumerationLiteral" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']/@literals.0"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-ZxYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-ZxYBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-ZxoBXEem3dc59wdQeEw" name="Vy">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-ZxoBXEem3dc59wdQeEw" name="Vy" tooltipText="">
           <target xmi:type="modane:EnumerationLiteral" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']/@literals.1"/>
           <semanticElements xmi:type="modane:EnumerationLiteral" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']/@literals.1"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Zx4BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Zx4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-ZyIBXEem3dc59wdQeEw" name="Vz">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-ZyIBXEem3dc59wdQeEw" name="Vz" tooltipText="">
           <target xmi:type="modane:EnumerationLiteral" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']/@literals.2"/>
           <semanticElements xmi:type="modane:EnumerationLiteral" href="MicroHydro.modane#//@elements[name='BoundaryConditionType']/@literals.2"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-ZyYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-ZyYBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Literals']/@subNodeMappings[name='DD.ME.L.Literal']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZyoBXEem3dc59wdQeEw" name="MicroHydro" tooltipText=" " outgoingEdges="_qn-aMIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZyoBXEem3dc59wdQeEw" name="MicroHydro" tooltipText="" outgoingEdges="_qn-aMIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
       <target xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
       <semanticElements xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Zy4BXEem3dc59wdQeEw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="128,243,56" foregroundColor="128,243,56">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Zy4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" backgroundColor="128,243,56" foregroundColor="128,243,56">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZzIBXEem3dc59wdQeEw" name="DefaultLoopDelegation">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-ZzIBXEem3dc59wdQeEw" name="DefaultLoopDelegation" tooltipText="">
         <target xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
         <semanticElements xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZzYBXEem3dc59wdQeEw" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-ZzYBXEem3dc59wdQeEw" labelSize="10" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" foregroundColor="255,255,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-ZzoBXEem3dc59wdQeEw" name="DefaultLoopDelegation properties">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-ZzoBXEem3dc59wdQeEw" name="DefaultLoopDelegation properties" tooltipText="">
         <target xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
         <semanticElements xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_qn-Zz4BXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z0IBXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z0IBXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-Z0YBXEem3dc59wdQeEw" name="DefaultLoopDelegation operations">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-Z0YBXEem3dc59wdQeEw" name="DefaultLoopDelegation operations" tooltipText="">
         <target xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
         <semanticElements xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_qn-Z0oBXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z04BXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z04BXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z1IBXEem3dc59wdQeEw" name="override computeNodeImpulsion">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z1IBXEem3dc59wdQeEw" name="override computeNodeImpulsion" tooltipText="">
           <target xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.0"/>
           <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.0"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z1YBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z1YBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z1oBXEem3dc59wdQeEw" name="override applyBoundaryCondition">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z1oBXEem3dc59wdQeEw" name="override applyBoundaryCondition" tooltipText="">
           <target xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.1"/>
           <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.1"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z14BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z14BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z2IBXEem3dc59wdQeEw" name="override moveNodes">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z2IBXEem3dc59wdQeEw" name="override moveNodes" tooltipText="">
           <target xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.2"/>
           <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.2"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z2YBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z2YBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z2oBXEem3dc59wdQeEw" name="override computeGeometricValues">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z2oBXEem3dc59wdQeEw" name="override computeGeometricValues" tooltipText="">
           <target xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.3"/>
           <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.3"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z24BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z24BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z3IBXEem3dc59wdQeEw" name="override updateDensity">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z3IBXEem3dc59wdQeEw" name="override updateDensity" tooltipText="">
           <target xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.4"/>
           <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.4"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z3YBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z3YBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z3oBXEem3dc59wdQeEw" name="override computeInternalEnergy">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z3oBXEem3dc59wdQeEw" name="override computeInternalEnergy" tooltipText="">
           <target xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.5"/>
           <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.5"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z34BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z34BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z4IBXEem3dc59wdQeEw" name="override computePressureForce">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z4IBXEem3dc59wdQeEw" name="override computePressureForce" tooltipText="">
           <target xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.6"/>
           <semanticElements xmi:type="modane:OverrideFunction" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']/@overrideFuncs.6"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z4YBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z4YBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.OverrideFunction']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Z4oBXEem3dc59wdQeEw" name="MicroHydro" tooltipText=" " incomingEdges="_qn-aLIBXEem3dc59wdQeEw _qn-aMIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Z4oBXEem3dc59wdQeEw" name="MicroHydro" tooltipText="" incomingEdges="_qn-aLIBXEem3dc59wdQeEw _qn-aMIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
       <target xmi:type="modane:Interface" href="MicroHydro.modane#//@elements[name='LoopDelegation']"/>
       <semanticElements xmi:type="modane:Interface" href="MicroHydro.modane#//@elements[name='LoopDelegation']"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z44BXEem3dc59wdQeEw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="128,243,56" foregroundColor="128,243,56">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z44BXEem3dc59wdQeEw" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" backgroundColor="128,243,56" foregroundColor="128,243,56">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Z5IBXEem3dc59wdQeEw" name="LoopDelegation">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Z5IBXEem3dc59wdQeEw" name="LoopDelegation" tooltipText="">
         <target xmi:type="modane:Interface" href="MicroHydro.modane#//@elements[name='LoopDelegation']"/>
         <semanticElements xmi:type="modane:Interface" href="MicroHydro.modane#//@elements[name='LoopDelegation']"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z5YBXEem3dc59wdQeEw" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z5YBXEem3dc59wdQeEw" labelSize="10" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" foregroundColor="255,255,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-Z5oBXEem3dc59wdQeEw" name="LoopDelegation properties">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-Z5oBXEem3dc59wdQeEw" name="LoopDelegation properties" tooltipText="">
         <target xmi:type="modane:Interface" href="MicroHydro.modane#//@elements[name='LoopDelegation']"/>
         <semanticElements xmi:type="modane:Interface" href="MicroHydro.modane#//@elements[name='LoopDelegation']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_qn-Z54BXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z6IBXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z6IBXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-Z6YBXEem3dc59wdQeEw" name="LoopDelegation operations">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-Z6YBXEem3dc59wdQeEw" name="LoopDelegation operations" tooltipText="">
         <target xmi:type="modane:Interface" href="MicroHydro.modane#//@elements[name='LoopDelegation']"/>
         <semanticElements xmi:type="modane:Interface" href="MicroHydro.modane#//@elements[name='LoopDelegation']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_qn-Z6oBXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z64BXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z64BXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z7IBXEem3dc59wdQeEw" name="computeNodeImpulsion : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z7IBXEem3dc59wdQeEw" name="computeNodeImpulsion : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.0"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.0"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z7YBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z7YBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z7oBXEem3dc59wdQeEw" name="applyBoundaryCondition : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z7oBXEem3dc59wdQeEw" name="applyBoundaryCondition : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.1"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.1"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z74BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z74BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z8IBXEem3dc59wdQeEw" name="moveNodes : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z8IBXEem3dc59wdQeEw" name="moveNodes : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.2"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.2"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z8YBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z8YBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z8oBXEem3dc59wdQeEw" name="computeGeometricValues : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z8oBXEem3dc59wdQeEw" name="computeGeometricValues : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.3"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.3"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z84BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z84BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z9IBXEem3dc59wdQeEw" name="updateDensity : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z9IBXEem3dc59wdQeEw" name="updateDensity : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.4"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.4"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z9YBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z9YBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z9oBXEem3dc59wdQeEw" name="computeInternalEnergy : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z9oBXEem3dc59wdQeEw" name="computeInternalEnergy : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.5"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.5"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z94BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z94BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z-IBXEem3dc59wdQeEw" name="computePressureForce : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-Z-IBXEem3dc59wdQeEw" name="computePressureForce : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.6"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.modane#//@elements[name='LoopDelegation']/@functions.6"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z-YBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-Z-YBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Z-oBXEem3dc59wdQeEw" name="MicroHydro" tooltipText=" " outgoingEdges="_qn-aKIBXEem3dc59wdQeEw _qn-aLIBXEem3dc59wdQeEw" childrenPresentation="VerticalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Z-oBXEem3dc59wdQeEw" name="MicroHydro" tooltipText="" outgoingEdges="_qn-aKIBXEem3dc59wdQeEw _qn-aLIBXEem3dc59wdQeEw _yCMHMLr3Eeyk7shkkMgnhQ" childrenPresentation="VerticalStack">
       <target xmi:type="modane:Module" href="MicroHydro.modane#//@elements[name='MicroHydro']"/>
       <semanticElements xmi:type="modane:Module" href="MicroHydro.modane#//@elements[name='MicroHydro']"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z-4BXEem3dc59wdQeEw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="128,243,56" foregroundColor="128,243,56">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z-4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" backgroundColor="128,243,56" foregroundColor="128,243,56">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Z_IBXEem3dc59wdQeEw" name="MicroHydro">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qn-Z_IBXEem3dc59wdQeEw" name="MicroHydro" tooltipText="">
         <target xmi:type="modane:Module" href="MicroHydro.modane#//@elements[name='MicroHydro']"/>
         <semanticElements xmi:type="modane:Module" href="MicroHydro.modane#//@elements[name='MicroHydro']"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z_YBXEem3dc59wdQeEw" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-Z_YBXEem3dc59wdQeEw" labelSize="10" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" foregroundColor="255,255,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-Z_oBXEem3dc59wdQeEw" name="MicroHydro properties">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-Z_oBXEem3dc59wdQeEw" name="MicroHydro properties" tooltipText="">
         <target xmi:type="modane:Module" href="MicroHydro.modane#//@elements[name='MicroHydro']"/>
         <semanticElements xmi:type="modane:Module" href="MicroHydro.modane#//@elements[name='MicroHydro']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_qn-Z_4BXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-aAIBXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-aAIBXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aAYBXEem3dc59wdQeEw" name="[1..1] deltat_min : Real">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aAYBXEem3dc59wdQeEw" name="[1..1] deltat_min : Real" tooltipText="">
           <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.0"/>
           <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.0"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aAoBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aAoBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aA4BXEem3dc59wdQeEw" name="[1..1] deltat_max : Real">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aA4BXEem3dc59wdQeEw" name="[1..1] deltat_max : Real" tooltipText="">
           <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.1"/>
           <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.1"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aBIBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aBIBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aBYBXEem3dc59wdQeEw" name="[1..1] deltat_init : Real">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aBYBXEem3dc59wdQeEw" name="[1..1] deltat_init : Real" tooltipText="">
           <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.2"/>
           <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.2"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aBoBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aBoBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aB4BXEem3dc59wdQeEw" name="[1..1] final_time : Real">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aB4BXEem3dc59wdQeEw" name="[1..1] final_time : Real" tooltipText="">
           <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.3"/>
           <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.3"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aCIBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aCIBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aCYBXEem3dc59wdQeEw" name="[1..1] cfl : Real">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aCYBXEem3dc59wdQeEw" name="[1..1] cfl : Real" tooltipText="Définition de la CFL. ">
           <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.4"/>
           <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.4"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aCoBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
-            <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_3u4FEmYCEeqlN7icoxRalA" name="[1..1] eos_model : Orphan">
-          <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.6"/>
-          <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.6"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_3u5TMGYCEeqlN7icoxRalA" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aCoBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@subNodeMappings[name='DD.ME.P.Property']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-aDYBXEem3dc59wdQeEw" name="MicroHydro operations">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qn-aDYBXEem3dc59wdQeEw" name="MicroHydro operations" tooltipText="">
         <target xmi:type="modane:Module" href="MicroHydro.modane#//@elements[name='MicroHydro']"/>
         <semanticElements xmi:type="modane:Module" href="MicroHydro.modane#//@elements[name='MicroHydro']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_qn-aDoBXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-aD4BXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qn-aD4BXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aEIBXEem3dc59wdQeEw" name="hydroStartInit @ StartInit">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aEIBXEem3dc59wdQeEw" name="hydroStartInit @ StartInit" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.0"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.0"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aEYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aEYBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aEoBXEem3dc59wdQeEw" name="hydroContinueInit @ ContinueInit">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aEoBXEem3dc59wdQeEw" name="hydroContinueInit @ ContinueInit" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.1"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.1"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aE4BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aE4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aFIBXEem3dc59wdQeEw" name="computePressureForce @ ComputeLoop">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aFIBXEem3dc59wdQeEw" name="computePressureForce @ ComputeLoop" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.2"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.2"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aFYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aFYBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aFoBXEem3dc59wdQeEw" name="computeVelocity @ ComputeLoop">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aFoBXEem3dc59wdQeEw" name="computeVelocity @ ComputeLoop" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.3"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.3"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aF4BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aF4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aGIBXEem3dc59wdQeEw" name="applyBoundaryCondition @ ComputeLoop">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aGIBXEem3dc59wdQeEw" name="applyBoundaryCondition @ ComputeLoop" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.4"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.4"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aGYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aGYBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aGoBXEem3dc59wdQeEw" name="moveNodes @ ComputeLoop">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aGoBXEem3dc59wdQeEw" name="moveNodes @ ComputeLoop" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.5"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.5"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aG4BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aG4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aHIBXEem3dc59wdQeEw" name="computeGeometricValues @ ComputeLoop">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aHIBXEem3dc59wdQeEw" name="computeGeometricValues @ ComputeLoop" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.6"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.6"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aHYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aHYBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aHoBXEem3dc59wdQeEw" name="updateDensity @ ComputeLoop">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aHoBXEem3dc59wdQeEw" name="updateDensity @ ComputeLoop" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.7"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.7"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aH4BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aH4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aIIBXEem3dc59wdQeEw" name="applyEquationOfState @ ComputeLoop">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aIIBXEem3dc59wdQeEw" name="applyEquationOfState @ ComputeLoop" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.8"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.8"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aIYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aIYBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aIoBXEem3dc59wdQeEw" name="computeDeltaT @ ComputeLoop">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_qn-aIoBXEem3dc59wdQeEw" name="computeDeltaT @ ComputeLoop" tooltipText="">
           <target xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.9"/>
           <semanticElements xmi:type="modane:EntryPoint" href="MicroHydro.modane#//@elements[name='MicroHydro']/@entryPoints.9"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_qn-aI4BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_qn-aI4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.EntryPoint']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qn-aJIBXEem3dc59wdQeEw" name="type" sourceNode="_qn-ZsoBXEem3dc59wdQeEw" targetNode="_qn-ZvYBXEem3dc59wdQeEw" endLabel="[1..1]">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qn-aJIBXEem3dc59wdQeEw" name="[1..1] type" sourceNode="_qn-ZsoBXEem3dc59wdQeEw" targetNode="_qn-ZvYBXEem3dc59wdQeEw">
       <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='BoundaryCondition']/@properties.0"/>
       <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='BoundaryCondition']/@properties.0"/>
       <semanticElements xmi:type="modane:Reference" href="MicroHydro.modane#//@elements[name='BoundaryCondition']/@properties.0/@type"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qn-aJYBXEem3dc59wdQeEw" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qn-aJYBXEem3dc59wdQeEw" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qn-aJoBXEem3dc59wdQeEw" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qn-aJoBXEem3dc59wdQeEw" labelSize="9" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_qn-aJ4BXEem3dc59wdQeEw" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qn-aKIBXEem3dc59wdQeEw" name="boundary_condition" sourceNode="_qn-Z-oBXEem3dc59wdQeEw" targetNode="_qn-ZsoBXEem3dc59wdQeEw" endLabel="[1..*]">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qn-aKIBXEem3dc59wdQeEw" name="[1..*] boundary_condition" sourceNode="_qn-Z-oBXEem3dc59wdQeEw" targetNode="_qn-ZsoBXEem3dc59wdQeEw">
       <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.5"/>
       <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.5"/>
       <semanticElements xmi:type="modane:Reference" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.5/@type"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qn-aKYBXEem3dc59wdQeEw" routingStyle="manhattan" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qn-aKYBXEem3dc59wdQeEw" size="2" routingStyle="manhattan">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qn-aKoBXEem3dc59wdQeEw" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qn-aKoBXEem3dc59wdQeEw" labelSize="9" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_qn-aK4BXEem3dc59wdQeEw" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qn-aLIBXEem3dc59wdQeEw" name="loop_delegation" sourceNode="_qn-Z-oBXEem3dc59wdQeEw" targetNode="_qn-Z4oBXEem3dc59wdQeEw" endLabel="[1..1]">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qn-aLIBXEem3dc59wdQeEw" name="[1..1] loop_delegation" sourceNode="_qn-Z-oBXEem3dc59wdQeEw" targetNode="_qn-Z4oBXEem3dc59wdQeEw">
       <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.7"/>
       <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.7"/>
       <semanticElements xmi:type="modane:Reference" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.7/@type"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qn-aLYBXEem3dc59wdQeEw" routingStyle="manhattan" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qn-aLYBXEem3dc59wdQeEw" size="2" routingStyle="manhattan">
         <customFeatures>routingStyle</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qn-aLoBXEem3dc59wdQeEw" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qn-aLoBXEem3dc59wdQeEw" labelSize="9" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_qn-aL4BXEem3dc59wdQeEw" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qn-aMIBXEem3dc59wdQeEw" sourceNode="_qn-ZyoBXEem3dc59wdQeEw" targetNode="_qn-Z4oBXEem3dc59wdQeEw">
       <target xmi:type="modane:Service" href="MicroHydro.modane#//@elements[name='DefaultLoopDelegation']"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qn-aMYBXEem3dc59wdQeEw" lineStyle="dash" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qn-aMYBXEem3dc59wdQeEw" lineStyle="dash" targetArrow="InputFillClosedArrow" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Implementation']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qn-aMoBXEem3dc59wdQeEw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qn-aMoBXEem3dc59wdQeEw" labelSize="9"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.Implementation']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sQU3kIBXEem3dc59wdQeEw" name="MicroHydro.Eos" tooltipText=" " childrenPresentation="VerticalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sQU3kIBXEem3dc59wdQeEw" name="MicroHydro.Eos" tooltipText="" incomingEdges="_yCMHMLr3Eeyk7shkkMgnhQ" childrenPresentation="VerticalStack">
       <target xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
       <semanticElements xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -955,49 +959,59 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ExternModaneElement']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sQmkYIBXEem3dc59wdQeEw" name="EquationOfState">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sQmkYIBXEem3dc59wdQeEw" name="EquationOfState" tooltipText="">
         <target xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
         <semanticElements xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sQnLcIBXEem3dc59wdQeEw" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sQnLcIBXEem3dc59wdQeEw" labelSize="10" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" foregroundColor="255,255,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Name']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_sQnLcYBXEem3dc59wdQeEw" name="EquationOfState properties">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_sQnLcYBXEem3dc59wdQeEw" name="EquationOfState properties" tooltipText="">
         <target xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
         <semanticElements xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_sQnygYBXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sQnygIBXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sQnygIBXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Properties']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_sQnygoBXEem3dc59wdQeEw" name="EquationOfState operations">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_sQnygoBXEem3dc59wdQeEw" name="EquationOfState operations" tooltipText="">
         <target xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
         <semanticElements xmi:type="modane:Interface" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_sQoZkYBXEem3dc59wdQeEw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sQoZkIBXEem3dc59wdQeEw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" foregroundColor="255,255,255">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sQoZkIBXEem3dc59wdQeEw" labelSize="9" labelAlignment="LEFT" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_sQpAoIBXEem3dc59wdQeEw" name="initEOS : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_sQpAoIBXEem3dc59wdQeEw" name="initEOS : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']/@functions.0"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']/@functions.0"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_sQpAoYBXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_sQpAoYBXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_sQpAooBXEem3dc59wdQeEw" name="applyEOS : void">
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_sQpAooBXEem3dc59wdQeEw" name="applyEOS : void" tooltipText="">
           <target xmi:type="modane:Function" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']/@functions.1"/>
           <semanticElements xmi:type="modane:Function" href="MicroHydro.Eos.modane#//@elements[name='EquationOfState']/@functions.1"/>
-          <ownedStyle xmi:type="diagram:Square" uid="_sQpAo4BXEem3dc59wdQeEw" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
+          <ownedStyle xmi:type="diagram:Square" uid="_sQpAo4BXEem3dc59wdQeEw" labelSize="9" showIcon="false" labelAlignment="LEFT" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@containerMappings[name='DD.ModaneElement']/@subContainerMappings[name='DD.ME.Operations']/@subNodeMappings[name='DD.ME.O.Function']"/>
         </ownedElements>
       </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_yCMHMLr3Eeyk7shkkMgnhQ" name="[1..1] eos_model" sourceNode="_qn-Z-oBXEem3dc59wdQeEw" targetNode="_sQU3kIBXEem3dc59wdQeEw">
+      <target xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.6"/>
+      <semanticElements xmi:type="modane:Pty" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.6"/>
+      <semanticElements xmi:type="modane:Reference" href="MicroHydro.modane#//@elements[name='MicroHydro']/@properties.6/@type"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_yCMuQLr3Eeyk7shkkMgnhQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_yCMuQbr3Eeyk7shkkMgnhQ" labelSize="9" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']/@defaultLayer/@edgeMappings[name='DD.PtyEdge']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.cea.modane.sirius/description/modane.odesign#//@ownedViewpoints[name='ModaneViewpoint']/@ownedRepresentations[name='DesignDiagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_qn-aM4BXEem3dc59wdQeEw"/>

@@ -28,17 +28,22 @@ public class UnitTestTestCase extends TestCaseBase
 	public void testCompilation()
 	{
 		testGenerationAndCompilationFromModaneModel(Dir, new String[] {"UnitTest"});
-		assertEquals(0, launchCommand("./UnitTest ./UnitTest.arc", Dir, Dir));
 	}
 
 	@Override
-	protected void makeFullClean()
+	public void testExecution()
+	{
+		testGenerationAndCompilationFromModaneModel(Dir, new String[] {"UnitTest"});
+		assertEquals(0, run("./build/Hydro ./UnitTest.arc", Dir));
+	}
+
+	@Override
+	public void makeFullClean()
 	{
 		for (File f : getAllFiles(Dir))
 		{
 			if (f.getName().matches("__(.*).h")
 					|| f.getName().matches("(.*).axl")
-					|| f.getName().matches("(.*)_axl.h")
 					|| f.getName().matches("PerfectGasService.(.*)")
 					|| f.getName().matches("StiffenedGasService.(.*)")
 					|| f.getName().matches("HydroModule.(.*)")

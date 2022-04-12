@@ -29,13 +29,12 @@ public class InheritanceTestCase extends TestCaseBase
 	}
 
 	@Override
-	protected void makeFullClean()
+	public void makeFullClean()
 	{
 		for (File f : getAllFiles(Dir))
 		{
 			if (f.getName().matches("__(.*).h")
 					|| f.getName().matches("(.*).axl")
-					|| f.getName().matches("(.*)_axl.h")
 					|| f.getName().matches("(.*).(.*)nabla")
 					|| f.getName().matches("HydroModule.(.*)")
 					|| f.getName().matches("BasicService.(.*)")

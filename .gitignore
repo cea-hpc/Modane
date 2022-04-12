@@ -12,6 +12,7 @@ xtend-gen/
 # C++
 .o
 .a
+build
 # Nabla
 .nablair
 org.antlr.runtime

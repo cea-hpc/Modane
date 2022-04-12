@@ -4,13 +4,15 @@
 add_library(MicroHydro
   DefaultLoopDelegationService.cc
   MicroHydroModule.cc
+  DefaultLoopDelegation_axl.h
+  MicroHydro_axl.h
 )
 
-target_include_directories(MicroHydro PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
-arcane_add_arcane_libraries_to_target(MicroHydro)
+arcane_generate_axl(DefaultLoopDelegation)
+arcane_generate_axl(MicroHydro)
 
-arcane_target_add_axl(MicroHydro DefaultLoopDelegation)
-arcane_target_add_axl(MicroHydro MicroHydro)
+target_link_libraries(MicroHydro PRIVATE arcane_full)
+target_include_directories(MicroHydro PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 
 add_subdirectory(Eos)
 

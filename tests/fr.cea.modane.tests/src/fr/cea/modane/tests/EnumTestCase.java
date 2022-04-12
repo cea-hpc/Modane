@@ -29,7 +29,7 @@ public class EnumTestCase extends TestCaseBase
 	}
 
 	@Override
-	protected void makeFullClean()
+	public void makeFullClean()
 	{
 		for (File f : getAllFiles(Dir))
 		{

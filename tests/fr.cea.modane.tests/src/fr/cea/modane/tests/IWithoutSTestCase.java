@@ -28,17 +28,22 @@ public class IWithoutSTestCase extends TestCaseBase
 	public void testCompilation()
 	{
 		testGenerationAndCompilationFromUmlModel(Dir);
-		assertEquals(0, launchCommand("./Hydro -arcane_opt max_iteration 1 ./IWithoutS.arc", Dir, Dir));
 	}
 
 	@Override
-	protected void makeFullClean()
+	public void testExecution()
+	{
+		testGenerationAndCompilationFromUmlModel(Dir);
+		assertEquals(0, run("./build/Hydro -arcane_opt max_iteration 1 ./IWithoutS.arc", Dir));
+	}
+
+	@Override
+	public void makeFullClean()
 	{
 		for (File f : getAllFiles(Dir))
 		{
 			if (f.getName().matches("__(.*).h")
 					|| f.getName().matches("(.*).axl")
-					|| f.getName().matches("(.*)_axl.h")
 					|| f.getName().matches("(.*).(.*)nabla")
 					|| f.getName().matches("OutsideService.(.*)")
 					|| f.getName().matches("ChildDefault.(.*)")

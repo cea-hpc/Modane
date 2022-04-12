@@ -5,7 +5,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: fr.cea.modane.project;singleton:=true
 Bundle-Version: 1.4.3.qualifier
 Bundle-ClassPath: .
-Bundle-Vendor: CEA
+Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: fr.cea.modane.modaneproject,
@@ -16,8 +16,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
  org.eclipse.ui.console,
  org.eclipse.emf.common,
- org.eclipse.emf.ecore,
- org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
