@@ -7,7 +7,7 @@
 
 Written by CEA and Contributors
 
-(C) Copyright 2021, by CEA. All rights reserved.
+(C) Copyright 2022, by CEA. All rights reserved.
 
 All content is the property of the respective authors or their employers.
 For more information regarding authorship of content, please consult the
