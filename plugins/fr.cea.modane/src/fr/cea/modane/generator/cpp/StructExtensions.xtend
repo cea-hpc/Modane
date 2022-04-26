@@ -51,8 +51,8 @@ class StructExtensions
 		  «IF p.needHasAccessor»«p.abstractHasAccessorContent»«ENDIF»
 		  «ENDFOR»
 		};
-	'''	
-	
+	'''
+
 	private static def getDeveloperClassContent(Struct it)
 	'''
 		/*!
@@ -89,18 +89,18 @@ class StructExtensions
 		  «FOR p : properties SEPARATOR '\n'»«p.attrTypeName» «p.fieldName»;«ENDFOR»
 		};
 	'''
-	
- 	private static def getDeveloperNameWithNs(Struct it)
- 	{
+
+	private static def getDeveloperNameWithNs(Struct it)
+	{
 		val context = GenerationContext::Current
 		context.addInclude(outputPath, developerFileName)
 		if (nsName != context.nsName && !context.isAUsedNs(nsName))
 			'::' + nsName + '::' + developerName
 		else
 			developerName	
- 	}
+	}
 
 	/** La structure dans le même fichier .h que son interface */
- 	private static def getDeveloperFileName(Struct it) { referencedFileName }
- 	private static def getDeveloperName(Struct it) { name }
+	private static def getDeveloperFileName(Struct it) { referencedFileName }
+	private static def getDeveloperName(Struct it) { name }
 }

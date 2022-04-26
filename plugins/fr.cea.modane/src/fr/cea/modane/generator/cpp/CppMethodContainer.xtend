@@ -21,7 +21,7 @@ import static extension fr.cea.modane.ModuleExtensions.*
 import static extension fr.cea.modane.ServiceExtensions.*
 
 /**
- * Interface pour tout élément de modèle succeptibles d'implémenter
+ * Interface pour tout élément de modèle succeptible d'implémenter
  * des méthodes (Function, OverrideFunction et EntryPoint).
  */
 interface CppMethodContainer

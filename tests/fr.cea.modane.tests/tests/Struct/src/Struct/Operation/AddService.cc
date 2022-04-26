@@ -1,3 +1,5 @@
+#include "Struct/__ITest.h"
+#include "Struct/Operation/__IOperand.h"
 #include "Struct/Operation/AddService.h"
 
 /*---------------------------------------------------------------------------*/

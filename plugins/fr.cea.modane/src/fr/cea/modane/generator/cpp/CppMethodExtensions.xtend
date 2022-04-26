@@ -35,11 +35,11 @@ class CppMethodExtensions
 			"AntiWedgeLeft6", "AntiWedgeRight6", "DiTetra5", "DualNode", "DualEdge",
 			"DualFace", "DualCell", "Link")
 
-	static def insertDebugMsg() 
+	static def insertDebugMsg()
 	'''
 		«IF GenerationContext::Current.generationOptions.traceMsg»info() << A_FUNCINFO;«ENDIF»
 	'''
-	
+
 	static def getVarClassContent(CppMethod it)
 	'''
 		//! Classe de variable pour «name»
@@ -85,7 +85,7 @@ class CppMethodExtensions
 	// sur une ligne car c'est commenté au départ
 	static def getBodyDeveloperSignature(CppMethod it, String className, String meshItemBasicType) 
 	'''void «className»::«name»«meshItemBasicType»(«getDeveloperArgs(false, 'ItemVectorView items').join(', ')»)'''
-	
+
 
 	/**
 	 * Retourne le type de retour.
@@ -102,7 +102,7 @@ class CppMethodExtensions
 	 * | Classe        | 1    | A*                     |
 	 * | ex: A         | *    | SharedArray<A*>        |
 	 * +---------------+------+------------------------+
-	 */	 
+	 */
 	static def getReturnTypeName(CppMethod it) 
 	{ 
 		if (returnType === null) 'void' 
@@ -119,7 +119,7 @@ class CppMethodExtensions
 			}
 		}
 	}
-	
+
 	static def getPrefixedCallerSignature(CppMethod it, String prefix) 
 	'''
 		«returnTypeName» «prefix»::
@@ -156,7 +156,7 @@ class CppMethodExtensions
 		  «ENDIF»
 		}
 	'''
-	
+
 	static def getItemTypeSpecializedHeaderContent(CppMethod it)
 	'''
 		//! Classe portant le code de l'opération «name» spécialisée par type d'item.
@@ -191,9 +191,9 @@ class CppMethodExtensions
 		if (!prefix.nullOrEmpty) l+= prefix
 		if (GenerationContext::Current.generationOptions.variableAsArgs) l += 'm_vars(vars)'
 		l += argDefinitions.map[a | a.fieldName + '(' + a.name + ')'].toList
-		return l 
+		return l
 	}
-	
+
 	private static def getArgSequence(CppMethod it) { getArgSequence(it, null) }
 	private static def getArgSequence(CppMethod it, String prefix)
 	{
@@ -202,8 +202,8 @@ class CppMethodExtensions
 		if (GenerationContext::Current.generationOptions.variableAsArgs) l += 'vars'
 		argDefinitions.forEach[a | l += a.name]
 		return l
-	}	
-	
+	}
+
 	private static def getCallerArgs(CppMethod it)
 	{
 		val l = new ArrayList<String>
@@ -211,9 +211,9 @@ class CppMethodExtensions
 		if (itemTypeSpecialized) l += 'const ItemGroup& items'
 		else if (hasSupport) l += 'const ' + support.literal + 'VectorView items'
 		l += allArgs.argsWithDefaultValue
-		return l		
+		return l
 	}
-	
+
 	private static def getDeveloperArgs(CppMethod it, boolean withDefaultValue) { getDeveloperArgs(it, withDefaultValue, null) }
 	private static def getDeveloperArgs(CppMethod it, boolean withDefaultValue, String prefix)
 	{
@@ -225,7 +225,7 @@ class CppMethodExtensions
 		else argDefinitions.forEach[x | l += x.typeName + ' ' + x.name]
 		return l
 	}
-	
+
 	private static def getArgsWithDefaultValue(Iterable<? extends Arg> args)
 	{
 		val argStrings = new ArrayList<String>

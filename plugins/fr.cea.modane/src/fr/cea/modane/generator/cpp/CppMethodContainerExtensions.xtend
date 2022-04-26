@@ -81,6 +81,9 @@ class CppMethodContainerExtensions
 			context.addInclude("arcane/utils/TraceAccessor.h")
 		}
 		context.generate(fsa)
+		// la classe de base a fait des "forward declarations" (class Xxx;)
+		// on récupère la liste des includes dont pourrait avoir besoin le .cc
+		val ccNecessaryIncludes = context.ccNecessaryIncludes
 
 		//
 		// les fichiers .h et .cc d'implémentation (sont générés s'ils n'existent pas)
@@ -95,6 +98,7 @@ class CppMethodContainerExtensions
 		// le .cc
 		context.newFile(outputPath, developerBodyFileName, false, component)
 		cmakeFiles += developerBodyFileName
+		ccNecessaryIncludes.forEach[x | context.addInclude(x)]
 		context.addInclude(outputPath, developerHeaderFileName)
 		context.addContent(developerBodyContent)
 		context.generateIfNotExist(fsa)
