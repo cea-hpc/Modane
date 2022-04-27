@@ -10,8 +10,6 @@
 package fr.cea.modane.generator.axl
 
 import com.google.inject.Inject
-import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher
-import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher.MessageType
 import fr.cea.modane.modane.ModaneElement
 import fr.cea.modane.modane.Module
 import fr.cea.modane.modane.Service
@@ -30,7 +28,6 @@ class AxlGenerator
 {
 	public static val FileExtension = ".axl"
 
-	@Inject ModaneGeneratorMessageDispatcher messageDispatcher
 	@Inject extension ModuleExtensions
 	@Inject extension ServiceExtensions
 
@@ -41,7 +38,6 @@ class AxlGenerator
 			val fileName = elt.outputPath + '/' + elt.name + FileExtension
 			cmakeFiles += elt.name
 			val content = elt.fileContent.toString.beautifyXml
-			messageDispatcher.post(MessageType.Exec, "Generate file: " + fileName)
 			fsa.generateFile(fileName, content)
 		}
 	}

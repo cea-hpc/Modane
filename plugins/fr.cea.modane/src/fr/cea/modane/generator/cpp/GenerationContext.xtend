@@ -11,8 +11,6 @@ package fr.cea.modane.generator.cpp
 
 import fr.cea.modane.ModaneOutputConfigurationProvider
 import fr.cea.modane.generator.GenerationOptions
-import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher
-import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher.MessageType
 import java.util.ArrayList
 import org.eclipse.xtext.generator.IFileSystemAccess
 
@@ -35,7 +33,6 @@ class GenerationContext
 
 	public static GenerationContext Current = null
 	public val GenerationOptions generationOptions
-	val ModaneGeneratorMessageDispatcher messageDispatcher
 
 	String path
 	String name
@@ -45,10 +42,9 @@ class GenerationContext
 	ArrayList<String[]> classDeclarations // 3 strings: namespace, class name, origin file
 	ArrayList<String> usedNs
 
-	new(GenerationOptions options, ModaneGeneratorMessageDispatcher messageDispatcher)
+	new(GenerationOptions options)
 	{
 		this.generationOptions = options
-		this.messageDispatcher = messageDispatcher
 		Current = this
 	}
 
@@ -131,13 +127,11 @@ class GenerationContext
 
 	def generate(IFileSystemAccess fsa)
 	{
-		messageDispatcher.post(MessageType.Exec, "Generate file: " + fullName)
 		generate(fsa, IFileSystemAccess::DEFAULT_OUTPUT)
 	}
 
 	def generateIfNotExist(IFileSystemAccess fsa)
 	{
-		messageDispatcher.post(MessageType.Exec, "Generate file (if not exists): " + fullName)
 		generate(fsa, ModaneOutputConfigurationProvider::GEN_ONCE_OUTPUT)
 	}
 
@@ -145,7 +139,7 @@ class GenerationContext
 	{
 		if (name.endsWith(HeaderExtension)) fsa.generateFile(fullName, outputConfigurationName, dumpH)
 		else if (name.endsWith(BodyExtension)) fsa.generateFile(fullName, outputConfigurationName, dumpCC)
-		else messageDispatcher.post(MessageType.Exec, "Invalid file extension: " + fullName)
+		else throw new RuntimeException("Invalid file extension: " + fullName)
 	}
 
 	/**

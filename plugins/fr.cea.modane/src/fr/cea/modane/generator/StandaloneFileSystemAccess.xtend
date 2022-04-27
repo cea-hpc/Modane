@@ -11,12 +11,14 @@ package fr.cea.modane.generator
 
 import com.google.common.collect.Maps
 import com.google.inject.Inject
+import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher.MessageType
 import java.util.Set
+import org.eclipse.xtend.lib.annotations.Accessors
+import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IOutputConfigurationProvider
 import org.eclipse.xtext.generator.JavaIoFileSystemAccess
 import org.eclipse.xtext.generator.OutputConfiguration
 import org.eclipse.xtext.util.RuntimeIOException
-import org.eclipse.xtext.generator.IFileSystemAccess
 
 /**
  * Cette classe est créée pour contourner un bug de la classe JavaIoFileSystemAccess
@@ -26,6 +28,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 class StandaloneFileSystemAccess extends JavaIoFileSystemAccess 
 {
 	@Inject IOutputConfigurationProvider configurationProvider
+	@Accessors(PUBLIC_GETTER, PRIVATE_SETTER) @Inject ModaneGeneratorMessageDispatcher messageDispatcher
 
 	def initialize()
 	{
@@ -52,7 +55,17 @@ class StandaloneFileSystemAccess extends JavaIoFileSystemAccess
 			val file = super.getFile(fileName, outputConfigName)
 			// Génération sauf si le fichier existe et que overrideExistingResources vaut faux
 			if (outputConfig.overrideExistingResources || !file.exists)
-				super.generateFile(fileName, outputConfigName, contents)
+			{
+				// Si le contenu du fichier n'a pas changé, pas de regénération
+				if (file.exists && isEqual(contents, fileName))
+					messageDispatcher.post(MessageType::Exec, "File contents unchanged, no overwrite: " + fileName)
+				{
+					messageDispatcher.post(MessageType.Exec, "Generate file: " + fileName)
+					super.generateFile(fileName, outputConfigName, contents)
+				}
+			}
+			else
+				messageDispatcher.post(MessageType.Exec, "File already exists, no overwrite: " + fileName)
 		}
 	}
 
@@ -60,5 +73,12 @@ class StandaloneFileSystemAccess extends JavaIoFileSystemAccess
 	private def toMap(Set<OutputConfiguration> configurations) 
 	{
 		Maps::uniqueIndex(configurations, [ OutputConfiguration from | from.name ]);
+	}
+
+	/** Can be optimized in case of big files in using a BufferedReader to read the file */
+	private def boolean isEqual(CharSequence newContent, String fullFileName)
+	{
+		val oldContent = super.readTextFile(fullFileName)
+		return (CharSequence.compare(newContent, oldContent) == 0)
 	}
 }

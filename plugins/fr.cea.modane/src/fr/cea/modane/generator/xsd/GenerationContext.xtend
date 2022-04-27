@@ -11,7 +11,6 @@ package fr.cea.modane.generator.xsd
 
 import fr.cea.modane.modane.ModaneElement
 import java.util.ArrayList
-import org.apache.commons.logging.LogFactory
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.scoping.IScopeProvider
 
@@ -19,8 +18,6 @@ import static extension fr.cea.modane.ModaneElementExtensions.*
 
 class GenerationContext
 {
-	static val log = LogFactory::getLog(typeof(GenerationContext))
-
 	public static val FileExtension = ".xsd"
 
 	public static GenerationContext Current = null
@@ -60,7 +57,6 @@ class GenerationContext
 
 	def generate(IFileSystemAccess fsa)
 	{
-		log.info("Generate file: " + fullFileName)
 		fsa.generateFile(fullFileName, IFileSystemAccess::DEFAULT_OUTPUT, dumpXsd)
 	}
 

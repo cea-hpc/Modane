@@ -18,12 +18,8 @@ import org.eclipse.xtext.generator.IGeneratorContext
  * Generates code from your model files on save.
  * see http://www.eclipse.org/Xtext/documentation.html#TutorialCodeGeneration
  */
-class ModaneGenerator extends GeneratorBase implements IGenerator2
+class ModaneGenerator implements IGenerator2
 {
-	/** 
-	 * API IGenerator : appelé depuis Xtext par la compilation incrémentale 
-	 * Les URI des resources sont de type Platform car tout se passe dans Eclipse  
-	 */
 	override doGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) 
 	{
 		//doGenerate(input, fsa, '')

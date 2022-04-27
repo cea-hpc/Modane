@@ -33,7 +33,7 @@ class CppGenerator
 
 	def setGenerationOptions(GenerationOptions options)
 	{
-		new GenerationContext(options, dispatcher)
+		new GenerationContext(options)
 	}
 
 	def generateFiles(ModaneElement elt, IFileSystemAccess fsa, Collection<String> cmakeFiles)

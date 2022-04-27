@@ -21,9 +21,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.uml2.uml.Model;
+import org.eclipse.xtext.xbase.lib.Procedures.Procedure2;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
+import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher;
 import fr.cea.modane.generator.StandaloneGenerator;
 import fr.cea.modane.uml.UmlToCpp;
 
@@ -32,6 +34,11 @@ public abstract class TestCaseBase
 	static final String TestBaseHome = "tests/";
 	static final String GenFolder = TestBaseHome + "fr.cea.modane.tests/tests/";
 	static GitUtils git;
+
+	private final Procedure2<ModaneGeneratorMessageDispatcher.MessageType, String> printConsole = (ModaneGeneratorMessageDispatcher.MessageType type, String msg) ->
+	{
+		System.out.println("[" + type + "] " + msg);
+	};
 
 	protected int run(String cmd, String testName)
 	{
@@ -89,16 +96,24 @@ public abstract class TestCaseBase
 
 	private void generateFromUmlModel(String testName)
 	{
+		System.out.println("\nStarting generation from UML model for test " + testName);
 		UmlToCpp umlToCpp = UmlToCpp.createInstance();
+		umlToCpp.getMessageDispatcher().getTraceListeners().add(printConsole);
 		Model model = umlToCpp.readModel(getUmlModelFileURI(testName));
 		umlToCpp.generate(model, getAbsoluteSrcDir(testName), null, null, false, false);
+		umlToCpp.getMessageDispatcher().getTraceListeners().remove(printConsole);
+		System.out.println("End of generation from UML model for test " + testName + "\n");
 	}
 
 	private void generateFromModaneModel(String testName, String[] modaneFileNames)
 	{
+		System.out.println("\nStarting generation from Modane model for test " + testName);
 		StandaloneGenerator generator = StandaloneGenerator.createInstance();
+		generator.getMessageDispatcher().getTraceListeners().add(printConsole);
 		for (String modaneFileName : modaneFileNames)
 			generator.generate(getModaneModelFileURI(testName, modaneFileName), getAbsoluteSrcDir(testName), null);
+		generator.getMessageDispatcher().getTraceListeners().remove(printConsole);
+		System.out.println("End of generation from Modane model for test " + testName + "\n");
 	}
 
 	protected void testGenerationFromUmlModel(String testName)
