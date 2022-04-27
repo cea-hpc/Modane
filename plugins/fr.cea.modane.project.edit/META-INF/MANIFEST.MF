@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Automatic-Module-Name: fr.cea.modane.project.edit
 Bundle-ManifestVersion: 2
-Bundle-Name: %pluginName
+Bundle-Name: fr.cea.modane.project.edit
 Bundle-SymbolicName: fr.cea.modane.project.edit;singleton:=true
-Bundle-Version: 1.4.3.qualifier
+Bundle-Version: 1.4.4.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: fr.cea.modane.modaneproject.provider.ModaneProjectEditPlugin$Implementation
-Bundle-Vendor: %providerName
+Bundle-Vendor: CEA
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: fr.cea.modane.project;visibility:=reexport,
