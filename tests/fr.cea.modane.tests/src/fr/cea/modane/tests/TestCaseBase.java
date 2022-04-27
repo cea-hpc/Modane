@@ -132,15 +132,15 @@ public abstract class TestCaseBase
 
 	protected void testGenerationAndCompilationFromUmlModel(String testName)
 	{
-		assertEquals(0, compileCommand("cmake ..", testName));
 		generateFromUmlModel(testName);
+		assertEquals(0, compileCommand("cmake ..", testName));
 		assertEquals(0, compileCommand("make", testName));
 	}
 
 	protected void testGenerationAndCompilationFromModaneModel(String testName, String[] modaneFileNames)
 	{
-		assertEquals(0, compileCommand("cmake ..", testName));
 		generateFromModaneModel(testName, modaneFileNames);
+		assertEquals(0, compileCommand("cmake ..", testName));
 		assertEquals(0, compileCommand("make", testName));
 	}
 
