@@ -136,7 +136,7 @@ Sirius (6.5.1)
 
 Amalgam (1.13.0)
  * License: EPL-2.0
- * Update Site: https://download.eclipse.org/modeling/amalgam/updates/stable
+ * Update Site: https://download.eclipse.org/modeling/amalgam/updates/stable/1.13.0-S20210909/capella/
 
 JGraphT (1.3.0)
  * License: LGPL-2.1, EPL-2.0
