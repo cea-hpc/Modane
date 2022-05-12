@@ -57,7 +57,7 @@ EnumerationLiteral:
 
 Legacy:
 	description=STRING?
-	'Legacy' name=SimpleName 'file' originFile=STRING ('namespace' originNamespace=STRING)? ';';
+	'Legacy' name=SimpleName 'file' originFile=STRING ('namespace' originNamespace=STRING)? forceInclude?='forceInclude'?';';
 
 // ----------------------------------------------------------------------------------------------------------------- //
 
@@ -67,7 +67,7 @@ Struct:
 	'{' 
 		properties+=Pty* 
 	'}';
-	
+
 Pty:
 	description=STRING?
 	('[' ('namefr' '=' namefr=STRING)? ('categories' '=' '(' categories+=[UserCategory|QualifiedName]* (',' categories+=[UserCategory|QualifiedName])* ')')? ']')? 
@@ -75,7 +75,7 @@ Pty:
 
 PtyOrArgType:
 	Simple | Item | ItemGroup | Reference;
-	
+
 // ----------------------------------------------------------------------------------------------------------------- //
 
 Interface:
@@ -96,7 +96,7 @@ Function:
 	 ('call' '(' calls+=[Function|QualifiedName] (',' calls+=[Function|QualifiedName])* ')')? ';';
 
 Arg:
-	ArgDefinition | VarDefinition;	
+	ArgDefinition | VarDefinition;
 
 ArgDefinition:
 	direction=Direction multiplicity=ArgMultiplicity? type=PtyOrArgType name=ID ('=' defaultValue=STRING)?;
@@ -118,7 +118,7 @@ ItemFamily:
 
 ServiceOrModule:
 	Service | Module;
-	
+
 Service:
 	description=STRING?
 	('[' type=ServiceType? singleton?='singleton'? ('namefr' '=' namefr=STRING)? ('categories' '=' '(' categories+=[UserCategory|QualifiedName]* (',' categories+=[UserCategory|QualifiedName])* ')')? classSetUp?='class-set-up'? testSetUp?='test-set-up'? classTearDown?='class-tear-down'? testTearDown?='test-tear-down'? ']')? 
@@ -130,7 +130,7 @@ Service:
 		functions+=Function*
 		unitTestFunctions+=UnitTestFunction*
 	'}';
-	
+
 OverrideFunction:
 	description=STRING?
 	'override' func=[Function|QualifiedName] 
@@ -140,7 +140,7 @@ OverrideFunction:
 UnitTestFunction:
 	description=STRING?
 	'test' name=SimpleName 'label' label=STRING ';';
-	
+
 enum ServiceType:
 	caseoption | application | session | subdomain;
 
@@ -167,10 +167,10 @@ EntryPoint:
 
 enum EntryPointLocation:
 	ComputeLoop | OnMeshChanged | OnMeshRefinement | Init | ContinueInit | StartInit | Restore | Build | Exit;
-	
+
 enum EntryPointAutoLoad:
-	NoAutoLoad | AutoLoadBegin | AutoLoadEnd;	
-	
+	NoAutoLoad | AutoLoadBegin | AutoLoadEnd;
+
 UserCategory:
 	description=STRING?
 	'UserCategory' name=SimpleName ';';
@@ -179,10 +179,10 @@ UserCategory:
 
 Simple:
 	type=SimpleType;
-	
+
 Item:
 	type=ItemType;
-	
+
 ItemGroup:
 	type=ItemGroupType;
 
@@ -194,9 +194,9 @@ enum ItemType:
 
 enum FunctionItemType:
 	NoItem | Item | Cell | Node | Face | Particle | MatCell | EnvCell | ComponentCell | AllEnvCell | DoF | ItemTypeSpecialized;
-	
+
 enum ItemGroupType:
-	NoItemGroup | ItemGroup | CellGroup | NodeGroup | FaceGroup | ParticleGroup | MatCellGroup | EnvCellGroup | ComponentCellGroup | AllEnvCellGroup; 
+	NoItemGroup | ItemGroup | CellGroup | NodeGroup | FaceGroup | ParticleGroup | MatCellGroup | EnvCellGroup | ComponentCellGroup | AllEnvCellGroup;
 
 enum SimpleType: 
 	bool | String| Integer | Int32 | Int64 | Real | Real2 | Real3 | Real2x2 | Real3x3;
@@ -206,12 +206,12 @@ enum Direction:
 
 enum PtyMultiplicity:
 	ZeroOne='[0..1]' | OneOne='[1..1]' | ZeroStar='[0..*]' | OneStar='[1..*]';
-	
+
 enum VariableMultiplicity:
 	Scalar='[1]' | Array='[*]' | Array2='[*,*]';
 
 enum ArgMultiplicity:
 	Scalar='[1]' | Array='[*]';
-	
+
 // ----------------------------------------------------------------------------------------------------------------- //
 

@@ -38,6 +38,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Legacy" eSuperTypes="#//Referenceable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="originFile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="originNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forceInclude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Struct" eSuperTypes="#//Referenceable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parents" unique="false"

@@ -135,6 +135,7 @@
     <genClasses ecoreClass="Modane.ecore#//Legacy">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Modane.ecore#//Legacy/originFile"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Modane.ecore#//Legacy/originNamespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Modane.ecore#//Legacy/forceInclude"/>
     </genClasses>
     <genClasses ecoreClass="Modane.ecore#//Struct">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Modane.ecore#//Struct/parents"/>
