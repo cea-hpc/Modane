@@ -3,7 +3,7 @@ Automatic-Module-Name: fr.cea.modane.ui.tests
 Bundle-ManifestVersion: 2
 Bundle-Name: fr.cea.modane.ui.tests
 Bundle-Vendor: CEA
-Bundle-Version: 1.4.4.qualifier
+Bundle-Version: 1.4.5.qualifier
 Bundle-SymbolicName: fr.cea.modane.ui.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: fr.cea.modane.ui,

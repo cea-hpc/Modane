@@ -2,8 +2,8 @@
 #!/bin/bash
 #
 
-OLD_VERSION=1.4.3
-NEW_VERSION=1.4.4
+OLD_VERSION=1.4.4
+NEW_VERSION=1.4.5
 
 echo "Looking for MANIFEST.MF files"
 FIND_RES=`find . -path ./.metadata -prune -o -name "MANIFEST.MF" -print`

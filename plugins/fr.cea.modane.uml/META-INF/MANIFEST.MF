@@ -3,7 +3,7 @@ Automatic-Module-Name: fr.cea.modane.uml
 Bundle-ManifestVersion: 2
 Bundle-Name: fr.cea.modane.uml
 Bundle-SymbolicName: fr.cea.modane.uml;singleton:=true
-Bundle-Version: 1.4.4.qualifier
+Bundle-Version: 1.4.5.qualifier
 Bundle-Activator: fr.cea.modane.uml.Activator
 Bundle-Vendor: CEA
 Require-Bundle: org.eclipse.core.runtime,

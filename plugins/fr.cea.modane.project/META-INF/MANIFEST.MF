@@ -3,7 +3,7 @@ Automatic-Module-Name: fr.cea.modane.project
 Bundle-ManifestVersion: 2
 Bundle-Name: fr.cea.modane.project
 Bundle-SymbolicName: fr.cea.modane.project;singleton:=true
-Bundle-Version: 1.4.4.qualifier
+Bundle-Version: 1.4.5.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: CEA
 Bundle-Localization: plugin

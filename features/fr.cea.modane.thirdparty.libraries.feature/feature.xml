@@ -2,7 +2,7 @@
 <feature
       id="fr.cea.modane.thirdparty.libraries.feature"
       label="Modane Third-party Libraries Feature"
-      version="1.4.4.qualifier"
+      version="1.4.5.qualifier"
       provider-name="CEA">
 
    <description url="http://www.example.com/description">

@@ -14,13 +14,13 @@
     <parent>
         <groupId>fr.cea.modane</groupId>
         <artifactId>parent</artifactId>
-        <version>1.4.4-SNAPSHOT</version>
+        <version>1.4.5-SNAPSHOT</version>
         <relativePath>../../</relativePath>
     </parent>
 
     <groupId>fr.cea.modane</groupId>
     <artifactId>fr.cea.modane.project</artifactId>
-    <version>1.4.4-SNAPSHOT</version>
+    <version>1.4.5-SNAPSHOT</version>
     <packaging>eclipse-plugin</packaging>
 
     <!-- Add a specific pom.xml to be able to generate plugins/fr.cea.modane.project/src/fr/cea/modane/project/GenerateModaneProject.mwe2 only once -->

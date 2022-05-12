@@ -3,7 +3,7 @@ Automatic-Module-Name: fr.cea.modane.project.editor
 Bundle-ManifestVersion: 2
 Bundle-Name: fr.cea.modane.project.editor
 Bundle-SymbolicName: fr.cea.modane.project.editor;singleton:=true
-Bundle-Version: 1.4.4.qualifier
+Bundle-Version: 1.4.5.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: fr.cea.modane.modaneproject.presentation.ModaneProjectEditorPlugin$Implementation
 Bundle-Vendor: CEA

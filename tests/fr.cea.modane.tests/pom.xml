@@ -14,13 +14,13 @@
     <parent>
         <groupId>fr.cea.modane</groupId>
         <artifactId>parent</artifactId>
-        <version>1.4.4-SNAPSHOT</version>
+        <version>1.4.5-SNAPSHOT</version>
         <relativePath>../../</relativePath>
     </parent>
 
     <groupId>fr.cea.modane</groupId>
     <artifactId>fr.cea.modane.tests</artifactId>
-    <version>1.4.4-SNAPSHOT</version>
+    <version>1.4.5-SNAPSHOT</version>
     <packaging>eclipse-test-plugin</packaging>
 
     <build>

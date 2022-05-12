@@ -3,7 +3,7 @@ Automatic-Module-Name: fr.cea.modane.compare
 Bundle-ManifestVersion: 2
 Bundle-Name: fr.cea.modane.compare
 Bundle-SymbolicName: fr.cea.modane.compare;singleton:=true
-Bundle-Version: 1.4.4.qualifier
+Bundle-Version: 1.4.5.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.eclipse.emf.compare.ide.ui,
  org.eclipse.emf.common,

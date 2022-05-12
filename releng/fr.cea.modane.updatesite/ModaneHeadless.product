@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="ModaneHeadless" uid="fr.cea.modane.headless.product" id="fr.cea.modane.headless.product" application="fr.cea.modane.headless.application" version="1.4.4.qualifier" useFeatures="false" includeLaunchers="true">
+<product name="ModaneHeadless" uid="fr.cea.modane.headless.product" id="fr.cea.modane.headless.product" application="fr.cea.modane.headless.application" version="1.4.5.qualifier" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>

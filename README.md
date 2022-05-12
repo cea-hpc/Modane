@@ -27,7 +27,7 @@ Please refer to the license for details.
 
 ## Getting started
 
-The latest Modane environment can be downloaded [here](https://github.com/cea-hpc/Modane/releases/tag/v1.4.4).
+The latest Modane environment can be downloaded [here](https://github.com/cea-hpc/Modane/releases/tag/v1.4.5).
 
 Once the Modane environment has been launched, the Modane perspective should be selected. If it is not the case, just select the Modane perspective from the *Window > Perspective > Open Perspective > Other ... > Modane Project Perspective* menu.
 

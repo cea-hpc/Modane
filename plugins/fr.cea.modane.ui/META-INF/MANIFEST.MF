@@ -3,7 +3,7 @@ Automatic-Module-Name: fr.cea.modane.ui
 Bundle-ManifestVersion: 2
 Bundle-Name: fr.cea.modane.ui
 Bundle-Vendor: CEA
-Bundle-Version: 1.4.4.qualifier
+Bundle-Version: 1.4.5.qualifier
 Bundle-SymbolicName: fr.cea.modane.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.core.runtime,

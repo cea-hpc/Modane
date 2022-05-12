@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Modane" uid="fr.cea.modane.product" id="fr.cea.modane.product" application="org.eclipse.ui.ide.workbench" version="1.4.4.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="Modane" uid="fr.cea.modane.product" id="fr.cea.modane.product" application="org.eclipse.ui.ide.workbench" version="1.4.5.qualifier" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <text>
