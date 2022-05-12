@@ -1,228 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ArcaneProfile="http:///schemas/ArcaneProfile/_Ssl78HWqEeqLr5eVn_6eWg/0" xmlns:DSLCustomization="http:///schemas/DSLCustomization/_Ssvs8HWqEeqLr5eVn_6eWg/0" xmlns:ValidationProfile="http:///schemas/ValidationProfile/_Ss6FAHWqEeqLr5eVn_6eWg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/ArcaneProfile/_Ssl78HWqEeqLr5eVn_6eWg/0 #_St4VYnWqEeqLr5eVn_6eWg http:///schemas/DSLCustomization/_Ssvs8HWqEeqLr5eVn_6eWg/0 UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_St5jgHWqEeqLr5eVn_6eWg http:///schemas/ValidationProfile/_Ss6FAHWqEeqLr5eVn_6eWg/0 UML_Standard_Profile.Validation_Profile.profile.uml#_St6yZHWqEeqLr5eVn_6eWg">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ArcaneProfile="http://ArcaneProfile/_15_0_1_2610136_1322228985601_419069_457" xmlns:DSLCustomization="http://UML_Standard_Profile/MagicDraw_Profile/DSL_Customization/_11_5_be00301_1153310565718_226811_161" xmlns:ValidationProfile="http://UML_Standard_Profile/Validation_Profile/_11_5_f720368_1159529670215_231387_1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http://ArcaneProfile/_15_0_1_2610136_1322228985601_419069_457 #_svL3EtH2EeyBFP-eNDcI4g http://UML_Standard_Profile/MagicDraw_Profile/DSL_Customization/_11_5_be00301_1153310565718_226811_161 UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_svKBQtH2EeyBFP-eNDcI4g http://UML_Standard_Profile/Validation_Profile/_11_5_f720368_1159529670215_231387_1 UML_Standard_Profile.Validation_Profile.profile.uml#_svLSC9H2EeyBFP-eNDcI4g">
   <uml:Profile xmi:id="_15_0_1_2610136_1322228985601_419069_457" name="ArcaneProfile" metamodelReference="_15_0_1_2610136_1322228985601_419069_457_packageImportcreatedOnLoad">
-    <eAnnotations xmi:id="_St4VYXWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-      <contents xmi:type="ecore:EPackage" xmi:id="_St4VYnWqEeqLr5eVn_6eWg" name="ArcaneProfile" nsURI="http:///schemas/ArcaneProfile/_Ssl78HWqEeqLr5eVn_6eWg/0" nsPrefix="ArcaneProfile">
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4VY3WqEeqLr5eVn_6eWg" name="Service" eSuperTypes="_St4VbHWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4VZHWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322575479714_628447_326"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VZXWqEeqLr5eVn_6eWg" name="base_Class" ordered="false" lowerBound="1">
+    <eAnnotations xmi:id="_svL3EdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_svL3EtH2EeyBFP-eNDcI4g" name="ArcaneProfile" nsURI="http://ArcaneProfile/_15_0_1_2610136_1322228985601_419069_457" nsPrefix="ArcaneProfile">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3E9H2EeyBFP-eNDcI4g" name="Service" eSuperTypes="_svL3HNH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3FNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322575479714_628447_326"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3FdH2EeyBFP-eNDcI4g" name="base_Class" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VZ3WqEeqLr5eVn_6eWg" name="type" ordered="false" lowerBound="1" eType="_St4VdHWqEeqLr5eVn_6eWg" defaultValueLiteral="CaseOption"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VaXWqEeqLr5eVn_6eWg" name="singleton" ordered="false" lowerBound="1" defaultValueLiteral="false">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3F9H2EeyBFP-eNDcI4g" name="type" ordered="false" lowerBound="1" eType="_svL3JNH2EeyBFP-eNDcI4g" defaultValueLiteral="CaseOption"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3GdH2EeyBFP-eNDcI4g" name="singleton" ordered="false" lowerBound="1" defaultValueLiteral="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4VbHWqEeqLr5eVn_6eWg" name="NamedElement" abstract="true">
-          <eAnnotations xmi:id="_St4VbXWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_682022c_1336052174890_510904_1632"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VbnWqEeqLr5eVn_6eWg" name="nameFr" ordered="false">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3HNH2EeyBFP-eNDcI4g" name="NamedElement" abstract="true">
+          <eAnnotations xmi:id="_svL3HdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_682022c_1336052174890_510904_1632"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3HtH2EeyBFP-eNDcI4g" name="nameFr" ordered="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VcHWqEeqLr5eVn_6eWg" name="userEnabled" ordered="false" lowerBound="1" defaultValueLiteral="false">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3INH2EeyBFP-eNDcI4g" name="userEnabled" ordered="false" lowerBound="1" defaultValueLiteral="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VcnWqEeqLr5eVn_6eWg" name="base_Element" ordered="false" lowerBound="1">
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3ItH2EeyBFP-eNDcI4g" name="base_Element" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Element"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_St4VdHWqEeqLr5eVn_6eWg" name="ServiceTypeList">
-          <eAnnotations xmi:id="_St4VdXWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_1_eb6034a_1353918967039_698249_2668"/>
-          <eLiterals xmi:id="_St4VdnWqEeqLr5eVn_6eWg" name="Application"/>
-          <eLiterals xmi:id="_St4Vd3WqEeqLr5eVn_6eWg" name="Session" value="1"/>
-          <eLiterals xmi:id="_St4VeHWqEeqLr5eVn_6eWg" name="SubDomain" value="2"/>
-          <eLiterals xmi:id="_St4VeXWqEeqLr5eVn_6eWg" name="CaseOption" value="3"/>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_svL3JNH2EeyBFP-eNDcI4g" name="ServiceTypeList">
+          <eAnnotations xmi:id="_svL3JdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_1_eb6034a_1353918967039_698249_2668"/>
+          <eLiterals xmi:id="_svL3JtH2EeyBFP-eNDcI4g" name="Application"/>
+          <eLiterals xmi:id="_svL3J9H2EeyBFP-eNDcI4g" name="Session" value="1"/>
+          <eLiterals xmi:id="_svL3KNH2EeyBFP-eNDcI4g" name="SubDomain" value="2"/>
+          <eLiterals xmi:id="_svL3KdH2EeyBFP-eNDcI4g" name="CaseOption" value="3"/>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4VenWqEeqLr5eVn_6eWg" name="Module" eSuperTypes="_St4VbHWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4Ve3WqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322575570007_619648_337"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VfHWqEeqLr5eVn_6eWg" name="base_Class" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3KtH2EeyBFP-eNDcI4g" name="Module" eSuperTypes="_svL3HNH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3K9H2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322575570007_619648_337"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3LNH2EeyBFP-eNDcI4g" name="base_Class" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4Vf3WqEeqLr5eVn_6eWg" name="Struct">
-          <eAnnotations xmi:id="_St4VgHWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322575594484_354893_343"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VgXWqEeqLr5eVn_6eWg" name="base_Class" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3L9H2EeyBFP-eNDcI4g" name="Struct">
+          <eAnnotations xmi:id="_svL3MNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322575594484_354893_343"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3MdH2EeyBFP-eNDcI4g" name="base_Class" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4Vg3WqEeqLr5eVn_6eWg" name="Func" eSuperTypes="_St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4VhHWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322575621962_867431_349"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VhXWqEeqLr5eVn_6eWg" name="base_Operation" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3M9H2EeyBFP-eNDcI4g" name="Func" eSuperTypes="_svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3NNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322575621962_867431_349"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3NdH2EeyBFP-eNDcI4g" name="base_Operation" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4Vh3WqEeqLr5eVn_6eWg" name="support" ordered="false" eType="_St4Vm3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4ViXWqEeqLr5eVn_6eWg" name="inVariables" ordered="false" upperBound="-1" eType="_St4Vn3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4Vi3WqEeqLr5eVn_6eWg" name="outVariables" ordered="false" upperBound="-1" eType="_St4Vn3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VjXWqEeqLr5eVn_6eWg" name="parallel" ordered="false" lowerBound="1" defaultValueLiteral="true">
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3N9H2EeyBFP-eNDcI4g" name="support" ordered="false" eType="_svL3S9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3OdH2EeyBFP-eNDcI4g" name="inVariables" ordered="false" upperBound="-1" eType="_svL3T9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3O9H2EeyBFP-eNDcI4g" name="outVariables" ordered="false" upperBound="-1" eType="_svL3T9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3PdH2EeyBFP-eNDcI4g" name="parallel" ordered="false" lowerBound="1" defaultValueLiteral="true">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4Vj3WqEeqLr5eVn_6eWg" name="calledFunctions" ordered="false" upperBound="-1" eType="_St4Vg3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VkXWqEeqLr5eVn_6eWg" name="itemTypeSpecialized" ordered="false" lowerBound="1" defaultValueLiteral="false">
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3P9H2EeyBFP-eNDcI4g" name="calledFunctions" ordered="false" upperBound="-1" eType="_svL3M9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3QdH2EeyBFP-eNDcI4g" name="itemTypeSpecialized" ordered="false" lowerBound="1" defaultValueLiteral="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4Vk3WqEeqLr5eVn_6eWg" name="const" ordered="false" lowerBound="1" defaultValueLiteral="false">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3Q9H2EeyBFP-eNDcI4g" name="const" ordered="false" lowerBound="1" defaultValueLiteral="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4VlnWqEeqLr5eVn_6eWg" name="MagicDrawProfile_InvisibleStereotype">
-          <eAnnotations xmi:id="_St4Vl3WqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3RtH2EeyBFP-eNDcI4g" name="MagicDrawProfile_InvisibleStereotype">
+          <eAnnotations xmi:id="_svL3R9H2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <references xmi:type="uml:Stereotype" href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_9_0_be00301_1108044721245_236588_411"/>
           </eAnnotations>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VmHWqEeqLr5eVn_6eWg" name="MagicDrawProfile_InvisibleStereotype_base_Element" ordered="false" lowerBound="1">
-            <eAnnotations xmi:id="_St4VmXWqEeqLr5eVn_6eWg" source="redefines" references="_St4VcnWqEeqLr5eVn_6eWg"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3SNH2EeyBFP-eNDcI4g" name="MagicDrawProfile_InvisibleStereotype_base_Element" ordered="false" lowerBound="1">
+            <eAnnotations xmi:id="_svL3SdH2EeyBFP-eNDcI4g" source="redefines" references="_svL3ItH2EeyBFP-eNDcI4g"/>
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Element"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4Vm3WqEeqLr5eVn_6eWg" name="ItemType">
-          <eAnnotations xmi:id="_St4VnHWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322582054945_883283_838"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VnXWqEeqLr5eVn_6eWg" name="base_DataType" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3S9H2EeyBFP-eNDcI4g" name="ItemType">
+          <eAnnotations xmi:id="_svL3TNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322582054945_883283_838"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3TdH2EeyBFP-eNDcI4g" name="base_DataType" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//DataType"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4Vn3WqEeqLr5eVn_6eWg" name="Variable">
-          <eAnnotations xmi:id="_St4VoHWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322577163649_447231_638"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VoXWqEeqLr5eVn_6eWg" name="base_Class" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3T9H2EeyBFP-eNDcI4g" name="Variable">
+          <eAnnotations xmi:id="_svL3UNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322577163649_447231_638"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3UdH2EeyBFP-eNDcI4g" name="base_Class" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4Vo3WqEeqLr5eVn_6eWg" name="support" ordered="false" lowerBound="1" eType="_St4Vm3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VpXWqEeqLr5eVn_6eWg" name="type" ordered="false" lowerBound="1" eType="_St4Vs3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4Vp3WqEeqLr5eVn_6eWg" name="needSync" ordered="false" lowerBound="1" defaultValueLiteral="true">
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3U9H2EeyBFP-eNDcI4g" name="support" ordered="false" lowerBound="1" eType="_svL3S9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3VdH2EeyBFP-eNDcI4g" name="type" ordered="false" lowerBound="1" eType="_svL3Y9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3V9H2EeyBFP-eNDcI4g" name="needSync" ordered="false" lowerBound="1" defaultValueLiteral="true">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VqXWqEeqLr5eVn_6eWg" name="dump" ordered="false" lowerBound="1" defaultValueLiteral="true">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3WdH2EeyBFP-eNDcI4g" name="dump" ordered="false" lowerBound="1" defaultValueLiteral="true">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4Vq3WqEeqLr5eVn_6eWg" name="executionDepend" ordered="false" lowerBound="1" defaultValueLiteral="false">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3W9H2EeyBFP-eNDcI4g" name="executionDepend" ordered="false" lowerBound="1" defaultValueLiteral="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VrXWqEeqLr5eVn_6eWg" name="restore" ordered="false" lowerBound="1" defaultValueLiteral="true">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3XdH2EeyBFP-eNDcI4g" name="restore" ordered="false" lowerBound="1" defaultValueLiteral="true">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4Vr3WqEeqLr5eVn_6eWg" name="multiplicity" ordered="false" lowerBound="1" eType="_St4Vt3WqEeqLr5eVn_6eWg" defaultValueLiteral="Scalar"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VsXWqEeqLr5eVn_6eWg" name="family" ordered="false" eType="_St4VvHWqEeqLr5eVn_6eWg"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3X9H2EeyBFP-eNDcI4g" name="multiplicity" ordered="false" lowerBound="1" eType="_svL3Z9H2EeyBFP-eNDcI4g" defaultValueLiteral="Scalar"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3YdH2EeyBFP-eNDcI4g" name="family" ordered="false" eType="_svL3bNH2EeyBFP-eNDcI4g"/>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4Vs3WqEeqLr5eVn_6eWg" name="SimpleType">
-          <eAnnotations xmi:id="_St4VtHWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322580936874_91397_804"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VtXWqEeqLr5eVn_6eWg" name="base_DataType" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3Y9H2EeyBFP-eNDcI4g" name="SimpleType">
+          <eAnnotations xmi:id="_svL3ZNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322580936874_91397_804"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3ZdH2EeyBFP-eNDcI4g" name="base_DataType" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//DataType"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_St4Vt3WqEeqLr5eVn_6eWg" name="VariableMultiplicity">
-          <eAnnotations xmi:id="_St4VuHWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322577328394_316176_652"/>
-          <eLiterals xmi:id="_St4VuXWqEeqLr5eVn_6eWg" name="Scalar"/>
-          <eLiterals xmi:id="_St4VunWqEeqLr5eVn_6eWg" name="Array" value="1"/>
-          <eLiterals xmi:id="_St4Vu3WqEeqLr5eVn_6eWg" name="Array2" value="2"/>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_svL3Z9H2EeyBFP-eNDcI4g" name="VariableMultiplicity">
+          <eAnnotations xmi:id="_svL3aNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322577328394_316176_652"/>
+          <eLiterals xmi:id="_svL3adH2EeyBFP-eNDcI4g" name="Scalar"/>
+          <eLiterals xmi:id="_svL3atH2EeyBFP-eNDcI4g" name="Array" value="1"/>
+          <eLiterals xmi:id="_svL3a9H2EeyBFP-eNDcI4g" name="Array2" value="2"/>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4VvHWqEeqLr5eVn_6eWg" name="ItemFamily">
-          <eAnnotations xmi:id="_St4VvXWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_5_2_682022c_1537520939151_415280_6034"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VvnWqEeqLr5eVn_6eWg" name="base_Class" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3bNH2EeyBFP-eNDcI4g" name="ItemFamily">
+          <eAnnotations xmi:id="_svL3bdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_5_2_682022c_1537520939151_415280_6034"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3btH2EeyBFP-eNDcI4g" name="base_Class" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VwHWqEeqLr5eVn_6eWg" name="support" ordered="false" lowerBound="1" eType="_St4Vm3WqEeqLr5eVn_6eWg"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3cNH2EeyBFP-eNDcI4g" name="support" ordered="false" lowerBound="1" eType="_svL3S9H2EeyBFP-eNDcI4g"/>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4VwnWqEeqLr5eVn_6eWg" name="EntryPoint" eSuperTypes="_St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4Vw3WqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322576737630_196599_612"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VxHWqEeqLr5eVn_6eWg" name="location" ordered="false" lowerBound="1" eType="_St4V0XWqEeqLr5eVn_6eWg" defaultValueLiteral="ComputeLoop"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VxnWqEeqLr5eVn_6eWg" name="base_Operation" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3ctH2EeyBFP-eNDcI4g" name="EntryPoint" eSuperTypes="_svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3c9H2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322576737630_196599_612"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3dNH2EeyBFP-eNDcI4g" name="location" ordered="false" lowerBound="1" eType="_svL3gdH2EeyBFP-eNDcI4g" defaultValueLiteral="ComputeLoop"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3dtH2EeyBFP-eNDcI4g" name="base_Operation" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Operation"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VyHWqEeqLr5eVn_6eWg" name="inVariables" ordered="false" upperBound="-1" eType="_St4Vn3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VynWqEeqLr5eVn_6eWg" name="outVariables" ordered="false" upperBound="-1" eType="_St4Vn3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4VzHWqEeqLr5eVn_6eWg" name="calledFunctions" ordered="false" upperBound="-1" eType="_St4Vg3WqEeqLr5eVn_6eWg"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4VznWqEeqLr5eVn_6eWg" name="autoLoad" ordered="false" lowerBound="1" eType="_St4V3HWqEeqLr5eVn_6eWg" defaultValueLiteral="None"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3eNH2EeyBFP-eNDcI4g" name="inVariables" ordered="false" upperBound="-1" eType="_svL3T9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3etH2EeyBFP-eNDcI4g" name="outVariables" ordered="false" upperBound="-1" eType="_svL3T9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3fNH2EeyBFP-eNDcI4g" name="calledFunctions" ordered="false" upperBound="-1" eType="_svL3M9H2EeyBFP-eNDcI4g"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3ftH2EeyBFP-eNDcI4g" name="autoLoad" ordered="false" lowerBound="1" eType="_svL3jNH2EeyBFP-eNDcI4g" defaultValueLiteral="None"/>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_St4V0XWqEeqLr5eVn_6eWg" name="EntryPointLocation">
-          <eAnnotations xmi:id="_St4V0nWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322576822897_242277_620"/>
-          <eLiterals xmi:id="_St4V03WqEeqLr5eVn_6eWg" name="ComputeLoop"/>
-          <eLiterals xmi:id="_St4V1HWqEeqLr5eVn_6eWg" name="OnMeshChanged" value="1"/>
-          <eLiterals xmi:id="_St4V1XWqEeqLr5eVn_6eWg" name="OnMeshRefinement" value="2"/>
-          <eLiterals xmi:id="_St4V1nWqEeqLr5eVn_6eWg" name="Init" value="3"/>
-          <eLiterals xmi:id="_St4V13WqEeqLr5eVn_6eWg" name="ContinueInit" value="4"/>
-          <eLiterals xmi:id="_St4V2HWqEeqLr5eVn_6eWg" name="StartInit" value="5"/>
-          <eLiterals xmi:id="_St4V2XWqEeqLr5eVn_6eWg" name="Restore" value="6"/>
-          <eLiterals xmi:id="_St4V2nWqEeqLr5eVn_6eWg" name="Build" value="7"/>
-          <eLiterals xmi:id="_St4V23WqEeqLr5eVn_6eWg" name="Exit" value="8"/>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_svL3gdH2EeyBFP-eNDcI4g" name="EntryPointLocation">
+          <eAnnotations xmi:id="_svL3gtH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322576822897_242277_620"/>
+          <eLiterals xmi:id="_svL3g9H2EeyBFP-eNDcI4g" name="ComputeLoop"/>
+          <eLiterals xmi:id="_svL3hNH2EeyBFP-eNDcI4g" name="OnMeshChanged" value="1"/>
+          <eLiterals xmi:id="_svL3hdH2EeyBFP-eNDcI4g" name="OnMeshRefinement" value="2"/>
+          <eLiterals xmi:id="_svL3htH2EeyBFP-eNDcI4g" name="Init" value="3"/>
+          <eLiterals xmi:id="_svL3h9H2EeyBFP-eNDcI4g" name="ContinueInit" value="4"/>
+          <eLiterals xmi:id="_svL3iNH2EeyBFP-eNDcI4g" name="StartInit" value="5"/>
+          <eLiterals xmi:id="_svL3idH2EeyBFP-eNDcI4g" name="Restore" value="6"/>
+          <eLiterals xmi:id="_svL3itH2EeyBFP-eNDcI4g" name="Build" value="7"/>
+          <eLiterals xmi:id="_svL3i9H2EeyBFP-eNDcI4g" name="Exit" value="8"/>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_St4V3HWqEeqLr5eVn_6eWg" name="EntryPointAutoLoad">
-          <eAnnotations xmi:id="_St4V3XWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_1_682022c_1406117058686_981507_2741"/>
-          <eLiterals xmi:id="_St4V3nWqEeqLr5eVn_6eWg" name="None"/>
-          <eLiterals xmi:id="_St4V33WqEeqLr5eVn_6eWg" name="Begin" value="1"/>
-          <eLiterals xmi:id="_St4V4HWqEeqLr5eVn_6eWg" name="End" value="2"/>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_svL3jNH2EeyBFP-eNDcI4g" name="EntryPointAutoLoad">
+          <eAnnotations xmi:id="_svL3jdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_1_682022c_1406117058686_981507_2741"/>
+          <eLiterals xmi:id="_svL3jtH2EeyBFP-eNDcI4g" name="None"/>
+          <eLiterals xmi:id="_svL3j9H2EeyBFP-eNDcI4g" name="Begin" value="1"/>
+          <eLiterals xmi:id="_svL3kNH2EeyBFP-eNDcI4g" name="End" value="2"/>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4V4XWqEeqLr5eVn_6eWg" name="Enum">
-          <eAnnotations xmi:id="_St4V4nWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322658134503_178908_719"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4V43WqEeqLr5eVn_6eWg" name="base_Enumeration" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3kdH2EeyBFP-eNDcI4g" name="Enum">
+          <eAnnotations xmi:id="_svL3ktH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322658134503_178908_719"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3k9H2EeyBFP-eNDcI4g" name="base_Enumeration" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Enumeration"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4V5XWqEeqLr5eVn_6eWg" name="Pty" eSuperTypes="_St4VbHWqEeqLr5eVn_6eWg _St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4V5nWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322727944718_738168_1775"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4V53WqEeqLr5eVn_6eWg" name="base_Property" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3ldH2EeyBFP-eNDcI4g" name="Pty" eSuperTypes="_svL3HNH2EeyBFP-eNDcI4g _svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3ltH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322727944718_738168_1775"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3l9H2EeyBFP-eNDcI4g" name="base_Property" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Property"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4V63WqEeqLr5eVn_6eWg" name="FuncParam" eSuperTypes="_St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4V7HWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322731885367_435836_1624"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4V7XWqEeqLr5eVn_6eWg" name="base_Parameter" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3m9H2EeyBFP-eNDcI4g" name="FuncParam" eSuperTypes="_svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3nNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322731885367_435836_1624"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3ndH2EeyBFP-eNDcI4g" name="base_Parameter" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Parameter"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4V8HWqEeqLr5eVn_6eWg" name="Interf">
-          <eAnnotations xmi:id="_St4V8XWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322818521616_253991_2543"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4V8nWqEeqLr5eVn_6eWg" name="base_Interface" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3oNH2EeyBFP-eNDcI4g" name="Interf">
+          <eAnnotations xmi:id="_svL3odH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322818521616_253991_2543"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3otH2EeyBFP-eNDcI4g" name="base_Interface" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Interface"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4V9HWqEeqLr5eVn_6eWg" name="EnumLiteral" eSuperTypes="_St4VbHWqEeqLr5eVn_6eWg _St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4V9XWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_682022c_1336134708113_333861_1511"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4V9nWqEeqLr5eVn_6eWg" name="base_EnumerationLiteral" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3pNH2EeyBFP-eNDcI4g" name="EnumLiteral" eSuperTypes="_svL3HNH2EeyBFP-eNDcI4g _svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3pdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_682022c_1336134708113_333861_1511"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3ptH2EeyBFP-eNDcI4g" name="base_EnumerationLiteral" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//EnumerationLiteral"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4V-HWqEeqLr5eVn_6eWg" name="value" ordered="false">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3qNH2EeyBFP-eNDcI4g" name="value" ordered="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4V_HWqEeqLr5eVn_6eWg" name="Legacy">
-          <eAnnotations xmi:id="_St4V_XWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_1_682022c_1343912580663_434069_2716"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4V_nWqEeqLr5eVn_6eWg" name="base_Class" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3rNH2EeyBFP-eNDcI4g" name="Legacy">
+          <eAnnotations xmi:id="_svL3rdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_1_682022c_1343912580663_434069_2716"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3rtH2EeyBFP-eNDcI4g" name="base_Class" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4WAHWqEeqLr5eVn_6eWg" name="provider" ordered="false">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3sNH2EeyBFP-eNDcI4g" name="provider" ordered="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4WAnWqEeqLr5eVn_6eWg" name="originNamespace" ordered="false">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3stH2EeyBFP-eNDcI4g" name="originNamespace" ordered="false">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
           </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_St4WBHWqEeqLr5eVn_6eWg" name="file" ordered="false" lowerBound="1">
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3tNH2EeyBFP-eNDcI4g" name="file" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_svL3ttH2EeyBFP-eNDcI4g" name="forceInclude" ordered="false" lowerBound="1" defaultValueLiteral="false">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4WBnWqEeqLr5eVn_6eWg" name="MeshType">
-          <eAnnotations xmi:id="_St4WB3WqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322582246601_35440_878"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4WCHWqEeqLr5eVn_6eWg" name="base_DataType" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3uNH2EeyBFP-eNDcI4g" name="MeshType">
+          <eAnnotations xmi:id="_svL3udH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_15_0_1_2610136_1322582246601_35440_878"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3utH2EeyBFP-eNDcI4g" name="base_DataType" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//DataType"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4WCnWqEeqLr5eVn_6eWg" name="StructGeneralization" eSuperTypes="_St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4WC3WqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_eb6034a_1337783170782_934523_1532"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4WDHWqEeqLr5eVn_6eWg" name="base_Generalization" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3vNH2EeyBFP-eNDcI4g" name="StructGeneralization" eSuperTypes="_svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3vdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_eb6034a_1337783170782_934523_1532"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3vtH2EeyBFP-eNDcI4g" name="base_Generalization" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Generalization"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4WD3WqEeqLr5eVn_6eWg" name="InterfaceGeneralization" eSuperTypes="_St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4WEHWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_eb6034a_1337932792999_4293_1581"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4WEXWqEeqLr5eVn_6eWg" name="base_Generalization" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3wdH2EeyBFP-eNDcI4g" name="InterfaceGeneralization" eSuperTypes="_svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3wtH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_eb6034a_1337932792999_4293_1581"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3w9H2EeyBFP-eNDcI4g" name="base_Generalization" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Generalization"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4WFHWqEeqLr5eVn_6eWg" name="InterfRealization" eSuperTypes="_St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4WFXWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_eb6034a_1337933008581_816118_1593"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4WFnWqEeqLr5eVn_6eWg" name="base_InterfaceRealization" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3xtH2EeyBFP-eNDcI4g" name="InterfRealization" eSuperTypes="_svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3x9H2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_16_6_1_eb6034a_1337933008581_816118_1593"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3yNH2EeyBFP-eNDcI4g" name="base_InterfaceRealization" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//InterfaceRealization"/>
           </eStructuralFeatures>
         </eClassifiers>
-        <eClassifiers xmi:type="ecore:EClass" xmi:id="_St4WGXWqEeqLr5eVn_6eWg" name="EntryPointFlow" eSuperTypes="_St4VlnWqEeqLr5eVn_6eWg">
-          <eAnnotations xmi:id="_St4WGnWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_1_682022c_1345553489113_529811_2858"/>
-          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_St4WG3WqEeqLr5eVn_6eWg" name="base_ControlFlow" ordered="false" lowerBound="1">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_svL3y9H2EeyBFP-eNDcI4g" name="EntryPointFlow" eSuperTypes="_svL3RtH2EeyBFP-eNDcI4g">
+          <eAnnotations xmi:id="_svL3zNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_17_0_1_682022c_1345553489113_529811_2858"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_svL3zdH2EeyBFP-eNDcI4g" name="base_ControlFlow" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//ControlFlow"/>
           </eStructuralFeatures>
         </eClassifiers>
@@ -713,6 +716,12 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_1_682022c_1344342261848_165188_2575" name="" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_1_682022c_1344342261848_78614_2574" name="" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_19_0_4_682022c_1652344930333_640043_6223" name="forceInclude" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_19_0_4_682022c_1652345014819_903628_6232" name="" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_19_0_4_682022c_1652345014818_334066_6231" name="" value="1"/>
+        <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_19_0_4_682022c_1652344980058_626183_6228" name=""/>
+      </ownedAttribute>
       <icon xmi:id="_17_0_1_682022c_1412686661762_997252_2970" content="3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 22 31 2e 30 22 20 65 6e 63 6f 64 69 6e 67 3d 22 69 73 6f 2d 38 38 35 39 2d 31 22 3f 3e d a 3c 21 2d 2d 20 47 65 6e 65 72 61 74 6f 72 3a 20 41 64 6f 62 65 20 49 6c 6c 75 73 74 72 61 74 6f 72 20 31 34 2e 30 2e 30 2c 20 53 56 47 20 45 78 70 6f 72 74 20 50 6c 75 67 2d 49 6e 20 2e 20 53 56 47 20 56 65 72 73 69 6f 6e 3a 20 36 2e 30 30 20 42 75 69 6c 64 20 34 33 33 36 33 29 20 20 2d 2d 3e d a 3c 21 44 4f 43 54 59 50 45 20 73 76 67 20 50 55 42 4c 49 43 20 22 2d 2f 2f 57 33 43 2f 2f 44 54 44 20 53 56 47 20 31 2e 31 2f 2f 45 4e 22 20 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 47 72 61 70 68 69 63 73 2f 53 56 47 2f 31 2e 31 2f 44 54 44 2f 73 76 67 31 31 2e 64 74 64 22 3e d a 3c 73 76 67 20 76 65 72 73 69 6f 6e 3d 22 31 2e 31 22 20 69 64 3d 22 4c 61 79 65 72 5f 31 22 20 78 6d 6c 6e 73 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 32 30 30 30 2f 73 76 67 22 20 78 6d 6c 6e 73 3a 78 6c 69 6e 6b 3d 22 68 74 74 70 3a 2f 2f 77 77 77 2e 77 33 2e 6f 72 67 2f 31 39 39 39 2f 78 6c 69 6e 6b 22 20 78 3d 22 30 70 78 22 20 79 3d 22 30 70 78 22 d a 9 20 77 69 64 74 68 3d 22 32 34 2e 30 30 38 70 78 22 20 68 65 69 67 68 74 3d 22 33 32 70 78 22 20 76 69 65 77 42 6f 78 3d 22 30 20 30 20 32 34 2e 30 30 38 20 33 32 22 20 73 74 79 6c 65 3d 22 65 6e 61 62 6c 65 2d 62 61 63 6b 67 72 6f 75 6e 64 3a 6e 65 77 20 30 20 30 20 32 34 2e 30 30 38 20 33 32 3b 22 20 78 6d 6c 3a 73 70 61 63 65 3d 22 70 72 65 73 65 72 76 65 22 3e d a 3c 67 3e d a 9 3c 70 61 74 68 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 23 32 33 31 46 32 30 3b 22 20 64 3d 22 4d 31 34 2e 30 30 38 2c 30 63 2d 35 2e 35 31 32 2c 30 2d 31 30 2c 34 2e 34 38 34 2d 31 30 2c 31 30 76 32 48 30 76 31 34 63 30 2c 33 2e 33 30 35 2c 32 2e 36 39 35 2c 36 2c 36 2c 36 68 31 32 2e 30 30 38 63 33 2e 33 31 32 2c 30 2c 36 2d 32 2e 36 39 35 2c 36 2d 36 56 31 30 d a 9 9 43 32 34 2e 30 30 38 2c 34 2e 34 38 34 2c 31 39 2e 35 32 33 2c 30 2c 31 34 2e 30 30 38 2c 30 7a 20 4d 38 2e 30 30 38 2c 31 30 63 30 2d 33 2e 33 31 32 2c 32 2e 36 39 35 2d 36 2c 36 2d 36 63 33 2e 33 31 32 2c 30 2c 36 2c 32 2e 36 38 38 2c 36 2c 36 76 32 68 2d 31 32 56 31 30 7a 20 4d 31 38 2e 30 30 38 2c 32 38 48 36 63 2d 31 2e 31 30 32 2c 30 2d 32 2d 30 2e 38 39 38 2d 32 2d 32 d a 9 9 56 31 36 68 31 36 2e 30 30 38 76 31 30 43 32 30 2e 30 30 38 2c 32 37 2e 31 30 32 2c 31 39 2e 31 31 33 2c 32 38 2c 31 38 2e 30 30 38 2c 32 38 7a 22 2f 3e d a 9 3c 70 61 74 68 20 73 74 79 6c 65 3d 22 66 69 6c 6c 3a 23 32 33 31 46 32 30 3b 22 20 64 3d 22 4d 31 34 2e 30 30 38 2c 32 32 63 30 2c 31 2e 31 30 32 2d 30 2e 38 39 38 2c 32 2d 32 2c 32 63 2d 31 2e 31 30 39 2c 30 2d 32 2d 30 2e 38 39 38 2d 32 2d 32 63 30 2d 31 2e 31 30 39 2c 30 2e 38 39 31 2d 32 2c 32 2d 32 d a 9 9 43 31 33 2e 31 30 39 2c 32 30 2c 31 34 2e 30 30 38 2c 32 30 2e 38 39 31 2c 31 34 2e 30 30 38 2c 32 32 7a 22 2f 3e d a 3c 2f 67 3e d a 3c 2f 73 76 67 3e d a " location="/cea/S/home/s3/oudot/workspaceModane/fr.cea.arcane.mdplugin/icons/legacy.svg" format="SVG"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Extension" xmi:id="_17_0_1_682022c_1343912602059_565275_2722" name="" memberEnd="_17_0_1_682022c_1343912602059_291866_2724 _17_0_1_682022c_1343912602059_22096_2723" navigableOwnedEnd="_17_0_1_682022c_1343912602059_291866_2724">
@@ -802,48 +811,23 @@
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ControlFlow"/>
       </ownedAttribute>
     </packagedElement>
-    <profileApplication xmi:id="_15_0_1_2610136_1322228985601_419069_457profileApplicationArcaneProfile" appliedProfile="_15_0_1_2610136_1322228985601_419069_457">
-      <eAnnotations xmi:id="_SuXdk3WqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_St4VYnWqEeqLr5eVn_6eWg"/>
-    </profileApplication>
     <profileApplication xmi:id="_11_5_be00301_1153310565718_226811_161profileApplicationArcaneProfile">
-      <eAnnotations xmi:id="_SuxGM3WqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_St5jgHWqEeqLr5eVn_6eWg"/>
+      <eAnnotations xmi:id="_svc8NdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_svKBQtH2EeyBFP-eNDcI4g"/>
       </eAnnotations>
       <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_11_5_be00301_1153310565718_226811_161"/>
     </profileApplication>
+    <profileApplication xmi:id="_15_0_1_2610136_1322228985601_419069_457profileApplicationArcaneProfile" appliedProfile="_15_0_1_2610136_1322228985601_419069_457">
+      <eAnnotations xmi:id="_svmtPtH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_svL3EtH2EeyBFP-eNDcI4g"/>
+    </profileApplication>
     <profileApplication xmi:id="_11_5_f720368_1159529670215_231387_1profileApplicationArcaneProfile">
-      <eAnnotations xmi:id="_SvJgsXWqEeqLr5eVn_6eWg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.Validation_Profile.profile.uml#_St6yZHWqEeqLr5eVn_6eWg"/>
+      <eAnnotations xmi:id="_svn7XdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.Validation_Profile.profile.uml#_svLSC9H2EeyBFP-eNDcI4g"/>
       </eAnnotations>
       <appliedProfile href="UML_Standard_Profile.Validation_Profile.profile.uml#_11_5_f720368_1159529670215_231387_1"/>
     </profileApplication>
   </uml:Profile>
-  <ArcaneProfile:SimpleType xmi:id="_Suag4HWqEeqLr5eVn_6eWg" base_DataType="_17_0_1_682022c_1416320840252_373788_2765"/>
-  <ArcaneProfile:SimpleType xmi:id="_Suag4XWqEeqLr5eVn_6eWg" base_DataType="_17_0_1_682022c_1416320829175_569125_2764"/>
-  <ArcaneProfile:SimpleType xmi:id="_Suag4nWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322747633303_687270_2540"/>
-  <ArcaneProfile:SimpleType xmi:id="_Suag43WqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322747633302_322726_2539"/>
-  <ArcaneProfile:SimpleType xmi:id="_Suag5HWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322584614685_876076_1160"/>
-  <ArcaneProfile:SimpleType xmi:id="_SubH8HWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322584608467_272591_1141"/>
-  <ArcaneProfile:SimpleType xmi:id="_SubH8XWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322584553323_691122_1121"/>
-  <ArcaneProfile:SimpleType xmi:id="_SubH8nWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322584524115_857827_1101"/>
-  <ArcaneProfile:SimpleType xmi:id="_SubH83WqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322582485121_639853_955"/>
-  <ArcaneProfile:SimpleType xmi:id="_SubH9HWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322582428977_166862_952"/>
-  <ArcaneProfile:ItemType xmi:id="_SubvAHWqEeqLr5eVn_6eWg" base_DataType="_18_5_2_682022c_1547806384753_824674_7093"/>
-  <ArcaneProfile:ItemType xmi:id="_SubvAXWqEeqLr5eVn_6eWg" base_DataType="_17_0_1_682022c_1463042078984_814431_2784"/>
-  <ArcaneProfile:ItemType xmi:id="_SubvAnWqEeqLr5eVn_6eWg" base_DataType="_17_0_1_ea7033b_1426756745504_883510_2771"/>
-  <ArcaneProfile:ItemType xmi:id="_SubvA3WqEeqLr5eVn_6eWg" base_DataType="_17_0_1_682022c_1406116821894_999870_2723"/>
-  <ArcaneProfile:ItemType xmi:id="_SubvBHWqEeqLr5eVn_6eWg" base_DataType="_17_0_1_682022c_1371822475366_533835_2695"/>
-  <ArcaneProfile:ItemType xmi:id="_SubvBXWqEeqLr5eVn_6eWg" base_DataType="_17_0_1_eb6034a_1353920386879_384066_2914"/>
-  <ArcaneProfile:ItemType xmi:id="_SucWEHWqEeqLr5eVn_6eWg" base_DataType="_16_6_1_682022c_1335970072511_179988_1494"/>
-  <ArcaneProfile:ItemType xmi:id="_SucWEXWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322582121880_58890_871"/>
-  <ArcaneProfile:ItemType xmi:id="_SucWEnWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322582116690_252382_869"/>
-  <ArcaneProfile:ItemType xmi:id="_SucWE3WqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322582094587_333646_850"/>
-  <ArcaneProfile:MeshType xmi:id="_SucWFHWqEeqLr5eVn_6eWg" base_DataType="_17_0_1_682022c_1463043523512_509418_2784"/>
-  <ArcaneProfile:MeshType xmi:id="_SucWFXWqEeqLr5eVn_6eWg" base_DataType="_16_6_1_682022c_1335970100788_383170_1496"/>
-  <ArcaneProfile:MeshType xmi:id="_SucWFnWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322582408349_458255_950"/>
-  <ArcaneProfile:MeshType xmi:id="_SucWF3WqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322582389362_411369_948"/>
-  <ArcaneProfile:MeshType xmi:id="_Suc9IHWqEeqLr5eVn_6eWg" base_DataType="_15_0_1_2610136_1322582366050_952446_946"/>
-  <DSLCustomization:Customization xmi:id="_SuzicHWqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322577163649_447231_638" base_Class="_15_0_1_2610136_1322325623865_687591_106">
+  <DSLCustomization:Customization xmi:id="_svdjQNH2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322577163649_447231_638" base_Class="_15_0_1_2610136_1322325623865_687591_106">
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#SendObjectAction"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#DeploymentSpecification"/>
     <disallowedRelationships xmi:type="uml:Stereotype" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_11_5EAPbeta_be00301_1148642764910_998510_268"/>
@@ -1019,11 +1003,9 @@
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#PackageableElement"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#BehavioralFeature"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuralFeatureAction"/>
-    <disallowedRelationships href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0_f720368_1162902630860_48474_927"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#ReadExtentAction"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#RaiseExceptionAction"/>
-    <disallowedRelationships href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0_f720368_1162895654896_962307_111"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#TemplateSignature"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#PackageImport"/>
     <disallowedRelationships xmi:type="uml:Stereotype" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_11_5EAPbeta_be00301_1148632817486_155219_3"/>
@@ -1129,7 +1111,6 @@
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#PartDecomposition"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#ReadLinkObjectEndAction"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#DurationInterval"/>
-    <disallowedRelationships href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0_f720368_1162903200595_74778_972"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#CallOperationAction"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Event"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#AddVariableValueAction"/>
@@ -1143,7 +1124,6 @@
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#MergeNode"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#ObjectNode"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#TemplateParameter"/>
-    <disallowedRelationships href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0_f720368_1162553683298_143811_108"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Expression"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#ExecutionEnvironment"/>
@@ -1194,27 +1174,7 @@
     <usedUMLProperties>isAbstract</usedUMLProperties>
     <usedUMLProperties>name</usedUMLProperties>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_SuzicXWqEeqLr5eVn_6eWg" disallowedRelationships="_16_6_1_eb6034a_1337932792999_4293_1581 _16_6_1_eb6034a_1337933008581_816118_1593 _16_6_1_eb6034a_1337783170782_934523_1532" customizationTarget="_17_0_1_682022c_1343912580663_434069_2716" base_Class="_17_0_1_682022c_1343912899845_356307_2776">
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>file&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>originNamespace&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>provider&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>USAGE&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>DOCUMENTATION_HYPERLINKS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>ATTRIBUTES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>PORTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>OPERATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RECEPTIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>BEHAVIORS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TEMPLATE_PARAMETERS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>INNER_ELEMENTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RELATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TAGS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>CONSTRAINTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>LANGUAGE_PROPERTIES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <usedUMLProperties>name</usedUMLProperties>
-  </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su0JgHWqEeqLr5eVn_6eWg" customizationTarget="_18_5_2_682022c_1537520939151_415280_6034" base_Class="_18_5_2_682022c_1537877774318_903988_6283" doNotSuggestAsType="true">
+  <DSLCustomization:Customization xmi:id="_svdjQdH2EeyBFP-eNDcI4g" customizationTarget="_18_5_2_682022c_1537520939151_415280_6034" base_Class="_18_5_2_682022c_1537877774318_903988_6283" doNotSuggestAsType="true">
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#SendObjectAction"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#DeploymentSpecification"/>
     <disallowedRelationships xmi:type="uml:Stereotype" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_11_5EAPbeta_be00301_1148642764910_998510_268"/>
@@ -1390,11 +1350,9 @@
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#PackageableElement"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#BehavioralFeature"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuralFeatureAction"/>
-    <disallowedRelationships href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0_f720368_1162902630860_48474_927"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#ReadExtentAction"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#RaiseExceptionAction"/>
-    <disallowedRelationships href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0_f720368_1162895654896_962307_111"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#TemplateSignature"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#PackageImport"/>
     <disallowedRelationships xmi:type="uml:Stereotype" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_11_5EAPbeta_be00301_1148632817486_155219_3"/>
@@ -1500,7 +1458,6 @@
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#PartDecomposition"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#ReadLinkObjectEndAction"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#DurationInterval"/>
-    <disallowedRelationships href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0_f720368_1162903200595_74778_972"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#CallOperationAction"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Event"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#AddVariableValueAction"/>
@@ -1514,7 +1471,6 @@
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#MergeNode"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#ObjectNode"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#TemplateParameter"/>
-    <disallowedRelationships href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0_f720368_1162553683298_143811_108"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Artifact"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Expression"/>
     <disallowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#ExecutionEnvironment"/>
@@ -1661,43 +1617,40 @@
     <symbolStandardExpertConfiguration>&lt;html>&lt;head>&lt;title>HMF&lt;/title>&lt;/head>&lt;body>&lt;p>BORDER_ELEMENT_MARGIN&lt;/p>&lt;/body>&lt;/html></symbolStandardExpertConfiguration>
     <symbolStandardExpertConfiguration>&lt;html>&lt;head>&lt;title>HMF&lt;/title>&lt;/head>&lt;body>&lt;p>SHOW_RECEPTIONS_COMPARTMENT_NAME&lt;/p>&lt;/body>&lt;/html></symbolStandardExpertConfiguration>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su0JgXWqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322575594484_354893_343" base_Class="_15_0_1_2610136_1322666432983_77178_572" suggestedOwnedTypes="_15_0_1_2610136_1322727944718_738168_1775">
-    <allowedRelationships xmi:type="uml:Stereotype" href="#_16_6_1_eb6034a_1337783170782_934523_1532"/>
-    <allowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+  <DSLCustomization:Customization xmi:id="_svdjQtH2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322727944718_738168_1775" base_Class="_15_0_1_2610136_1322728557341_102215_1835">
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>type&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>defaultValue&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>multiplicity&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>DOCUMENTATION_HYPERLINKS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>ATTRIBUTES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>PORTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>OPERATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RECEPTIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>BEHAVIORS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TEMPLATE_PARAMETERS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>INNER_ELEMENTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RELATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TAGS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>CONSTRAINTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>LANGUAGE_PROPERTIES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
+    <usedUMLProperties>defaultValue</usedUMLProperties>
+    <usedUMLProperties>multiplicity</usedUMLProperties>
     <usedUMLProperties>name</usedUMLProperties>
+    <usedUMLProperties>type</usedUMLProperties>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su0JgnWqEeqLr5eVn_6eWg" typesForTarget="_15_0_1_2610136_1322818521616_253991_2543" typesForSource="_15_0_1_2610136_1322575479714_628447_326 _15_0_1_2610136_1322575570007_619648_337" customizationTarget="_16_6_1_eb6034a_1337933008581_816118_1593" base_Class="_16_6_1_eb6034a_1337933968696_279820_1615"/>
-  <DSLCustomization:Customization xmi:id="_Su0Jg3WqEeqLr5eVn_6eWg" typesForTarget="_15_0_1_2610136_1322818521616_253991_2543" typesForSource="_15_0_1_2610136_1322818521616_253991_2543" customizationTarget="_16_6_1_eb6034a_1337932792999_4293_1581" base_Class="_16_6_1_eb6034a_1337933760737_767706_1605"/>
-  <DSLCustomization:Customization xmi:id="_Su0wkHWqEeqLr5eVn_6eWg" typesForTarget="_15_0_1_2610136_1322575594484_354893_343" typesForSource="_15_0_1_2610136_1322575594484_354893_343" customizationTarget="_16_6_1_eb6034a_1337783170782_934523_1532" base_Class="_16_6_1_eb6034a_1337783251717_747175_1544"/>
-  <DSLCustomization:Customization xmi:id="_Su0wkXWqEeqLr5eVn_6eWg" customizationTarget="_16_6_1_682022c_1336134708113_333861_1511" base_Class="_16_6_1_682022c_1336135120024_253213_1906">
+  <DSLCustomization:Customization xmi:id="_svdjQ9H2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322658134503_178908_719" base_Class="_15_0_1_2610136_1322669681703_190296_889" suggestedOwnedTypes="_16_6_1_682022c_1336134708113_333861_1511">
+    <allowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>value&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>SLOTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>userEnabled&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>nameFr&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>DOCUMENTATION_HYPERLINKS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>DEPLOYED_ARTIFACTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>ATTRIBUTES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>OPERATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>ENUMERATION_LITERALS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TEMPLATE_PARAMETERS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>INNER_ELEMENTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RELATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TAGS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>CONSTRAINTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>LANGUAGE_PROPERTIES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#EnumerationLiteral"/>
     <usedUMLProperties>name</usedUMLProperties>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su0wknWqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322731885367_435836_1624" base_Class="_15_0_1_2610136_1322732288774_548543_1687">
+  <DSLCustomization:Customization xmi:id="_svdjRNH2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322731885367_435836_1624" base_Class="_15_0_1_2610136_1322732288774_548543_1687">
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>type&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>direction&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
@@ -1715,7 +1668,33 @@
     <usedUMLProperties>name</usedUMLProperties>
     <usedUMLProperties>type</usedUMLProperties>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su0wk3WqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322818521616_253991_2543" base_Class="_15_0_1_2610136_1322821265711_217586_1734" suggestedOwnedTypes="_15_0_1_2610136_1322575621962_867431_349 _15_0_1_2610136_1322727944718_738168_1775">
+  <DSLCustomization:Customization xmi:id="_svdjRdH2EeyBFP-eNDcI4g" disallowedRelationships="_16_6_1_eb6034a_1337932792999_4293_1581 _16_6_1_eb6034a_1337933008581_816118_1593 _16_6_1_eb6034a_1337783170782_934523_1532" customizationTarget="_17_0_1_682022c_1343912580663_434069_2716" base_Class="_17_0_1_682022c_1343912899845_356307_2776">
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SPF&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>USED_IN&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>MANAGE_NAVIGATION&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>INSTANCES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>Traceability&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SPF&lt;/title>&lt;/head>&lt;body>&lt;p>file&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SPF&lt;/title>&lt;/head>&lt;body>&lt;p>originNamespace&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SPF&lt;/title>&lt;/head>&lt;body>&lt;p>provider&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SPF&lt;/title>&lt;/head>&lt;body>&lt;p>forceInclude&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>USAGE&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SNF&lt;/title>&lt;/head>&lt;body>&lt;p>DOCUMENTATION_HYPERLINKS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>ATTRIBUTES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>PORTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>OPERATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>RECEPTIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>BEHAVIORS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>TEMPLATE_PARAMETERS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>INNER_ELEMENTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>RELATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>TAGS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>CONSTRAINTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HNF&lt;/title>&lt;/head>&lt;body>&lt;p>LANGUAGE_PROPERTIES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <usedUMLProperties>name</usedUMLProperties>
+  </DSLCustomization:Customization>
+  <DSLCustomization:Customization xmi:id="_svdjRtH2EeyBFP-eNDcI4g" typesForTarget="_15_0_1_2610136_1322818521616_253991_2543" typesForSource="_15_0_1_2610136_1322575479714_628447_326 _15_0_1_2610136_1322575570007_619648_337" customizationTarget="_16_6_1_eb6034a_1337933008581_816118_1593" base_Class="_16_6_1_eb6034a_1337933968696_279820_1615"/>
+  <DSLCustomization:Customization xmi:id="_svdjR9H2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322818521616_253991_2543" base_Class="_15_0_1_2610136_1322821265711_217586_1734" suggestedOwnedTypes="_15_0_1_2610136_1322575621962_867431_349 _15_0_1_2610136_1322727944718_738168_1775">
     <allowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
     <allowedRelationships xmi:type="uml:Stereotype" href="#_16_6_1_eb6034a_1337932792999_4293_1581"/>
     <allowedRelationships xmi:type="uml:Stereotype" href="#_16_6_1_eb6034a_1337933008581_816118_1593"/>
@@ -1801,7 +1780,7 @@
     <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
     <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su0wlHWqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322575479714_628447_326" base_Class="_15_0_1_2610136_1322819720770_354939_2412" suggestedOwnedTypes="_15_0_1_2610136_1322727944718_738168_1775 _15_0_1_2610136_1322575621962_867431_349">
+  <DSLCustomization:Customization xmi:id="_svdjSNH2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322575479714_628447_326" base_Class="_15_0_1_2610136_1322819720770_354939_2412" suggestedOwnedTypes="_15_0_1_2610136_1322727944718_738168_1775 _15_0_1_2610136_1322575621962_867431_349">
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SPF&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HPF&lt;/title>&lt;/head>&lt;body>&lt;p>ELEMENT_ID&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HPF&lt;/title>&lt;/head>&lt;body>&lt;p>syncElement&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
@@ -1901,7 +1880,23 @@
     <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
     <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su0wlXWqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322576737630_196599_612" base_Class="_15_0_1_2610136_1322734367096_39650_1750">
+  <DSLCustomization:Customization xmi:id="_sveKUNH2EeyBFP-eNDcI4g" typesForTarget="_15_0_1_2610136_1322818521616_253991_2543" typesForSource="_15_0_1_2610136_1322818521616_253991_2543" customizationTarget="_16_6_1_eb6034a_1337932792999_4293_1581" base_Class="_16_6_1_eb6034a_1337933760737_767706_1605"/>
+  <DSLCustomization:Customization xmi:id="_sveKUdH2EeyBFP-eNDcI4g" typesForTarget="_15_0_1_2610136_1322575594484_354893_343" typesForSource="_15_0_1_2610136_1322575594484_354893_343" customizationTarget="_16_6_1_eb6034a_1337783170782_934523_1532" base_Class="_16_6_1_eb6034a_1337783251717_747175_1544"/>
+  <DSLCustomization:Customization xmi:id="_sveKUtH2EeyBFP-eNDcI4g" customizationTarget="_16_6_1_682022c_1336134708113_333861_1511" base_Class="_16_6_1_682022c_1336135120024_253213_1906">
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>value&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>SLOTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>userEnabled&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>nameFr&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>DOCUMENTATION_HYPERLINKS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>DEPLOYED_ARTIFACTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>INNER_ELEMENTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RELATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TAGS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>CONSTRAINTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <usedUMLProperties>name</usedUMLProperties>
+  </DSLCustomization:Customization>
+  <DSLCustomization:Customization xmi:id="_sveKU9H2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322576737630_196599_612" base_Class="_15_0_1_2610136_1322734367096_39650_1750">
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>autoLoad&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>inVariables&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
@@ -1917,40 +1912,26 @@
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>LANGUAGE_PROPERTIES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <usedUMLProperties>name</usedUMLProperties>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su1XoHWqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322658134503_178908_719" base_Class="_15_0_1_2610136_1322669681703_190296_889" suggestedOwnedTypes="_16_6_1_682022c_1336134708113_333861_1511">
+  <DSLCustomization:Customization xmi:id="_sveKVNH2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322575594484_354893_343" base_Class="_15_0_1_2610136_1322666432983_77178_572" suggestedOwnedTypes="_15_0_1_2610136_1322727944718_738168_1775">
+    <allowedRelationships xmi:type="uml:Stereotype" href="#_16_6_1_eb6034a_1337783170782_934523_1532"/>
     <allowedRelationships href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>DOCUMENTATION_HYPERLINKS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>ATTRIBUTES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>ATTRIBUTES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>PORTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>OPERATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>ENUMERATION_LITERALS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RECEPTIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
+    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>BEHAVIORS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TEMPLATE_PARAMETERS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>INNER_ELEMENTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RELATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TAGS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>CONSTRAINTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>LANGUAGE_PROPERTIES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#EnumerationLiteral"/>
+    <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
     <usedUMLProperties>name</usedUMLProperties>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su1XoXWqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322727944718_738168_1775" base_Class="_15_0_1_2610136_1322728557341_102215_1835">
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>type&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>defaultValue&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>multiplicity&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>DOCUMENTATION_HYPERLINKS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TEMPLATE_PARAMETERS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>INNER_ELEMENTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>RELATIONS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>TAGS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>CONSTRAINTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>HN&lt;/title>&lt;/head>&lt;body>&lt;p>LANGUAGE_PROPERTIES&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
-    <usedUMLProperties>defaultValue</usedUMLProperties>
-    <usedUMLProperties>multiplicity</usedUMLProperties>
-    <usedUMLProperties>name</usedUMLProperties>
-    <usedUMLProperties>type</usedUMLProperties>
-  </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su1XonWqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322575570007_619648_337" base_Class="_15_0_1_2610136_1322668418055_362650_659" suggestedOwnedTypes="_15_0_1_2610136_1322727944718_738168_1775 _15_0_1_2610136_1322576737630_196599_612 _15_0_1_2610136_1322575621962_867431_349">
+  <DSLCustomization:Customization xmi:id="_sveKVdH2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322575570007_619648_337" base_Class="_15_0_1_2610136_1322668418055_362650_659" suggestedOwnedTypes="_15_0_1_2610136_1322727944718_738168_1775 _15_0_1_2610136_1322576737630_196599_612 _15_0_1_2610136_1322575621962_867431_349">
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>namespaceMacroName&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>autoload&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
@@ -2033,7 +2014,7 @@
     <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
     <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
   </DSLCustomization:Customization>
-  <DSLCustomization:Customization xmi:id="_Su1Xo3WqEeqLr5eVn_6eWg" customizationTarget="_15_0_1_2610136_1322575621962_867431_349" base_Class="_15_0_1_2610136_1322665413666_43356_547" suggestedOwnedTypes="_15_0_1_2610136_1322731885367_435836_1624">
+  <DSLCustomization:Customization xmi:id="_sveKVtH2EeyBFP-eNDcI4g" customizationTarget="_15_0_1_2610136_1322575621962_867431_349" base_Class="_15_0_1_2610136_1322665413666_43356_547" suggestedOwnedTypes="_15_0_1_2610136_1322731885367_435836_1624">
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>name&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SP&lt;/title>&lt;/head>&lt;body>&lt;p>itemTypeSpecialized&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
     <standardExpertConfiguration>&lt;html>&lt;head>&lt;title>SN&lt;/title>&lt;/head>&lt;body>&lt;p>INNER_ELEMENTS&lt;/p>&lt;/body>&lt;/html></standardExpertConfiguration>
@@ -2052,16 +2033,41 @@
     <hiddenOwnedTypes href="pathmap://UML_METAMODELS/UML.metamodel.uml#Parameter"/>
     <usedUMLProperties>name</usedUMLProperties>
   </DSLCustomization:Customization>
-  <DSLCustomization:metaProperty xmi:id="_SvISknWqEeqLr5eVn_6eWg" base_Property="_15_0_1_2610136_1322732493926_750280_1697" newTypes="_15_0_1_2610136_1322658134503_178908_719 _15_0_1_2610136_1322575594484_354893_343 _15_0_1_2610136_1322580936874_91397_804 _15_0_1_2610136_1322582246601_35440_878 _17_0_1_682022c_1343912580663_434069_2716 _15_0_1_2610136_1322818521616_253991_2543 _15_0_1_2610136_1322582054945_883283_838"/>
-  <DSLCustomization:metaProperty xmi:id="_SvISk3WqEeqLr5eVn_6eWg" base_Property="_15_0_1_2610136_1322729367079_79968_1444" newTypes="_15_0_1_2610136_1322580936874_91397_804 _15_0_1_2610136_1322582246601_35440_878 _15_0_1_2610136_1322575594484_354893_343 _15_0_1_2610136_1322658134503_178908_719 _15_0_1_2610136_1322818521616_253991_2543 _17_0_1_682022c_1343912580663_434069_2716"/>
-  <ValidationProfile:validationSuite xmi:id="_SvL88HWqEeqLr5eVn_6eWg" base_Package="_16_6_1_ea7033b_1331566609383_122890_1836"/>
-  <ValidationProfile:validationRule xmi:id="_SvQOYHWqEeqLr5eVn_6eWg" base_Constraint="_17_0_1_682022c_1427364804115_635041_2936" implementation="fr.cea.arcane.mdplugin.ServiceOrModuleRule" abbreviation="Service invalide." errorMessage="Service invalide."/>
-  <ValidationProfile:validationRule xmi:id="_SvQOYXWqEeqLr5eVn_6eWg" base_Constraint="_17_0_1_682022c_1360339137087_715683_2680" implementation="fr.cea.arcane.mdplugin.EntryPointRule" abbreviation="Opération invalide." errorMessage="Opération invalide."/>
-  <ValidationProfile:validationRule xmi:id="_SvQOYnWqEeqLr5eVn_6eWg" base_Constraint="_17_0_1_682022c_1351603509133_522181_2659" implementation="fr.cea.arcane.mdplugin.PtyInfoRule" abbreviation="Information sur une définition de propriété." errorMessage="Information sur une définition de propriété." severity="info"/>
-  <ValidationProfile:validationRule xmi:id="_SvQOY3WqEeqLr5eVn_6eWg" base_Constraint="_17_0_1_682022c_1344240598985_836452_2725" implementation="fr.cea.arcane.mdplugin.FuncRule" abbreviation="Opération invalide." errorMessage="Opération invalide."/>
-  <ValidationProfile:validationRule xmi:id="_SvQOZHWqEeqLr5eVn_6eWg" base_Constraint="_16_6_1_682022c_1336118998922_498360_1724" implementation="fr.cea.arcane.mdplugin.PtyRule" abbreviation="Définition de propriété incorrecte." errorMessage="Définition de propriété incorrecte."/>
-  <ValidationProfile:validationRule xmi:id="_SvQOZXWqEeqLr5eVn_6eWg" base_Constraint="_16_6_1_682022c_1336115792541_221789_1707" implementation="fr.cea.arcane.mdplugin.VariableRule" abbreviation="Définition de variable incorrecte." errorMessage="Définition de variable incorrecte."/>
-  <ValidationProfile:validationRule xmi:id="_SvQOZnWqEeqLr5eVn_6eWg" base_Constraint="_16_6_1_682022c_1332237760081_60559_1486" implementation="fr.cea.arcane.mdplugin.InterfaceRule" abbreviation="Interface invalide." errorMessage="Interface invalide."/>
-  <ValidationProfile:validationRule xmi:id="_SvQOZ3WqEeqLr5eVn_6eWg" base_Constraint="_16_6_1_eb6034a_1331736150037_635969_1627" implementation="fr.cea.arcane.mdplugin.NamingRule" abbreviation="Règle de nommage non respectée." errorMessage="Règle de nommage non respectée."/>
-  <ValidationProfile:validationRule xmi:id="_SvQ1cHWqEeqLr5eVn_6eWg" base_Constraint="_15_0_1_2610136_1323683728644_819457_1498" implementation="fr.cea.arcane.mdplugin.ServiceRule" abbreviation="Service invalide." errorMessage="Service invalide."/>
+  <DSLCustomization:metaProperty xmi:id="_svk4CNH2EeyBFP-eNDcI4g" base_Property="_15_0_1_2610136_1322729367079_79968_1444" newTypes="_15_0_1_2610136_1322580936874_91397_804 _15_0_1_2610136_1322582246601_35440_878 _15_0_1_2610136_1322575594484_354893_343 _15_0_1_2610136_1322658134503_178908_719 _15_0_1_2610136_1322818521616_253991_2543 _17_0_1_682022c_1343912580663_434069_2716"/>
+  <DSLCustomization:metaProperty xmi:id="_svk4CdH2EeyBFP-eNDcI4g" base_Property="_15_0_1_2610136_1322732493926_750280_1697" newTypes="_15_0_1_2610136_1322658134503_178908_719 _15_0_1_2610136_1322575594484_354893_343 _15_0_1_2610136_1322580936874_91397_804 _15_0_1_2610136_1322582246601_35440_878 _17_0_1_682022c_1343912580663_434069_2716 _15_0_1_2610136_1322818521616_253991_2543 _15_0_1_2610136_1322582054945_883283_838"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnUQNH2EeyBFP-eNDcI4g" base_DataType="_17_0_1_682022c_1416320829175_569125_2764"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnUQdH2EeyBFP-eNDcI4g" base_DataType="_17_0_1_682022c_1416320840252_373788_2765"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnUQtH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322747633303_687270_2540"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnUQ9H2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322747633302_322726_2539"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnURNH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322584608467_272591_1141"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnURdH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322584614685_876076_1160"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnURtH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322584553323_691122_1121"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnUR9H2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322582485121_639853_955"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnUSNH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322584524115_857827_1101"/>
+  <ArcaneProfile:SimpleType xmi:id="_svnUSdH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322582428977_166862_952"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUStH2EeyBFP-eNDcI4g" base_DataType="_18_5_2_682022c_1547806384753_824674_7093"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUS9H2EeyBFP-eNDcI4g" base_DataType="_17_0_1_682022c_1463042078984_814431_2784"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUTNH2EeyBFP-eNDcI4g" base_DataType="_17_0_1_ea7033b_1426756745504_883510_2771"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUTdH2EeyBFP-eNDcI4g" base_DataType="_17_0_1_682022c_1406116821894_999870_2723"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUTtH2EeyBFP-eNDcI4g" base_DataType="_17_0_1_eb6034a_1353920386879_384066_2914"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUT9H2EeyBFP-eNDcI4g" base_DataType="_17_0_1_682022c_1371822475366_533835_2695"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUUNH2EeyBFP-eNDcI4g" base_DataType="_16_6_1_682022c_1335970072511_179988_1494"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUUdH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322582121880_58890_871"/>
+  <ArcaneProfile:ItemType xmi:id="_svnUUtH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322582116690_252382_869"/>
+  <ArcaneProfile:ItemType xmi:id="_svn7UNH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322582094587_333646_850"/>
+  <ArcaneProfile:MeshType xmi:id="_svn7UdH2EeyBFP-eNDcI4g" base_DataType="_17_0_1_682022c_1463043523512_509418_2784"/>
+  <ArcaneProfile:MeshType xmi:id="_svn7UtH2EeyBFP-eNDcI4g" base_DataType="_16_6_1_682022c_1335970100788_383170_1496"/>
+  <ArcaneProfile:MeshType xmi:id="_svn7U9H2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322582408349_458255_950"/>
+  <ArcaneProfile:MeshType xmi:id="_svn7VNH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322582389362_411369_948"/>
+  <ArcaneProfile:MeshType xmi:id="_svn7VdH2EeyBFP-eNDcI4g" base_DataType="_15_0_1_2610136_1322582366050_952446_946"/>
+  <ValidationProfile:validationSuite xmi:id="_svoiYNH2EeyBFP-eNDcI4g" base_Package="_16_6_1_ea7033b_1331566609383_122890_1836"/>
+  <ValidationProfile:validationRule xmi:id="_svpwgNH2EeyBFP-eNDcI4g" base_Constraint="_17_0_1_682022c_1427364804115_635041_2936" implementation="fr.cea.arcane.mdplugin.ServiceOrModuleRule" abbreviation="Service invalide." errorMessage="Service invalide."/>
+  <ValidationProfile:validationRule xmi:id="_svpwgdH2EeyBFP-eNDcI4g" base_Constraint="_17_0_1_682022c_1360339137087_715683_2680" implementation="fr.cea.arcane.mdplugin.EntryPointRule" abbreviation="Opération invalide." errorMessage="Opération invalide."/>
+  <ValidationProfile:validationRule xmi:id="_svpwgtH2EeyBFP-eNDcI4g" base_Constraint="_17_0_1_682022c_1351603509133_522181_2659" implementation="fr.cea.arcane.mdplugin.PtyInfoRule" abbreviation="Information sur une définition de propriété." errorMessage="Information sur une définition de propriété." severity="info"/>
+  <ValidationProfile:validationRule xmi:id="_svpwg9H2EeyBFP-eNDcI4g" base_Constraint="_17_0_1_682022c_1344240598985_836452_2725" implementation="fr.cea.arcane.mdplugin.FuncRule" abbreviation="Opération invalide." errorMessage="Opération invalide."/>
+  <ValidationProfile:validationRule xmi:id="_svpwhNH2EeyBFP-eNDcI4g" base_Constraint="_16_6_1_682022c_1336115792541_221789_1707" implementation="fr.cea.arcane.mdplugin.VariableRule" abbreviation="Définition de variable incorrecte." errorMessage="Définition de variable incorrecte."/>
+  <ValidationProfile:validationRule xmi:id="_svpwhdH2EeyBFP-eNDcI4g" base_Constraint="_16_6_1_682022c_1336118998922_498360_1724" implementation="fr.cea.arcane.mdplugin.PtyRule" abbreviation="Définition de propriété incorrecte." errorMessage="Définition de propriété incorrecte."/>
+  <ValidationProfile:validationRule xmi:id="_svpwhtH2EeyBFP-eNDcI4g" base_Constraint="_16_6_1_682022c_1332237760081_60559_1486" implementation="fr.cea.arcane.mdplugin.InterfaceRule" abbreviation="Interface invalide." errorMessage="Interface invalide."/>
+  <ValidationProfile:validationRule xmi:id="_svpwh9H2EeyBFP-eNDcI4g" base_Constraint="_16_6_1_eb6034a_1331736150037_635969_1627" implementation="fr.cea.arcane.mdplugin.NamingRule" abbreviation="Règle de nommage non respectée." errorMessage="Règle de nommage non respectée."/>
+  <ValidationProfile:validationRule xmi:id="_svpwiNH2EeyBFP-eNDcI4g" base_Constraint="_15_0_1_2610136_1323683728644_819457_1498" implementation="fr.cea.arcane.mdplugin.ServiceRule" abbreviation="Service invalide." errorMessage="Service invalide."/>
 </xmi:XMI>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ArcaneProfile="http:///schemas/ArcaneProfile/_Kf_G4HWqEeq8c9m1Sg2lEw/0" xmlns:MagicDrawProfile="http:///schemas/MagicDrawProfile/_KgdoAHWqEeq8c9m1Sg2lEw/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/ArcaneProfile/_Kf_G4HWqEeq8c9m1Sg2lEw/0 ArcaneProfile.profile.uml#_Kg337HWqEeq8c9m1Sg2lEw http:///schemas/MagicDrawProfile/_KgdoAHWqEeq8c9m1Sg2lEw/0 UML_Standard_Profile.MagicDraw_Profile.profile.uml#_Kg9-4HWqEeq8c9m1Sg2lEw">
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ArcaneProfile="http://ArcaneProfile/_15_0_1_2610136_1322228985601_419069_457" xmlns:MagicDrawProfile="http://UML_Standard_Profile/MagicDraw_Profile/_be00301_1073394351331_445580_2" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http://ArcaneProfile/_15_0_1_2610136_1322228985601_419069_457 ArcaneProfile.profile.uml#_vX4_cNH2EeyBFP-eNDcI4g http://UML_Standard_Profile/MagicDraw_Profile/_be00301_1073394351331_445580_2 UML_Standard_Profile.MagicDraw_Profile.profile.uml#_vX5nytH2EeyBFP-eNDcI4g">
   <uml:Model xmi:id="eee_1045467100313_135436_1" name="Data" viewpoint="">
     <ownedComment xmi:id="_16_6_1_eb6034a_1324286468129_808728_343" body="Author:lelandax.&#xA;Created:3/15/12 10:50 AM.&#xA;Title:.&#xA;Comment:.&#xA;" annotatedElement="eee_1045467100313_135436_1"/>
     <packageImport xmi:id="_0primitiveTypesData">
@@ -146,130 +146,136 @@
       <ownedComment xmi:id="_be00301_1078843546940_242228_131" body="UML Standard Profile contains a UML metamodel (metaclasses without properties and associations), Standard UML stereotypes defined in the annex C of UML specification, validation suites for UML model correctness and completeness checking, and stereotypes used by MagicDraw internally." annotatedElement="magicdraw_uml_standard_profile_v_0001"/>
     </packagedElement>
     <profileApplication xmi:id="_15_0_1_2610136_1322228985601_419069_457profileApplicationData">
-      <eAnnotations xmi:id="_KhFTEHWqEeq8c9m1Sg2lEw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="ArcaneProfile.profile.uml#_Kg337HWqEeq8c9m1Sg2lEw"/>
+      <eAnnotations xmi:id="_vX8BZNH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="ArcaneProfile.profile.uml#_vX4_cNH2EeyBFP-eNDcI4g"/>
       </eAnnotations>
       <appliedProfile href="ArcaneProfile.profile.uml#_15_0_1_2610136_1322228985601_419069_457"/>
     </profileApplication>
-    <profileApplication xmi:id="_16_6_8f90291_1254846042821_86742_517profileApplicationData">
-      <eAnnotations xmi:id="_KhDd4HWqEeq8c9m1Sg2lEw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.Traceability_customization.profile.uml#_Kg9YfXWqEeq8c9m1Sg2lEw"/>
-      </eAnnotations>
-      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.Traceability_customization.profile.uml#_16_6_8f90291_1254846042821_86742_517"/>
-    </profileApplication>
-    <profileApplication xmi:id="_11_5_f720368_1159529670215_231387_1profileApplicationData">
-      <eAnnotations xmi:id="_KhEE8XWqEeq8c9m1Sg2lEw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.Validation_Profile.profile.uml#_Kg67nnWqEeq8c9m1Sg2lEw"/>
-      </eAnnotations>
-      <appliedProfile href="UML_Standard_Profile.Validation_Profile.profile.uml#_11_5_f720368_1159529670215_231387_1"/>
-    </profileApplication>
-    <profileApplication xmi:id="_9_0_be00301_1108050582343_527400_10847profileApplicationData">
-      <eAnnotations xmi:id="_KhGhMXWqEeq8c9m1Sg2lEw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.StandardProfile.profile.uml#_KhBCSnWqEeq8c9m1Sg2lEw"/>
-      </eAnnotations>
-      <appliedProfile href="UML_Standard_Profile.StandardProfile.profile.uml#_9_0_be00301_1108050582343_527400_10847"/>
-    </profileApplication>
     <profileApplication xmi:id="_11_5_be00301_1153310565718_226811_161profileApplicationData">
-      <eAnnotations xmi:id="_KhHIQXWqEeq8c9m1Sg2lEw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_Kg5GqXWqEeq8c9m1Sg2lEw"/>
+      <eAnnotations xmi:id="_vX63f9H2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_vX6SLNH2EeyBFP-eNDcI4g"/>
       </eAnnotations>
       <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.DSL_Customization.profile.uml#_11_5_be00301_1153310565718_226811_161"/>
     </profileApplication>
+    <profileApplication xmi:id="_11_5_f720368_1159529670215_231387_1profileApplicationData">
+      <eAnnotations xmi:id="_vX7aUdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.Validation_Profile.profile.uml#_vX5lItH2EeyBFP-eNDcI4g"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.Validation_Profile.profile.uml#_11_5_f720368_1159529670215_231387_1"/>
+    </profileApplication>
+    <profileApplication xmi:id="_19_0beta_8bb027e_1484121177637_661582_4502profileApplicationData">
+      <eAnnotations xmi:id="_vX7aU9H2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.Find_By_Text.profile.uml#_vX5nttH2EeyBFP-eNDcI4g"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.Find_By_Text.profile.uml#_19_0beta_8bb027e_1484121177637_661582_4502"/>
+    </profileApplication>
+    <profileApplication xmi:id="_9_0_be00301_1108050582343_527400_10847profileApplicationData">
+      <eAnnotations xmi:id="_vX7aVdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.StandardProfile.profile.uml#_vX5nxNH2EeyBFP-eNDcI4g"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.StandardProfile.profile.uml#_9_0_be00301_1108050582343_527400_10847"/>
+    </profileApplication>
     <profileApplication xmi:id="_be00301_1073394351331_445580_2profileApplicationData">
-      <eAnnotations xmi:id="_KhHvUXWqEeq8c9m1Sg2lEw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_Kg9-4HWqEeq8c9m1Sg2lEw"/>
+      <eAnnotations xmi:id="_vX8BYdH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_vX5nytH2EeyBFP-eNDcI4g"/>
       </eAnnotations>
       <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_be00301_1073394351331_445580_2"/>
     </profileApplication>
     <profileApplication xmi:id="_17_0_4beta_8ca0285_1361349406965_180847_3086profileApplicationData">
-      <eAnnotations xmi:id="_KhJkgXWqEeq8c9m1Sg2lEw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.Dependency_Matrix_Profile.profile.uml#_Kg8xZXWqEeq8c9m1Sg2lEw"/>
+      <eAnnotations xmi:id="_vX8BY9H2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.Dependency_Matrix_Profile.profile.uml#_vX4-EtH2EeyBFP-eNDcI4g"/>
       </eAnnotations>
       <appliedProfile href="UML_Standard_Profile.Dependency_Matrix_Profile.profile.uml#_17_0_4beta_8ca0285_1361349406965_180847_3086"/>
     </profileApplication>
+    <profileApplication xmi:id="_16_6_8f90291_1254846042821_86742_517profileApplicationData">
+      <eAnnotations xmi:id="_vX8BZtH2EeyBFP-eNDcI4g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.Traceability_customization.profile.uml#_vX62ytH2EeyBFP-eNDcI4g"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.Traceability_customization.profile.uml#_16_6_8f90291_1254846042821_86742_517"/>
+    </profileApplication>
   </uml:Model>
-  <ArcaneProfile:Service xmi:id="_Kh6ZgXWqEeq8c9m1Sg2lEw" base_Element="_17_0_1_ea7033b_1429002480390_815769_3157" base_Class="_17_0_1_ea7033b_1429002480390_815769_3157"/>
-  <ArcaneProfile:Service xmi:id="_Kh6ZgnWqEeq8c9m1Sg2lEw" base_Element="_17_0_1_682022c_1359731413510_701844_2798" base_Class="_17_0_1_682022c_1359731413510_701844_2798"/>
-  <ArcaneProfile:Service xmi:id="_Kh6Zg3WqEeq8c9m1Sg2lEw" base_Element="_16_6_1_eb6034a_1331805083370_517769_1829" base_Class="_16_6_1_eb6034a_1331805083370_517769_1829"/>
-  <ArcaneProfile:Module xmi:id="_Kh7AkHWqEeq8c9m1Sg2lEw" base_Element="_16_6_1_682022c_1334066844827_8465_1546" base_Class="_16_6_1_682022c_1334066844827_8465_1546"/>
-  <ArcaneProfile:Func xmi:id="_Kh7AkXWqEeq8c9m1Sg2lEw" base_Operation="_16_6_1_eb6034a_1331805149724_166083_1988" inVariables="_Kh81xHWqEeq8c9m1Sg2lEw"/>
-  <ArcaneProfile:Func xmi:id="_Kh7AknWqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_ea7033b_1429002625344_220356_3244" inVariables="_Kh9c0nWqEeq8c9m1Sg2lEw _Kh9c0HWqEeq8c9m1Sg2lEw" outVariables="_Kh9c03WqEeq8c9m1Sg2lEw _Kh9c0XWqEeq8c9m1Sg2lEw" itemTypeSpecialized="true"/>
-  <ArcaneProfile:Func xmi:id="_Kh7Ak3WqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_ea7033b_1429002570364_47448_3217" inVariables="_Kh9c0nWqEeq8c9m1Sg2lEw _Kh9c0HWqEeq8c9m1Sg2lEw" outVariables="_Kh9c03WqEeq8c9m1Sg2lEw _Kh9c0XWqEeq8c9m1Sg2lEw">
-    <support href="ArcaneProfile.profile.uml#_KiCVU3WqEeq8c9m1Sg2lEw"/>
+  <MagicDrawProfile:auxiliaryResource xmi:id="_vYRYkNH2EeyBFP-eNDcI4g" base_Element="magicdraw_uml_standard_profile_v_0001"/>
+  <ArcaneProfile:Service xmi:id="_vYaigNH2EeyBFP-eNDcI4g" base_Element="_17_0_1_ea7033b_1429002480390_815769_3157" base_Class="_17_0_1_ea7033b_1429002480390_815769_3157"/>
+  <ArcaneProfile:Service xmi:id="_vYaigdH2EeyBFP-eNDcI4g" base_Element="_17_0_1_682022c_1359731413510_701844_2798" base_Class="_17_0_1_682022c_1359731413510_701844_2798"/>
+  <ArcaneProfile:Service xmi:id="_vYaigtH2EeyBFP-eNDcI4g" base_Element="_16_6_1_eb6034a_1331805083370_517769_1829" base_Class="_16_6_1_eb6034a_1331805083370_517769_1829"/>
+  <ArcaneProfile:Module xmi:id="_vYaig9H2EeyBFP-eNDcI4g" base_Element="_16_6_1_682022c_1334066844827_8465_1546" base_Class="_16_6_1_682022c_1334066844827_8465_1546"/>
+  <ArcaneProfile:Func xmi:id="_vYaihNH2EeyBFP-eNDcI4g" base_Operation="_16_6_1_eb6034a_1331805149724_166083_1988" inVariables="_vYbJldH2EeyBFP-eNDcI4g"/>
+  <ArcaneProfile:Func xmi:id="_vYaihdH2EeyBFP-eNDcI4g" base_Operation="_17_0_1_ea7033b_1429002625344_220356_3244" inVariables="_vYbJmtH2EeyBFP-eNDcI4g _vYbJmNH2EeyBFP-eNDcI4g" outVariables="_vYbJm9H2EeyBFP-eNDcI4g _vYbJmdH2EeyBFP-eNDcI4g" itemTypeSpecialized="true"/>
+  <ArcaneProfile:Func xmi:id="_vYaihtH2EeyBFP-eNDcI4g" base_Operation="_17_0_1_ea7033b_1429002570364_47448_3217" inVariables="_vYbJmtH2EeyBFP-eNDcI4g _vYbJmNH2EeyBFP-eNDcI4g" outVariables="_vYbJm9H2EeyBFP-eNDcI4g _vYbJmdH2EeyBFP-eNDcI4g">
+    <support href="ArcaneProfile.profile.uml#_vYc-ytH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Func>
-  <ArcaneProfile:Func xmi:id="_Kh7noHWqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_ea7033b_1429002517561_886283_3191" inVariables="_Kh9c0nWqEeq8c9m1Sg2lEw _Kh9c0HWqEeq8c9m1Sg2lEw" outVariables="_Kh9c03WqEeq8c9m1Sg2lEw _Kh9c0XWqEeq8c9m1Sg2lEw"/>
-  <ArcaneProfile:Func xmi:id="_Kh7noXWqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_ea7033b_1429002606752_322057_3232" itemTypeSpecialized="true"/>
-  <ArcaneProfile:Func xmi:id="_Kh7nonWqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_ea7033b_1429002534618_230591_3204">
-    <support href="ArcaneProfile.profile.uml#_KiCVU3WqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Func xmi:id="_vYaih9H2EeyBFP-eNDcI4g" base_Operation="_17_0_1_ea7033b_1429002517561_886283_3191" inVariables="_vYbJmtH2EeyBFP-eNDcI4g _vYbJmNH2EeyBFP-eNDcI4g" outVariables="_vYbJm9H2EeyBFP-eNDcI4g _vYbJmdH2EeyBFP-eNDcI4g"/>
+  <ArcaneProfile:Func xmi:id="_vYaiiNH2EeyBFP-eNDcI4g" base_Operation="_17_0_1_ea7033b_1429002606752_322057_3232" itemTypeSpecialized="true"/>
+  <ArcaneProfile:Func xmi:id="_vYaiidH2EeyBFP-eNDcI4g" base_Operation="_17_0_1_ea7033b_1429002534618_230591_3204">
+    <support href="ArcaneProfile.profile.uml#_vYc-ytH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Func>
-  <ArcaneProfile:Func xmi:id="_Kh7no3WqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_ea7033b_1428997666729_796522_2992"/>
-  <ArcaneProfile:Func xmi:id="_Kh7npHWqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_682022c_1359731430708_659787_2826" inVariables="_Kh9c0nWqEeq8c9m1Sg2lEw _Kh9c0HWqEeq8c9m1Sg2lEw _Kh81w3WqEeq8c9m1Sg2lEw" outVariables="_Kh9c03WqEeq8c9m1Sg2lEw _Kh9c0XWqEeq8c9m1Sg2lEw"/>
-  <ArcaneProfile:Func xmi:id="_Kh8OsHWqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_eb6034a_1341220325268_185464_2588" inVariables="_Kh9c0nWqEeq8c9m1Sg2lEw _Kh9c0HWqEeq8c9m1Sg2lEw" outVariables="_Kh9c03WqEeq8c9m1Sg2lEw _Kh9c0XWqEeq8c9m1Sg2lEw"/>
-  <ArcaneProfile:Func xmi:id="_Kh8OsXWqEeq8c9m1Sg2lEw" base_Operation="_17_0_1_682022c_1400075466299_486666_2817" inVariables="_Kh81xnWqEeq8c9m1Sg2lEw"/>
-  <ArcaneProfile:EntryPoint xmi:id="_Kh8OsnWqEeq8c9m1Sg2lEw" base_Operation="_16_6_1_682022c_1334066942782_66894_1565" inVariables="_Kh9c0nWqEeq8c9m1Sg2lEw _Kh81xnWqEeq8c9m1Sg2lEw _Kh81wnWqEeq8c9m1Sg2lEw _Kh81wXWqEeq8c9m1Sg2lEw _Kh81wHWqEeq8c9m1Sg2lEw" outVariables="_Kh9c03WqEeq8c9m1Sg2lEw _Kh81xXWqEeq8c9m1Sg2lEw _Kh81w3WqEeq8c9m1Sg2lEw"/>
-  <ArcaneProfile:Variable xmi:id="_Kh81wHWqEeq8c9m1Sg2lEw" base_Class="_18_5_2_682022c_1547806771148_611247_7304" family="_Kh-q8HWqEeq8c9m1Sg2lEw">
-    <support href="ArcaneProfile.profile.uml#_KiBuQnWqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBuQXWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Func xmi:id="_vYaiitH2EeyBFP-eNDcI4g" base_Operation="_17_0_1_ea7033b_1428997666729_796522_2992"/>
+  <ArcaneProfile:Func xmi:id="_vYaii9H2EeyBFP-eNDcI4g" base_Operation="_17_0_1_682022c_1359731430708_659787_2826" inVariables="_vYbJmtH2EeyBFP-eNDcI4g _vYbJmNH2EeyBFP-eNDcI4g _vYbJlNH2EeyBFP-eNDcI4g" outVariables="_vYbJm9H2EeyBFP-eNDcI4g _vYbJmdH2EeyBFP-eNDcI4g"/>
+  <ArcaneProfile:Func xmi:id="_vYaijNH2EeyBFP-eNDcI4g" base_Operation="_17_0_1_eb6034a_1341220325268_185464_2588" inVariables="_vYbJmtH2EeyBFP-eNDcI4g _vYbJmNH2EeyBFP-eNDcI4g" outVariables="_vYbJm9H2EeyBFP-eNDcI4g _vYbJmdH2EeyBFP-eNDcI4g"/>
+  <ArcaneProfile:Func xmi:id="_vYaijdH2EeyBFP-eNDcI4g" base_Operation="_17_0_1_682022c_1400075466299_486666_2817" inVariables="_vYbJl9H2EeyBFP-eNDcI4g"/>
+  <ArcaneProfile:EntryPoint xmi:id="_vYbJkNH2EeyBFP-eNDcI4g" base_Operation="_16_6_1_682022c_1334066942782_66894_1565" inVariables="_vYbJmtH2EeyBFP-eNDcI4g _vYbJl9H2EeyBFP-eNDcI4g _vYbJk9H2EeyBFP-eNDcI4g _vYbJktH2EeyBFP-eNDcI4g _vYbJkdH2EeyBFP-eNDcI4g" outVariables="_vYbJm9H2EeyBFP-eNDcI4g _vYbJltH2EeyBFP-eNDcI4g _vYbJlNH2EeyBFP-eNDcI4g"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJkdH2EeyBFP-eNDcI4g" base_Class="_18_5_2_682022c_1547806771148_611247_7304" family="_vYbwoNH2EeyBFP-eNDcI4g">
+    <support href="ArcaneProfile.profile.uml#_vYc-wdH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYc-wNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh81wXWqEeq8c9m1Sg2lEw" base_Class="_17_0_1_682022c_1479118495117_736225_3259" multiplicity="Array">
-    <support href="ArcaneProfile.profile.uml#_KiBuR3WqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBHN3WqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJktH2EeyBFP-eNDcI4g" base_Class="_17_0_1_682022c_1479118495117_736225_3259" multiplicity="Array">
+    <support href="ArcaneProfile.profile.uml#_vYc-xdH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYcXuNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh81wnWqEeq8c9m1Sg2lEw" base_Class="_17_0_1_682022c_1463068050131_906545_3236" family="_Kh-q8XWqEeq8c9m1Sg2lEw">
-    <support href="ArcaneProfile.profile.uml#_KiBuQ3WqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBuQXWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJk9H2EeyBFP-eNDcI4g" base_Class="_17_0_1_682022c_1463068050131_906545_3236" family="_vYbwodH2EeyBFP-eNDcI4g">
+    <support href="ArcaneProfile.profile.uml#_vYc-wtH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYc-wNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh81w3WqEeq8c9m1Sg2lEw" base_Class="_17_0_1_682022c_1463042518010_279902_3212" family="_Kh-q8nWqEeq8c9m1Sg2lEw">
-    <support href="ArcaneProfile.profile.uml#_KiBuQ3WqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBuQXWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJlNH2EeyBFP-eNDcI4g" base_Class="_17_0_1_682022c_1463042518010_279902_3212" family="_vYbwotH2EeyBFP-eNDcI4g">
+    <support href="ArcaneProfile.profile.uml#_vYc-wtH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYc-wNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh81xHWqEeq8c9m1Sg2lEw" base_Class="_17_0_1_682022c_1463068121923_833508_3435">
-    <support href="ArcaneProfile.profile.uml#_KiBuQ3WqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBuQXWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJldH2EeyBFP-eNDcI4g" base_Class="_17_0_1_682022c_1463068121923_833508_3435">
+    <support href="ArcaneProfile.profile.uml#_vYc-wtH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYc-wNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh81xXWqEeq8c9m1Sg2lEw" base_Class="_17_0_1_682022c_1406122760019_780314_3011">
-    <support href="ArcaneProfile.profile.uml#_KiBuRnWqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBuQXWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJltH2EeyBFP-eNDcI4g" base_Class="_17_0_1_682022c_1406122760019_780314_3011">
+    <support href="ArcaneProfile.profile.uml#_vYc-xtH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYc-wNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh81xnWqEeq8c9m1Sg2lEw" base_Class="_17_0_1_eb6034a_1354114210930_480361_2793" executionDepend="true">
-    <support href="ArcaneProfile.profile.uml#_KiCVU3WqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBHN3WqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJl9H2EeyBFP-eNDcI4g" base_Class="_17_0_1_eb6034a_1354114210930_480361_2793" executionDepend="true">
+    <support href="ArcaneProfile.profile.uml#_vYc-ytH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYcXuNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh9c0HWqEeq8c9m1Sg2lEw" base_Class="_17_0_1_682022c_1351526466072_753560_2776" multiplicity="Array">
-    <type href="ArcaneProfile.profile.uml#_KiBHNnWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJmNH2EeyBFP-eNDcI4g" base_Class="_17_0_1_682022c_1351526466072_753560_2776" multiplicity="Array">
+    <type href="ArcaneProfile.profile.uml#_vYcXttH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh9c0XWqEeq8c9m1Sg2lEw" base_Class="_17_0_1_682022c_1343744211333_470492_2627" restore="false">
-    <support href="ArcaneProfile.profile.uml#_KiBuR3WqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBuQXWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJmdH2EeyBFP-eNDcI4g" base_Class="_17_0_1_682022c_1343744211333_470492_2627" restore="false">
+    <support href="ArcaneProfile.profile.uml#_vYc-xdH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYc-wNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh9c0nWqEeq8c9m1Sg2lEw" base_Class="_16_6_1_eb6034a_1331805094599_713262_1889" restore="false">
-    <support href="ArcaneProfile.profile.uml#_KiCVU3WqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBuQXWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJmtH2EeyBFP-eNDcI4g" base_Class="_16_6_1_eb6034a_1331805094599_713262_1889" restore="false">
+    <support href="ArcaneProfile.profile.uml#_vYc-ytH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYc-wNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Variable xmi:id="_Kh9c03WqEeq8c9m1Sg2lEw" base_Class="_16_6_1_eb6034a_1331805126755_385117_1948" restore="false">
-    <support href="ArcaneProfile.profile.uml#_KiCVU3WqEeq8c9m1Sg2lEw"/>
-    <type href="ArcaneProfile.profile.uml#_KiBuQXWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Variable xmi:id="_vYbJm9H2EeyBFP-eNDcI4g" base_Class="_16_6_1_eb6034a_1331805126755_385117_1948" restore="false">
+    <support href="ArcaneProfile.profile.uml#_vYc-ytH2EeyBFP-eNDcI4g"/>
+    <type href="ArcaneProfile.profile.uml#_vYc-wNH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:Variable>
-  <ArcaneProfile:Pty xmi:id="_Kh9c1HWqEeq8c9m1Sg2lEw" base_Element="_17_0_1_682022c_1372061914601_464210_2822" base_Property="_17_0_1_682022c_1372061914601_464210_2822"/>
-  <ArcaneProfile:Pty xmi:id="_Kh9c1XWqEeq8c9m1Sg2lEw" base_Element="_17_0_1_682022c_1343808276936_210332_2806" base_Property="_17_0_1_682022c_1343808276936_210332_2806"/>
-  <ArcaneProfile:Pty xmi:id="_Kh-D4HWqEeq8c9m1Sg2lEw" base_Element="_17_0_1_ea7033b_1428997605848_41397_2965" base_Property="_17_0_1_ea7033b_1428997605848_41397_2965"/>
-  <ArcaneProfile:FuncParam xmi:id="_Kh-D4XWqEeq8c9m1Sg2lEw" base_Parameter="_17_0_1_ea7033b_1429002606753_37971_3233"/>
-  <ArcaneProfile:FuncParam xmi:id="_Kh-D4nWqEeq8c9m1Sg2lEw" base_Parameter="_17_0_1_ea7033b_1429002534619_819333_3205"/>
-  <ArcaneProfile:FuncParam xmi:id="_Kh-D43WqEeq8c9m1Sg2lEw" base_Parameter="_17_0_1_ea7033b_1428997666730_272350_2993"/>
-  <ArcaneProfile:FuncParam xmi:id="_Kh-D5HWqEeq8c9m1Sg2lEw" base_Parameter="_16_6_1_eb6034a_1331805209831_104370_1998"/>
-  <ArcaneProfile:Interf xmi:id="_Kh-D5XWqEeq8c9m1Sg2lEw" base_Interface="_17_0_1_ea7033b_1428997553110_451411_2946"/>
-  <ArcaneProfile:Interf xmi:id="_Kh-D5nWqEeq8c9m1Sg2lEw" base_Interface="_16_6_1_eb6034a_1331805087761_802292_1852"/>
-  <ArcaneProfile:ItemFamily xmi:id="_Kh-q8HWqEeq8c9m1Sg2lEw" base_Class="_18_5_2_682022c_1547806837122_808263_7354">
-    <support href="ArcaneProfile.profile.uml#_KiBuQnWqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:Pty xmi:id="_vYbJnNH2EeyBFP-eNDcI4g" base_Element="_17_0_1_682022c_1372061914601_464210_2822" base_Property="_17_0_1_682022c_1372061914601_464210_2822"/>
+  <ArcaneProfile:Pty xmi:id="_vYbJndH2EeyBFP-eNDcI4g" base_Element="_17_0_1_682022c_1343808276936_210332_2806" base_Property="_17_0_1_682022c_1343808276936_210332_2806"/>
+  <ArcaneProfile:Pty xmi:id="_vYbJntH2EeyBFP-eNDcI4g" base_Element="_17_0_1_ea7033b_1428997605848_41397_2965" base_Property="_17_0_1_ea7033b_1428997605848_41397_2965"/>
+  <ArcaneProfile:FuncParam xmi:id="_vYbJn9H2EeyBFP-eNDcI4g" base_Parameter="_17_0_1_ea7033b_1429002606753_37971_3233"/>
+  <ArcaneProfile:FuncParam xmi:id="_vYbJoNH2EeyBFP-eNDcI4g" base_Parameter="_17_0_1_ea7033b_1429002534619_819333_3205"/>
+  <ArcaneProfile:FuncParam xmi:id="_vYbJodH2EeyBFP-eNDcI4g" base_Parameter="_17_0_1_ea7033b_1428997666730_272350_2993"/>
+  <ArcaneProfile:FuncParam xmi:id="_vYbJotH2EeyBFP-eNDcI4g" base_Parameter="_16_6_1_eb6034a_1331805209831_104370_1998"/>
+  <ArcaneProfile:Interf xmi:id="_vYbJo9H2EeyBFP-eNDcI4g" base_Interface="_17_0_1_ea7033b_1428997553110_451411_2946"/>
+  <ArcaneProfile:Interf xmi:id="_vYbJpNH2EeyBFP-eNDcI4g" base_Interface="_16_6_1_eb6034a_1331805087761_802292_1852"/>
+  <ArcaneProfile:ItemFamily xmi:id="_vYbwoNH2EeyBFP-eNDcI4g" base_Class="_18_5_2_682022c_1547806837122_808263_7354">
+    <support href="ArcaneProfile.profile.uml#_vYc-wdH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:ItemFamily>
-  <ArcaneProfile:ItemFamily xmi:id="_Kh-q8XWqEeq8c9m1Sg2lEw" base_Class="_18_5_2_682022c_1538128647835_262548_7392">
-    <support href="ArcaneProfile.profile.uml#_KiBuQ3WqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:ItemFamily xmi:id="_vYbwodH2EeyBFP-eNDcI4g" base_Class="_18_5_2_682022c_1538128647835_262548_7392">
+    <support href="ArcaneProfile.profile.uml#_vYc-wtH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:ItemFamily>
-  <ArcaneProfile:ItemFamily xmi:id="_Kh-q8nWqEeq8c9m1Sg2lEw" base_Class="_18_5_2_682022c_1538059382795_403768_7139">
-    <support href="ArcaneProfile.profile.uml#_KiBuQ3WqEeq8c9m1Sg2lEw"/>
+  <ArcaneProfile:ItemFamily xmi:id="_vYbwotH2EeyBFP-eNDcI4g" base_Class="_18_5_2_682022c_1538059382795_403768_7139">
+    <support href="ArcaneProfile.profile.uml#_vYc-wtH2EeyBFP-eNDcI4g"/>
   </ArcaneProfile:ItemFamily>
-  <ArcaneProfile:InterfRealization xmi:id="_KiC8YnWqEeq8c9m1Sg2lEw" base_InterfaceRealization="_17_0_1_ea7033b_1429002494435_6731_3188"/>
-  <ArcaneProfile:InterfRealization xmi:id="_KiC8Y3WqEeq8c9m1Sg2lEw" base_InterfaceRealization="_17_0_1_682022c_1359731437054_988452_3067"/>
-  <ArcaneProfile:InterfRealization xmi:id="_KiDjcHWqEeq8c9m1Sg2lEw" base_InterfaceRealization="_16_6_1_ea7033b_1338373006123_900912_1277"/>
-  <MagicDrawProfile:auxiliaryResource xmi:id="_KioyQnWqEeq8c9m1Sg2lEw" base_Element="magicdraw_uml_standard_profile_v_0001" base_Package="magicdraw_uml_standard_profile_v_0001"/>
+  <ArcaneProfile:InterfRealization xmi:id="_vYc-0NH2EeyBFP-eNDcI4g" base_InterfaceRealization="_17_0_1_ea7033b_1429002494435_6731_3188"/>
+  <ArcaneProfile:InterfRealization xmi:id="_vYc-0dH2EeyBFP-eNDcI4g" base_InterfaceRealization="_17_0_1_682022c_1359731437054_988452_3067"/>
+  <ArcaneProfile:InterfRealization xmi:id="_vYc-0tH2EeyBFP-eNDcI4g" base_InterfaceRealization="_16_6_1_ea7033b_1338373006123_900912_1277"/>
 </xmi:XMI>
