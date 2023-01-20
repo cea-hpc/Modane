@@ -4,6 +4,7 @@ project(IWithoutSCore LANGUAGES NONE)
 include(${CMAKE_CURRENT_LIST_DIR}/../../Common.cmake)
 
 project(Hydro LANGUAGES C CXX)
+find_package(Arcane REQUIRED)
 
 add_executable(Hydro
   IWithoutS/HydroModule.cc

@@ -4,6 +4,7 @@ project(StructCore LANGUAGES NONE)
 include(${CMAKE_CURRENT_LIST_DIR}/../../Common.cmake)
 
 project(Calculator LANGUAGES C CXX)
+find_package(Arcane REQUIRED)
 
 add_executable(Calculator
   Struct/CalculatorModule.cc

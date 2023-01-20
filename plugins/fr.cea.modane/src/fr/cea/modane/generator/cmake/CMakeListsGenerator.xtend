@@ -56,11 +56,12 @@ class CMakeListsGenerator
 		#
 		# Generated file - Do not overwrite
 		#
-		cmake_minimum_required(VERSION 3.13)
-		project(«projectName» LANGUAGES C CXX)
+		cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
+		project(«projectName»Core LANGUAGES NONE)
 
-		set(Arcane_ROOT «arcaneHome»)
 		include(«arcaneHome»/samples/ArcaneCompilerConfig.cmake)
+
+		project(«projectName» LANGUAGES C CXX)
 		find_package(Arcane REQUIRED)
 
 		«FOR subPackageShortName : subPackageShortNames»
