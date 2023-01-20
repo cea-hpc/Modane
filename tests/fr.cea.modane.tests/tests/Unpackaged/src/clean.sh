@@ -1,0 +1,1 @@
+rm -f __*.h *.axl *_axl.h HydroModule.* *.modane

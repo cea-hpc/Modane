@@ -9,9 +9,7 @@ else()
     " samples/ArcaneCompilerConfig.cmake in this directory: '${CMAKE_CURRENT_LIST_DIR}'")
 endif()
 
-# TODO: ajouter cible 'fullclean' qui supprime tout:
-#	\rm -f __*.h *.axl *_axl.h
-#	\rm -rf output ../*.modane
+# NB : Replace makefile clean target by clean.sh
 
 # TODO: ajouter cible pour doxygen
 #       doxygen Doxyfile
