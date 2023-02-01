@@ -17,38 +17,38 @@ import fr.cea.modane.modane.Struct
 
 import static extension fr.cea.modane.ModaneElementExtensions.*
 
-class ReferenceableExtensions
+class ReferenceableExtensions 
 {
 	static def getReferencedTypeName(Referenceable it)
 	{
-		switch it
-		{
-			// Enumeration are referenced by value
-			Enumeration: getReferencedNameWithNs(it, true)
-			// Interface are referenced by pointer but CaseOption inherits from them
-			Interface: getReferencedNameWithNs(it, false) + '*'
-			Legacy: getReferencedNameWithNs(it) + '*'
-			default: getReferencedNameWithNs(it, false) + '*'
-		}
+		if (it instanceof Enumeration)
+			referencedNameWithNs
+		else
+			referencedNameWithNs + '*'
 	}
-
-	static def dispatch getReferencedNameWithNs(Referenceable it)
-	{
-		getReferencedNameWithNs(it, true)
-	}
-
-	static def dispatch getReferencedNameWithNs(Legacy it)
-	{
+ 
+ 	static def dispatch getReferencedNameWithNs(Referenceable it)
+ 	{
 		val context = GenerationContext::Current
-		if (!originFile.nullOrEmpty)
+		if (context.name.endsWith(GenerationContext::HeaderExtension)) context.addInclude(outputPath, referencedFileName)
+		if (nsName != context.nsName && !context.isAUsedNs(nsName))
+			'::' + nsName + '::' + referencedName
+		else
+			referencedName	
+ 	}
+ 	
+ 	static def dispatch getReferencedNameWithNs(Legacy it)
+ 	{
+		val context = GenerationContext::Current
+		if (context.name.endsWith(GenerationContext::HeaderExtension) && !originFile.nullOrEmpty)
 		{
-			if (context.name.endsWith(GenerationContext::HeaderExtension))
-				context.addClassDeclaration(originNamespace, referencedName, originFile)
+			context.addCcInclude(originFile)
+			context.addClassDeclaration(originNamespace, referencedName)
 		}
 
 		if (originNamespace.nullOrEmpty) referencedName
 		else '::' + originNamespace + '::' + referencedName
-	}
+ 	}
 
 	static def dispatch getReferencedName(Struct it) { 'I' + name }
 	static def dispatch getReferencedName(Interface it) { 'I' + name }
@@ -56,21 +56,7 @@ class ReferenceableExtensions
 
 	static def dispatch getReferencedFileName(Legacy it) { originFile }
 	static def dispatch getReferencedFileName(Referenceable it) 
-	{
+	{ 
 		#[GenerationContext::GenFilePrefix, referencedName, GenerationContext::HeaderExtension].join
-	}
-
-	private static def getReferencedNameWithNs(Referenceable it, boolean forceInclude)
-	{
-		val context = GenerationContext::Current
-		if (forceInclude)
-			context.addInclude(outputPath, referencedFileName)
-		else if (context.name.endsWith(GenerationContext::HeaderExtension))
-			context.addClassDeclaration(nsName, referencedName, outputPath + "/" + referencedFileName)
-
-		if (nsName != context.nsName && !context.isAUsedNs(nsName))
-			'::' + nsName + '::' + referencedName
-		else
-			referencedName
 	}
 }

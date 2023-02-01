@@ -1,9 +1,7 @@
+#include "MicroHydro/MicroHydroModule.h"
+#include "MicroHydro/Eos/__IEquationOfState.h"
 #include <arcane/IParallelMng.h>
 #include <arcane/ITimeLoopMng.h>
-#include "MicroHydro/Eos/__IEquationOfState.h"
-#include "MicroHydro/__IBoundaryCondition.h"
-#include "MicroHydro/__ILoopDelegation.h"
-#include "MicroHydro/MicroHydroModule.h"
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/

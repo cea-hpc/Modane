@@ -1,6 +1,3 @@
-#include "PtyOnInterface/__IEos.h"
-#include "PtyOnInterface/__IMyStruct.h"
-#include "PtyOnInterface/__IMyInterf.h"
 #include "PtyOnInterface/HydroModule.h"
 
 /*---------------------------------------------------------------------------*/

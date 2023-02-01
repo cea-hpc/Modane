@@ -1,9 +1,5 @@
-#include "Struct/Operation/__IOperation.h"
-#include "Struct/Operation/__IOperand.h"
-#include "Struct/__IParam.h"
-#include "Struct/__IMethod.h"
-#include "Struct/__ITest.h"
 #include "Struct/CalculatorModule.h"
+#include "Struct/Operation/__IOperation.h"
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/

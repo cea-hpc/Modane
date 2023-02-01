@@ -12,14 +12,14 @@
 #include "arcane/VariableTypes.h"
 #include "arcane/utils/Array.h"
 #include "MicroHydro/__MicroHydroModuleVars.h"
+#include "MicroHydro/__IBoundaryCondition.h"
+#include "MicroHydro/Eos/__IEquationOfState.h"
+#include "MicroHydro/__ILoopDelegation.h"
 #include "MicroHydro/MicroHydro_axl.h"
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 
-namespace MicroHydro { class IBoundaryCondition; }
-namespace MicroHydroEos { class IEquationOfState; }
-namespace MicroHydro { class ILoopDelegation; }
 using namespace Arcane;
 namespace MicroHydro {
 

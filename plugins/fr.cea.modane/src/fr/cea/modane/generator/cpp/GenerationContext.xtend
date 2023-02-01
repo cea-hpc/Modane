@@ -27,10 +27,6 @@ class GenerationContext
 		
 	'''	
 
-	static int NsIndex = 0
-	static int ClassNameIndex = 1
-	static int OriginFileIndex = 2
-
 	public static GenerationContext Current = null
 	public val GenerationOptions generationOptions
 
@@ -38,8 +34,9 @@ class GenerationContext
 	String name
 	String content
 	ArrayList<String> arcaneIncludes
-	ArrayList<String> includes
-	ArrayList<String[]> classDeclarations // 3 strings: namespace, class name, origin file
+	ArrayList<String> includes // includes for .h and .cc
+	ArrayList<String> ccIncludes // includes only for .cc
+	ArrayList<Pair<String, String>> classDeclarations // <namespace, class name> pair of declarations
 	ArrayList<String> usedNs
 
 	new(GenerationOptions options)
@@ -55,7 +52,8 @@ class GenerationContext
 		this.content = ""
 		this.arcaneIncludes = new ArrayList<String>
 		this.includes = new ArrayList<String>
-		this.classDeclarations = new ArrayList<String[]>
+		this.ccIncludes = new ArrayList<String>
+		this.classDeclarations = new ArrayList<Pair<String, String>>
 		this.usedNs = new ArrayList<String>
 
 		if (withIncludes)
@@ -108,15 +106,16 @@ class GenerationContext
 		}
 	}
 
-	def addClassDeclaration(String namespace, String className, String originFile)
+	def addCcInclude(String include)
 	{
-		if (!classDeclarations.exists[x | x.get(NsIndex) == namespace && x.get(ClassNameIndex) == className])
-			classDeclarations.add(#[namespace, className, originFile])
+		if (!ccIncludes.contains(include) && include != fullName)
+			ccIncludes += include
 	}
 
-	def getCcNecessaryIncludes()
+	def addClassDeclaration(String namespace, String className)
 	{
-		classDeclarations.map[x | x.get(OriginFileIndex)]
+		if (!classDeclarations.exists[x | x.key == namespace && x.value == className])
+			classDeclarations += new Pair<String, String>(namespace, className)
 	}
 
 	def addUsedNs(String value)
@@ -155,10 +154,10 @@ class GenerationContext
 		«ENDFOR»
 		«Separator»
 		«FOR p : classDeclarations»
-			«IF p.get(NsIndex).nullOrEmpty»
-				class «p.get(ClassNameIndex)»; // #include "«p.get(OriginFileIndex)»"
+			«IF p.key.nullOrEmpty»
+				class «p.value»;
 			«ELSE»
-				namespace «p.get(NsIndex)» { class «p.get(ClassNameIndex)»; } // #include "«p.get(OriginFileIndex)»"
+				namespace «p.key» { class «p.value»; }
 			«ENDIF»
 		«ENDFOR»
 		«FOR i : usedNs»
@@ -180,7 +179,7 @@ class GenerationContext
 	 */
 	private def dumpCC()
 	'''
-		«FOR i : arcaneIncludes + includes»
+		«FOR i : arcaneIncludes + includes + ccIncludes»
 		#include "«i»"
 		«ENDFOR»
 		«Separator»
