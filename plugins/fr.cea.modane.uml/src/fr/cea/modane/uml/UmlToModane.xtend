@@ -11,8 +11,6 @@ package fr.cea.modane.uml
 
 import com.google.inject.Inject
 import fr.cea.modane.ModaneStandaloneSetupGenerated
-import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher
-import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher.MessageType
 import fr.cea.modane.modane.ArgDefinition
 import fr.cea.modane.modane.ArgMultiplicity
 import fr.cea.modane.modane.Direction
@@ -64,6 +62,8 @@ import static extension fr.cea.modane.uml.ArcaneProfileExtensions.*
 import static extension fr.cea.modane.uml.EObjectExtensions.*
 import static extension fr.cea.modane.uml.ElementExtensions.*
 import static extension fr.cea.modane.uml.ModelMetricsExtensions.*
+import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher
+import fr.cea.modane.generator.ModaneGeneratorMessageDispatcher.MessageType
 
 class UmlToModane
 {
@@ -226,7 +226,6 @@ class UmlToModane
 		description = c.description
 		originNamespace = c.legacyNamespace
 		originFile = c.legacyFile
-		forceInclude = c.forceInclude
 	}
 
 	private def Pty create ModaneFactory::eINSTANCE.createPty toPty(Property p)

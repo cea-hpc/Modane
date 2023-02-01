@@ -43,12 +43,7 @@ class ReferenceableExtensions
 		if (!originFile.nullOrEmpty)
 		{
 			if (context.name.endsWith(GenerationContext::HeaderExtension))
-			{
-				if (forceInclude)
-					context.addInclude(originFile)
-				else
-					context.addClassDeclaration(originNamespace, referencedName, originFile)
-			}
+				context.addClassDeclaration(originNamespace, referencedName, originFile)
 		}
 
 		if (originNamespace.nullOrEmpty) referencedName
