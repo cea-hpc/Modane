@@ -20,7 +20,7 @@ NB : To get the last tag, check previous ones [here](https://github.com/cea-hpc/
     ```bash
     cd /tmp
     git clone https://github.com/cea-hpc/Modane.git
-    cd /tmp/
+    cd /tmp/Modane
     mvn clean verify
     ```
 8. Create Release on [GitHub](https://github.com/cea-hpc/Modane/releases). Click Draft a new release, fill version and attach binaries produced by maven (3 binaries for Modane, 3 binaries for ModaneHeadless and 1 update-site)
