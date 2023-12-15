@@ -58,7 +58,10 @@ class StandaloneFileSystemAccess extends JavaIoFileSystemAccess
 			{
 				// Si le contenu du fichier n'a pas changé, pas de regénération
 				if (file.exists && isEqual(contents, fileName))
+				{
 					messageDispatcher.post(MessageType::Exec, "File contents unchanged, no overwrite: " + fileName)
+				}
+				else
 				{
 					messageDispatcher.post(MessageType.Exec, "Generate file: " + fileName)
 					super.generateFile(fileName, outputConfigName, contents)
